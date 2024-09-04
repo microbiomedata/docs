@@ -29,7 +29,7 @@ jobs:
         run: pip install -r requirements.txt
       - name: Compile source documents into HTML
         run: sphinx-build -b html src ${{ github.workspace }}/legacy/workflow-documentation/_build/html
-        # Upload the result as an "artifact" so it can then be downloaded and used by another (TBD) job.
+        # Upload the result as an "artifact" so it can then be downloaded and used by another job.
       - name: Save the HTML for publishing later  # Docs: https://github.com/actions/upload-artifact
         uses: actions/upload-artifact@v4
         with:
