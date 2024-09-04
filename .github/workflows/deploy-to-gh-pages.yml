@@ -41,7 +41,7 @@ jobs:
       - name: Assemble website file tree
         run: |
           ls -R artifacts
-          mkdir -p _build/html
+          mkdir -p _build/html _build/html/legacy
           cp -R artifacts/legacy-nmdc-documentation-as-html _build/html/legacy/nmdc-documentation
           cp -R artifacts/legacy-workflow-documentation-as-html _build/html/legacy/workflow-documentation
           cp content/index.html _build/html/index.html
