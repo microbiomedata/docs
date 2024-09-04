@@ -8,3 +8,13 @@ services:
       - "50000:8000"
     volumes:
       - ./legacy/nmdc-documentation:/app
+
+  legacy-workflow-documentation:
+    # Use the container image built from `legacy/workflow-documentation/Dockerfile`.
+    build:
+      context: legacy/workflow-documentation
+      dockerfile: Dockerfile
+    ports:
+      - "50001:8000"
+    volumes:
+      - ./legacy/workflow-documentation:/app

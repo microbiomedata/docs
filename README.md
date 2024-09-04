@@ -53,6 +53,7 @@ Instead of maintaining a local copy of that documentation here, we redirect visi
 
 You can compare the `legacy/nmdc-documentation/src` directory with the corresponding directory in the
 upstream repository, by following these steps:
+
 ```shell
 # Clone the upstream repository onto your computer.
 git clone https://github.com/microbiomedata/NMDC_documentation.git /tmp/NMDC_documentation
@@ -63,8 +64,30 @@ git diff --stat /tmp/NMDC_documentation/docs ./legacy/nmdc-documentation/src
 
 #### Workflow documentation
 
-> [!NOTE]  
-> TODO
+Most of the files in the `legacy/workflow-documentation` directory are files that we copied from
+[commit `40b5a313`](https://github.com/microbiomedata/workflow_documentation/commit/40b5a313db29eefae896fa1cfd98530324e5c91a)
+in the [workflow_documentation](https://github.com/microbiomedata/workflow_documentation) repository.
+That was the latest commit on the `main` branch as of August 28, 2024.
+This documentation is implemented within the [Sphinx](https://www.sphinx-doc.org) documentation framework.
+
+In addition to the files we copied, the directory also contains some files that are _exclusive_ to this repository;
+e.g., `Dockerfile` and `.gitignore`.
+
+##### Omissions
+
+When copying the aforementioned files from the `workflow_documentation` repository, we _omitted_ files that were used
+to fetch content from even higher upstream; i.e. from individual workflow repositories.
+
+You can compare the `legacy/workflow-documentation/src` directory with the corresponding directory in the
+upstream repository, by following these steps:
+
+```shell
+# Clone the upstream repository onto your computer.
+git clone https://github.com/microbiomedata/workflow_documentation.git /tmp/workflow_documentation
+
+# Use Git to compare the corresponding directories. 
+git diff --stat /tmp/workflow_documentation/docs ./legacy/workflow-documentation/src
+```
 
 ### Code
 
@@ -104,7 +127,7 @@ the associated sections of the website will automatically be rebuilt
 # TODO
 
 - [ ] Populate the "TODO" sections above
-- [ ] Include a snapshot of https://github.com/microbiomedata/workflow_documentation (https://nmdc-workflow-documentation.readthedocs.io) in the "Legacy" section
+- [ ] Update legacy `requirements.txt` files to indicate specific versions
 - [ ] Implement an overall website, of which the "Legacy" section is only one part
 - [ ] Implement a framework for pulling in content from external sources
 - [ ] Configure a vanity URL once we have a cohesive website
