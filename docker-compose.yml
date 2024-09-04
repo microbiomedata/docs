@@ -1,0 +1,10 @@
+services:
+  legacy-nmdc-documentation:
+    # Use the container image built from `legacy/nmdc-documentation/Dockerfile`.
+    build:
+      context: legacy/nmdc-documentation
+      dockerfile: Dockerfile
+    ports:
+      - "50000:8000"
+    volumes:
+      - ./legacy/nmdc-documentation:/app
