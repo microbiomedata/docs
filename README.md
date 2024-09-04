@@ -40,9 +40,9 @@ e.g., `Dockerfile` and `.gitignore`.
 
 When copying the aforementioned files from the `NMDC_documentation` repository, we _omitted_ the following files:
 
-- Schema element documentation in `src/reference/metadata`
-- Schema-related images in `src/_static/images/reference/metadata`
-- Schema in `src/_static/jsonschema`
+- Schema element documentation in `docs/reference/metadata`
+- Schema-related images in `docs/_static/images/reference/metadata`
+- Schema in `docs/_static/jsonschema`
 
 Instead of maintaining a local copy of that documentation here, we redirect visitors to the _standalone_
 [schema documentation](https://microbiomedata.github.io/nmdc-schema/).
@@ -50,6 +50,16 @@ Instead of maintaining a local copy of that documentation here, we redirect visi
 > **Example:** When someone visits `/reference/metadata/xylene.html` on this documentation website,
 > they'll be automatically redirected to https://microbiomedata.github.io/nmdc-schema/xylene/. This redirection
 > is configured in `legacy/nmdc-documentation/src/conf.py`.
+
+You can compare the `legacy/nmdc-documentation/src` directory with the corresponding directory in the
+upstream repository, by following these steps:
+```shell
+# Clone the upstream repository onto your computer.
+git clone https://github.com/microbiomedata/NMDC_documentation.git /tmp/NMDC_documentation
+
+# Use Git to compare the corresponding directories. 
+git diff --stat /tmp/NMDC_documentation/docs ./legacy/nmdc-documentation/src
+```
 
 #### Workflow documentation
 
