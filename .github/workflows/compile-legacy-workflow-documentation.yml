@@ -28,12 +28,14 @@ jobs:
       - name: Install other dependencies
         run: pip install -r requirements.txt
       - name: Compile source documents into HTML
-        run: sphinx-build -b html src _build/html
+        run: sphinx-build -b html src ${{ github.workspace }}/legacy/workflow-documentation/_build/html
         # Upload the result as an "artifact" so it can then be downloaded and used by another (TBD) job.
       - name: Save the HTML for publishing later  # Docs: https://github.com/actions/upload-artifact
         uses: actions/upload-artifact@v4
         with:
           name: legacy-workflow-documentation-as-html
-          path: _build/html/
+          # Note: Relative `path` values here are relative to the _workspace_, not to the current working directory.
+          #       Reference: https://github.com/actions/upload-artifact/pull/477#issue-2044900649
+          path: legacy/workflow-documentation/_build/html
           if-no-files-found: error
           retention-days: 1  # Note: 1 day is the shortest period possible
