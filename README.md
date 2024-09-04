@@ -9,6 +9,27 @@
 This repository contains the content that we compile into our
 [documentation website](https://microbiomedata.github.io/docs).
 
+## Table of contents
+
+<!-- TOC -->
+* [Docs](#docs)
+  * [Introduction](#introduction)
+  * [Table of contents](#table-of-contents)
+  * [Repository structure](#repository-structure)
+    * [Content](#content)
+    * [Legacy content](#legacy-content)
+      * [NMDC documentation](#nmdc-documentation)
+        * [Omissions](#omissions)
+      * [Workflow documentation](#workflow-documentation)
+        * [Omissions](#omissions-1)
+    * [Code](#code)
+    * [Repository-level configuration files and documentation](#repository-level-configuration-files-and-documentation)
+      * [GitHub Actions](#github-actions)
+  * [Development](#development)
+    * [Spin up the development environment](#spin-up-the-development-environment)
+* [TODO](#todo)
+<!-- TOC -->
+
 ## Repository structure
 
 This repository has the following sections:
