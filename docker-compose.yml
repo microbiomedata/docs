@@ -18,3 +18,16 @@ services:
       - "50001:8000"
     volumes:
       - ./legacy/workflow-documentation:/app
+
+  main-website:
+    image: nginx  # Docs: https://hub.docker.com/_/nginx
+    depends_on:
+      - legacy-nmdc-documentation
+      - legacy-workflow-documentation
+    restart: unless-stopped
+    ports:
+      - "5000:80"
+    volumes:
+      - ./content:/usr/share/nginx/html
+      - ./legacy/nmdc-documentation/_build/html:/usr/share/nginx/html/legacy/nmdc-documentation
+      - ./legacy/workflow-documentation/_build/html:/usr/share/nginx/html/legacy/workflow-documentation
