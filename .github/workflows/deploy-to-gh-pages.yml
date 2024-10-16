@@ -20,6 +20,9 @@ jobs:
   compile-legacy-workflow-documentation:
     name: Compile legacy workflow documentation
     uses: ./.github/workflows/compile-legacy-workflow-documentation.yml
+  fetch-and-compile-nmdc-runtime-documentation:
+    name: Fetch and compile NMDC Runtime documentation
+    uses: ./.github/workflows/fetch-and-compile-nmdc-runtime-documentation.yml
 
   build:
     name: Compile main website
@@ -28,6 +31,7 @@ jobs:
     needs:
       - compile-legacy-nmdc-documentation
       - compile-legacy-workflow-documentation
+      - fetch-and-compile-nmdc-runtime-documentation
     runs-on: ubuntu-latest
     permissions:
       contents: read
@@ -44,6 +48,7 @@ jobs:
           mkdir -p _build/html _build/html/legacy
           cp -R artifacts/legacy-nmdc-documentation-as-html _build/html/legacy/nmdc-documentation
           cp -R artifacts/legacy-workflow-documentation-as-html _build/html/legacy/workflow-documentation
+          cp -R artifacts/nmdc-runtime-documentation-as-html _build/html/nmdc-runtime-documentation
           cp content/index.html _build/html/index.html
       - name: Save the result for publishing to GitHub Pages  # Docs: https://github.com/actions/upload-pages-artifact
         uses: actions/upload-pages-artifact@v3

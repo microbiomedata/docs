@@ -48,6 +48,8 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: nmdc-runtime-documentation-as-html
-          path: ${{ github.workspace }}/_dist
+          # Note: Relative `path` values here are relative to the _workspace_, not to the current working directory.
+          #       Reference: https://github.com/actions/upload-artifact/pull/477#issue-2044900649
+          path: _dist
           if-no-files-found: error
           retention-days: 1  # Note: 1 day is the shortest period possible
