@@ -10,7 +10,7 @@ import yaml
 # TODO: Write some tests that target this code.
 
 # This is the value you want the `site_url` YAML field to contain.
-SITE_URL = r"https://microbiomedata.github.io/docs/nmdc-runtime"
+SITE_URL = r"https://microbiomedata.github.io/docs/nmdc-runtime-documentation/"
 
 
 def sanitize_yaml_lines(raw_lines: List[str]):
@@ -67,6 +67,8 @@ def main():
         mkdocs_config: dict = yaml.safe_load(stream)
 
     # Replace the `site_url` value.
+    # Note: MkDocs incorporates this value into "canonical" URLs in the HTML `<head>` section.
+    #       Reference: https://www.mkdocs.org/user-guide/configuration/#site_url
     # TODO: Make the value configurable (e.g. via a script argument or environment variable).
     print("Replacing site-specific values.")
     mkdocs_config["site_url"] = SITE_URL
