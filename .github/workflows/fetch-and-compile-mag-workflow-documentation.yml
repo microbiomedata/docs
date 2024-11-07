@@ -15,14 +15,15 @@ jobs:
         # Docs: https://github.com/actions/checkout
       - name: Check out commit
         uses: actions/checkout@v4
-      - name: Check out commit from `metaMAGs/main`
+        # Note: The default branch of the `metaMAGs` repository is named "master"
+      - name: Check out commit from `metaMAGs/master`
         uses: actions/checkout@v4
         with:
           # Notes:
           # - `repository` format is: "{owner_name}/{repo_name}"
-          # - `sparse-checkout` lists the same files as the `mkdocs.yml` GHA workflow in `nmdc-runtime`
+          # - The default branch of the `metaMAGs` repository is named "master"
           repository: microbiomedata/metaMAGs  # format is "{owner_name}/{repo_name}"
-          ref: main
+          ref: master
           sparse-checkout: |
             docs
           path: _clones/microbiomedata/metaMAGs  # where, locally, to create the clone
