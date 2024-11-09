@@ -38,7 +38,7 @@ jobs:
         working-directory: _clones/microbiomedata/nmdc-runtime
         run: python ${{ github.workspace }}/src/nmdc_runtime/modify_mkdocs_config.py mkdocs.yml mkdocs.yml
       - name: Install dependencies of `nmdc-runtime` docs
-        run: python -m pip install mkdocs-mermaid2-plugin mkdocs-jupyter pymdown-extensions
+        run: python -m pip install mkdocs-material mkdocs-mermaid2-plugin mkdocs-jupyter
         # Docs: https://www.mkdocs.org/user-guide/cli/
       - name: Compile source documents into HTML
         working-directory: _clones/microbiomedata/nmdc-runtime
