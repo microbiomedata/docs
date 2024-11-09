@@ -3,7 +3,6 @@
 from typing import List
 import argparse
 import re
-from io import StringIO
 
 import yaml
 
@@ -11,26 +10,6 @@ import yaml
 
 # This is the value you want the `site_url` YAML field to contain.
 SITE_URL = r"https://microbiomedata.github.io/docs/nmdc-runtime-documentation/"
-
-
-def sanitize_yaml_lines(raw_lines: List[str]):
-    r"""Helper function that wraps a specific value in quotes so PyYAML can parse it."""
-
-    sanitized_lines = []
-    for line in raw_lines:
-        matches = re.match(
-            r"^(\s*)(format):\s*(!!python/name:pymdownx\.superfences\.fence_code_format)\s*$",
-            line,
-        )
-        if matches is not None:
-            spaces = matches[1]
-            label = matches[2]
-            value = matches[3]
-            sanitized_line = f'{spaces}{label}: "{value}"'
-        else:
-            sanitized_line = line
-        sanitized_lines.append(sanitized_line)
-    return sanitized_lines
 
 
 def main():
@@ -53,18 +32,7 @@ def main():
     # Read the input file, parsing its contents as YAML.
     print(f"Parsing original YAML file: {args.input_file_path.name}")
     with open(args.input_file_path.name, "r") as f:
-        # Note: When I used `safe_load()` or I used `load()` with `Loader=yaml.SafeLoader`, Python raised this error:
-        #       ```
-        #       yaml.constructor.ConstructorError: could not determine a constructor for the tag
-        #       'tag:yaml.org,2002:python/name:pymdownx.superfences.fence_code_format'
-        #       ```
-        #       So, I first modify the relevant line of the YAML file, putting quotes around its value,
-        #       since PyYAML seems to load the result OK.
-        #
-        raw_lines = f.readlines()
-        sanitized_lines = sanitize_yaml_lines(raw_lines)
-        stream = StringIO("\n".join(sanitized_lines))
-        mkdocs_config: dict = yaml.safe_load(stream)
+        mkdocs_config: dict = yaml.safe_load(f)
 
     # Replace the `site_url` value.
     # Note: MkDocs incorporates this value into "canonical" URLs in the HTML `<head>` section.
