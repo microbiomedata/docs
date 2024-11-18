@@ -50,10 +50,10 @@ Most of the files in the `legacy/nmdc-documentation` directory are files that we
 [commit `8786ff5a`](https://github.com/microbiomedata/NMDC_documentation/commit/8786ff5a63be21d38e8a01cce6f4fecc073526ac)
 in the [NMDC_documentation](https://github.com/microbiomedata/NMDC_documentation) repository.
 That was the latest commit on the `main` branch as of August 28, 2024.
-This documentation is implemented within the [Sphinx](https://www.sphinx-doc.org) documentation framework.
 
 In addition to the files we copied, the directory also contains some files that are _exclusive_ to this repository;
 e.g., `Dockerfile` and `.gitignore`.
+
 
 ##### Omissions
 
@@ -80,6 +80,53 @@ git clone https://github.com/microbiomedata/NMDC_documentation.git /tmp/NMDC_doc
 # Use Git to compare the corresponding directories. 
 git diff --stat /tmp/NMDC_documentation/docs ./legacy/nmdc-documentation/src
 ```
+
+##### Maintenance
+
+This documentation is implemented within the [Sphinx](https://www.sphinx-doc.org) framework.
+The content is organized according to the [Diátaxis](https://diataxis.fr/how-to-use-diataxis/#use-diataxis-as-a-guide-not-a-plan) guidelines.
+
+Here's how you can propose changes to this documentation:
+
+> Note: The general flow is: (1) create a GitHub Issue, (2) create a branch associated with that Issue,
+> (3) make changes on that branch, and (4) create a Pull Request to merge that branch into the `main` branch.
+> The following are a couple of the many ways someone can do those things (other ways are also OK).
+
+###### Prerequisites
+
+1. Create a GitHub Issue describing what you want to change (e.g. "Fix Foo in Bar")
+
+###### Procedure: Basic (to edit 1 file)
+
+1. On GitHub, go to the file within `legacy/nmdc-documentation/src/` that you want to edit
+2. Click the "Edit this file" button (i.e. the pencil icon button) at the upper right
+3. Edit the file
+4. Click the "Commit changes..." button at the upper right
+5. Customize the commit message to tell others what you did (e.g. "`Fix typo in link`")
+6. Mark the bubble that says "**Create a new branch** for this commit and start a pull request"
+7. (Recommended) Customize the branch name so it starts with the GitHub Issue number (e.g. `123-fix-foo-in-bar`)
+8. Click "Propose changes"
+9. Fill in the Pull Request form and click "Create pull request"
+
+You will end up with a Pull Request (PR) containing the changes. Once the PR gets merged into `main`,
+the documentation website will automatically be updated to reflect the changes.
+
+###### Procedure: Intermediate (to edit 1+ files)
+
+1. Visit https://github.dev/microbiomedata/docs/
+2. Click the branch name (e.g. `main`) at the lower left
+3. Click "Create a new branch..." at the top
+4. Enter a name for the branch, beginning with an issue number (e.g. `123-fix-foo-in-bar`)
+5. (If prompted) Click "Switch to Branch"
+6. Make changes in `legacy/nmdc-documentation/src`
+7. Click the "Source Control" icon in the left sidebar (3rd from the top)
+8. Hover over the "Changes" heading an click the `+` icon that appears
+9. Enter a commit message to tell others what you did (e.g. "`Fix typo in link`")
+10. Click the "Commit & Push" button
+11. Visit https://github.com/microbiomedata/docs/ and create a Pull Request for that branch
+
+You will end up with a Pull Request (PR) containing the changes. Once the PR gets merged into `main`,
+the documentation website will automatically be updated to reflect the changes. 
 
 ### Code
 
