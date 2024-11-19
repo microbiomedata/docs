@@ -89,7 +89,8 @@ main.container .card-img-wrapper {
   flex-direction: column;
 }
 @media (max-width: 991.98px) {
+  /* Reference: https://getbootstrap.com/docs/5.3/layout/breakpoints/#media-queries */
   main.container .card-img-wrapper {
-    min-height: 240px;
+    min-height: 160px;
   }
 }
