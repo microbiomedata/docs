@@ -120,7 +120,7 @@ the documentation website will automatically be updated to reflect the changes.
 5. (If prompted) Click "Switch to Branch"
 6. Make changes in `legacy/nmdc-documentation/src`
 7. Click the "Source Control" icon in the left sidebar (3rd from the top)
-8. Hover over the "Changes" heading an click the `+` icon that appears
+8. Hover over the "Changes" heading and click the `+` icon that appears
 9. Enter a commit message to tell others what you did (e.g. "`Fix typo in link`")
 10. Click the "Commit & Push" button
 11. Visit https://github.com/microbiomedata/docs/ and create a Pull Request for that branch
@@ -167,7 +167,6 @@ the associated sections of the website will automatically be rebuilt
 
 - [ ] Populate the "TODO" sections above
 - [ ] Update legacy `requirements.txt` files to indicate specific versions
-- [ ] Implement an overall website, of which the "Legacy" section is only one part
 - [ ] Implement a framework for pulling in content from external sources
 - [ ] Configure a vanity URL once we have a cohesive website
 - [ ] Migrate `.rst` files into Markdown (`.md`)
