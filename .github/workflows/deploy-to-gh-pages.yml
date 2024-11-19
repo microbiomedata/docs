@@ -49,7 +49,7 @@ jobs:
           cp -R artifacts/legacy-nmdc-documentation-as-html _build/html/legacy/nmdc-documentation
           cp -R artifacts/nmdc-runtime-documentation-as-html _build/html/nmdc-runtime-documentation
           cp -R artifacts/mag-workflow-documentation-as-html _build/html/workflows/mag-workflow-documentation
-          cp content/index.html _build/html/index.html
+          cp content _build/html
       - name: Save the result for publishing to GitHub Pages  # Docs: https://github.com/actions/upload-pages-artifact
         uses: actions/upload-pages-artifact@v3
         with:
