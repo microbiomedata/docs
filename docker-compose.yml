@@ -5,9 +5,19 @@ services:
       context: legacy/nmdc-documentation
       dockerfile: Dockerfile
     ports:
-      - "50000:8000"
+      - "5001:8000"
     volumes:
       - ./legacy/nmdc-documentation:/app
+
+  nmdc-documentation:
+    # Use the container image built from `content/nmdc/Dockerfile`.
+    build:
+      context: content/nmdc
+      dockerfile: Dockerfile
+    ports:
+      - "5002:8000"
+    volumes:
+      - ./content/nmdc:/app
 
   main-website:
     image: nginx  # Docs: https://hub.docker.com/_/nginx
@@ -18,4 +28,3 @@ services:
       - "5000:80"
     volumes:
       - ./content:/usr/share/nginx/html
-      - ./legacy/nmdc-documentation/_build/html:/usr/share/nginx/html/legacy/nmdc-documentation
