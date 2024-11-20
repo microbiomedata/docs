@@ -163,9 +163,9 @@ docker compose up
 
 That will start up several Docker containers, which you can access via the URLs below:
 
-- http://localhost:5000 - the home page of the centralized documentation website
-- http://localhost:5001 - the legacy documentation website
-- http://localhost:5002 - the current documentation website
+- http://localhost:5000 - the home page of the website
+- http://localhost:5001 - the legacy documentation portion of the website
+- http://localhost:5002 - the current documentation portion of the website
 
 In addition, whenever you make changes to content,
 the associated section of the associated website will automatically be rebuilt
