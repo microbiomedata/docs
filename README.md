@@ -176,5 +176,4 @@ the associated section of the associated website will automatically be rebuilt
 - [ ] Populate the "TODO" sections above
 - [ ] Update legacy `requirements.txt` files to indicate specific versions
 - [ ] Implement a framework for pulling in content from external sources
-- [ ] Configure a vanity URL once we have a cohesive website
 - [ ] Migrate `.rst` files into Markdown (`.md`)
