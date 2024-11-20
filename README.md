@@ -18,8 +18,8 @@ This repository contains the content that we compile into our
   * [Repository structure](#repository-structure)
     * [Content](#content)
       * [Maintenance](#maintenance)
-        * [Procedure: Basic (to edit 1 file)](#procedure-basic-to-edit-1-file)
-        * [Procedure: Intermediate (to edit 1+ files)](#procedure-intermediate-to-edit-1-files)
+        * [Basic workflow (to edit 1 file)](#basic-workflow-to-edit-1-file)
+        * [Intermediate workflow (to edit 1+ files)](#intermediate-workflow-to-edit-1-files)
     * [Legacy content](#legacy-content)
       * [NMDC documentation](#nmdc-documentation)
         * [Omissions](#omissions)
@@ -62,7 +62,7 @@ Here's how you can make (technically, "propose") changes to this documentation:
 > with that Issue, (3) make changes on that branch, and (4) create a Pull Request to merge that branch into `main`.
 > You can use whatever workflow you want in order to follow that process. The following are some example workflows:
 
-##### Workflow: Basic (to edit 1 file)
+##### Basic workflow (to edit 1 file)
 
 1. Create a GitHub Issue describing what you want to change (e.g. "Fix Foo in Bar")
 2. On GitHub, go to the file within `./content/nmdc/src` that you want to edit
@@ -78,7 +78,7 @@ Here's how you can make (technically, "propose") changes to this documentation:
 You will end up with a Pull Request (PR) containing the changes. Once the PR gets merged into `main`,
 the documentation website will automatically be updated to reflect the changes.
 
-##### Workflow: Intermediate (to edit 1+ files)
+##### Intermediate workflow (to edit 1+ files)
 
 1. Create a GitHub Issue describing what you want to change (e.g. "Fix Foo in Bar")
 2. Visit https://github.dev/microbiomedata/docs/
