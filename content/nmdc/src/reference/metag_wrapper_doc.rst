@@ -1,7 +1,7 @@
 Metagenomic Workflow 
 ================================================
 
-.. image:: metag_workflow2024.svg
+.. image:: ../_static/images/reference/workflows/metag_workflow2024.svg
    :align: center
    :scale: 25%
 
