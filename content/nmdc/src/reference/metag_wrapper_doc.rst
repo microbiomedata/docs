@@ -20,7 +20,7 @@ Users can run a single workflow within the metagenome pipeline with the appropri
 
 Workflow Availability
 ---------------------
-The workflow is available in its individual components on GitHub and as a whole to run on `NMDC-EDGE <https://nmdc-edge.org/home>`_. 
+The workflow is available in its individual components on GitHub and as a whole to run on `NMDC EDGE <https://nmdc-edge.org/home>`_. 
 
 - `ReadsQC <https://github.com/microbiomedata/ReadsQC>`_ 
 - `MetaAssembly <https://github.com/microbiomedata/metaAssembly>`_
@@ -45,17 +45,17 @@ Hardware Requirements:
 Workflow Dependencies
 ---------------------
 
-Third party software:
+Third-party software:
 ~~~~~~~~~~~~~~~~~~~~~
 
-Docker images containing third-party software are available in the repsective repositories. More information is available in the workflow repositories listed above. 
+Docker images containing third-party software are available in the respective repositories. More information is available in the workflow repositories listed above. 
 
 - `microbiomedata/bbtools:38.96 <https://hub.docker.com/r/microbiomedata/bbtools>`_
-- `bryce911/smrtlink:12.0.0.177059`_
-- `staphb/racon:1.4.20`_
-- `staphb/minimap2:2.25`_
-- `staphb/samtools:1.18`_
-- `staphb/spades:4.0.0`_
+- `bryce911/smrtlink:12.0.0.177059 <https://hub.docker.com/r/bryce911/smrtlink>`_
+- `staphb/racon:1.4.20 <https://hub.docker.com/r/staphb/racon>`_
+- `staphb/minimap2:2.25 <https://hub.docker.com/r/staphb/minimap2>`_
+- `staphb/samtools:1.18 <https://hub.docker.com/r/staphb/samtools>`_
+- `staphb/spades:4.0.0 <https://hub.docker.com/r/staphb/spades>`_
 - `microbiomedata/img-omics:5.2.0 <https://hub.docker.com/r/microbiomedata/img-omics>`_
 - `microbiomedata/nmdc_mbin <https://hub.docker.com/r/microbiomedata/nmdc_mbin>`_
 - `microbiomedata/nmdc_mbin_vis:0.7.0 <https://hub.docker.com/r/microbiomedata/nmdc_mbin_vis>`_
@@ -65,29 +65,41 @@ Docker images containing third-party software are available in the repsective re
 Sample dataset(s):
 ~~~~~~~~~~~~~~~~~~
 
-Zymobiomics mock-community DNA control (SRR7877884); this dataset is ~7 GB.
+- Soil microbial communities from the East River watershed near Crested Butte, Colorado, United States - ER_DNA_379 metagenome (`SRR8553641 <https://www.ncbi.nlm.nih.gov/sra/SRX5355418>`) with `metadata available in the NMDC Data Portal <https://data.microbiomedata.org/details/study/nmdc:sty-11-dcqce727>`_. This dataset has 18.3G bases
+
+  - The zipped raw fastq file is available `here <https://portal.nersc.gov/cfs/m3408/test_data/SRR8553641/SRR8553641.fastq.gz>`_
+
+- Zymobiomics mock-community DNA control (`SRR7877884 <https://www.ncbi.nlm.nih.gov/sra/SRX4716743>`_); this `dataset <https://portal.nersc.gov/cfs/m3408/test_data/SRR7877884/>`_ is has 6.7G bases.
+
+  - The non-interleaved raw fastq files are available as `R1 <https://portal.nersc.gov/cfs/m3408/test_data/SRR7877884/SRR7877884_1.fastq.gz>`_ and `R2 <https://portal.nersc.gov/cfs/m3408/test_data/SRR7877884/SRR7877884_2.fastq.gz>`
+  - The interleaved file is `here <https://portal.nersc.gov/cfs/m3408/test_data/SRR7877884/SRR7877884-int.fastq.gz>`_
+  - A 10% subset of the interleaved file is available as a quick dataset `here <https://portal.nersc.gov/cfs/m3408/test_data/SRR7877884/SRR7877884-int-0.1.fastq.gz>`
+
+
 
 Input: 
 ~~~~~~~~~~~~~~~~~~~~
-A JSON file containing the following
+
+A JSON file containing the following:
+
 #.	output file prefix
-#.  path to :code:`input_file` if interleaved file
-#.  paths to :code:`input_fq1` and :code:`input_fq2` non-interleaved paired-end reads 
-#.	input_interleaved (boolean)
+#. path to :code:`input_file` if interleaved file
+#. paths to :code:`input_fq1` and :code:`input_fq2` non-interleaved paired-end reads 
+#. input_interleaved (boolean)
 #.	RNA strand type (optional) either left blank, :code:`aRNA`, or :code:`non_stranded_RNA`
 
 
 Output:
 ~~~~~~~
-Upon completion of the run, the NMDC EDGE interface provides users can view the results, which are grouped by individual workflow. 
+Upon completion of the run, the NMDC EDGE interface provides results grouped by individual workflow for viewing.
 
 In addition to the workflow outputs are summary tables for each portion: 
 
-- ReadsQC: statistics and metrics, including the number of reads and bases before and after QC filtering.
-- Read-based taxonomy: summary tables and interactive Krona plots as visual outputs.
-- Assembly: summary statistics
+- ReadsQC: statistics and metrics, including the number of reads and bases before and after QC filtering
+- Read-based taxonomy: summary tables and interactive Krona plots as visual outputs
+- Assembly: summary statistics table
 - Annotation: statistics for processed sequences, predicted genes, and general quality information
-- MAGs: summary section with information on binned and unbinned contigs, genome completeness, estimated contamination, and the number of genes present on all bins determined to be high quality or medium quality.
+- MAGs: summary section with information on binned and unbinned contigs, genome completeness, estimated contamination, and the number of genes present on all bins determined to be high quality or medium quality
 
 
 
