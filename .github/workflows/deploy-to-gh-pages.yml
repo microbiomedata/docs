@@ -65,14 +65,6 @@ jobs:
       - name: Inject robots.txt file into assembled website file tree
         run: |
           cp content/robots.txt _build/html/robots.txt
-      - name: Append banner script to assembled index.html files
-        run: |
-          cat content/banner.snippet.html >> _build/html/legacy/nmdc-documentation/index.html
-          cat content/banner.snippet.html >> _build/html/nmdc/index.html
-          cat content/banner.snippet.html >> _build/html/nmdc-runtime-documentation/index.html
-          cat content/banner.snippet.html >> _build/html/workflows/mag-workflow-documentation/index.html
-          cat content/banner.snippet.html >> _build/html/workflows/mg-annotation-workflow-documentation/index.html
-          cat content/banner.snippet.html >> _build/html/index.html
       - name: Save the result for publishing to GitHub Pages  # Docs: https://github.com/actions/upload-pages-artifact
         uses: actions/upload-pages-artifact@v3
         with:
