@@ -4,12 +4,18 @@
          * Create a banner and mount it to the DOM as the first element inside the `body`.
          *
          * @param innerHTML {string} The HTML content you want the banner to contain.
-         * @param backgroundColor {string} The CSS color of the banner's background.
          */
-        function displayBanner(innerHTML = "", backgroundColor = "red") {
+        function displayBanner(innerHTML = "") {
             const divEl = document.createElement("div");
-            divEl.style.backgroundColor = backgroundColor;
+            divEl.style.backgroundColor = "red";
             divEl.style.textAlign = "center";
+            // Note: The navigation bar on the ReadTheDocs Sphinx theme has a
+            //       z-index of 200.
+            divEl.style.zIndex = "201";
+            divEl.style.position = "fixed";
+            divEl.style.width = "100%";
+            divEl.style.fontSize = "16px";
+            divEl.style.lineHeight = "24px";
             divEl.innerHTML = innerHTML;
             document.body.insertBefore(divEl, document.body.firstChild);
         }
