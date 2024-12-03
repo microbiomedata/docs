@@ -62,6 +62,9 @@ jobs:
           cp -R content/assets _build/html/assets
           cp content/index.html _build/html/index.html
           ls -R _build/html
+      - name: Inject robots.txt file into assembled website file tree
+        run: |
+          cp content/robots.txt _build/html/robots.txt
       - name: Save the result for publishing to GitHub Pages  # Docs: https://github.com/actions/upload-pages-artifact
         uses: actions/upload-pages-artifact@v3
         with:
