@@ -13,7 +13,7 @@ The reads QC workflow utilizes rqcfilter2 to trim and filter low quality data fr
 
 The read-based taxonomy classification workflow utilizes GOTTCHA2, Kraken2, and Centrifuge to profile quality-controlled reads to accommodate varied project goals and sequencing approaches that cover a spectrum from high sensitivity to high specificity that is dependent on the algorithms and cut-off levels chosen from different tools. 
 
-The metagenome assembly workflow uses bbcms, metaSPAdes, and BBMap to run error correction, assembly, and assembly validation, respectively. The metagenome annotation workflow takes in assembled metagenomes and generates structural and functional annotations. The MAGs workflow uses metabat2 to generate metagenome bins and applies the MIMAG standards using annotated tRNAs, rRNAs, and marker genes with checkM to estimate completeness and contamination and subsequent taxonomic lineage assignment.
+The metagenome assembly workflow uses bbcms, metaSPAdes, and BBMap to run error correction, assembly, and assembly validation, respectively. The metagenome annotation workflow takes in assembled metagenomes and generates structural and functional annotations. The MAGs workflow uses MetaBAT 2 to generate metagenome bins and applies the MIMAG standards using annotated tRNAs, rRNAs, and marker genes with checkM to estimate completeness and contamination and subsequent taxonomic lineage assignment.
 
 Users can run a single workflow within the metagenome pipeline with the appropriate input files, but the entire metagenome workflow is available to run from start to finish on NMDC EDGE from a single input raw Illumina file.
 
@@ -29,7 +29,7 @@ The workflow is available in its individual components on GitHub and as a whole 
 - `Read-based Taxonomy <https://github.com/microbiomedata/ReadbasedAnalysis>`_
 
 
-Requirements for Execution:  
+Requirements for Execution outside `NMDC EDGE <nmdc-edge.org>`_:  
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 (recommendations are in **bold**)
@@ -80,13 +80,14 @@ Sample dataset(s):
 Input: 
 ~~~~~~~~~~~~~~~~~~~~
 
-A JSON file containing the following:
+To run the full workflow via NMDC EDGE web UI, the following inputs are needed: 
 
-#.	output file prefix
-#. path to :code:`input_file` if interleaved file
-#. paths to :code:`input_fq1` and :code:`input_fq2` non-interleaved paired-end reads 
-#. input_interleaved (boolean)
-#.	RNA strand type (optional) either left blank, :code:`aRNA`, or :code:`non_stranded_RNA`
+#. Project/Run Name
+#. Is interleaved (boolean)
+#. Interleaved fastq(s), (FASTQ #1; FASTQ #2...)
+#. If non-interleaved paired-end reads, Pair(FASTQ R1, FASTQ R2)...
+
+To run individual workflows, see website or individual GitHub repositories. (See Workflow Availability links)
 
 
 Output:
@@ -106,4 +107,4 @@ In addition to the workflow outputs are summary tables for each portion:
 Point of contact
 ----------------
 
-- Package maintainers: Chienchi Lo <chienchi@lanl.gov>, Mark Flynn <mflynn@lanl.gov>
+- Workflow maintainers: Chienchi Lo <chienchi@lanl.gov>, Mark Flynn <mflynn@lanl.gov>
