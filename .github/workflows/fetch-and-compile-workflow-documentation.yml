@@ -1,0 +1,44 @@
+name: Fetch and compile workflow documentation
+
+on:
+  push: { branches: [ main ] }
+  workflow_dispatch: { }
+  # Allow this workflow to be called by other workflows.
+  # Reference: https://docs.github.com/en/actions/using-workflows/reusing-workflows
+  workflow_call: { }
+
+jobs:
+  compile:
+    name: Compile
+    runs-on: ubuntu-latest
+    steps:
+        # Docs: https://github.com/actions/checkout
+      - name: Check out commit
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with: { python-version: '3.12' }
+      - name: Install dependencies of workflow documentation
+        run: python -m pip install sphinx sphinx_rtd_theme pillow
+        # Note: This shell script will store the chapters in `/src/*`.
+      - name: Fetch documentation sources and arrange into chapters
+        run: |
+          chmod +x ./src/workflow_docs/fetch_docs_sources.sh
+          ./src/workflow_docs/fetch_docs_sources.sh
+      - name: Introduce additional source documents and a configuration file
+        run: |
+          cp src/workflow_docs/overview.rst /src/overview.rst
+          cp src/workflow_docs/index.rst    /src/index.rst
+          cp src/workflow_docs/conf.py      /src/conf.py
+      - name: Compile source documents into HTML
+        run: sphinx-build --builder html /src ${{ github.workspace }}/_dist
+        # Upload the result as an "artifact" so it can then be downloaded and used by another job.
+      - name: Save the HTML for publishing later  # Docs: https://github.com/actions/upload-artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: workflow-documentation-as-html
+          # Note: Relative `path` values here are relative to the _workspace_, not to the current working directory.
+          #       Reference: https://github.com/actions/upload-artifact/pull/477#issue-2044900649
+          path: _dist
+          if-no-files-found: error
+          retention-days: 1  # Note: 1 day is the shortest period possible

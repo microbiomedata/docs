@@ -23,12 +23,9 @@ jobs:
   fetch-and-compile-nmdc-runtime-documentation:
     name: Fetch and compile NMDC Runtime documentation
     uses: ./.github/workflows/fetch-and-compile-nmdc-runtime-documentation.yml
-  fetch-and-compile-mag-workflow-documentation:
-    name: Fetch and compile MAG workflow documentation
-    uses: ./.github/workflows/fetch-and-compile-mag-workflow-documentation.yml
-  fetch-and-compile-mg-annotation-workflow-documentation:
-    name: Fetch and compile Metagenome Annotation workflow documentation
-    uses: ./.github/workflows/fetch-and-compile-mg-annotation-workflow-documentation.yml
+  fetch-and-compile-workflow-documentation:
+    name: Fetch and compile workflow documentation
+    uses: ./.github/workflows/fetch-and-compile-workflow-documentation.yml
 
   build:
     name: Compile main website
@@ -38,8 +35,7 @@ jobs:
       - compile-legacy-nmdc-documentation
       - compile-current-nmdc-documentation
       - fetch-and-compile-nmdc-runtime-documentation
-      - fetch-and-compile-mag-workflow-documentation
-      - fetch-and-compile-mg-annotation-workflow-documentation
+      - fetch-and-compile-workflow-documentation
     runs-on: ubuntu-latest
     permissions:
       contents: read
@@ -57,8 +53,7 @@ jobs:
           cp -R artifacts/legacy-nmdc-documentation-as-html _build/html/legacy/nmdc-documentation
           cp -R artifacts/current-nmdc-documentation-as-html _build/html/nmdc
           cp -R artifacts/nmdc-runtime-documentation-as-html _build/html/nmdc-runtime-documentation
-          cp -R artifacts/mag-workflow-documentation-as-html _build/html/workflows/mag-workflow-documentation
-          cp -R artifacts/mg-annotation-workflow-documentation-as-html _build/html/workflows/mg-annotation-workflow-documentation
+          cp -R artifacts/workflow-documentation-as-html _build/html/workflow-documentation
           cp -R content/assets _build/html/assets
           cp content/index.html _build/html/index.html
           ls -R _build/html
