@@ -21,13 +21,13 @@ git clone --no-checkout --depth=1 --single-branch --branch=master --filter=tree:
 git clone --no-checkout --depth=1 --single-branch --branch=master --filter=tree:0 https://github.com/microbiomedata/enviroMS /tmp/clones/enviroMS                   && cd /tmp/clones/enviroMS          && git sparse-checkout set --no-cone /docs && git checkout
 
 # Arrange the "docs" directories into chapters.
-mkdir -p /src/chapters
-mv /tmp/clones/ReadsQC/docs           /src/chapters/1_RQC
-mv /tmp/clones/ReadbasedAnalysis/docs /src/chapters/2_ReadAnalysis
-mv /tmp/clones/metaAssembly/docs      /src/chapters/3_MetaGAssembly
-mv /tmp/clones/mg_annotation/docs     /src/chapters/4_MetaGAnnotation
-mv /tmp/clones/metaMAGs/docs          /src/chapters/5_MAG
-mv /tmp/clones/metaT/docs             /src/chapters/6_MetaT
-mv /tmp/clones/metaPro/docs           /src/chapters/7_Metaproteomics
-mv /tmp/clones/metaMS/docs            /src/chapters/8_Metabolomics
-mv /tmp/clones/enviroMS/docs          /src/chapters/9_NOM
+mkdir -p /tmp/book/src/chapters
+mv /tmp/clones/ReadsQC/docs           /tmp/book/src/chapters/1_RQC
+mv /tmp/clones/ReadbasedAnalysis/docs /tmp/book/src/chapters/2_ReadAnalysis
+mv /tmp/clones/metaAssembly/docs      /tmp/book/src/chapters/3_MetaGAssembly
+mv /tmp/clones/mg_annotation/docs     /tmp/book/src/chapters/4_MetaGAnnotation
+mv /tmp/clones/metaMAGs/docs          /tmp/book/src/chapters/5_MAG
+mv /tmp/clones/metaT/docs             /tmp/book/src/chapters/6_MetaT
+mv /tmp/clones/metaPro/docs           /tmp/book/src/chapters/7_Metaproteomics
+mv /tmp/clones/metaMS/docs            /tmp/book/src/chapters/8_Metabolomics
+mv /tmp/clones/enviroMS/docs          /tmp/book/src/chapters/9_NOM

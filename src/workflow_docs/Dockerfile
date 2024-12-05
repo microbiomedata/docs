@@ -26,9 +26,10 @@ RUN chmod +x /tmp/fetch_docs_sources.sh
 RUN /tmp/fetch_docs_sources.sh
 
 # Introduce additional source documents and a configuration file.
-COPY overview.rst /src/chapters/overview.rst
-COPY index.rst    /src/index.rst
-COPY conf.py      /src/conf.py
+# Note: The above shell script will have created `/tmp/book/src/chapters/`.
+COPY overview.rst /tmp/book/src/chapters/overview.rst
+COPY index.rst    /tmp/book/src/index.rst
+COPY conf.py      /tmp/book/src/conf.py
 
 # Compile source documents into HTML.
 #
@@ -38,7 +39,7 @@ COPY conf.py      /src/conf.py
 #
 # Reference: https://www.sphinx-doc.org/en/master/man/sphinx-build.html
 #
-RUN sphinx-build --builder html /src /html
+RUN sphinx-build --builder html /tmp/book/src /html
 
 EXPOSE 8000
 
