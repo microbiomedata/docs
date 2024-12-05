@@ -2,7 +2,7 @@
     Note: This file was initialized by copy/pasting the contents of:
     https://github.com/microbiomedata/workflow_documentation/blob/master/docs/index.rst
 
-Welcome to NMDC Workflows's documentation!
+Welcome to the NMDC Workflow documentation!
 ==========================================
 
 .. toctree::
