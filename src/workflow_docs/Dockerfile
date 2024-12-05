@@ -4,7 +4,7 @@
 
 # Base this container image upon the official Python container image.
 # Reference: https://hub.docker.com/_/python
-FROM python:3.10
+FROM python:3.12
 
 WORKDIR /src
 
