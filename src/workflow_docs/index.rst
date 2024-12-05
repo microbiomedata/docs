@@ -1,6 +1,6 @@
 ..
-    Note: This file was copied from: https://github.com/microbiomedata/workflow_documentation/blob/master/docs/index.rst
-    TODO: Fix the typo in "Assemly" below (change to "Assembly").
+    Note: This file was initialized by copy/pasting the contents of:
+    https://github.com/microbiomedata/workflow_documentation/blob/master/docs/index.rst
 
 Welcome to NMDC Workflows's documentation!
 ==========================================
@@ -12,7 +12,7 @@ Welcome to NMDC Workflows's documentation!
    chapters/overview.rst
    chapters/1_RQC/index.rst
    chapters/2_ReadAnalysis/index.rst
-   chapters/3_MetaGAssemly/index.rst
+   chapters/3_MetaGAssembly/index.rst
    chapters/4_MetaGAnnotation/index.rst
    chapters/5_MAG/index.rst
    chapters/6_MetaT/index.rst

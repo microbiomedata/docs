@@ -44,7 +44,7 @@ RUN git clone --no-checkout --depth=1 --single-branch --branch=master --filter=t
 RUN mkdir -p /src/chapters
 RUN mv /tmp/clones/ReadsQC/docs           /src/chapters/1_RQC
 RUN mv /tmp/clones/ReadbasedAnalysis/docs /src/chapters/2_ReadAnalysis
-RUN mv /tmp/clones/metaAssembly/docs      /src/chapters/3_MetaGAssemly
+RUN mv /tmp/clones/metaAssembly/docs      /src/chapters/3_MetaGAssembly
 RUN mv /tmp/clones/mg_annotation/docs     /src/chapters/4_MetaGAnnotation
 RUN mv /tmp/clones/metaMAGs/docs          /src/chapters/5_MAG
 RUN mv /tmp/clones/metaT/docs             /src/chapters/6_MetaT
