@@ -1,5 +1,5 @@
 # This Dockerfile can be used to build a container image that serves a built version of the combined workflow docs.
-# To build: $ docker build --progress=plain --tag workflow-docs --file Dockerfile .
+# To build: $ docker build --progress=plain --no-cache --tag workflow-docs --file Dockerfile .
 # To run:   $ docker run --name workflow-docs -p 8000:8000 workflow-docs
 
 # Base this container image upon the official Python container image.
