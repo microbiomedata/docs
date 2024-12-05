@@ -11,7 +11,7 @@
 >
 >Task 1:  Create an NMDC EDGE account with either your email address or your ORCiD account.
 >
->Task 2: Download the small interleaved [data file](https://nmdc-edge.org/publicdata/test_data/SRR7877884-int-0.1.fastq.gz) listed here. (Note: This is paired-end data with the pairs interleaved together into a single file.) Upload the file to NMDC EDGE.
+>Task 2: Download the small interleaved [data file](https://portal.nersc.gov/cfs/m3408/test_data/SRR7877884/SRR7877884-int-0.1.fastq.gz) listed here. (Note: This is paired-end data with the pairs interleaved together into a single file.) Upload the file to NMDC EDGE.
 >
 >Task 3: Click the user icon (in the top right corner with your initials) and under “Files”, click on “Manage Uploads”. Verify that the file you uploaded is there. (Note: Later you can delete uploads that are no longer needed.)
 >
@@ -117,8 +117,7 @@ run the Metagenome Read-based Taxonomy Classification workflow with all three ta
 >
 >Task: Log into NMDC EDGE and run the full Metagenome pipeline (multiple workflows- all workflows are selected by default). Use the same dataset uploaded in the QuickStart tutorial. Check your results for the full pipeline against your results from the previous tutorials. The results should be identical/nearly identical to the results from the previous tutorials for each individual workflow with the added benefit of submitting all the workflows with a single input of raw sequencing data.
 >
->If you want to just test the full pipeline and not the individual workflows, [download this data set.](
-https://nmdc-edge.org/publicdata/test_data/SRR7877884-int-0.1.fastq.gz) Upload the file to NMDC EDGE and run the full pipeline.
+>If you want to just test the full pipeline and not the individual workflows, [download this data set.](https://portal.nersc.gov/cfs/m3408/test_data/SRR7877884/SRR7877884-int-0.1.fastq.gz) Upload the file to NMDC EDGE and run the full pipeline.
 
 
 ## Metatranscriptomics
