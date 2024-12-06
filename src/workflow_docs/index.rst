@@ -10,12 +10,17 @@ Welcome to the NMDC Workflow documentation!
    :caption: Contents:
 
    chapters/overview.rst
-   chapters/1_RQC/index.rst
-   chapters/2_ReadAnalysis/index.rst
-   chapters/3_MetaGAssembly/index.rst
-   chapters/4_MetaGAnnotation/index.rst
-   chapters/5_MAG/index.rst
-   chapters/6_MetaT/index.rst
-   chapters/7_Metaproteomics/index.rst
-   chapters/8_Metabolomics/index.rst
-   chapters/9_NOM/index.rst
+   chapters/1_Metagenome Workflow Overview/index.rst
+   chapters/2_Read Based Taxonomy/index.rst
+   chapters/3_Metagenome Reads QC/index.rst
+   chapters/4_Metagenome Assembly/index.rst
+   chapters/5_Metagenome and Metatranscriptome Annotation/index.rst
+   chapters/6_Metagenome Assembled Genome/index.rst
+   chapters/7_Metatranscriptome Worflow Overview/index.rst
+   chapters/8_Metranscriptome Reads QC/index.rst
+   chapters/9_Metranscriptome Assembly/index.rst
+   chapters/10_Metranscriptome Expression/index.rst
+   chapters/11_Metaproteomics/index.rst
+   chapters/12_Metabolomics/index.rst
+   chapters/13_Natural Organic Matter/index.rst
+
