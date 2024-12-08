@@ -44,7 +44,7 @@ jobs:
         working-directory: _clones/microbiomedata/nmdc-runtime
         run: |
           echo '{
-            "INHERIT": "mkdocs.yaml",
+            "INHERIT": "mkdocs.yml",
             "site_dir": "${{ github.workspace }}/_dist",
             "site_url": "https://microbiomedata.github.io/docs/nmdc-runtime-documentation/"
           }' | mkdocs build -f -
