@@ -3,7 +3,7 @@
     https://github.com/microbiomedata/workflow_documentation/blob/master/docs/index.rst
 
 Welcome to the NMDC Workflow documentation!
-==========================================
+===========================================
 
 .. toctree::
    :maxdepth: 2
