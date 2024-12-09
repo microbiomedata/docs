@@ -16,8 +16,8 @@ Welcome to the NMDC Workflow documentation!
    chapters/4_Metagenome Assembly/index.rst
    chapters/5_Metagenome and Metatranscriptome Annotation/index.rst
    chapters/6_Metagenome Assembled Genome/index.rst
-   chapters/7_Metatranscriptome Worflow Overview/index.rst
-   chapters/8_Metranscriptome Reads QC/index.rst
+   chapters/7_Metatranscriptome Workflow Overview/index.rst
+   chapters/8_Metatranscriptome Reads QC/index.rst
    chapters/9_Metranscriptome Assembly/index.rst
    chapters/10_Metranscriptome Expression/index.rst
    chapters/11_Metaproteomics/index.rst
