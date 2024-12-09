@@ -27,15 +27,15 @@ git clone --no-checkout --depth=1 --single-branch --branch=master --filter=tree:
 mkdir -p /tmp/book/src/chapters
 #placeholder for metaG end to end chapter which will come from this repo
 #                                      /tmp/book/src/chapters/1_Metagenome Workflow Overview
-mv /tmp/clones/ReadbasedAnalysis/docs /tmp/book/src/chapters/2_Read Based Taxonomy 
-mv /tmp/clones/ReadsQC/docs           /tmp/book/src/chapters/3_Metagenome Reads QC 
-mv /tmp/clones/metaAssembly/docs      /tmp/book/src/chapters/4_Metagenome Assembly
-mv /tmp/clones/mg_annotation/docs     /tmp/book/src/chapters/5_Metagenome and Metatranscriptome Annotation
-mv /tmp/clones/metaMAGs/docs          /tmp/book/src/chapters/6_Metagenome Assembled Genome 
-mv /tmp/clones/metaT/docs             /tmp/book/src/chapters/7_Metatranscriptome Worflow Overview
-mv /tmp/clones/metaT_ReadsQC/docs     /tmp/book/src/chapters/8_Metranscriptome Reads QC 
-mv /tmp/clones/metaT_Assembly/docs     /tmp/book/src/chapters/9_Metranscriptome Assembly
-mv /tmp/clones/metaT_ReadCounts/docs     /tmp/book/src/chapters/10_Metranscriptome Expression 
+mv /tmp/clones/ReadbasedAnalysis/docs /tmp/book/src/chapters/2_Read_Based_Taxonomy 
+mv /tmp/clones/ReadsQC/docs           /tmp/book/src/chapters/3_Metagenome_Reads_QC 
+mv /tmp/clones/metaAssembly/docs      /tmp/book/src/chapters/4_Metagenome_Assembly
+mv /tmp/clones/mg_annotation/docs     /tmp/book/src/chapters/5_Metagenome_and_Metatranscriptome_Annotation
+mv /tmp/clones/metaMAGs/docs          /tmp/book/src/chapters/6_Metagenome_Assembled_Genome 
+mv /tmp/clones/metaT/docs             /tmp/book/src/chapters/7_Metatranscriptome_Worflow_Overview
+mv /tmp/clones/metaT_ReadsQC/docs     /tmp/book/src/chapters/8_Metranscriptome_Reads_QC
+mv /tmp/clones/metaT_Assembly/docs    /tmp/book/src/chapters/9_Metranscriptome_Assembly
+mv /tmp/clones/metaT_ReadCounts/docs  /tmp/book/src/chapters/10_Metranscriptome_Expression
 mv /tmp/clones/metaPro/docs           /tmp/book/src/chapters/11_Metaproteomics
 mv /tmp/clones/metaMS/docs            /tmp/book/src/chapters/12_Metabolomics
-mv /tmp/clones/enviroMS/docs          /tmp/book/src/chapters/13_Natural Organic Matter
+mv /tmp/clones/enviroMS/docs          /tmp/book/src/chapters/13_Natural_Organic_Matter
