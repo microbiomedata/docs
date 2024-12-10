@@ -40,6 +40,5 @@ NMDC Documentation
    :caption: Explanation:
 
    FAIR Data <./explanation/fair_data.md>
-   IDEA <./explanation/idea.md>
    Community Conversations <./explanation/community_conversations.md>
    Publications <./explanation/publications.md>
