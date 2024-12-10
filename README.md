@@ -28,6 +28,12 @@ This repository contains the content that we compile into our
       * [GitHub Actions](#github-actions)
   * [Development](#development)
     * [Spin up the development environment](#spin-up-the-development-environment)
+    * [Watch for changes](#watch-for-changes)
+      * [Home page](#home-page)
+      * [Legacy documentation](#legacy-documentation)
+      * [Current documentation](#current-documentation)
+      * [Runtime documentation](#runtime-documentation)
+      * [Workflow documentation](#workflow-documentation)
 * [TODO](#todo)
 <!-- TOC -->
 
@@ -158,7 +164,7 @@ and to (b) publish that website to the Internet.
 Assuming you have Docker installed, you can spin up the development environment by running: 
 
 ```shell
-docker compose up
+docker compose up --detach
 ```
 
 That will start up several Docker containers, which you can access via the URLs below:
@@ -166,14 +172,55 @@ That will start up several Docker containers, which you can access via the URLs 
 - http://localhost:5000 - the home page of the website
 - http://localhost:5001 - the legacy documentation portion of the website
 - http://localhost:5002 - the current documentation portion of the website
+- http://localhost:5003 - the Runtime documentation portion of the website
+- http://localhost:5004 - the workflow documentation portion of the website
 
-In addition, whenever you make changes to content,
-the associated section of the associated website will automatically be rebuilt
-(at which point, you can refresh your web browser to see the newly-rebuilt section).
+### Watch for changes
+
+#### Home page
+
+Whenever you update the `content/index.html` file, you can refresh your web browser
+to see the updated version of the home page.
+
+#### Legacy documentation
+
+Whenever you update files in the `legacy/nmdc-documentation/src` directory,
+the legacy documentation portion of the website will be automatically rebuilt.
+Refresh your web browser to see that newly-rebuilt portion of the website.
+
+#### Current documentation
+
+Similarly, whenever you update files in the `content/nmdc/src` directory,
+the current documentation portion of the website will be automatically rebuilt.
+Refresh your web browser to see that newly-rebuilt portion of the website.
+
+#### Runtime documentation
+
+Nothing will automatically happen in the development environment when someone
+updates files in the upstream Runtime repository. To adopt those changes
+in the development environment, rebuild the `runtime-documentation` container
+by issuing the following sequence of commands:
+
+```shell
+docker compose down             runtime-documentation
+docker compose build --no-cache runtime-documentation
+docker compose up --detach      runtime-documentation
+```
+
+#### Workflow documentation
+
+Similarly, nothing will automatically happen in the development environment when someone
+updates files in the upstream workflow repositories. To adopt those changes
+in the development environment, rebuild the `workflow-documentation` container
+by issuing the following sequence of commands:
+
+```shell
+docker compose down             workflow-documentation
+docker compose build --no-cache workflow-documentation
+docker compose up --detach      workflow-documentation
+```
 
 # TODO
 
 - [ ] Populate the "TODO" sections above
 - [ ] Update legacy `requirements.txt` files to indicate specific versions
-- [ ] Implement a framework for pulling in content from external sources
-- [ ] Migrate `.rst` files into Markdown (`.md`)

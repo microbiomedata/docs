@@ -3,7 +3,7 @@
     https://github.com/microbiomedata/workflow_documentation/blob/master/docs/index.rst
 
 Welcome to the NMDC Workflow documentation!
-==========================================
+===========================================
 
 ..
     TODO: Include Chapter 1, the end-to-end MetaG chapter.

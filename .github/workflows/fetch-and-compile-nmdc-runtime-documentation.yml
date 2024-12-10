@@ -13,8 +13,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
         # Docs: https://github.com/actions/checkout
-      - name: Check out commit
-        uses: actions/checkout@v4
       - name: Check out commit from `nmdc-runtime/main`
         uses: actions/checkout@v4
         with:
@@ -32,17 +30,24 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v5
         with: { python-version: '3.12' }
-      - name: Install own dependencies
-        run: python -m pip install -r src/nmdc_runtime/requirements.txt
-      - name: Customize MkDocs configuration
-        working-directory: _clones/microbiomedata/nmdc-runtime
-        run: python ${{ github.workspace }}/src/nmdc_runtime/modify_mkdocs_config.py mkdocs.yml mkdocs.yml
       - name: Install dependencies of `nmdc-runtime` docs
-        run: python -m pip install mkdocs-material mkdocs-mermaid2-plugin mkdocs-jupyter
+        run: | 
+          python -m pip install \
+            mkdocs-material \
+            mkdocs-mermaid2-plugin \
+            mkdocs-jupyter \
+            pymdown-extensions
         # Docs: https://www.mkdocs.org/user-guide/cli/
+        # Docs: https://www.mkdocs.org/user-guide/configuration/#configuration-inheritance
+        # TODO: Make the `site_url` configurable (e.g. via an environment variable).
       - name: Compile source documents into HTML
         working-directory: _clones/microbiomedata/nmdc-runtime
-        run: mkdocs build --site-dir ${{ github.workspace }}/_dist
+        run: |
+          echo '{
+            "INHERIT": "mkdocs.yml",
+            "site_dir": "${{ github.workspace }}/_dist",
+            "site_url": "https://microbiomedata.github.io/docs/nmdc-runtime-documentation/"
+          }' | mkdocs build -f -
         # Upload the result as an "artifact" so it can then be downloaded and used by another job.
       - name: Save the HTML for publishing later  # Docs: https://github.com/actions/upload-artifact
         uses: actions/upload-artifact@v4
