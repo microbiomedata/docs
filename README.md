@@ -197,7 +197,7 @@ Refresh your web browser to see that newly-rebuilt portion of the website.
 #### Runtime documentation
 
 Nothing will automatically happen in the development environment when someone
-updates files in the upstream Runtime repository. To adopt those changes
+updates files in the **upstream** Runtime repository. To adopt those changes
 in the development environment, rebuild the `runtime-documentation` container
 by issuing the following sequence of commands:
 
@@ -209,14 +209,24 @@ docker compose up --detach      runtime-documentation
 
 #### Workflow documentation
 
-Similarly, nothing will automatically happen in the development environment when someone
-updates files in the upstream workflow repositories. To adopt those changes
+Nothing will automatically happen in the development environment when someone
+updates files in the **upstream** workflow repositories. To adopt those changes
 in the development environment, rebuild the `workflow-documentation` container
 by issuing the following sequence of commands:
 
 ```shell
 docker compose down             workflow-documentation
 docker compose build --no-cache workflow-documentation
+docker compose up --detach      workflow-documentation
+```
+
+If you **only** make changes to the documentation source files that reside in _this_ repository
+(i.e. those in `src/workflow_docs`), then you can issue this sequence of commands instead,
+which will allow Docker to _avoid refetching_ the source files from the upstream repos:
+
+```shell
+docker compose down             workflow-documentation
+docker compose build            workflow-documentation
 docker compose up --detach      workflow-documentation
 ```
 

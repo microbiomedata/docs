@@ -21,15 +21,20 @@ jobs:
       - name: Install dependencies of workflow documentation
         run: python -m pip install sphinx sphinx_rtd_theme pillow
         # Note: This shell script will store the chapters under `/tmp/book/src/`.
+        #
+        # Note: The source files for the overview chapter and Chapter 1 reside
+        #       in this `docs` repo. We will process those in a subsequent step.
+        #
       - name: Fetch documentation sources and arrange into chapters
         run: |
           chmod +x ./src/workflow_docs/fetch_docs_sources.sh
           ./src/workflow_docs/fetch_docs_sources.sh
       - name: Introduce additional source documents and a configuration file
         run: |
-          cp src/workflow_docs/overview.rst /tmp/book/src/chapters/overview.rst
-          cp src/workflow_docs/index.rst    /tmp/book/src/index.rst
-          cp src/workflow_docs/conf.py      /tmp/book/src/conf.py
+          cp src/workflow_docs/metagenome_workflow_overview/docs /tmp/book/src/chapters/1_Metagenome_Workflow_Overview
+          cp src/workflow_docs/overview.rst                      /tmp/book/src/chapters/overview.rst
+          cp src/workflow_docs/index.rst                         /tmp/book/src/index.rst
+          cp src/workflow_docs/conf.py                           /tmp/book/src/conf.py
       - name: Compile source documents into HTML
         run: sphinx-build --builder html /tmp/book/src ${{ github.workspace }}/_dist
         # Upload the result as an "artifact" so it can then be downloaded and used by another job.

@@ -6,9 +6,8 @@ Welcome to the NMDC Workflow documentation!
 ===========================================
 
 ..
-    TODO: Include Chapter 1, the end-to-end MetaG chapter.
-          Its source files will reside in this `docs` Git repository.
-          Its chapter slug will be `1_Metagenome_Workflow_Overview`.
+    Note: The source files for Chapter 1 reside in the `docs` Git repository.
+          The source files for all other chapters reside in upstream repositories.
 
 .. toctree::
    :maxdepth: 2
@@ -16,6 +15,7 @@ Welcome to the NMDC Workflow documentation!
 
    chapters/overview.rst
 
+   chapters/1_Metagenome_Workflow_Overview/index.rst
    chapters/2_Read_Based_Taxonomy/index.rst
    chapters/3_Metagenome_Reads_QC/index.rst
    chapters/4_Metagenome_Assembly/index.rst
