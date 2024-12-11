@@ -21,15 +21,20 @@ RUN python -m pip install --upgrade pip
 RUN python -m pip install sphinx sphinx_rtd_theme pillow
 
 # Fetch individual workflow docs sources and arrange them into chapters.
+#
+# Note: The source files for the overview chapter and Chapter 1 reside
+#       in this `docs` repo. We will process those in a subsequent step.
+#
 COPY fetch_docs_sources.sh /tmp/fetch_docs_sources.sh
 RUN chmod +x /tmp/fetch_docs_sources.sh
 RUN /tmp/fetch_docs_sources.sh
 
 # Introduce additional source documents and a configuration file.
 # Note: The above shell script will have created `/tmp/book/src/chapters/`.
-COPY overview.rst /tmp/book/src/chapters/overview.rst
-COPY index.rst    /tmp/book/src/index.rst
-COPY conf.py      /tmp/book/src/conf.py
+COPY metagenome_workflow_overview/docs /tmp/book/src/chapters/1_Metagenome_Workflow_Overview
+COPY overview.rst                      /tmp/book/src/chapters/overview.rst
+COPY index.rst                         /tmp/book/src/index.rst
+COPY conf.py                           /tmp/book/src/conf.py
 
 # Compile source documents into HTML.
 #
