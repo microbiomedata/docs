@@ -31,10 +31,10 @@ jobs:
           ./src/workflow_docs/fetch_docs_sources.sh
       - name: Introduce additional source documents and a configuration file
         run: |
-          cp src/workflow_docs/metagenome_workflow_overview/docs /tmp/book/src/chapters/1_Metagenome_Workflow_Overview
-          cp src/workflow_docs/overview.rst                      /tmp/book/src/chapters/overview.rst
-          cp src/workflow_docs/index.rst                         /tmp/book/src/index.rst
-          cp src/workflow_docs/conf.py                           /tmp/book/src/conf.py
+          cp -r src/workflow_docs/metagenome_workflow_overview/docs /tmp/book/src/chapters/1_Metagenome_Workflow_Overview
+          cp    src/workflow_docs/overview.rst                      /tmp/book/src/chapters/overview.rst
+          cp    src/workflow_docs/index.rst                         /tmp/book/src/index.rst
+          cp    src/workflow_docs/conf.py                           /tmp/book/src/conf.py
       - name: Compile source documents into HTML
         run: sphinx-build --builder html /tmp/book/src ${{ github.workspace }}/_dist
         # Upload the result as an "artifact" so it can then be downloaded and used by another job.
