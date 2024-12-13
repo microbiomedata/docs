@@ -32,6 +32,7 @@ NMDC Documentation
    :caption: Reference:
 
    NMDC Schema <https://w3id.org/nmdc/about>
+   NMDC Runtime <runtime.rst>
    NMDC Workflows <workflows.rst>
    NMDC Data Portal <./reference/data_portal.md>
 

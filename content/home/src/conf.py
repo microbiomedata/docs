@@ -86,9 +86,12 @@ html_js_files = [
 # -- Redirects ------------------------------------------
 
 # Redirect old schema documentation URLs to the schema documentation
-# that is automatically kept in sync with the schema.
+# that is automatically kept in sync with the schema. Also, redirect
+# some specific local HTML file paths to subdirectory paths (in order
+# to work around a limitation of Sphinx regarding `toctree` links).
 # Reference: https://pypi.org/project/sphinx-reredirects/
 redirects = {
+    "runtime.html": "/runtime/",
     "workflows.html": "/workflows/",
     "reference/metadata/xylene": "https://w3id.org/nmdc/xylene",  # the latter redirects to: https://microbiomedata.github.io/nmdc-schema/xylene/
     "reference/metadata/*": "https://w3id.org/nmdc/nmdc",
