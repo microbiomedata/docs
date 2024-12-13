@@ -5,7 +5,3 @@ sphinx_rtd_theme
 # Sphinx plugin that handles redirects.
 # Reference: https://pypi.org/project/sphinx-reredirects/
 sphinx-reredirects
-
-# Sphinx plugin that enables the use of custom favicons.
-# Reference: https://sphinx-favicon.readthedocs.io/en/latest/
-sphinx-favicon

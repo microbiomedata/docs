@@ -35,7 +35,6 @@ extensions = [
    'myst_parser',
    'sphinx_markdown_tables',
    'sphinx_reredirects',
-   'sphinx_favicon',
 ]
 
 # source_suffix = '.rst'
@@ -69,9 +68,8 @@ html_css_files = [
 ]
 html_logo = "_static/images/nmdc-logo-bg-white.png"
 
-favicons = [
-    'favicon.ico',  # Sphinx will prepend `{html_static_path}/` to this value; i.e. `_static/favicon.ico`
-]
+# Reference: https://www.sphinx-doc.org/en/master/usage/configuration.html#confval-html_favicon
+html_favicon = "_static/images/favicon.ico"
 
 # -- Redirects ------------------------------------------
 

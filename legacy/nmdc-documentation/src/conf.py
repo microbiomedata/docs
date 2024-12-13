@@ -34,7 +34,7 @@ release = '0.1'
 extensions = [
    'myst_parser',
    'sphinx_markdown_tables',
-   'sphinx_reredirects'
+   'sphinx_reredirects',
 ]
 
 # source_suffix = '.rst'
@@ -67,6 +67,9 @@ html_css_files = [
     'css/custom.css',
 ]
 html_logo = "_static/images/nmdc-logo-bg-white.png"
+
+# Reference: https://www.sphinx-doc.org/en/master/usage/configuration.html#confval-html_favicon
+html_favicon = "_static/images/favicon.ico"
 
 # -- Redirects ------------------------------------------
 
