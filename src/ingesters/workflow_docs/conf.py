@@ -26,3 +26,19 @@ master_doc = 'index'
 # The theme for HTML output.
 # Docs: https://www.sphinx-doc.org/en/master/usage/configuration.html#confval-master_doc
 html_theme = 'sphinx_rtd_theme'
+
+# Register paths to directories containing static files.
+# Note: This path is relative to the directory containing the `conf.py` file.
+# Reference: https://www.sphinx-doc.org/en/master/usage/configuration.html#confval-html_static_path
+html_static_path = ['_static']
+
+# Register a custom favicon for the website.
+# Reference: https://www.sphinx-doc.org/en/master/usage/configuration.html#confval-html_favicon
+html_favicon = '_static/favicon.ico'
+
+# Register a custom JavaScript script for the website to load.
+# Note: These paths are relative to the `{html_static_path}` directory.
+# Reference: https://www.sphinx-doc.org/en/master/usage/configuration.html#confval-html_js_files
+html_js_files = [
+    'js/index.js'
+]

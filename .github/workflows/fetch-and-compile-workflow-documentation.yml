@@ -29,9 +29,11 @@ jobs:
         run: |
           chmod +x ./src/ingesters/workflow_docs/fetch_docs_sources.sh
           ./src/ingesters/workflow_docs/fetch_docs_sources.sh
-      - name: Introduce additional source documents and a configuration file
+      - name: Introduce additional source files, static files, and a configuration file
         run: |
           cp -r src/ingesters/workflow_docs/metagenome_workflow_overview/docs /tmp/book/src/chapters/1_Metagenome_Workflow_Overview
+          cp    src/ingesters/workflow_docs/_static/js/index.js               /tmp/book/src/_static/js/index.js
+          cp    src/ingesters/workflow_docs/_static/favicon.ico               /tmp/book/src/_static/favicon.ico          
           cp    src/ingesters/workflow_docs/overview.rst                      /tmp/book/src/chapters/overview.rst
           cp    src/ingesters/workflow_docs/index.rst                         /tmp/book/src/index.rst
           cp    src/ingesters/workflow_docs/conf.py                           /tmp/book/src/conf.py
