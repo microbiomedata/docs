@@ -77,3 +77,15 @@ redirects = {
     "reference/metadata/xylene": "https://w3id.org/nmdc/xylene",  # the latter redirects to: https://microbiomedata.github.io/nmdc-schema/xylene/
     "reference/metadata/*": "https://w3id.org/nmdc/nmdc",
 }
+
+# -- Sphinx Read The Docs Theme -------------------------
+#
+# Configure "Edit on GitHub" links.
+# Reference: https://docs.readthedocs.io/en/stable/guides/edit-source-links-sphinx.html#github
+html_context = {
+    "display_github": True,
+    "github_user": "microbiomedata",
+    "github_repo": "docs",
+    "github_version": "main",
+    "conf_py_path": "/legacy/nmdc-documentation/src/",  # path to directory containing `conf.py` file
+}
