@@ -32,6 +32,11 @@ html_theme = 'sphinx_rtd_theme'
 # Reference: https://www.sphinx-doc.org/en/master/usage/configuration.html#confval-html_static_path
 html_static_path = ['_static']
 
+# The path to the logo we want to use for the documentation website.
+# Note: This path is relative to the directory containing the `conf.py` file.
+# Reference: https://www.sphinx-doc.org/en/master/usage/configuration.html#confval-html_logo
+html_logo = "_static/images/nmdc-logo-bg-white.png"
+
 # Register a custom favicon for the website.
 # Reference: https://www.sphinx-doc.org/en/master/usage/configuration.html#confval-html_favicon
 html_favicon = '_static/favicon.ico'
