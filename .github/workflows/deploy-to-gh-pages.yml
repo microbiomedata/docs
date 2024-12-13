@@ -17,9 +17,9 @@ jobs:
   compile-legacy-nmdc-documentation:
     name: Compile legacy NMDC documentation
     uses: ./.github/workflows/compile-legacy-nmdc-documentation.yml
-  compile-current-nmdc-documentation:
-    name: Compile current NMDC documentation
-    uses: ./.github/workflows/compile-current-nmdc-documentation.yml
+  compile-home-docs:
+    name: Compile home documentation
+    uses: ./.github/workflows/compile-home-docs.yml
   fetch-and-compile-nmdc-runtime-documentation:
     name: Fetch and compile NMDC Runtime documentation
     uses: ./.github/workflows/fetch-and-compile-nmdc-runtime-documentation.yml
@@ -33,7 +33,7 @@ jobs:
     # Reference: https://docs.github.com/en/actions/writing-workflows/workflow-syntax-for-github-actions#jobsjob_idneeds
     needs:
       - compile-legacy-nmdc-documentation
-      - compile-current-nmdc-documentation
+      - compile-home-docs
       - fetch-and-compile-nmdc-runtime-documentation
       - fetch-and-compile-workflow-documentation
     runs-on: ubuntu-latest
@@ -56,7 +56,7 @@ jobs:
             _build/html/runtime \
             _build/html/workflows
           cp -R -T artifacts/legacy-nmdc-documentation-as-html  _build/html/legacy
-          cp -R -T artifacts/current-nmdc-documentation-as-html _build/html
+          cp -R -T artifacts/home-docs-as-html                  _build/html
           cp -R -T artifacts/nmdc-runtime-documentation-as-html _build/html/runtime
           cp -R -T artifacts/workflow-documentation-as-html     _build/html/workflows
       - name: Inject robots.txt file into assembled website file tree

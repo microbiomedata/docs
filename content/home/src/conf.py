@@ -103,5 +103,5 @@ html_context = {
     "github_user": "microbiomedata",
     "github_repo": "docs",
     "github_version": "main",
-    "conf_py_path": "/content/nmdc/src/",  # path to directory containing `conf.py` file
+    "conf_py_path": "/content/home/src/",  # path to directory containing `conf.py` file
 }

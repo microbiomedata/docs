@@ -9,15 +9,15 @@ services:
     volumes:
       - ./legacy/nmdc-documentation/src:/app/src
 
-  nmdc-documentation:
-    # Use the container image built from `content/nmdc/Dockerfile`.
+  home-docs:
+    # Use the container image built from `content/home/Dockerfile`.
     build:
-      context: content/nmdc
+      context: content/home
       dockerfile: Dockerfile
     ports:
       - "5002:8000"
     volumes:
-      - ./content/nmdc/src:/app/src
+      - ./content/home/src:/app/src
 
   runtime-documentation:
     # Use the container image built from `pullers/runtime_docs/Dockerfile`.
@@ -40,7 +40,7 @@ services:
     restart: unless-stopped
     depends_on:
       - legacy-nmdc-documentation
-      - nmdc-documentation
+      - home-docs
       - runtime-documentation
       - workflow-documentation
     ports:
