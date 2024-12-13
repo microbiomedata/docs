@@ -46,7 +46,7 @@ jobs:
           echo '{
             "INHERIT": "mkdocs.yml",
             "site_dir": "${{ github.workspace }}/_dist",
-            "site_url": "https://microbiomedata.github.io/docs/nmdc-runtime-documentation/"
+            "site_url": "https://microbiomedata.github.io/docs/runtime/"
           }' | mkdocs build -f -
         # Upload the result as an "artifact" so it can then be downloaded and used by another job.
       - name: Save the HTML for publishing later  # Docs: https://github.com/actions/upload-artifact

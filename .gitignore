@@ -1,2 +1,5 @@
 # JetBrains IDE files
 /.idea
+
+# Ignore all the `.venv` directories in the child directories of the current directory.
+/*/.venv

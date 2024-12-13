@@ -41,11 +41,8 @@ This repository contains the content that we compile into our
 
 This repository has the following sections:
 
-1. `./content`: Current, high-level content about NMDC
-   1. `nmdc`: Current content (under construction), initialized as a copy of the legacy content
-2. `./legacy`: Legacy content we include in the website to support legacy references/publications
-3. `./src`: Code we use to compile local and remote content into a website
-4. `./`: Repository-level configuration files and documentation
+> [!NOTE]
+> TODO
 
 ### Content
 
@@ -221,7 +218,7 @@ docker compose up --detach      workflow-documentation
 ```
 
 If you **only** make changes to the documentation source files that reside in _this_ repository
-(i.e. those in `src/ingesters/workflow_docs`), then you can issue this sequence of commands instead,
+(i.e. those in `pullers/workflow_docs`), then you can issue this sequence of commands instead,
 which will allow Docker to _avoid refetching_ the source files from the upstream repos:
 
 ```shell
