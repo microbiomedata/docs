@@ -46,16 +46,19 @@ jobs:
         uses: actions/download-artifact@v4  # Docs: https://github.com/actions/download-artifact
         with:
           path: artifacts
+      # Note: We use the `-T` option of the `cp` command so that the source directory name does not
+      #       get appended to the destination directory name. It's short for `--no-target-directory`.
+      #       Reference: https://www.gnu.org/software/coreutils/manual/html_node/Target-directory.html
       - name: Assemble website file tree
         run: |
           mkdir -p \
             _build/html/legacy \
             _build/html/runtime \
             _build/html/workflows
-          cp -R artifacts/legacy-nmdc-documentation-as-html  _build/html/legacy
-          cp -R artifacts/current-nmdc-documentation-as-html _build/html
-          cp -R artifacts/nmdc-runtime-documentation-as-html _build/html/runtime
-          cp -R artifacts/workflow-documentation-as-html     _build/html/workflows
+          cp -R -T artifacts/legacy-nmdc-documentation-as-html  _build/html/legacy
+          cp -R -T artifacts/current-nmdc-documentation-as-html _build/html
+          cp -R -T artifacts/nmdc-runtime-documentation-as-html _build/html/runtime
+          cp -R -T artifacts/workflow-documentation-as-html     _build/html/workflows
       - name: Inject robots.txt file into assembled website file tree
         run: |
           cp content/robots.txt _build/html/robots.txt
