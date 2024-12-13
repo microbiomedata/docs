@@ -69,7 +69,7 @@ html_css_files = [
 html_logo = "_static/images/nmdc-logo-bg-white.png"
 
 # Reference: https://www.sphinx-doc.org/en/master/usage/configuration.html#confval-html_favicon
-html_favicon = "_static/images/favicon.ico"
+html_favicon = "_static/favicon.ico"
 
 # Register a custom JavaScript script for the website to load.
 # Reference: https://www.sphinx-doc.org/en/master/usage/configuration.html#confval-html_js_files
