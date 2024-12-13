@@ -13,6 +13,7 @@
         divEl.style.textAlign = "center";
         divEl.style.zIndex = `${zIndexOfSphinxRTDSidebar + 1}`;
         divEl.style.position = "relative";
+        divEl.style.paddingBottom = "2px";
         divEl.innerHTML = innerHTML;
         document.body.insertBefore(divEl, document.body.firstChild);
 
@@ -29,4 +30,10 @@
     window.addEventListener("load", (event) => {
         displayBanner('<strong>This website is in early development.</strong> You can access our production documentation <a href="https://microbiomedata.org/documentation/" style="color: black;">here</a>.');
     });
+
+    displayBanner(`
+        <strong>This website is in early development.</strong>
+        You can access our production documentation
+        <a href="https://microbiomedata.org/documentation/" style="color: black; text-decoration: underline;">here</a>.
+    `);
 })();
