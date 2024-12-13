@@ -12,7 +12,7 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  # Use existing workflows to compile the legacy documentation.
+  # Use existing workflows to compile the legacy, current, Runtime, and workflow documentation.
   # Reference: https://docs.github.com/en/actions/using-workflows/reusing-workflows#calling-a-reusable-workflow
   compile-legacy-nmdc-documentation:
     name: Compile legacy NMDC documentation
@@ -48,15 +48,14 @@ jobs:
           path: artifacts
       - name: Assemble website file tree
         run: |
-          ls -R artifacts
-          mkdir -p _build/html _build/html/legacy _build/html/workflows
-          cp -R artifacts/legacy-nmdc-documentation-as-html _build/html/legacy/nmdc-documentation
-          cp -R artifacts/current-nmdc-documentation-as-html _build/html/nmdc
-          cp -R artifacts/nmdc-runtime-documentation-as-html _build/html/nmdc-runtime-documentation
-          cp -R artifacts/workflow-documentation-as-html _build/html/workflow-documentation
-          cp -R content/assets _build/html/assets
-          cp content/index.html _build/html/index.html
-          ls -R _build/html
+          mkdir -p \
+            _build/html/legacy \
+            _build/html/runtime \
+            _build/html/workflows
+          cp -R artifacts/legacy-nmdc-documentation-as-html  _build/html/legacy
+          cp -R artifacts/current-nmdc-documentation-as-html _build/html
+          cp -R artifacts/nmdc-runtime-documentation-as-html _build/html/runtime
+          cp -R artifacts/workflow-documentation-as-html     _build/html/workflows
       - name: Inject robots.txt file into assembled website file tree
         run: |
           cp content/robots.txt _build/html/robots.txt
