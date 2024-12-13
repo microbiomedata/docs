@@ -221,7 +221,7 @@ docker compose up --detach      workflow-documentation
 ```
 
 If you **only** make changes to the documentation source files that reside in _this_ repository
-(i.e. those in `src/workflow_docs`), then you can issue this sequence of commands instead,
+(i.e. those in `src/ingesters/workflow_docs`), then you can issue this sequence of commands instead,
 which will allow Docker to _avoid refetching_ the source files from the upstream repos:
 
 ```shell

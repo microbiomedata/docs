@@ -20,9 +20,9 @@ services:
       - ./content/nmdc:/app
 
   runtime-documentation:
-    # Use the container image built from `src/runtime_docs/Dockerfile`.
+    # Use the container image built from `src/ingesters/runtime_docs/Dockerfile`.
     build:
-      context: src/runtime_docs
+      context: src/ingesters/runtime_docs
       dockerfile: Dockerfile
     ports:
       - "5003:8000"
@@ -30,7 +30,7 @@ services:
   workflow-documentation:
     # Use the container image built from `src/workflow_docs/Dockerfile`.
     build:
-      context: src/workflow_docs
+      context: src/ingesters/workflow_docs
       dockerfile: Dockerfile
     ports:
       - "5004:8000"
