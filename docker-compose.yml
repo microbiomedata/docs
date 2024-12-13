@@ -7,7 +7,7 @@ services:
     ports:
       - "5001:8000"
     volumes:
-      - ./legacy/nmdc-documentation:/app
+      - ./legacy/nmdc-documentation/src:/app/src
 
   nmdc-documentation:
     # Use the container image built from `content/nmdc/Dockerfile`.
@@ -17,7 +17,7 @@ services:
     ports:
       - "5002:8000"
     volumes:
-      - ./content/nmdc:/app
+      - ./content/nmdc/src:/app/src
 
   runtime-documentation:
     # Use the container image built from `src/ingesters/runtime_docs/Dockerfile`.
