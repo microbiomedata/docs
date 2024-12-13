@@ -1,6 +1,6 @@
 # This GitHub Actions workflow compiles the Sphinx documentation into web-based documentation.
 # Reference: https://docs.github.com/en/actions/writing-workflows/workflow-syntax-for-github-actions
-name: Compile legacy NMDC documentation into HTML
+name: Compile legacy home documentation into HTML
 
 on:
   push: { branches: [ main ] }
@@ -17,7 +17,7 @@ jobs:
       run:
         # Set a default working directory for all `run` steps in this job.
         # Reference: https://docs.github.com/en/actions/writing-workflows/workflow-syntax-for-github-actions#jobsjob_iddefaultsrun
-        working-directory: legacy/nmdc-documentation
+        working-directory: content/legacy_home
     permissions:
       contents: read
     steps:
@@ -31,14 +31,14 @@ jobs:
       - name: Install other dependencies
         run: pip install -r requirements.txt
       - name: Compile source documents into HTML
-        run: sphinx-build -b html src ${{ github.workspace }}/legacy/nmdc-documentation/_build/html
+        run: sphinx-build -b html src ${{ github.workspace }}/content/legacy_home/_build/html
         # Upload the result as an "artifact" so it can then be downloaded and used by another job.
       - name: Save the HTML for publishing later  # Docs: https://github.com/actions/upload-artifact
         uses: actions/upload-artifact@v4
         with:
-          name: legacy-nmdc-documentation-as-html
+          name: legacy-home-docs-as-html
           # Note: Relative `path` values here are relative to the _workspace_, not to the current working directory.
           #       Reference: https://github.com/actions/upload-artifact/pull/477#issue-2044900649
-          path: legacy/nmdc-documentation/_build/html
+          path: content/legacy_home/_build/html
           if-no-files-found: error
           retention-days: 1  # Note: 1 day is the shortest period possible

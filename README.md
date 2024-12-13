@@ -44,11 +44,11 @@ This repository has the following sections:
 
 ### Content
 
-The `./content/nmdc` directory contains our current documentation that is not pulled from an external repository.
-This directory began as a 1-to-1 copy of the `./legacy/nmdc-documentation` directory. The latter is, itself, mostly a
+The `./content/home` directory contains our current documentation that is not pulled from an external repository.
+This directory began as a 1-to-1 copy of the `./content/legacy_home` directory. The latter is, itself, mostly a
 copy of the `NMDC_documentation` repository (more details about this are in the "Legacy content" section below).
 
-Unlike the contents of the `./legacy/nmdc-documentation` directory, the contents of the `./content/nmdc` directory will
+Unlike the contents of the `./content/legacy_home` directory, the contents of the `./content/home` directory will
 continue to change over time; i.e. NMDC team members will update and add documentation to this directory.
 
 #### Maintenance
@@ -66,7 +66,7 @@ Here's how you can make (technically, "propose") changes to this documentation:
 ##### Basic workflow (to edit 1 file)
 
 1. Create a GitHub Issue describing what you want to change (e.g. "Fix Foo in Bar")
-2. On GitHub, go to the file within `./content/nmdc/src` that you want to edit
+2. On GitHub, go to the file within `./content/home/src` that you want to edit
 3. Click the "Edit this file" button (i.e. the pencil icon button) at the upper right
 4. Edit the file
 5. Click the "Commit changes..." button at the upper right
@@ -87,7 +87,7 @@ the documentation website will automatically be updated to reflect the changes.
 4. Click "Create a new branch..." at the top
 5. Enter a name for the branch, beginning with an issue number (e.g. `123-fix-foo-in-bar`)
 6. (If prompted) Click "Switch to Branch"
-7. Make changes in `./content/nmdc/src`
+7. Make changes in `./content/home/src`
 8. Click the "Source Control" icon in the left sidebar (3rd from the top)
 9. Hover over the "Changes" heading and click the `+` icon that appears
 10. Enter a commit message to tell others what you did (e.g. "`Fix typo in link`")
@@ -99,7 +99,7 @@ the documentation website will automatically be updated to reflect the changes.
 
 ### Legacy content
 
-See [legacy/README.md](./legacy/README.md).
+See [content/legacy_home/README.md](./content/legacy_home/README.md).
 
 ### Code
 
@@ -130,9 +130,9 @@ docker compose up --detach
 
 That will start up several Docker containers, which you can access via the URLs below:
 
-- http://localhost:5000 - the home page of the website
-- http://localhost:5001 - the legacy documentation portion of the website
-- http://localhost:5002 - the current documentation portion of the website
+- http://localhost:5000 - the main entrypoint of the website
+- http://localhost:5001 - the legacy home documentation portion of the website
+- http://localhost:5002 - the home documentation portion of the website
 - http://localhost:5003 - the Runtime documentation portion of the website
 - http://localhost:5004 - the workflow documentation portion of the website
 
@@ -145,13 +145,13 @@ to see the updated version of the home page.
 
 #### Legacy documentation
 
-Whenever you update files in the `legacy/nmdc-documentation/src` directory,
+Whenever you update files in the `content/legacy_home/src` directory,
 the legacy documentation portion of the website will be automatically rebuilt.
 Refresh your web browser to see that newly-rebuilt portion of the website.
 
 #### Current documentation
 
-Similarly, whenever you update files in the `content/nmdc/src` directory,
+Similarly, whenever you update files in the `content/home/src` directory,
 the current documentation portion of the website will be automatically rebuilt.
 Refresh your web browser to see that newly-rebuilt portion of the website.
 
