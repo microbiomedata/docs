@@ -74,6 +74,7 @@ html_logo = "_static/images/nmdc-logo-bg-white.png"
 # that is automatically kept in sync with the schema.
 # Reference: https://pypi.org/project/sphinx-reredirects/
 redirects = {
+    "workflows.html": "/workflows/",
     "reference/metadata/xylene": "https://w3id.org/nmdc/xylene",  # the latter redirects to: https://microbiomedata.github.io/nmdc-schema/xylene/
     "reference/metadata/*": "https://w3id.org/nmdc/nmdc",
 }

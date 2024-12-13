@@ -32,7 +32,7 @@ NMDC Documentation
    :caption: Reference:
 
    NMDC Schema <https://w3id.org/nmdc/about>
-   NMDC Workflows <https://nmdc-workflow-documentation.readthedocs.io/en/latest/chapters/overview.html>
+   NMDC Workflows <workflows.rst>
    NMDC Data Portal <./reference/data_portal.md>
 
 .. toctree::
