@@ -34,7 +34,7 @@ release = '0.1'
 extensions = [
    'myst_parser',
    'sphinx_markdown_tables',
-   'sphinx_reredirects'
+   'sphinx_reredirects',
 ]
 
 # source_suffix = '.rst'
@@ -68,6 +68,16 @@ html_css_files = [
 ]
 html_logo = "_static/images/nmdc-logo-bg-white.png"
 
+# Register a custom favicon for the website.
+# Reference: https://www.sphinx-doc.org/en/master/usage/configuration.html#confval-html_favicon
+html_favicon = "_static/images/favicon.ico"
+
+# Register a custom JavaScript script for the website to load.
+# Reference: https://www.sphinx-doc.org/en/master/usage/configuration.html#confval-html_js_files
+html_js_files = [
+    "js/index.js"
+]
+
 # -- Redirects ------------------------------------------
 
 # Redirect old schema documentation URLs to the schema documentation
@@ -77,4 +87,16 @@ redirects = {
     "workflows.html": "/workflows/",
     "reference/metadata/xylene": "https://w3id.org/nmdc/xylene",  # the latter redirects to: https://microbiomedata.github.io/nmdc-schema/xylene/
     "reference/metadata/*": "https://w3id.org/nmdc/nmdc",
+}
+
+# -- Sphinx Read The Docs Theme -------------------------
+#
+# Configure "Edit on GitHub" links.
+# Reference: https://docs.readthedocs.io/en/stable/guides/edit-source-links-sphinx.html#github
+html_context = {
+    "display_github": True,
+    "github_user": "microbiomedata",
+    "github_repo": "docs",
+    "github_version": "main",
+    "conf_py_path": "/content/nmdc/src/",  # path to directory containing `conf.py` file
 }
