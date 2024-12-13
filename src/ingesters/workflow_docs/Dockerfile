@@ -32,8 +32,7 @@ RUN /tmp/fetch_docs_sources.sh
 # Introduce additional source documents and a configuration file.
 # Note: The above shell script will have created `/tmp/book/src/chapters/`.
 COPY metagenome_workflow_overview/docs /tmp/book/src/chapters/1_Metagenome_Workflow_Overview
-COPY _static/js/index.js               /tmp/book/src/_static/js/index.js
-COPY _static/favicon.ico               /tmp/book/src/_static/favicon.ico
+COPY _static                           /tmp/book/src/_static
 COPY overview.rst                      /tmp/book/src/chapters/overview.rst
 COPY index.rst                         /tmp/book/src/index.rst
 COPY conf.py                           /tmp/book/src/conf.py
