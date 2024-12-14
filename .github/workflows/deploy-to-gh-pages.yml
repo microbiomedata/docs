@@ -22,10 +22,10 @@ jobs:
     uses: ./.github/workflows/compile-home-docs.yml
   fetch-and-compile-runtime-docs:
     name: Fetch and compile Runtime docs
-    uses: fetch-and-compile-runtime-docs.yml
+    uses: ./.github/workflows/fetch-and-compile-runtime-docs.yml
   fetch-and-compile-workflow-docs:
     name: Fetch and compile workflow docs
-    uses: fetch-and-compile-workflow-docs.yml
+    uses: ./.github/workflows/fetch-and-compile-workflow-docs.yml
 
   build:
     name: Compile main website

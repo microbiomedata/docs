@@ -1,4 +1,4 @@
-name: Fetch and compile workflow documentation
+name: Fetch and compile workflow docs
 
 on:
   push: { branches: [ main ] }
