@@ -26,9 +26,8 @@ git clone --no-checkout --depth=1 --single-branch --branch=master --filter=tree:
 # Arrange the "docs" directories into chapters.
 mkdir -p /tmp/book/src/chapters
 #
-# TODO: Include Chapter 1, the end-to-end MetaG chapter.
-#       Its source files will reside in this `docs` Git repository.
-#       Its chapter slug will be `1_Metagenome_Workflow_Overview`.
+# Note: The source files for Chapter 1 (the end-to-end MetaG chapter) reside in this `docs` Git repository.
+#       They get incorporated into the file tree by something other than this shell script.
 #
 mv /tmp/clones/ReadbasedAnalysis/docs /tmp/book/src/chapters/2_Read_Based_Taxonomy
 mv /tmp/clones/ReadsQC/docs           /tmp/book/src/chapters/3_Metagenome_Reads_QC
