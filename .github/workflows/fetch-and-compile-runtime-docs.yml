@@ -1,4 +1,4 @@
-name: Fetch and compile NMDC Runtime documentation
+name: Fetch and compile Runtime docs
 
 on:
   push: { branches: [ main ] }
@@ -46,13 +46,13 @@ jobs:
           echo '{
             "INHERIT": "mkdocs.yml",
             "site_dir": "${{ github.workspace }}/_dist",
-            "site_url": "https://microbiomedata.github.io/docs/runtime/"
+            "site_url": "https://docs.microbiomedata.org/runtime/"
           }' | mkdocs build -f -
         # Upload the result as an "artifact" so it can then be downloaded and used by another job.
       - name: Save the HTML for publishing later  # Docs: https://github.com/actions/upload-artifact
         uses: actions/upload-artifact@v4
         with:
-          name: nmdc-runtime-documentation-as-html
+          name: runtime-docs-as-html
           # Note: Relative `path` values here are relative to the _workspace_, not to the current working directory.
           #       Reference: https://github.com/actions/upload-artifact/pull/477#issue-2044900649
           path: _dist

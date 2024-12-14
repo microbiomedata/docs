@@ -19,7 +19,7 @@ services:
     volumes:
       - ./content/home/src:/app/src
 
-  runtime-documentation:
+  runtime-docs:
     # Use the container image built from `pullers/runtime_docs/Dockerfile`.
     build:
       context: pullers/runtime_docs
@@ -41,7 +41,7 @@ services:
     depends_on:
       - legacy-home-docs
       - home-docs
-      - runtime-documentation
+      - runtime-docs
       - workflow-documentation
     ports:
       - "5000:80"

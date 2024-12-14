@@ -159,13 +159,13 @@ Refresh your web browser to see that newly-rebuilt portion of the website.
 
 Nothing will automatically happen in the development environment when someone
 updates files in the **upstream** Runtime repository. To adopt those changes
-in the development environment, rebuild the `runtime-documentation` container
+in the development environment, rebuild the `runtime-docs` container
 by issuing the following sequence of commands:
 
 ```shell
-docker compose down             runtime-documentation
-docker compose build --no-cache runtime-documentation
-docker compose up --detach      runtime-documentation
+docker compose down             runtime-docs
+docker compose build --no-cache runtime-docs
+docker compose up --detach      runtime-docs
 ```
 
 #### Workflow documentation
