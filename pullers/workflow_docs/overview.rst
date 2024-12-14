@@ -1,3 +1,10 @@
+:github_url: https://github.com/microbiomedata/docs/blob/main/pullers/workflow_docs/overview.rst
+
+..
+   Note: The above `github_url` field is used to force the target of the "Edit on GitHub" link
+         to be the specified URL. You can learn more about the field at:
+         https://sphinx-rtd-theme.readthedocs.io/en/stable/configuring.html#confval-github_url
+
 NMDC Workflows
 ==============
 
