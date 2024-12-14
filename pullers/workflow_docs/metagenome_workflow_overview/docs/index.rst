@@ -1,4 +1,11 @@
-Metagenomic Workflow 
+:github_url: https://github.com/microbiomedata/docs/blob/main/pullers/workflow_docs/metagenome_workflow_overview/docs/index.rst
+
+..
+    Note: The above `github_url` field is used to force the target of the "Edit on GitHub" link
+          to be the specified URL. You can learn more about the field at:
+          https://sphinx-rtd-theme.readthedocs.io/en/stable/configuring.html#confval-github_url
+
+Metagenomic Workflow
 ================================================
 
 .. image:: ./metag_workflow2024.svg
