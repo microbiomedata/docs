@@ -13,6 +13,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
         # Docs: https://github.com/actions/checkout
+      - name: Check out commit
+        uses: actions/checkout@v4
       - name: Check out commit from `nmdc-runtime/main`
         uses: actions/checkout@v4
         with:
@@ -37,6 +39,9 @@ jobs:
             mkdocs-mermaid2-plugin \
             mkdocs-jupyter \
             pymdown-extensions
+        # Note: The `mkdocs.yml` file we pull from the `nmdc-runtime` repo sets the overrides directory to `mkdocs_overrides`.
+      - name: Copy files that override parts of theme
+        run: cp pullers/runtime_docs/mkdocs_overrides/main.html _clones/microbiomedata/nmdc-runtime/mkdocs_overrides/main.html
         # Docs: https://www.mkdocs.org/user-guide/cli/
         # Docs: https://www.mkdocs.org/user-guide/configuration/#configuration-inheritance
         # TODO: Make the `site_url` configurable (e.g. via an environment variable).

@@ -30,6 +30,10 @@ RUN git clone --no-checkout --depth=1 --single-branch --branch=main --filter=tre
     git sparse-checkout set --no-cone /docs /mkdocs_overrides /mkdocs.yml && \
     git checkout
 
+# Copy files we can use to override parts of the Material for MkDocs theme.
+# Note: The `mkdocs.yml` file we pull from the `nmdc-runtime` repo sets the overrides directory to `mkdocs_overrides`.
+COPY mkdocs_overrides/main.html nmdc-runtime/mkdocs_overrides/main.html
+
 # Compile source documents into HTML.
 RUN cd nmdc-runtime && \
     echo '{\
