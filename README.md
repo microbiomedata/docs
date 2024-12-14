@@ -27,11 +27,10 @@ This repository contains the content that we compile into our
   * [Development](#development)
     * [Spin up the development environment](#spin-up-the-development-environment)
     * [Watch for changes](#watch-for-changes)
-      * [Home page](#home-page)
-      * [Legacy documentation](#legacy-documentation)
-      * [Current documentation](#current-documentation)
-      * [Runtime documentation](#runtime-documentation)
-      * [Workflow documentation](#workflow-documentation)
+      * [Legacy home docs](#legacy-home-docs)
+      * [Home docs](#home-docs)
+      * [Runtime docs](#runtime-docs)
+      * [Workflow docs](#workflow-docs)
 * [TODO](#todo)
 <!-- TOC -->
 
@@ -130,32 +129,27 @@ docker compose up --detach
 
 That will start up several Docker containers, which you can access via the URLs below:
 
-- http://localhost:5000 - the main entrypoint of the website
-- http://localhost:5001 - the legacy home documentation portion of the website
-- http://localhost:5002 - the home documentation portion of the website
-- http://localhost:5003 - the Runtime documentation portion of the website
-- http://localhost:5004 - the workflow documentation portion of the website
+- http://localhost:5000 - the entire website
+- http://localhost:5001 - only the legacy home docs portion of the website
+- http://localhost:5002 - only the home docs portion of the website
+- http://localhost:5003 - only the Runtime docs portion of the website
+- http://localhost:5004 - only the workflow docs portion of the website
 
 ### Watch for changes
 
-#### Home page
-
-Whenever you update the `content/index.html` file, you can refresh your web browser
-to see the updated version of the home page.
-
-#### Legacy documentation
+#### Legacy home docs
 
 Whenever you update files in the `content/legacy_home/src` directory,
-the legacy documentation portion of the website will be automatically rebuilt.
+the legacy home docs portion of the website will be automatically rebuilt.
 Refresh your web browser to see that newly-rebuilt portion of the website.
 
-#### Current documentation
+#### Home docs
 
-Similarly, whenever you update files in the `content/home/src` directory,
-the current documentation portion of the website will be automatically rebuilt.
+Whenever you update files in the `content/home/src` directory,
+the home docs portion of the website will be automatically rebuilt.
 Refresh your web browser to see that newly-rebuilt portion of the website.
 
-#### Runtime documentation
+#### Runtime docs
 
 Nothing will automatically happen in the development environment when someone
 updates files in the **upstream** Runtime repository. To adopt those changes
@@ -168,17 +162,17 @@ docker compose build --no-cache runtime-docs
 docker compose up --detach      runtime-docs
 ```
 
-#### Workflow documentation
+#### Workflow docs
 
 Nothing will automatically happen in the development environment when someone
 updates files in the **upstream** workflow repositories. To adopt those changes
-in the development environment, rebuild the `workflow-documentation` container
+in the development environment, rebuild the `workflow-docs` container
 by issuing the following sequence of commands:
 
 ```shell
-docker compose down             workflow-documentation
-docker compose build --no-cache workflow-documentation
-docker compose up --detach      workflow-documentation
+docker compose down             workflow-docs
+docker compose build --no-cache workflow-docs
+docker compose up --detach      workflow-docs
 ```
 
 If you **only** make changes to the documentation source files that reside in _this_ repository
@@ -186,9 +180,9 @@ If you **only** make changes to the documentation source files that reside in _t
 which will allow Docker to _avoid refetching_ the source files from the upstream repos:
 
 ```shell
-docker compose down             workflow-documentation
-docker compose build            workflow-documentation
-docker compose up --detach      workflow-documentation
+docker compose down             workflow-docs
+docker compose build            workflow-docs
+docker compose up --detach      workflow-docs
 ```
 
 # TODO

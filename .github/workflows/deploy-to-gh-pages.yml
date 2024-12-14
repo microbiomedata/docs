@@ -23,9 +23,9 @@ jobs:
   fetch-and-compile-runtime-docs:
     name: Fetch and compile Runtime docs
     uses: fetch-and-compile-runtime-docs.yml
-  fetch-and-compile-workflow-documentation:
-    name: Fetch and compile workflow documentation
-    uses: ./.github/workflows/fetch-and-compile-workflow-documentation.yml
+  fetch-and-compile-workflow-docs:
+    name: Fetch and compile workflow docs
+    uses: fetch-and-compile-workflow-docs.yml
 
   build:
     name: Compile main website
@@ -35,7 +35,7 @@ jobs:
       - compile-legacy-home-docs
       - compile-home-docs
       - fetch-and-compile-runtime-docs
-      - fetch-and-compile-workflow-documentation
+      - fetch-and-compile-workflow-docs
     runs-on: ubuntu-latest
     permissions:
       contents: read
@@ -55,10 +55,10 @@ jobs:
             _build/html/legacy \
             _build/html/runtime \
             _build/html/workflows
-          cp -R -T artifacts/legacy-home-docs-as-html           _build/html/legacy
-          cp -R -T artifacts/home-docs-as-html                  _build/html
-          cp -R -T artifacts/runtime-docs-as-html               _build/html/runtime
-          cp -R -T artifacts/workflow-documentation-as-html     _build/html/workflows
+          cp -R -T artifacts/legacy-home-docs-as-html _build/html/legacy
+          cp -R -T artifacts/home-docs-as-html        _build/html
+          cp -R -T artifacts/runtime-docs-as-html     _build/html/runtime
+          cp -R -T artifacts/workflow-docs-as-html    _build/html/workflows
       - name: Inject robots.txt file into assembled website file tree
         run: |
           cp content/robots.txt _build/html/robots.txt

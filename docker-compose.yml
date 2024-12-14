@@ -27,8 +27,8 @@ services:
     ports:
       - "5003:8000"
 
-  workflow-documentation:
-    # Use the container image built from `pullers/Dockerfile`.
+  workflow-docs:
+    # Use the container image built from `pullers/workflow_docs/Dockerfile`.
     build:
       context: pullers/workflow_docs
       dockerfile: Dockerfile
@@ -42,7 +42,7 @@ services:
       - legacy-home-docs
       - home-docs
       - runtime-docs
-      - workflow-documentation
+      - workflow-docs
     ports:
       - "5000:80"
     volumes:
