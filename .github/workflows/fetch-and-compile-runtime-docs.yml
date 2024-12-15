@@ -42,7 +42,7 @@ jobs:
         # Note: The `mkdocs.yml` file we pull from the `nmdc-runtime` repo sets the overrides directory to `mkdocs_overrides`.
       - name: Copy files that override or customize parts of theme
         run: |
-          mkdir -p _clones/microbiomedata/nmdc-runtime/assets/images/
+          mkdir -p _clones/microbiomedata/nmdc-runtime/docs/assets/images/
           cp pullers/runtime_docs/mkdocs_overrides/main.html _clones/microbiomedata/nmdc-runtime/mkdocs_overrides/main.html
           cp pullers/runtime_docs/assets/images/favicon.ico  _clones/microbiomedata/nmdc-runtime/docs/assets/images/favicon.ico
       - name: Compile source documents into HTML
