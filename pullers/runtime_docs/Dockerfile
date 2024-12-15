@@ -33,13 +33,21 @@ RUN git clone --no-checkout --depth=1 --single-branch --branch=main --filter=tre
 # Copy files we can use to override parts of the Material for MkDocs theme.
 # Note: The `mkdocs.yml` file we pull from the `nmdc-runtime` repo sets the overrides directory to `mkdocs_overrides`.
 COPY mkdocs_overrides/main.html nmdc-runtime/mkdocs_overrides/main.html
+COPY assets/images/favicon.ico  nmdc-runtime/docs/assets/images/favicon.ico
 
 # Compile source documents into HTML.
+#
+# References:
+# - https://www.mkdocs.org/user-guide/cli/
+# - https://www.mkdocs.org/user-guide/configuration/#configuration-inheritance
+# - https://squidfunk.github.io/mkdocs-material/setup/changing-the-logo-and-icons/#favicon
+#
 RUN cd nmdc-runtime && \
     echo '{\
         "INHERIT": "mkdocs.yml",\
         "site_dir": "/html",\
-        "site_url": "http://localhost:8000/"\
+        "site_url": "http://localhost:8000/",\
+        "theme": {"favicon": "assets/images/favicon.ico"}\
     }' | mkdocs build -f -
 
 EXPOSE 8000
