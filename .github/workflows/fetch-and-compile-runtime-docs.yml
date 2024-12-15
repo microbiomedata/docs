@@ -40,18 +40,26 @@ jobs:
             mkdocs-jupyter \
             pymdown-extensions
         # Note: The `mkdocs.yml` file we pull from the `nmdc-runtime` repo sets the overrides directory to `mkdocs_overrides`.
-      - name: Copy files that override parts of theme
-        run: cp pullers/runtime_docs/mkdocs_overrides/main.html _clones/microbiomedata/nmdc-runtime/mkdocs_overrides/main.html
-        # Docs: https://www.mkdocs.org/user-guide/cli/
-        # Docs: https://www.mkdocs.org/user-guide/configuration/#configuration-inheritance
-        # TODO: Make the `site_url` configurable (e.g. via an environment variable).
+      - name: Copy files that override or customize parts of theme
+        run: |
+          cp pullers/runtime_docs/mkdocs_overrides/main.html _clones/microbiomedata/nmdc-runtime/mkdocs_overrides/main.html
+          cp pullers/runtime_docs/assets/images/favicon.ico  _clones/microbiomedata/nmdc-runtime/assets/images/favicon.ico
       - name: Compile source documents into HTML
+        #
+        # References:
+        # - https://www.mkdocs.org/user-guide/cli/
+        # - https://www.mkdocs.org/user-guide/configuration/#configuration-inheritance
+        # - https://squidfunk.github.io/mkdocs-material/setup/changing-the-logo-and-icons/#favicon
+        #
+        # TODO: Make the `site_url` configurable (e.g. via an environment variable).
+        #
         working-directory: _clones/microbiomedata/nmdc-runtime
         run: |
           echo '{
             "INHERIT": "mkdocs.yml",
             "site_dir": "${{ github.workspace }}/_dist",
-            "site_url": "https://docs.microbiomedata.org/runtime/"
+            "site_url": "https://docs.microbiomedata.org/runtime/",
+            "theme": {"favicon": "assets/images/favicon.ico"}
           }' | mkdocs build -f -
         # Upload the result as an "artifact" so it can then be downloaded and used by another job.
       - name: Save the HTML for publishing later  # Docs: https://github.com/actions/upload-artifact
