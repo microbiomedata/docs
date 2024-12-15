@@ -44,7 +44,7 @@ jobs:
         run: |
           mkdir -p _clones/microbiomedata/nmdc-runtime/assets/images/
           cp pullers/runtime_docs/mkdocs_overrides/main.html _clones/microbiomedata/nmdc-runtime/mkdocs_overrides/main.html
-          cp pullers/runtime_docs/assets/images/favicon.ico  _clones/microbiomedata/nmdc-runtime/assets/images/favicon.ico
+          cp pullers/runtime_docs/assets/images/favicon.ico  _clones/microbiomedata/nmdc-runtime/docs/assets/images/favicon.ico
       - name: Compile source documents into HTML
         #
         # References:
