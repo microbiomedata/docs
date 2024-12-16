@@ -32,9 +32,10 @@ release = '0.1'
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
-   'myst_parser',
-   'sphinx_markdown_tables',
-   'sphinx_reredirects',
+    'myst_parser',
+    'sphinx_markdown_tables',
+    'sphinx_reredirects',
+    'notfound.extension',
 ]
 
 # source_suffix = '.rst'
@@ -95,6 +96,16 @@ redirects = {
     "workflows.html": "/workflows/",
     "reference/metadata/xylene": "https://w3id.org/nmdc/xylene",  # the latter redirects to: https://microbiomedata.github.io/nmdc-schema/xylene/
     "reference/metadata/*": "https://w3id.org/nmdc/nmdc",
+}
+
+# -- Sphinx Not Found Page extension --------------------
+#
+# Reference: https://sphinx-notfound-page.readthedocs.io/en/latest/configuration.html
+#
+notfound_urls_prefix = None
+notfound_context = {
+    "title": "Page Not Found",
+    "body": "<h1>Page Not Found</h1>\n\nWe failed to find a page at that address.",
 }
 
 # -- Sphinx Read The Docs Theme -------------------------
