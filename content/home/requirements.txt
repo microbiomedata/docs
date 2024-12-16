@@ -2,6 +2,10 @@ myst-parser
 sphinx_markdown_tables
 sphinx_rtd_theme
 
-# Sphinx plugin that handles redirects.
+# Sphinx extension that handles redirects.
 # Reference: https://pypi.org/project/sphinx-reredirects/
 sphinx-reredirects
+
+# Sphinx extension that creates a `404.html` page in which static assets are properly referenced.
+# Reference: https://sphinx-notfound-page.readthedocs.io
+sphinx-notfound-page==1.0.4
