@@ -41,10 +41,12 @@ COPY assets/images/favicon.ico  nmdc-runtime/docs/assets/images/favicon.ico
 # - https://www.mkdocs.org/user-guide/cli/
 # - https://www.mkdocs.org/user-guide/configuration/#configuration-inheritance
 # - https://squidfunk.github.io/mkdocs-material/setup/changing-the-logo-and-icons/#favicon
+# - https://squidfunk.github.io/mkdocs-material/setup/setting-up-the-footer/?h=copyright#copyright-notice
 #
 RUN cd nmdc-runtime && \
     echo '{\
         "INHERIT": "mkdocs.yml",\
+        "copyright": "&copy; Copyright 2024, National Microbiome Data Collaborative",\
         "site_dir": "/html",\
         "site_url": "http://localhost:8000/",\
         "theme": {"favicon": "assets/images/favicon.ico"}\

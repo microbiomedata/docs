@@ -51,6 +51,7 @@ jobs:
         # - https://www.mkdocs.org/user-guide/cli/
         # - https://www.mkdocs.org/user-guide/configuration/#configuration-inheritance
         # - https://squidfunk.github.io/mkdocs-material/setup/changing-the-logo-and-icons/#favicon
+        # - https://squidfunk.github.io/mkdocs-material/setup/setting-up-the-footer/?h=copyright#copyright-notice
         #
         # TODO: Make the `site_url` configurable (e.g. via an environment variable).
         #
@@ -58,6 +59,7 @@ jobs:
         run: |
           echo '{
             "INHERIT": "mkdocs.yml",
+            "copyright": "&copy; Copyright 2024, National Microbiome Data Collaborative",
             "site_dir": "${{ github.workspace }}/_dist",
             "site_url": "https://docs.microbiomedata.org/runtime/",
             "theme": {"favicon": "assets/images/favicon.ico"}

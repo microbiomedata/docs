@@ -19,8 +19,8 @@
 # -- Project information -----------------------------------------------------
 
 project = 'NMDC Documentation'
-copyright = '2024, The NMDC Team'
-author = 'The NMDC Team'
+copyright = '2024, National Microbiome Data Collaborative'
+author = 'National Microbiome Data Collaborative'
 
 # The full version, including alpha/beta/rc tags
 release = '0.1'
