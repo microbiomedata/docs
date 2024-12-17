@@ -42,4 +42,3 @@ NMDC Documentation
 
    FAIR Data <./explanation/fair_data.md>
    Community Conversations <./explanation/community_conversations.md>
-   Publications <./explanation/publications.md>
