@@ -20,14 +20,12 @@ This repository contains the content that we compile into our
       * [Maintenance](#maintenance)
         * [Basic workflow (to edit 1 file)](#basic-workflow-to-edit-1-file)
         * [Intermediate workflow (to edit 1+ files)](#intermediate-workflow-to-edit-1-files)
-    * [Legacy content](#legacy-content)
     * [Code](#code)
     * [Repository-level configuration files and documentation](#repository-level-configuration-files-and-documentation)
       * [GitHub Actions](#github-actions)
   * [Development](#development)
     * [Spin up the development environment](#spin-up-the-development-environment)
     * [Watch for changes](#watch-for-changes)
-      * [Legacy home docs](#legacy-home-docs)
       * [Home docs](#home-docs)
       * [Runtime docs](#runtime-docs)
       * [Workflow docs](#workflow-docs)
@@ -43,12 +41,9 @@ This repository has the following sections:
 
 ### Content
 
-The `./content/home` directory contains our current documentation that is not pulled from an external repository.
-This directory began as a 1-to-1 copy of the `./content/legacy_home` directory. The latter is, itself, mostly a
-copy of the `NMDC_documentation` repository (more details about this are in the "Legacy content" section below).
-
-Unlike the contents of the `./content/legacy_home` directory, the contents of the `./content/home` directory will
-continue to change over time; i.e. NMDC team members will update and add documentation to this directory.
+The `./content/home` directory contains the portion of our documentation that is not pulled from an external repository.
+This directory began as an almost 1-to-1 copy of the `NMDC_documentation` repository. More details about what was and
+wasn't copied is available [here](./content/home/README.md).
 
 #### Maintenance
 
@@ -96,10 +91,6 @@ the documentation website will automatically be updated to reflect the changes.
 You will end up with a Pull Request (PR) containing the changes. Once the PR gets merged into `main`,
 the documentation website will automatically be updated to reflect the changes.
 
-### Legacy content
-
-See [content/legacy_home/README.md](./content/legacy_home/README.md).
-
 ### Code
 
 > [!NOTE]  
@@ -130,18 +121,11 @@ docker compose up --detach
 That will start up several Docker containers, which you can access via the URLs below:
 
 - http://localhost:5000 - the entire website
-- http://localhost:5001 - only the legacy home docs portion of the website
 - http://localhost:5002 - only the home docs portion of the website
 - http://localhost:5003 - only the Runtime docs portion of the website
 - http://localhost:5004 - only the workflow docs portion of the website
 
 ### Watch for changes
-
-#### Legacy home docs
-
-Whenever you update files in the `content/legacy_home/src` directory,
-the legacy home docs portion of the website will be automatically rebuilt.
-Refresh your web browser to see that newly-rebuilt portion of the website.
 
 #### Home docs
 
@@ -188,4 +172,4 @@ docker compose up --detach      workflow-docs
 # TODO
 
 - [ ] Populate the "TODO" sections above
-- [ ] Update legacy `requirements.txt` files to indicate specific versions
+- [ ] Add package version constraints to `content/home/requirements.txt`

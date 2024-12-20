@@ -1,5 +1,5 @@
 # This `robots.txt` file is designed to tell web crawlers that we do not want them to crawl any pages on this website.
 # Reference: https://developers.google.com/search/docs/crawling-indexing/robots/robots_txt
-# TODO: Loosen or remove this rule once we are ready to launch the website.
+# TODO: Loosen or remove this rule once we are ready to launch the website or run a respectful link checker against it.
 User-agent: *
 Disallow: /
