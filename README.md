@@ -173,3 +173,4 @@ docker compose up --detach      workflow-docs
 
 - [ ] Populate the "TODO" sections above
 - [ ] Add package version constraints to `content/home/requirements.txt`
+- [ ] Document Google Analytics usage
