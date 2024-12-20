@@ -15,17 +15,17 @@
 >
 >&nbsp;&nbsp;&nbsp;&nbsp;Question 1: How many metagenomes have been collected near Corvallis?
 >
->Task 3: Using the Study box (which shows the number of microbiome studies related to the metagenomes identified in Task 2), click the arrow on the right side of this box to go to the Study Page for this study.
+>Task 3: Using the Study box (which shows the number of microbiome studies related to the metagenomes identified in Task 2), click the arrow on the right side of this box to go to the Study Page for Bio-Scales.
 >
->&nbsp;&nbsp;&nbsp;&nbsp;Question 1:  What is the DOI for this study? (Note: This is also the DOI for the Dataset Citation.)
+>&nbsp;&nbsp;&nbsp;&nbsp;Question 1:  What is the award DOI for this study? 
 >
->Task 4: Go back to the main Data Portal page and clear the active query terms in the upper left corner. Use the Collection date option in the left menu bar or the timeline slide feature (below the Omics type and map) to filter to samples collected in 2015.  Use the "search" feature (upper left corner) to find metagenomes collected from freshwater river biomes.
+>Task 4: Go back to the main Data Portal page and clear the active query terms in the upper left corner. Use the Collection date option in the left menu bar or the timeline slide feature (below the data type and map) to filter to samples collected in 2015.  Use the "search" feature (upper left corner) to find metagenomes collected from freshwater river biomes.
 >
 >&nbsp;&nbsp;&nbsp;&nbsp;Question 1: How many samples collected from freshwater biomes in 2015 have metagenomic data?
 >
->&nbsp;&nbsp;&nbsp;&nbsp;Question 2: What other types of omics data are available for these samples?
+>&nbsp;&nbsp;&nbsp;&nbsp;Question 2: What other types of data are available for these samples?
 >
->Task 5: In the Omics box, click the additional omics types available for these samples. This will allow you to be able to download from any of the processed data. (You must be logged in to be able to download data.) Download some **small** files from the first sample in the list:
+>Task 5: In the data type box, click the additional data types available for these samples. This will allow you to be able to download from any of the processed data. (You must be logged in to be able to download data.) Download some **small** files from the first sample in the list:
 >
 >&nbsp;&nbsp;&nbsp;&nbsp;1. Click the Metagenome button under the first sample. You can see all of the processed data available from this metagenome; download the QC Statistics. 
 >
@@ -39,10 +39,10 @@
 
 
 ## Answers to Tutorial Questions
->Task 2, Question 1: 108 metagenomes have been collected near Corvallis, Oregon.
+>Task 2, Question 1: 167 metagenomes have been collected near Corvallis, Oregon.
 >
 >Task 3, Question 1: The DOI for this study and dataset is https://doi.org/10.46936/10.25585/60000017
 >
->Task 4, Question 1: There are 32 samples collected from freshwater river biomes in 2015 which have metagenomic data.
+>Task 4, Question 1: There are 53 samples collected from freshwater river biomes in 2015 which have metagenomic data.
 >
->Task 4, Question 2: There are also proteomics and metabolomics data for these 32 samples.
+>Task 4, Question 2: There are also proteomics and metabolomics data for 32 of these samples.
