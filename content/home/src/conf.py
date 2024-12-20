@@ -36,6 +36,7 @@ extensions = [
     'sphinx_markdown_tables',
     'sphinx_reredirects',
     'notfound.extension',
+    'sphinxcontrib.googleanalytics',
 ]
 
 # source_suffix = '.rst'
@@ -119,3 +120,10 @@ html_context = {
     "github_version": "main",
     "conf_py_path": "/content/home/src/",  # path to directory containing `conf.py` file
 }
+
+# -- Sphinx Google Analytics extension --------------------
+#
+# Reference: https://pypi.org/project/sphinxcontrib-googleanalytics/
+#
+googleanalytics_id: str = "G-VH6HKVLCWN"
+googleanalytics_enabled: bool = True

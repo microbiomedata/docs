@@ -9,3 +9,7 @@ sphinx-reredirects
 # Sphinx extension that creates a `404.html` page in which static assets are properly referenced.
 # Reference: https://sphinx-notfound-page.readthedocs.io
 sphinx-notfound-page==1.0.4
+
+# Sphinx extention that facilitates including a Google Analytics snippet in each web page.
+# Reference: https://pypi.org/project/sphinxcontrib-googleanalytics/
+sphinxcontrib-googleanalytics==0.4

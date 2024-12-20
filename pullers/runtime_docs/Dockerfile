@@ -49,7 +49,13 @@ RUN cd nmdc-runtime && \
         "copyright": "&copy; Copyright 2024, National Microbiome Data Collaborative",\
         "site_dir": "/html",\
         "site_url": "http://localhost:8000/",\
-        "theme": {"favicon": "assets/images/favicon.ico"}\
+        "theme": {"favicon": "assets/images/favicon.ico"},\
+        "extra": {\
+          "analytics": {\
+            "provider": "google",\
+            "property": "G-VH6HKVLCWN"\
+          }\
+        }\
     }' | mkdocs build -f -
 
 EXPOSE 8000

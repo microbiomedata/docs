@@ -47,3 +47,16 @@ html_favicon = '_static/favicon.ico'
 html_js_files = [
     'js/index.js'
 ]
+
+# Register Sphinx extensions.
+# Reference: https://www.sphinx-doc.org/en/master/usage/extensions/index.html
+extensions = [
+    'sphinxcontrib.googleanalytics',
+]
+
+# -- Sphinx Google Analytics extension --------------------
+#
+# Reference: https://pypi.org/project/sphinxcontrib-googleanalytics/
+#
+googleanalytics_id: str = "G-VH6HKVLCWN"
+googleanalytics_enabled: bool = True

@@ -19,7 +19,12 @@ jobs:
         uses: actions/setup-python@v5
         with: { python-version: '3.12' }
       - name: Install dependencies of workflow documentation
-        run: python -m pip install sphinx sphinx_rtd_theme pillow
+        run: |
+          python -m pip install \
+            sphinx \
+            sphinx_rtd_theme \
+            pillow \
+            sphinxcontrib-googleanalytics==0.4
         # Note: This shell script will store the chapters under `/tmp/book/src/`.
         #
         # Note: The source files for the overview chapter and Chapter 1 reside

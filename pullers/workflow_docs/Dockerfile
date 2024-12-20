@@ -18,7 +18,11 @@ WORKDIR /src
 #       it no longer says "Requires Python Imaging Library").
 #
 RUN python -m pip install --upgrade pip
-RUN python -m pip install sphinx sphinx_rtd_theme pillow
+RUN python -m pip install \
+    sphinx \
+    sphinx_rtd_theme \
+    pillow \
+    sphinxcontrib-googleanalytics==0.4
 
 # Fetch individual workflow docs sources and arrange them into chapters.
 #

@@ -62,7 +62,13 @@ jobs:
             "copyright": "&copy; Copyright 2024, National Microbiome Data Collaborative",
             "site_dir": "${{ github.workspace }}/_dist",
             "site_url": "https://docs.microbiomedata.org/runtime/",
-            "theme": {"favicon": "assets/images/favicon.ico"}
+            "theme": {"favicon": "assets/images/favicon.ico"},
+            "extra": {
+              "analytics": {
+                "provider": "google",
+                "property": "G-VH6HKVLCWN"
+              }
+            }
           }' | mkdocs build -f -
         # Upload the result as an "artifact" so it can then be downloaded and used by another job.
       - name: Save the HTML for publishing later  # Docs: https://github.com/actions/upload-artifact
