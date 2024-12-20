@@ -1,0 +1,82 @@
+name: Fetch and compile Runtime docs
+
+on:
+  push: { branches: [ main ] }
+  workflow_dispatch: { }
+  # Allow this workflow to be called by other workflows.
+  # Reference: https://docs.github.com/en/actions/using-workflows/reusing-workflows
+  workflow_call: { }
+
+jobs:
+  compile:
+    name: Compile
+    runs-on: ubuntu-latest
+    steps:
+        # Docs: https://github.com/actions/checkout
+      - name: Check out commit
+        uses: actions/checkout@v4
+      - name: Check out commit from `nmdc-runtime/main`
+        uses: actions/checkout@v4
+        with:
+          # Notes:
+          # - `repository` format is: "{owner_name}/{repo_name}"
+          # - `sparse-checkout` lists the same files as the `mkdocs.yml` GHA workflow in `nmdc-runtime`
+          repository: microbiomedata/nmdc-runtime  # format is "{owner_name}/{repo_name}"
+          ref: main
+          sparse-checkout: |
+            docs
+            mkdocs_overrides
+            mkdocs.yml
+          path: _clones/microbiomedata/nmdc-runtime  # where, locally, to create the clone
+        # Docs: https://github.com/actions/setup-python
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with: { python-version: '3.12' }
+      - name: Install dependencies of `nmdc-runtime` docs
+        run: | 
+          python -m pip install \
+            mkdocs-material \
+            mkdocs-mermaid2-plugin \
+            mkdocs-jupyter \
+            pymdown-extensions
+        # Note: The `mkdocs.yml` file we pull from the `nmdc-runtime` repo sets the overrides directory to `mkdocs_overrides`.
+      - name: Copy files that override or customize parts of theme
+        run: |
+          mkdir -p _clones/microbiomedata/nmdc-runtime/docs/assets/images/
+          cp pullers/runtime_docs/mkdocs_overrides/main.html _clones/microbiomedata/nmdc-runtime/mkdocs_overrides/main.html
+          cp pullers/runtime_docs/assets/images/favicon.ico  _clones/microbiomedata/nmdc-runtime/docs/assets/images/favicon.ico
+      - name: Compile source documents into HTML
+        #
+        # References:
+        # - https://www.mkdocs.org/user-guide/cli/
+        # - https://www.mkdocs.org/user-guide/configuration/#configuration-inheritance
+        # - https://squidfunk.github.io/mkdocs-material/setup/changing-the-logo-and-icons/#favicon
+        # - https://squidfunk.github.io/mkdocs-material/setup/setting-up-the-footer/?h=copyright#copyright-notice
+        #
+        # TODO: Make the `site_url` configurable (e.g. via an environment variable).
+        #
+        working-directory: _clones/microbiomedata/nmdc-runtime
+        run: |
+          echo '{
+            "INHERIT": "mkdocs.yml",
+            "copyright": "&copy; Copyright 2024, National Microbiome Data Collaborative",
+            "site_dir": "${{ github.workspace }}/_dist",
+            "site_url": "https://docs.microbiomedata.org/runtime/",
+            "theme": {"favicon": "assets/images/favicon.ico"},
+            "extra": {
+              "analytics": {
+                "provider": "google",
+                "property": "G-VH6HKVLCWN"
+              }
+            }
+          }' | mkdocs build -f -
+        # Upload the result as an "artifact" so it can then be downloaded and used by another job.
+      - name: Save the HTML for publishing later  # Docs: https://github.com/actions/upload-artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: runtime-docs-as-html
+          # Note: Relative `path` values here are relative to the _workspace_, not to the current working directory.
+          #       Reference: https://github.com/actions/upload-artifact/pull/477#issue-2044900649
+          path: _dist
+          if-no-files-found: error
+          retention-days: 1  # Note: 1 day is the shortest period possible

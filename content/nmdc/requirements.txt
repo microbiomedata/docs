@@ -1,7 +1,0 @@
-myst-parser
-sphinx_markdown_tables
-sphinx_rtd_theme
-
-# Sphinx plugin that handles redirects.
-# Reference: https://pypi.org/project/sphinx-reredirects/
-sphinx-reredirects

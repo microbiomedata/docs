@@ -1,0 +1,15 @@
+{#
+  Note: We are using this file to override a block(s) of the Material for MkDocs theme.
+  Reference: https://squidfunk.github.io/mkdocs-material/customization/#overriding-blocks
+#}
+
+{% extends "base.html" %}
+
+{#
+  Note: The `announce` block appears at the top of each page of the site.
+  Reference: https://squidfunk.github.io/mkdocs-material/setup/setting-up-the-header/?h=header#announcement-bar
+#}
+{% block announce %}
+  <strong>This website is in early development.</strong>
+  You can access our production documentation <a href="https://microbiomedata.org/documentation/">here</a>.
+{% endblock %}

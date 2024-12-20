@@ -12,34 +12,26 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  # Use existing workflows to compile the legacy documentation.
+  # Use existing workflows to compile the home, Runtime, and workflow documentation.
   # Reference: https://docs.github.com/en/actions/using-workflows/reusing-workflows#calling-a-reusable-workflow
-  compile-legacy-nmdc-documentation:
-    name: Compile legacy NMDC documentation
-    uses: ./.github/workflows/compile-legacy-nmdc-documentation.yml
-  compile-current-nmdc-documentation:
-    name: Compile current NMDC documentation
-    uses: ./.github/workflows/compile-current-nmdc-documentation.yml
-  fetch-and-compile-nmdc-runtime-documentation:
-    name: Fetch and compile NMDC Runtime documentation
-    uses: ./.github/workflows/fetch-and-compile-nmdc-runtime-documentation.yml
-  fetch-and-compile-mag-workflow-documentation:
-    name: Fetch and compile MAG workflow documentation
-    uses: ./.github/workflows/fetch-and-compile-mag-workflow-documentation.yml
-  fetch-and-compile-mg-annotation-workflow-documentation:
-    name: Fetch and compile Metagenome Annotation workflow documentation
-    uses: ./.github/workflows/fetch-and-compile-mg-annotation-workflow-documentation.yml
+  compile-home-docs:
+    name: Compile home docs
+    uses: ./.github/workflows/compile-home-docs.yml
+  fetch-and-compile-runtime-docs:
+    name: Fetch and compile Runtime docs
+    uses: ./.github/workflows/fetch-and-compile-runtime-docs.yml
+  fetch-and-compile-workflow-docs:
+    name: Fetch and compile workflow docs
+    uses: ./.github/workflows/fetch-and-compile-workflow-docs.yml
 
   build:
     name: Compile main website
     # This job depends upon other jobs succeeding.
     # Reference: https://docs.github.com/en/actions/writing-workflows/workflow-syntax-for-github-actions#jobsjob_idneeds
     needs:
-      - compile-legacy-nmdc-documentation
-      - compile-current-nmdc-documentation
-      - fetch-and-compile-nmdc-runtime-documentation
-      - fetch-and-compile-mag-workflow-documentation
-      - fetch-and-compile-mg-annotation-workflow-documentation
+      - compile-home-docs
+      - fetch-and-compile-runtime-docs
+      - fetch-and-compile-workflow-docs
     runs-on: ubuntu-latest
     permissions:
       contents: read
@@ -50,17 +42,20 @@ jobs:
         uses: actions/download-artifact@v4  # Docs: https://github.com/actions/download-artifact
         with:
           path: artifacts
+      # Note: We use the `-T` option of the `cp` command so that the source directory name does not
+      #       get appended to the destination directory name. It's short for `--no-target-directory`.
+      #       Reference: https://www.gnu.org/software/coreutils/manual/html_node/Target-directory.html
       - name: Assemble website file tree
         run: |
-          ls -R artifacts
-          mkdir -p _build/html _build/html/legacy _build/html/workflows
-          cp -R artifacts/legacy-nmdc-documentation-as-html _build/html/legacy/nmdc-documentation
-          cp -R artifacts/current-nmdc-documentation-as-html _build/html/nmdc
-          cp -R artifacts/nmdc-runtime-documentation-as-html _build/html/nmdc-runtime-documentation
-          cp -R artifacts/mag-workflow-documentation-as-html _build/html/workflows/mag-workflow-documentation
-          cp -R artifacts/mg-annotation-workflow-documentation-as-html _build/html/workflows/mg-annotation-workflow-documentation
-          cp -R content/assets _build/html/assets
-          cp content/index.html _build/html/index.html
+          mkdir -p \
+            _build/html/runtime \
+            _build/html/workflows
+          cp -R -T artifacts/home-docs-as-html        _build/html
+          cp -R -T artifacts/runtime-docs-as-html     _build/html/runtime
+          cp -R -T artifacts/workflow-docs-as-html    _build/html/workflows
+      - name: Inject robots.txt file into assembled website file tree
+        run: |
+          cp content/robots.txt _build/html/robots.txt
           ls -R _build/html
       - name: Save the result for publishing to GitHub Pages  # Docs: https://github.com/actions/upload-pages-artifact
         uses: actions/upload-pages-artifact@v3
