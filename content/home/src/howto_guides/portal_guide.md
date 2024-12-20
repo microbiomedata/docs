@@ -14,8 +14,9 @@ user interface using an ORCiD authentication, with associated download
 metrics, or retrieved through available RESTful APIs. All multi-omics
 data are available under a Creative Commons 4.0 license, which enables
 public use with attribution, as outlined in the NMDC Data Use Policy
-(<https://microbiomedata.org/nmdc-data-use-policy>). The NMDC Data Portal
-was first released in March, 2021.
+(<https://microbiomedata.org/nmdc-data-use-policy>). The first
+iteration of the NMDC Data Portal was released in March 2021 and 
+continues to expand its data hosting and functionality on an ongoing basis.
 
 There is a short video tutorial showing how to navigate the portal on
 Youtube (<https://www.youtube.com/watch?v=KJQDrCnJRho>).
@@ -30,7 +31,7 @@ Data Portal. This methodology (1) enables the scientific community to
 provide feedback, iterative and continuous improvement of our systems,
 and ensures that our systems enable a high level of scientific
 productivity. Feedback collected from the scientific community during
-early iterations of the Data Portal can be linked to the features and
+user research can be linked to the features and
 design directions found in the current release. Our community-centered
 design approach ensures that the NMDC can evolve with the needs of the
 microbiome research community, but will also be important for uncovering
@@ -42,18 +43,10 @@ the NMDC Data Portal.
 
 ## Available Studies & Data
 
-Data hostings include studies, biosamples, and 5 data types from a breadth of
+Data hostings include studies, biosamples, and multi-omics data from a breadth of
 environmental microbiomes, spanning river sediments, subsurface shale
 carbon reservoirs, plant-microbe associations, and temperate and
-tropical soils. Specifics are as follows:
-
-## Studies
-
-As the NMDC Data Portal is a pilot infrastructure, incoming projects for
-which study information and curated environmental metadata become
-available is first validated and loaded with a flag (Omics data coming
-soon) before processed instrumentation data is integrated into the
-portal.
+tropical soils.
 
 ## Standards
 
@@ -84,104 +77,36 @@ altitude, depth, etc.) for 17 different sample environments.
 
 ### *Environment Ontology (EnvO)*
 
-EnvO is a community-led ontology that represents environmental entities
+EnvO (6) is a community-led ontology that represents environmental entities
 such as biomes, environmental features, and environmental materials.
 These EnvO entities are the recommended values for several of the
 mandatory terms in the MIxS packages, often referred to as the "MIxS
-triad".
+triad".  Where appropriate, we also support terms from the Plant Ontology (PO) (7) and Uberon (8), 
+an anotomical ontology. 
 
 ### *Genomes OnLine Database (GOLD)*
 
-GOLD is an open-access repository of genome, metagenome, and
+GOLD (9) is an open-access repository of genome, metagenome, and
 metatranscriptome sequencing projects with their associated metadata.
 Biosamples (defined as the physical material collected from an
 environment) are described using a five-level ecosystem classification
 path that goes from ecosystem down to the type of environmental material
 that describes the sample.
 
-## Omics Data
+## Data Types
 
-A suite of omics processing data can be generated from available
+A suite of data can be generated from available
 biosamples, and the value of associating these data through a common
 sample source enables researchers to probe function. The NMDC data
-schema offers an approach to link omics processing runs to their source
+schema offers an approach to link data to their source
 biosample (for example, multiple organic matter characterizations can be
-generated from a single sample through extraction with various solvents,
-eg, chloroform, methanol, and water fractionation). Below outlines the
-various omics data currently available through the portal.
-
-### *Metagenomes.*
-
-Illumina-sequenced shotgun metagenome data undergo pre-processing, error
-correction, assembly, structural and functional annotation, and binning
-leveraging the JGI's production pipelines (6), along with an additional
-read-based taxonomic analysis component. Standardized outputs from the
-read QC, read-based analysis, assembly, annotation, and binning are
-available for search and download on the NMDC Data
-Portal.
-
-### *Metatranscriptomes.*
-
-Illumina-sequenced shotgun reads from cDNA library undergo
-pre-processing and error correction in the same way as described above
-in the metagenome workflow with additional steps to filter ribosomal
-reads. High-quality reads are then assembled into transcripts using
-MEGAHIT (7), annotated using the annotation module described in the
-metagenome workflow, and the high-quality reads are mapped back to the
-annotated transcripts using HISAT2 (8) and then processed to calculate
-the number of reads mapped per feature using FeatureCount (9) and RPKM
-calculations per feature using edgeR (10). Results from read QC,
-assembly, and annotation are available for search and download for 
-metatranscriptomes on the NMDC Data Portal.
-
-### *Metaproteomes.*
-
-Data-dependent mass spectrometry raw data files are first converted to
-mzML, using MSConvert (11). Peptide identification is achieved using
-MSGF+ (12) and the associated metagenomic information in the FASTA file.
-Peptide identification false discovery rate is controlled using a decoy
-database approach. Intensity information is extracted using MASIC (13)
-and combined with protein information. Protein annotation information is
-obtained from the associated metagenome annotation output. Standardized
-outputs for quality control, and peptide and protein-level quantitative
-data are available for search and download for metaproteomes on the
-NMDC Data Portal.
-
-### *Metabolomes.*
-
-The gas chromatography-mass spectrometry (GC-MS) based metabolomics
-workflow (metaMS) developed by leveraging EMSL's CoreMS mass
-spectrometry software framework allows target and semi-target data
-analysis of metabolomics data (14). The raw data is parsed into coreMS
-data structure and undergoes all the steps of signal processing (signal
-noise reduction, m/z based chromatogram peak deconvolution, abundance
-threshold calculation, peak picking) and molecular identification,
-including the molecular search using a metabolites standard compound
-library, spectral similarity calculation, and similarity score
-calculation (15), all in a single step. The putative metabolite
-annotation data is available to download for metabolomes on the NMDC
-Data Portal. Data dependent LC-MS based workflows are currently under
-development. Additionally, it should be noted that all available data
-derives from exploratory, untargeted analysis and is semi-quantitative.
-
-### *Natural Organic Matter Characterization (NOM).*
-
-Direct Infusion Fourier Transform mass spectrometry (DI FT-MS) data
-undergoes signal processing and molecular formula assignment leveraging
-EMSL's CoreMS framework (14). Raw time domain data is transformed into
-the *m/z* domain using Fourier Transform and Ledford equation (16). Data
-is denoised followed by peak picking, recalibration using an external
-reference list of known compounds, and searched against a dynamically
-generated molecular formula library with a defined molecular search
-space. The confidence scores for all the molecular formula candidates
-are calculated based on the mass accuracy and fine isotopic structure,
-and the best candidate assigned as the highest score. The molecular
-formula characterization table is available to download for natural
-organic matter characterizations on the NMDC Data Portal.
+generated from a single sample through extraction with various solvents;
+e.g., chloroform, methanol, and water fractionation). For details on workflow processing, refer to 
+our [workflow documentation](https://github.com/microbiomedata/workflow_documentation/tree/master/docs/chapters).
 
 ## Portal Functionality
 
-#Faceted search and access
+### Faceted search and access
 
 ### *Search by investigator name*
 
@@ -193,37 +118,36 @@ selection will display studies and samples associated with that PI, and
 selecting the arrow on the right side of the study name will open up
 more information about that study and that principal investigator.
 
-### *Search by omics processing information*
+### *Search by data generation information*
 
 [![](../_static/images/howto_guides/portal_guide/instrument_name.png)](../_static/images/howto_guides/portal_guide/instrument_name.png)
 
-[![](../_static/images/howto_guides/portal_guide/omics_type.png)](../_static/images/howto_guides/portal_guide/omics_type.png)
+[![](../_static/images/howto_guides/portal_guide/data_types.png)](../_static/images/howto_guides/portal_guide/data_types.png)
 
 [![](../_static/images/howto_guides/portal_guide/processing_institution.png)](../_static/images/howto_guides/portal_guide/processing_institution.png)
 
-Samples can be queried by various omics processing information terms
-including instrument name, omics type (processing runs sorted by omics
+Samples can be queried by various data generation terms
+including instrument name, data type (processing runs sorted by data
 type can also be queried using the bar plot on the main portal page),
 and processing institution.
 
-### *Search by KEGG Orthology (KO)*
+### *Search by function*
 
-[![](../_static/images/howto_guides/portal_guide/KO_term_search.png)](../_static/images/howto_guides/portal_guide/KO_term_search.png)
+[![](../_static/images/howto_guides/portal_guide/functional_search_2024.png)](../_static/images/howto_guides/portal_guide/functional_search_2024.png)
 
-[![](../_static/images/howto_guides/portal_guide/KO_results.png)](../_static/images/howto_guides/portal_guide/KO_results.png)
+[![](../_static/images/howto_guides/portal_guide/kegg_search_2024.png)](../_static/images/howto_guides/portal_guide/kegg_search_2024.png)
 
-Under 'Function' on the query term bar, users are able to search by KEGG
-Orthology (KO) terms to limit the query to samples with datasets that
-include at least one of the listed KO terms. Users may list multiple KO
+Under 'Function' on the query term bar users are able to search by Kyoto Encyclopedia of Genes and Genomes (KEGG) (10) , the protein families database (Pfam) (11) , Clusters of Orthologous Genes (COG) (12) and Gene Ontology (GO) (13) terms to limit the query to samples with datasets that
+include at least one of the listed terms. For KEGG we support search by orthologies, modules or pathways. For Pfam we support entries and clans. For COG we support terms, categories and pathways. Search by GO terms is supported via mappings to Pfam and KEGG terms.  Users may list multiple 
 terms, but it is important to note that adding multiple terms will limit
-the search to datasets that include at least one of those KO terms, not
+the search to datasets that include at least one of those identifiers, not
 all of the added terms.
 
 ### *Search by environmental descriptors*
 
-[![](../_static/images/howto_guides/portal_guide/depth.png)](../_static/images/howto_guides/portal_guide/depth.png)
+[![](../_static/images/howto_guides/portal_guide/depth_meter.png)](../_static/images/howto_guides/portal_guide/depth_meter.png)
 
-[![](../_static/images/howto_guides/portal_guide/date.png)](../_static/images/howto_guides/portal_guide/date.png)
+[![](../_static/images/howto_guides/portal_guide/date_slider.png)](../_static/images/howto_guides/portal_guide/date_slider.png)
 
 [![](../_static/images/howto_guides/portal_guide/latitude.png)](../_static/images/howto_guides/portal_guide/latitude.png)
 
@@ -242,24 +166,25 @@ name.
 
 [![](../_static/images/howto_guides/portal_guide/gold_classification.png)](../_static/images/howto_guides/portal_guide/gold_classification.png)
 
-[![](../_static/images/howto_guides/portal_guide/envo.png)](../_static/images/howto_guides/portal_guide/envo.png)
+[![](../_static/images/howto_guides/portal_guide/mixs_env_triad.png)](../_static/images/howto_guides/portal_guide/mixs_env_triad.png)
 
 Samples can also be queried by ecosystem classifications using GOLD
-and/or ENVO terms. Selecting GOLD classification in the query term bar
+and/or MIxS Environmental Triad terms. Selecting GOLD classification in the query term bar
 opens up a hierarchy that can be navigated through to select ecosystem
 classification(s) of interest. Users can select everything under a
 certain classification at any point, or can continue navigating to more
 specific classifications. The Sankey diagram on the 'Environment' page
 provides an interactive visualization of the GOLD classification system.
 
-Similarly, ENVO terms can be used to query the portal, and these are
-broken down into environmental biome, feature, and material categories.
-ENVO is another effective classification system that can be used to
-describe environments where samples were collected from.
+Similarly, ENVO, PO and Uberon terms are classification systems that can be used to
+describe environments where samples were collected from which can be used to query the portal.  
+Users can search by broad-scale environmental context, local environmental context, 
+and envioronmental medium.  These terms are required by NMDC because they are required by
+the GSC.
 
 ## Interactive visualizations
 
-### *Omics Page*
+### *Data Type*
 
 #### Barplot
 
@@ -275,7 +200,7 @@ type.
 
 [![](../_static/images/howto_guides/portal_guide/geographic_map.png)](../_static/images/howto_guides/portal_guide/geographic_map.png)
 
-The geographic map on the omics page allows for samples to be queried by
+The geographic map allows for samples to be queried by
 the geographic location from which they were isolated. The map displays
 the geographical location (latitude, longitude) of the sample collection
 sites as clusters with colors corresponding to the number of samples
@@ -286,25 +211,25 @@ button will limit the search to the current map bounds.
 
 #### Temporal slider
 
-[![](../_static/images/howto_guides/portal_guide/temporal_slider.png)](../_static/images/howto_guides/portal_guide/temporal_slider.png)
+[![](../_static/images/howto_guides/portal_guide/date.png)](../_static/images/howto_guides/portal_guide/date.png)
 
 Samples can also be queried by a sample collection date range by
-dragging the dots below the temporal slider on the omics page. Sample
-collection dates are grouped by month.
+clicking and holding to select a date range. Sample
+collection dates are grouped by month. The selected date range will be highlighted in gray.
 
 #### Upset plot
 
 [![](../_static/images/howto_guides/portal_guide/upset_plot.png)](../_static/images/howto_guides/portal_guide/upset_plot.png)
 
 The upset plot on the omics page displays the number of samples that
-have various combinations of associated omics data. The axis at the top
+have various combinations of associated data. The axis at the top
 of the plot refers to the different omics types (MG: metagenomic, MT:
 metatranscriptomic, MP: metaproteomic, MB: metabolomic, NOM: natural
 organic matter) and the dots and lines in the graph below represent the
-combinations of the omics data types. The numbers and bars on the right
+combinations of the data types. The numbers and bars on the right
 side represent the number of samples searchable in the NMDC data portal
-with each corresponding combination of omics data types. This plot will
-update as query terms are added.
+with each corresponding combination of omics data types. Clicking either on the bar 
+portion or the number beside it will apply a filter.
 
 ### *Environment Page*
 
@@ -327,7 +252,7 @@ came from that selected environment.
 
 Various output data files are available from samples findable through
 the NMDC that have been run through the NMDC standardized workflows.
-Output files from each omic type are sorted by the specific workflow
+Output files from each data type are sorted by the specific workflow
 (e.g. Metagenome Assembly, Annotation) that was run and are each
 available for download when the sample of interest is selected. Users
 must log in with an ORCID account before downloading data.
@@ -347,7 +272,7 @@ downloading data.
 ## References
 
 > 1.  Abras C, Maloney-Krichmar, D., Preece, J. 2004. User-Centered
->     Design. \_In \_Bainbridge W (ed), Encyclopedia of Human-Computer
+>     Design. In Bainbridge W (ed), Encyclopedia of Human-Computer
 >     Interaction. Sage Publications, Thousand Oaks.
 > 2.  Preece J, Rogers, Y., & Sharp, H. 2002. Interaction design: Beyond
 >     human-computer interaction. John Wiley & Sons, New York, NY.
@@ -362,59 +287,24 @@ downloading data.
 >     Jansson J, Kau AL, Kelley ST, Kennedy J, Knights D, Koren O, et
 >     al. 2011. Minimum information about a marker gene sequence
 >     (MIMARKS) and minimum information about any (x) sequence (MIxS)
->     specifications. \_Nature Biotechnol. \_29:415-420.
+>     specifications. Nature Biotechnol. 29:415-420.
 > 4.  Taylor CF, Paton NW, Lilley KS, Binz P-A, Julian RK, Jones AR, Zhu
 >     W, Apweiler R, Aebersold R, Deutsch EW, Dunn MJ, Heck AJR, Leitner
 >     A, Macht M, Mann M, Martens L, Neubert TA, Patterson SD, Ping P,
 >     Seymour SL, Souda P, Tsugita A, Vandekerckhove J, Vondriska TM,
 >     Whitelegge JP, Wilkins MR, Xenarios I, Yates JR,
 >     Hermjakob H. 2007. The minimum information about a proteomics
->     experiment (MIAPE). \_Nature Biotechnol. \_25:887-893.
+>     experiment (MIAPE). Nature Biotechnol. 25:887-893.
 > 5.  Sansone S-A, Fan T, Goodacre R, Griffin JL, Hardy NW,
 >     Kaddurah-Daouk R, Kristal BS, Lindon J, Mendes P, Morrison N,
 >     Nikolau B, Robertson D, Sumner LW, Taylor C, van der Werf M, van
 >     Ommen B, Fiehn O, Members MSIB. 2007. The Metabolomics Standards
->     Initiative. \_Nature Biotechnol. \_25:846-848.
-> 6.  Clum A, Huntemann M, Bushnell B, Foster B, Foster B, Roux S, Hajek
->     PP, Varghese N, Mukherjee S, Reddy TBK, Daum C, Yoshinaga Y,
->     O'Malley R, Seshadri R, Kyrpides NC, Eloe-Fadrosh EA, Chen I-MA,
->     Copeland A, Ivanova NN, Segata N. 2021. DOE JGI Metagenome
->     Workflow. \_mSystems \_6:e00804-20.
-> 7.  Li D, Liu C-M, Luo R, Sadakane K, Lam T-W. 2015. MEGAHIT: an
->     ultra-fast single-node solution for large and complex metagenomics
->     assembly via succinct de Bruijn graph. \_Bioinformatics
->     \_31:1674-1676.
-> 8.  Kim D, Paggi JM, Park C, Bennett C, Salzberg SL. 2019. Graph-based
->     genome alignment and genotyping with HISAT2 and HISAT-genotype.
->     \_Nature Biotechnol. \_37:907-915.
-> 9.  Liao Y, Smyth GK, Shi W. 2014. featureCounts: an efficient general
->     purpose program for assigning sequence reads to genomic features.
->     \_Bioinformatics \_30:923-30.
-> 10. Robinson MD, McCarthy DJ, Smyth GK. 2010. edgeR: a Bioconductor
->     package for differential expression analysis of digital gene
->     expression data. \_Bioinformatics \_26:139-140.
-> 11. Chambers MC, Maclean B, Burke R, Amodei D, Ruderman DL, Neumann S,
->     Gatto L, Fischer B, Pratt B, Egertson J, Hoff K, Kessner D, Tasman
->     N, Shulman N, Frewen B, Baker TA, Brusniak MY, Paulse C, Creasy D,
->     Flashner L, Kani K, Moulding C, Seymour SL, Nuwaysir LM, Lefebvre
->     B, Kuhlmann F, Roark J, Rainer P, Detlev S, Hemenway T, Huhmer A,
->     Langridge J, Connolly B, Chadick T, Holly K, Eckels J, Deutsch EW,
->     Moritz RL, Katz JE, Agus DB, MacCoss M, Tabb DL, Mallick P. 2012.
->     A cross-platform toolkit for mass spectrometry and proteomics.
->     \_Nature Biotechnol. \_30:918-20.
-> 12. Kim S, Gupta N, Pevzner PA. 2008. Spectral Probabilities and
->     Generating Functions of Tandem Mass Spectra: A Strike against
->     Decoy Databases. \_J Proteome Res. \_7:3354-3363.
-> 13. Monroe ME, Shaw JL, Daly DS, Adkins JN, Smith RD. 2008. MASIC: A
->     software program for fast quantitation and flexible visualization
->     of chromatographic profiles from detected LC-- MS(/MS) features.
->     \_Comp. Biol. Chemistry \_32:215-217.
-> 14. Corilo YE, Kew WR, McCue LA. 2021. EMSL-Computing/CoreMS: CoreMS
->     1.0.0 (v1.0.0). Zenodo. 10.5281/zenodo.4641552.
-> 15. Hiller K, Hangebrauk J, Jäger C, Spura J, Schreiber K,
->     Schomburg D. 2009. MetaboliteDetector: comprehensive analysis tool
->     for targeted and nontargeted GC/MS based metabolome analysis.
->     \_Anal Chem \_81:3429-39.
-> 16. Marshall AG, Hendrickson CL, Jackson GS. 1998. Fourier transform
->     ion cyclotron resonance mass spectrometry: a primer. \_Mass
->     Spectrom Rev \_17:1-35.
+>     Initiative. Nature Biotechnol. 25:846-848.
+> 6.  Buttigieg PL, Morrison N, Smith B, Mungall CJ, Lewis SE, Envo Consortium. 2013. The environment ontology: contextualising biological and biomedical entities. J Biomed Semantics 4:1–9.
+> 7.  Cooper L, Jaiswal P. 2016. The Plant Ontology: a tool for plant genomics. Methods Mol Biol. 1374:89–114. https://doi.org/10.1007/978-1-4939-3167-5_5.
+> 8.  Mungall CJ, Torniai C, Gkoutos GV, et al. 2012. Uberon, an integrative multi-species anatomy ontology. Genome Biol. 13:R5. https://doi.org/10.1186/gb-2012-13-1-r5.
+> 9.  Mukherjee S, Stamatis D, Li CT, Ovchinnikova G, Kandimalla M, Handke V, Reddy A, Ivanova N, Woyke T, Eloe-Fadrosh EA, Chen I-MA, Kyrpides NC, Reddy TBK. 2024. Genomes OnLine Database (GOLD) v.10: new features and updates. Nucleic Acids Res. https://doi.org/10.1093/nar/gkae1000.
+> 10.  Kanehisa M, Goto S. 2000. KEGG: Kyoto Encyclopedia of Genes and Genomes. Nucleic Acids Res. 28:27–30. https://doi.org/10.1093/nar/28.1.27.
+> 11.  Bateman A, Coin L, Durbin R, Finn RD, Hollich V, Griffiths-Jones S, Khanna A, Marshall M, Moxon S, Sonnhammer ELL, Studholme DJ, Yeats C, Eddy SR. 2004. The Pfam protein families database. Nucleic Acids Res. 32:D138–D141. https://doi.org/10.1093/nar/gkh121.
+> 12.  Tatusov RL, Galperin MY, Natale DA, Koonin EV. 2000. The COG database: a tool for genome-scale analysis of protein functions and evolution. Nucleic Acids Res. 28:33. https://doi.org/10.1093/nar/28.1.33.
+> 13.  The Gene Ontology Consortium. 2019. The Gene Ontology resource: 20 years and still GOing strong. Nucleic Acids Res. 47:D330–D338. https://doi.org/10.1093/nar/gky1055.
