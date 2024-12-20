@@ -1,14 +1,4 @@
 services:
-  legacy-home-docs:
-    # Use the container image built from `content/legacy_home/Dockerfile`.
-    build:
-      context: content/legacy_home
-      dockerfile: Dockerfile
-    ports:
-      - "5001:8000"
-    volumes:
-      - ./content/legacy_home/src:/app/src
-
   home-docs:
     # Use the container image built from `content/home/Dockerfile`.
     build:
@@ -39,7 +29,6 @@ services:
     image: nginx  # Docs: https://hub.docker.com/_/nginx
     restart: unless-stopped
     depends_on:
-      - legacy-home-docs
       - home-docs
       - runtime-docs
       - workflow-docs
