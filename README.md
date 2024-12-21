@@ -57,8 +57,48 @@ Here is a table showing the locations of files you can edit in order to make cha
 | Workflows (Chapter 1)              | The `pullers/workflow_docs/metagenome_workflow_overview` folder in this repo |
 | Workflows (Everything else)        | The `docs` folder of the respective workflow repo                            |
 
+Here is a diagram showing the repositories (bottom) each section of the website (top) gets its content from.
+
+```mermaid
+flowchart BT
+    docs_repo[("docs<br>repo")]
+    home_section("Home")
+    docs_repo --> home_section
+    
+    runtime_section("Runtime")
+    runtime_repo[("nmdc-runtime<br>repo")]
+    runtime_repo --> runtime_section
+    
+    workflows_section("Workflows")
+    ReadsQC_repo[("ReadsQC<br>repo")]
+    ReadbasedAnalysis_repo[("ReadbasedAnalysis<br>repo")]
+    metaAssembly_repo[("metaAssembly<br>repo")]
+    mg_annotation_repo[("mg_annotation<br>repo")]
+    metaMAGs_repo[("metaMAGs<br>repo")]
+    metaT_repo[("metaT<br>repo")]
+    metaT_ReadsQC_repo[("metaT_ReadsQC<br>repo")]
+    metaT_Assembly_repo[("metaT_Assembly<br>repo")]
+    metaT_ReadCounts_repo[("metaT_ReadCounts<br>repo")]
+    metaPro_repo[("metaPro<br>repo")]
+    metaMS_repo[("metaMS<br>repo")]
+    enviroMS_repo[("enviroMS<br>repo")]
+    docs_repo --> workflows_section
+    ReadsQC_repo --> workflows_section
+    ReadbasedAnalysis_repo --> workflows_section
+    metaAssembly_repo --> workflows_section
+    mg_annotation_repo --> workflows_section
+    metaMAGs_repo --> workflows_section
+    metaT_repo --> workflows_section
+    metaT_ReadsQC_repo --> workflows_section
+    metaT_Assembly_repo --> workflows_section
+    metaT_ReadCounts_repo --> workflows_section
+    metaPro_repo --> workflows_section
+    metaMS_repo --> workflows_section
+    enviroMS_repo --> workflows_section
+```
+
 The website will automatically be regenerated and redeployed whenever a new commit is made on—or merged into—the `main`
-branch of the repository. The regeneration and redeployment process usually takes about three minutes to complete.
+branch of _this_ repository. Regeneration includes pulling content from the remote repositories. The regeneration and redeployment process usually takes about three minutes to complete.
 
 ## The Home section
 
