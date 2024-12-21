@@ -49,14 +49,17 @@ Some of those top-level directories have their own `README.md` files, which furt
 
 Here is a table showing the locations of files you can edit in order to make changes to a given section of the website:
 
-| To edit content<br>in this section... | Edit files in...                                                             |
+| To edit content in<br>this section... | Edit files in<br>this folder...                                              |
 |---------------------------------------|------------------------------------------------------------------------------|
 | Home                                  | The `content/home` folder in this repo                                       |
 | Runtime                               | The `docs` folder in the `nmdc-runtime` repo                                 |
 | Workflows (Overview)                  | The `pullers/workflow_docs` folder in this repo                              |
 | Workflows (Index)                     | The `pullers/workflow_docs` folder in this repo                              |
 | Workflows (Chapter 1)                 | The `pullers/workflow_docs/metagenome_workflow_overview` folder in this repo |
-| Workflows (Everything else)           | The `docs` folder of the respective workflow repo                            |
+| Workflows (Other)                     | The `docs` folder in the respective workflow repo                            |
+
+> **Note:** As an alternative to using the table above, you can click on the "Edit on GitHub" links
+> throughout the website.
 
 Here is a diagram showing the repositories (bottom) each section of the website (top) gets its content from.
 
