@@ -72,10 +72,21 @@ Its content is organized according to the [Diátaxis](https://diataxis.fr/how-to
 
 Here's how you can make (technically, "propose") a change to this section of the website:
 
-> **Note:** The high-level process may be familiar to you: (1) create a GitHub Issue, (2) create a branch associated
-> with that Issue, (3) make changes on that branch, and (4) create a Pull Request to merge that branch into `main`.
-> You can use whatever workflow you want in order to do those things. The following are some example workflows we've
-> documented for our teammates.
+**Note:** The high-level process may be familiar to you: (1) create a GitHub Issue, (2) create a branch associated
+with that Issue, (3) make changes on that branch, and (4) create a Pull Request to merge that branch into `main`.
+
+```mermaid
+flowchart LR
+    a("1. Create issue")
+    b("2. Create branch")
+    c("3. Make changes on branch")
+    d("4. Create pull request")
+
+    a --> b --> c --> d
+```
+
+You can use whatever workflow you want in order to do those things. The following are some example workflows we've
+documented for our teammates.
 
 #### Basic workflow (to edit 1 file) 
 
