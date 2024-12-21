@@ -57,8 +57,8 @@ Here is a table showing the locations of files you can edit in order to make cha
 | Workflows (Chapter 1)              | The `pullers/workflow_docs/metagenome_workflow_overview` folder in this repo |
 | Workflows (Everything else)        | The `docs` folder of the respective workflow repo                            |
 
-The website will automatically be regenerated and redeployed whenever a new commit is made on—or merged into—the
-`main` branch of the repository. The regeneration and redeployment process usually takes about three to complete.
+The website will automatically be regenerated and redeployed whenever a new commit is made on—or merged into—the `main`
+branch of the repository. The regeneration and redeployment process usually takes about three minutes to complete.
 
 ## The Home section
 
