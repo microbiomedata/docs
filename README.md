@@ -29,7 +29,7 @@ flowchart TD
   * [Content Editor Quick Reference ✍️](#content-editor-quick-reference-)
   * [The Home section](#the-home-section)
     * [Making changes](#making-changes)
-      * [Basic workflow (to edit 1 file)](#basic-workflow-to-edit-1-file-)
+      * [Basic workflow (to edit 1 file)](#basic-workflow-to-edit-1-file)
       * [Intermediate workflow (to edit 1+ files)](#intermediate-workflow-to-edit-1-files)
   * [Developer documentation](#developer-documentation)
 <!-- TOC -->
@@ -128,7 +128,10 @@ flowchart LR
 You can use whatever workflow you want in order to do those things. The following are some example workflows we've
 documented for our teammates.
 
-#### Basic workflow (to edit 1 file) 
+#### Basic workflow (to edit 1 file)
+
+<details>
+  <summary>Show/hide steps</summary>
 
 1. Create a GitHub Issue describing the issue you want to address (e.g. "`Link is broken`")
 2. On GitHub, go to the file within `content/home/src` that you want to edit
@@ -141,10 +144,15 @@ documented for our teammates.
 9. Click "Propose changes"
 10. Fill in the Pull Request form and click "Create pull request"
 
+</details>
+
 You will end up with a Pull Request (PR) containing the changes. Once the PR gets merged into `main`,
 the documentation website will automatically be updated to reflect the changes you made.
 
 #### Intermediate workflow (to edit 1+ files)
+
+<details>
+  <summary>Show/hide steps</summary>
 
 1. Create a GitHub Issue describing the issue you want to address (e.g. "`Link is broken`")
 2. Visit https://github.dev/microbiomedata/docs/
@@ -158,6 +166,8 @@ the documentation website will automatically be updated to reflect the changes y
 10. Enter a commit message to tell others what you did (e.g. "`Fix typo in link`")
 11. Click the "Commit & Push" button
 12. Visit https://github.com/microbiomedata/docs/ and create a Pull Request for that branch
+
+</details>
 
 You will end up with a Pull Request (PR) containing the changes. Once the PR gets merged into `main`,
 the documentation website will automatically be updated to reflect the changes you made.
