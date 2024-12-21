@@ -62,9 +62,9 @@ branch of the repository. The regeneration and redeployment process usually take
 
 ## The Home section
 
-The `content/home/` directory contains the source files for the Home section of the website.
-This directory began as an almost 1-to-1 copy of the `NMDC_documentation` repository. More details about what was—and
-wasn't—copied is available [here](./content/home/README.md).
+The `content/home/` directory contains the source files for the Home section of the website. That directory began as an
+almost 1-to-1 copy of the `NMDC_documentation` repository. More information about what was—and wasn't—copied is
+available [here](./content/home/README.md).
 This section of the website is generated using [Sphinx](https://www.sphinx-doc.org), a static site generator.
 Its content is organized according to the [Diátaxis](https://diataxis.fr/how-to-use-diataxis/#use-diataxis-as-a-guide-not-a-plan) guidelines.
 
