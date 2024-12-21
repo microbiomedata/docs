@@ -43,7 +43,7 @@ The repository has the following top-level directories:
 - `content/` - this directory contains the source files for the Home section of the website
 - `pullers/` - this directory contains files related to pulling and compiling remote content into the website
 
-Some of those top-level directories have their own `README.md` files, which further describe the directories' contents.
+Some of those top-level directories have their own `README.md` files, which further describes the directory's contents.
 
 ## Content Editor Quick Reference ✍️
 
