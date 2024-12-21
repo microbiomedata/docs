@@ -117,13 +117,10 @@ with that Issue, (3) make changes on that branch, and (4) create a Pull Request 
 
 ```mermaid
 flowchart LR
-    %% Note: The labels are not wrapped in quotes. When wrapped in quotes, GitHub interprets them as
-    %%       Markdown list items, which Mermaid does not allow in its diagrams.
-    %%       Reference: https://github.com/mermaid-js/mermaid/issues/6099
-    a(1. Create issue)
-    b(2. Create branch)
-    c(3. Make changes on branch)
-    d(4. Create pull request)
+    a("1: Create issue")
+    b("2: Create branch")
+    c("3: Make changes on branch")
+    d("4: Create pull request")
 
     a --> b --> c --> d
 ```
