@@ -49,14 +49,14 @@ Some of those top-level directories have their own `README.md` files, which furt
 
 Here is a table showing the locations of files you can edit in order to make changes to a given section of the website:
 
-| To edit content in<br>this section... | Edit files in<br>this folder...                                              |
-|---------------------------------------|------------------------------------------------------------------------------|
-| Home                                  | The `content/home` folder in this repo                                       |
-| Runtime                               | The `docs` folder in the `nmdc-runtime` repo                                 |
-| Workflows (Overview)                  | The `pullers/workflow_docs` folder in this repo                              |
-| Workflows (Index)                     | The `pullers/workflow_docs` folder in this repo                              |
-| Workflows (Chapter 1)                 | The `pullers/workflow_docs/metagenome_workflow_overview` folder in this repo |
-| Workflows (Other)                     | The `docs` folder in the respective workflow repo                            |
+| To edit content in<br>this section... | Edit files in<br>this folder...                                                                               |
+|---------------------------------------|---------------------------------------------------------------------------------------------------------------|
+| Home                                  | The `content/home` folder in this repo                                                                        |
+| Runtime                               | The `docs` folder in [the `nmdc-runtime` repo](https://github.com/microbiomedata/nmdc-runtime/tree/main/docs) |
+| Workflows › Overview                  | The `pullers/workflow_docs` folder in this repo                                                               |
+| Workflows › Index                     | The `pullers/workflow_docs` folder in this repo                                                               |
+| Workflows › Chapter 1                 | The `pullers/workflow_docs/metagenome_workflow_overview` folder in this repo                                  |
+| Workflows (Other)                     | The `docs` folder in [the respective workflow's repo](https://github.com/orgs/microbiomedata/repositories)    |
 
 > **Note:** As an alternative to using the table above, you can click on the "Edit on GitHub" links
 > throughout the website.
