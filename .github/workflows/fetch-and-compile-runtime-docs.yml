@@ -59,7 +59,7 @@ jobs:
         run: |
           echo '{
             "INHERIT": "mkdocs.yml",
-            "copyright": "&copy; Copyright 2024, National Microbiome Data Collaborative",
+            "copyright": "&copy; Copyright 2025, National Microbiome Data Collaborative",
             "site_dir": "${{ github.workspace }}/_dist",
             "site_url": "https://docs.microbiomedata.org/runtime/",
             "theme": {"favicon": "assets/images/favicon.ico"},

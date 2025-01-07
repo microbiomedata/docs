@@ -10,7 +10,7 @@ author = 'National Microbiome Data Collaborative'
 
 # A copyright statement.
 # Docs: https://www.sphinx-doc.org/en/master/usage/configuration.html#confval-copyright
-copyright = '2024, National Microbiome Data Collaborative'
+copyright = '2025, National Microbiome Data Collaborative'
 
 # The documented project's _simplified_ and _full_ version identifiers.
 # Note: This chained assignment keeps them identical to one another.
