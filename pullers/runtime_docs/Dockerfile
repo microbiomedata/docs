@@ -46,7 +46,7 @@ COPY assets/images/favicon.ico  nmdc-runtime/docs/assets/images/favicon.ico
 RUN cd nmdc-runtime && \
     echo '{\
         "INHERIT": "mkdocs.yml",\
-        "copyright": "&copy; Copyright 2024, National Microbiome Data Collaborative",\
+        "copyright": "&copy; Copyright 2025, National Microbiome Data Collaborative",\
         "site_dir": "/html",\
         "site_url": "http://localhost:8000/",\
         "theme": {"favicon": "assets/images/favicon.ico"},\
