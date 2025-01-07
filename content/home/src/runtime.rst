@@ -11,13 +11,6 @@ Runtime
 
     Reference: https://github.com/sphinx-doc/sphinx/issues/701
 
-    table of contents (i.e. the `toctree` section of `index.rst`). Sphinx only generates ToC links for two types of
-    targets: (a) pages that are part of the same Sphinx site, and (b) absolute URLs. Since (a) our workflow
-    documentation is part of a different Sphinx site, and (b) we want to have the flexibility of deploying this
-    website to different URLs (e.g. for production, for staging, for local development), we do the following:
-    (a) leave this file here to so Sphinx will generate the ToC link, and (b) implement a redirect in `conf.py` so
-    visitors never actually end up at this page. Whew!
-
     The gist is that, if this file did not exists, Sphinx would refuse to generate a link to `./runtime.html` in its
     table of contents (i.e. the `toctree` section of `index.rst`). Sphinx only generates ToC links for two types of
     targets: (a) pages that are part of the same Sphinx site, and (b) absolute URLs. Since (a) our workflow
