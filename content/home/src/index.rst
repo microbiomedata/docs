@@ -1,6 +1,6 @@
-======================================
-National Microbiome Data Collaborative
-======================================
+==================
+NMDC Documentation
+==================
 
 ..
    Note: Including the `:hidden:` option under a given `toctree::` directive makes it so that that section of ToC links
