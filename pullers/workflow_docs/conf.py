@@ -27,6 +27,10 @@ master_doc = 'index'
 # Docs: https://www.sphinx-doc.org/en/master/usage/configuration.html#confval-master_doc
 html_theme = 'sphinx_rtd_theme'
 
+# The string you want Sphinx to append to the HTML `<title> tag of each page.
+# Docs: https://www.sphinx-doc.org/en/master/usage/configuration.html#confval-html_title
+html_title = 'NMDC Workflow Documentation'
+
 # Register paths to directories containing static files.
 # Note: This path is relative to the directory containing the `conf.py` file.
 # Reference: https://www.sphinx-doc.org/en/master/usage/configuration.html#confval-html_static_path

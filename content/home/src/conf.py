@@ -18,7 +18,10 @@
 
 # -- Project information -----------------------------------------------------
 
-project = 'NMDC Documentation'
+# The name of the _documented_ project.
+# Docs: https://www.sphinx-doc.org/en/master/usage/configuration.html#confval-project
+project = 'NMDC'
+
 copyright = '2025, National Microbiome Data Collaborative'
 author = 'National Microbiome Data Collaborative'
 
@@ -55,7 +58,10 @@ exclude_patterns = []
 # a list of builtin themes.
 #
 html_theme = 'sphinx_rtd_theme'
-html_title = 'NMDC'
+
+# The string you want Sphinx to append to the HTML `<title> tag of each page.
+# Docs: https://www.sphinx-doc.org/en/master/usage/configuration.html#confval-html_title
+html_title = 'NMDC Documentation'
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
