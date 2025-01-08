@@ -1,0 +1,14 @@
+{% extends "!footer.html" %}
+
+{% block extrafooter %}
+    <a href="https://microbiomedata.org/privacy" target="_blank">Privacy policy</a>.
+    {{ super() }}
+{% endblock %}
+
+{#
+    Note: `{{ super() }}` renders the block's original content (i.e. the content defined in
+          https://github.com/readthedocs/sphinx_rtd_theme/blob/master/sphinx_rtd_theme/footer.html#L60).
+          As of the time of this writing, there is no content there; but that could change over time.
+
+    Reference: https://www.sphinx-doc.org/en/master/development/html_themes/templating.html
+#}
