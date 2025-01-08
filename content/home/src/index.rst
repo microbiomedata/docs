@@ -9,7 +9,7 @@ National Microbiome Data Collaborative
 
 .. toctree::
    :maxdepth: 2
-   :caption: Tutorials:
+   :caption: Tutorials
    :hidden:
  
    Submitting to NMDC <./tutorials/submission_portal.md>
@@ -18,7 +18,7 @@ National Microbiome Data Collaborative
 
 .. toctree::
    :maxdepth: 2
-   :caption: How-To Guides:
+   :caption: How-To Guides
    :hidden:
 
    Creating a Data Mgt. Plan <./howto_guides/data_plan.md>
@@ -30,7 +30,7 @@ National Microbiome Data Collaborative
 
 .. toctree::
    :maxdepth: 2
-   :caption: Reference:
+   :caption: Reference
    :hidden:
 
    NMDC Schema <https://w3id.org/nmdc/about>
@@ -40,7 +40,7 @@ National Microbiome Data Collaborative
 
 .. toctree::
    :maxdepth: 2
-   :caption: Explanation:
+   :caption: Explanation
    :hidden:
 
    FAIR Data <./explanation/fair_data.md>
