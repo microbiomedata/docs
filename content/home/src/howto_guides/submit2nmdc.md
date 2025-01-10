@@ -165,7 +165,7 @@ TODO: Update all these to field notes!
 
 [![](../_static/images/howto_guides/portal_guide/Create_submission.png)](../_static/images/howto_guides/portal_guide/Create_submission.png)
 
-Once signed in with an ORCiD, you will have the ability to access existing studys or create a study using the 'New’ button. Details about each section are outlined below. Users can also return to existing submissions saved under the ORCiD account to resume their work at any point. 
+Once signed in with an ORCiD, you will have the ability to access existing studies or create a study using the 'New’ button. Details about each section are outlined below. Users can also return to existing submissions saved under the ORCiD account to resume their work at any point. 
 
 ### New Study
 
