@@ -190,9 +190,7 @@ We recommend completing all "New Study" steps prior to and in preparation of fie
 
 ### Samples
 
-In Field Notes, sample metadata are entered individually in a form like structure. This is different than the grid format of the Submission Portal
-
-The Sample (TODO Biosample in Submission Portal vs Sample here?) Metadata interface consists of a form like structure where metadata is entered individually, unlike the grid format of the Submission Portal.
+In Field Notes, the sample (TODO Biosample in Submission Portal vs Sample here?) metadata interface consists of a form like structure where metadata is entered individually, unlike the grid format of the Submission Portal.
 
 Required metadata is marked with a ⚠️ symbol. Though, no metadata can be provided and the same will still be saved.
 Once a sample has been started, you can return to the Study page via the ← button in the upper left. Your new sample will now appear at the bottom of your screen.
