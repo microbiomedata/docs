@@ -35,3 +35,4 @@ Welcome to the NMDC Workflow documentation!
    chapters/11_Metaproteomics/index.rst
    chapters/12_Metabolomics/index.rst
    chapters/13_Natural_Organic_Matter/index.rst
+   chapters/14_Lipidomics/index.rst
