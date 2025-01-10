@@ -148,7 +148,7 @@ The NMDC Field Notes App is for mobile device use and is available for beta test
 
 This app is designed to streamline real-time registration and collection of standardized metadata and field measurements. 
 
-Each section of the app will automatically launch a quick walk-through. You can press the → button to continue the tour or press the X button to end it. To re-initiate the walk through at any time, visit the Settings page and select ‘App Walk-Through’
+Upon first use, each section of the app will automatically launch a quick walk-through. You can press the → button to continue the tour or press the X button to end it. To re-initiate the walk through at any time, visit the Settings page and select ‘App Walk-Through’
 
 Available in the app is general fieldwork guidance and recommendations for collecting proper metadata for your sample type(s) to help you plan your fieldwork and metadata collection. We recommend viewing this information before you go out into the field.
 
