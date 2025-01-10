@@ -215,7 +215,7 @@ Similar to [header](#column-information) for the Submission Portal, when you sel
 
 ##### Location Provided Metadata
 
-Field Notes can use your mobile device information and location to populate some metadata fields. For example, selecting "Set to today" for the term "collection date" will auto populate with the current date. Additional, mobile GPS coordinates can be used to populate "latitude and longitude" field by selecting "Use GPS location". This along with other auto-populating fields ensure accurate and structured metadata in real time and minimuzes human error.
+Field Notes can use your mobile device information and location to populate some metadata fields. For example, selecting "Set to today" for the term "collection date" will auto populate with the current date. Additionally, mobile GPS coordinates can be used to populate "latitude and longitude" field by selecting "Use GPS location". This along with other auto-populating fields ensure accurate and structured metadata in real time and minimizes human error.
 
 ##### Real Time Validation  
 
