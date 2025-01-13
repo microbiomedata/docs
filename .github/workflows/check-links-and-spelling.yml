@@ -15,6 +15,7 @@ name: Check Links and Spelling
 on:
   push: { branches: [ 60-add-spell-checker ] }
   workflow_dispatch: { }
+  workflow_call: { }
 
 # Reference: https://docs.github.com/en/actions/using-jobs/using-concurrency
 concurrency:

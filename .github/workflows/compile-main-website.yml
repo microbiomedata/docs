@@ -5,6 +5,7 @@ name: Build GitHub Pages
 on:
   push: { branches: [ main ] }
   workflow_dispatch: { }
+  workflow_call: { }
 
 # Reference: https://docs.github.com/en/actions/using-jobs/using-concurrency
 concurrency:
