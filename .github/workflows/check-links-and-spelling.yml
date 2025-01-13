@@ -42,17 +42,12 @@ jobs:
           path: _build/html
 
       # ------------------ Link Checking ------------------
-      - name: Check for broken links
-        id: link-report
-        uses: celinekurpershoek/link-checker@v1.0.2
+      - name: Hyperlink link checker
+        uses: untitaker/hyperlink@0.1.43
+        id: linkcheck
         with:
-          # Required:
-          url: "https://..."
-          # optional:
-          honorRobotExclusions: true
-          ignorePatterns: "github,google"
-          recursiveLinks: true # Check all URLs on all reachable pages (could take a while)
-
+          args: _build/html/ --check-anchors 
+          
       - name: Create GitHub Issue listing broken links
         if: ${{ success() && steps.linkcheck.outputs.broken-links != '' }}
         uses: peter-evans/create-issue-from-file@v4
