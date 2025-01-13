@@ -13,12 +13,12 @@ name: Check Links and Spelling
 
 on:
   # Trigger automatically on push or pull request to the development branch
-  push:
-    branches:
-      - 60-add-spell-checker  # Replace with default branch
-  pull_request:
-    branches:
-      - 60-add-spell-checker  # Replace with default branch
+  # push:
+  #   branches:
+  #     - 60-add-spell-checker  # Replace with default branch
+  # pull_request:
+  #   branches:
+  #     - 60-add-spell-checker  # Replace with default branch
 
   # Allow people to trigger the workflow manually.
   workflow_dispatch: {} 
