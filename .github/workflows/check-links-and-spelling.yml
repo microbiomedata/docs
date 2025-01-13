@@ -32,10 +32,27 @@ jobs:
       - name: Check out repository
         uses: actions/checkout@v4
 
+      
+
+      # ------------------ Link Checking ------------------
+      - name: Hyperlink link checker
+        uses: untitaker/hyperlink@0.1.43
+        id: linkcheck
+        with:
+          args: _build/html/ --check-anchors --continue
+          
+      - name: Create GitHub Issue listing broken links
+        if: ${{ success() && steps.linkcheck.outputs.broken-links != '' }}
+        uses: peter-evans/create-issue-from-file@v4
+        with:
+          title: Documentation contains broken links
+          content-filepath: './linkcheck_report.txt'
+          labels: documentation, broken-link
+
       # ------------------ Spell Checking ------------------
       - name: Run Spell Checker
         id: spellcheck
-        uses: wow-actions/spell-checker@v1
+        uses: wow-actions/spell-checker@v1.0.3
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           include: |
@@ -50,21 +67,3 @@ jobs:
           title: Documentation contains misspelled words
           content-filepath: './spellcheck_report.txt'
           labels: documentation, spelling-error
-
-
-      # ------------------ Link Checking ------------------
-      - name: Hyperlink link checker
-        uses: untitaker/hyperlink@0.1.43
-        id: linkcheck
-        with:
-          args: _build/html/ --check-anchors 
-          
-      - name: Create GitHub Issue listing broken links
-        if: ${{ success() && steps.linkcheck.outputs.broken-links != '' }}
-        uses: peter-evans/create-issue-from-file@v4
-        with:
-          title: Documentation contains broken links
-          content-filepath: './linkcheck_report.txt'
-          labels: documentation, broken-link
-
-      
