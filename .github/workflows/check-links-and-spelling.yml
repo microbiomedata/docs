@@ -12,6 +12,7 @@
 name: Check Links and Spelling
 
 on:
+  workflow_dispatch: { }
   # Trigger automatically on push or pull request to the development branch
   # push:
   #   branches:
@@ -21,7 +22,7 @@ on:
   #     - 60-add-spell-checker  # Replace with default branch
 
   # Allow people to trigger the workflow manually.
-  workflow_dispatch: {} 
+
 
 jobs:
   check-docs:
