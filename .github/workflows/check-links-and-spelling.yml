@@ -17,11 +17,6 @@ on:
   workflow_dispatch: { }
   workflow_call: { }
 
-# Reference: https://docs.github.com/en/actions/using-jobs/using-concurrency
-concurrency:
-  group: github-pages
-  cancel-in-progress: true
-
 jobs:
   # Use existing workflows to compile the legacy documentation.
   # Reference: https://docs.github.com/en/actions/using-workflows/reusing-workflows#calling-a-reusable-workflow
