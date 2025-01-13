@@ -65,6 +65,11 @@ jobs:
         with:
           path: _build/html
 
+  check-links-and-spelling:
+    name: Check for broken links and misspelled words in compiled docs
+    needs: build
+    uses: ./.github/workflows/check-links-and-spelling.yml
+
   deploy:
     name: Deploy website
     needs:

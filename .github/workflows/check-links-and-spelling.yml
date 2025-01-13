@@ -1,0 +1,67 @@
+###############################################################################
+# Introduction:
+# -------------
+# This workflow builds the NMDC documentation, checks for broken links, 
+# and identifies any spelling errors in the documentation.
+# If any issues are found (broken links or misspelled words), it creates
+# GitHub Issues containing lists of the errors for further review and fixing.
+#
+###############################################################################
+
+
+name: Check Links and Spelling
+
+on:
+  # Trigger automatically on push or pull request to the development branch
+  push:
+    branches:
+      - 60-add-spell-checker  # Replace with default branch
+  pull_request:
+    branches:
+      - 60-add-spell-checker  # Replace with default branch
+
+  # Allow people to trigger the workflow manually.
+  workflow_dispatch: {} 
+
+jobs:
+  check-docs:
+    name: Check Links and Spelling in Documentation
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4  # Checkout the latest commit
+
+      # ------------------ Link Checking ------------------
+      - name: Run LinkCheck to check for broken links
+        uses: filiph/linkcheck@3.0.0
+        id: linkcheck
+        with:
+          files: '**/*.{md,html,rst}'  # Check .md, .html, and .rst files recursively
+          fail-on-first-error: false  # Don't fail on the first broken link
+          output-file: './linkcheck_report.txt'  # Output file for broken links
+
+      - name: Create GitHub Issue listing broken links
+        if: ${{ success() && steps.linkcheck.outputs.broken-links != '' }}
+        uses: peter-evans/create-issue-from-file@v4
+        with:
+          title: Documentation contains broken links
+          content-filepath: ./linkcheck_report.txt
+          labels: documentation, broken-link
+
+      # ------------------ Spell Checking ------------------
+      - name: Run Spell Checker
+        id: spellcheck
+        uses: wow-actions/spell-checker@v1  # Using the wow-actions spell checker
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Token for creating issues
+          include: |
+            **/*.md  
+            **/*.txt  # Add .txt files if needed
+
+      - name: Create GitHub Issue for Misspellings
+        if: ${{ steps.spellcheck.outputs.found_errors == 'true' }}
+        uses: peter-evans/create-issue-from-file@v4
+        with:
+          title: Documentation contains misspelled words
+          content-filepath: './spellcheck_report.txt'  # Output file with the list of misspelled words
+          labels: documentation, spelling-error
