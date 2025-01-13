@@ -88,50 +88,50 @@ jobs:
           path: _build/html
 
   check-docs:
-  name: Check Links and Spelling in Documentation
-  needs: build
-  runs-on: ubuntu-latest
-  steps:
-    - name: Check out repository
-      uses: actions/checkout@v4
+    name: Check Links and Spelling in Documentation
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
 
-    - name: Download compiled documentation artifacts
-      uses: actions/download-artifact@v4
-      with:
-        path: _build/html
+      - name: Download compiled documentation artifacts
+        uses: actions/download-artifact@v4
+        with:
+          path: _build/html
 
-    # ------------------ Link Checking ------------------
-    - name: Run LinkCheck to check for broken links
-      uses: filiph/linkcheck@3.0.0
-      id: linkcheck
-      with:
-        files: '_build/html/**/*.{md,html,rst}'
-        fail-on-first-error: false
-        output-file: './linkcheck_report.txt'
+      # ------------------ Link Checking ------------------
+      - name: Run LinkCheck to check for broken links
+        uses: filiph/linkcheck@3.0.0
+        id: linkcheck
+        with:
+          files: '_build/html/**/*.{md,html,rst}'
+          fail-on-first-error: false
+          output-file: './linkcheck_report.txt'
 
-    - name: Create GitHub Issue listing broken links
-      if: ${{ success() && steps.linkcheck.outputs.broken-links != '' }}
-      uses: peter-evans/create-issue-from-file@v4
-      with:
-        title: Documentation contains broken links
-        content-filepath: './linkcheck_report.txt'
-        labels: documentation, broken-link
+      - name: Create GitHub Issue listing broken links
+        if: ${{ success() && steps.linkcheck.outputs.broken-links != '' }}
+        uses: peter-evans/create-issue-from-file@v4
+        with:
+          title: Documentation contains broken links
+          content-filepath: './linkcheck_report.txt'
+          labels: documentation, broken-link
 
-    # ------------------ Spell Checking ------------------
-    - name: Run Spell Checker
-      id: spellcheck
-      uses: wow-actions/spell-checker@v1
-      with:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        include: |
-          _build/html/**/*.md
-          _build/html/**/*.txt
-          _build/html/**/*.html
+      # ------------------ Spell Checking ------------------
+      - name: Run Spell Checker
+        id: spellcheck
+        uses: wow-actions/spell-checker@v1
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          include: |
+            _build/html/**/*.md
+            _build/html/**/*.txt
+            _build/html/**/*.html
 
-    - name: Create GitHub Issue for Misspellings
-      if: ${{ steps.spellcheck.outputs.found_errors == 'true' }}
-      uses: peter-evans/create-issue-from-file@v4
-      with:
-        title: Documentation contains misspelled words
-        content-filepath: './spellcheck_report.txt'
-        labels: documentation, spelling-error
+      - name: Create GitHub Issue for Misspellings
+        if: ${{ steps.spellcheck.outputs.found_errors == 'true' }}
+        uses: peter-evans/create-issue-from-file@v4
+        with:
+          title: Documentation contains misspelled words
+          content-filepath: './spellcheck_report.txt'
+          labels: documentation, spelling-error
