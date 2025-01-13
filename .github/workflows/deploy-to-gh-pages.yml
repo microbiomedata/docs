@@ -3,7 +3,7 @@
 name: Build and deploy to GitHub Pages
 
 on:
-  push: { branches: [ 60-add-spell-checker ] }
+  push: { branches: [ main ] }
   workflow_dispatch: { }
 
 # Reference: https://docs.github.com/en/actions/using-jobs/using-concurrency
