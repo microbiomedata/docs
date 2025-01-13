@@ -8,18 +8,6 @@
 #
 ###############################################################################
 
-# on:
-#   workflow_dispatch: { }
-#   # Trigger automatically on push or pull request to the development branch
-#   # push:
-#   #   branches:
-#   #     - 60-add-spell-checker  # Replace with default branch
-#   # pull_request:
-#   #   branches:
-#   #     - 60-add-spell-checker  # Replace with default branch
-
-#   # Allow people to trigger the workflow manually.
-
 
 
 name: Check Links and Spelling
@@ -36,57 +24,10 @@ concurrency:
 jobs:
   # Use existing workflows to compile the legacy documentation.
   # Reference: https://docs.github.com/en/actions/using-workflows/reusing-workflows#calling-a-reusable-workflow
-  compile-legacy-nmdc-documentation:
-    name: Compile legacy NMDC documentation
-    uses: ./.github/workflows/compile-legacy-nmdc-documentation.yml
-  compile-current-nmdc-documentation:
-    name: Compile current NMDC documentation
-    uses: ./.github/workflows/compile-current-nmdc-documentation.yml
-  fetch-and-compile-nmdc-runtime-documentation:
-    name: Fetch and compile NMDC Runtime documentation
-    uses: ./.github/workflows/fetch-and-compile-nmdc-runtime-documentation.yml
-  fetch-and-compile-workflow-documentation:
-    name: Fetch and compile workflow documentation
-    uses: ./.github/workflows/fetch-and-compile-workflow-documentation.yml
-
   build:
     name: Compile main website
-    # This job depends upon other jobs succeeding.
-    # Reference: https://docs.github.com/en/actions/writing-workflows/workflow-syntax-for-github-actions#jobsjob_idneeds
-    needs:
-      - compile-legacy-nmdc-documentation
-      - compile-current-nmdc-documentation
-      - fetch-and-compile-nmdc-runtime-documentation
-      - fetch-and-compile-workflow-documentation
-    runs-on: ubuntu-latest
-    permissions:
-      contents: read
-    steps:
-      - name: Check out commit  # Docs: https://github.com/actions/checkout
-        uses: actions/checkout@v4
-      - name: Download all artifacts
-        uses: actions/download-artifact@v4  # Docs: https://github.com/actions/download-artifact
-        with:
-          path: artifacts
-      - name: Assemble website file tree
-        run: |
-          ls -R artifacts
-          mkdir -p _build/html _build/html/legacy _build/html/workflows
-          cp -R artifacts/legacy-nmdc-documentation-as-html _build/html/legacy/nmdc-documentation
-          cp -R artifacts/current-nmdc-documentation-as-html _build/html/nmdc
-          cp -R artifacts/nmdc-runtime-documentation-as-html _build/html/nmdc-runtime-documentation
-          cp -R artifacts/workflow-documentation-as-html _build/html/workflow-documentation
-          cp -R content/assets _build/html/assets
-          cp content/index.html _build/html/index.html
-          ls -R _build/html
-      - name: Inject robots.txt file into assembled website file tree
-        run: |
-          cp content/robots.txt _build/html/robots.txt
-      - name: Save the result for publishing to GitHub Pages  # Docs: https://github.com/actions/upload-pages-artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: _build/html
-
+    uses: ./.github/workflows/compile-main-website.yml
+ 
   check-docs:
     name: Check Links and Spelling in Documentation
     needs: build
@@ -101,13 +42,16 @@ jobs:
           path: _build/html
 
       # ------------------ Link Checking ------------------
-      - name: Run LinkCheck to check for broken links
-        uses: filiph/linkcheck@3.0.0
-        id: linkcheck
+      - name: Check for broken links
+        id: link-report
+        uses: celinekurpershoek/link-checker@v1.0.2
         with:
-          files: '_build/html/**/*.{md,html,rst}'
-          fail-on-first-error: false
-          output-file: './linkcheck_report.txt'
+          # Required:
+          url: "https://..."
+          # optional:
+          honorRobotExclusions: true
+          ignorePatterns: "github,google"
+          recursiveLinks: true # Check all URLs on all reachable pages (could take a while)
 
       - name: Create GitHub Issue listing broken links
         if: ${{ success() && steps.linkcheck.outputs.broken-links != '' }}
