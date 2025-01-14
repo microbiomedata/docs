@@ -1,0 +1,174 @@
+###############################################################################
+# Introduction:
+# -------------
+# This workflow builds the NMDC documentation, checks for broken links, 
+# and identifies any spelling errors in the documentation.
+# If any issues are found (broken links or misspelled words), it creates
+# GitHub Issues containing lists of the errors for further review and fixing.
+#
+###############################################################################
+
+
+
+name: Check Links and Spelling
+
+on:
+  push: { branches: [ 61-add-link-checker ] }
+  workflow_dispatch: { }
+  workflow_call: { }
+
+jobs:
+
+  compile-home-docs:
+    name: Compile home docs
+    uses: ./.github/workflows/compile-home-docs.yml
+  fetch-and-compile-runtime-docs:
+    name: Fetch and compile Runtime docs
+    uses: ./.github/workflows/fetch-and-compile-runtime-docs.yml
+  fetch-and-compile-workflow-docs:
+    name: Fetch and compile workflow docs
+    uses: ./.github/workflows/fetch-and-compile-workflow-docs.yml
+
+  build:
+    name: Compile main website
+    # This job depends upon other jobs succeeding.
+    # Reference: https://docs.github.com/en/actions/writing-workflows/workflow-syntax-for-github-actions#jobsjob_idneeds
+    needs:
+      - compile-home-docs
+      - fetch-and-compile-runtime-docs
+      - fetch-and-compile-workflow-docs
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - name: Check out commit  # Docs: https://github.com/actions/checkout
+        uses: actions/checkout@v4
+      - name: Download all artifacts
+        uses: actions/download-artifact@v4  # Docs: https://github.com/actions/download-artifact
+        with:
+          path: artifacts
+      # Note: We use the `-T` option of the `cp` command so that the source directory name does not
+      #       get appended to the destination directory name. It's short for `--no-target-directory`.
+      #       Reference: https://www.gnu.org/software/coreutils/manual/html_node/Target-directory.html
+      - name: Assemble website file tree
+        run: |
+          mkdir -p \
+            _build/html/runtime \
+            _build/html/workflows
+          cp -R -T artifacts/home-docs-as-html        _build/html
+          cp -R -T artifacts/runtime-docs-as-html     _build/html/runtime
+          cp -R -T artifacts/workflow-docs-as-html    _build/html/workflows
+      - name: Inject robots.txt file into assembled website file tree
+        run: |
+          cp content/robots.txt _build/html/robots.txt
+          ls -R _build/html
+      - name: Save the result for publishing to GitHub Pages  # Docs: https://github.com/actions/upload-pages-artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _build/html
+      
+  
+  check-links:
+    name: Check Links in Documentation
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out commit  # Docs: https://github.com/actions/checkout
+        uses: actions/checkout@v4
+      - name: Download all artifacts
+        uses: actions/download-artifact@v4  # Docs: https://github.com/actions/download-artifact
+        with:
+          path: artifacts
+      - name: Run Markdown Link Check
+        uses: gaurav-nelson/github-action-markdown-link-check@v1
+        id: linkcheck
+        with:
+          use-quiet-mode: 'yes'
+          folder-path: 'artifacts/'
+          max-depth: -1
+          file-extension: '.html'
+
+      - name: Create GitHub Issue for Broken Links
+        if: ${{ steps.linkcheck.outputs.found_errors == 'true' }}
+        uses: peter-evans/create-issue-from-file@v4
+        with:
+          title: Documentation contains misspelled words
+          content-filepath: './linkcheck_report.txt'
+          labels: documentation, broken-link
+
+
+      # ------------------ Spell Checking ------------------
+  check-spelling:
+    name: Check Spelling in Documentation
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out commit  # Docs: https://github.com/actions/checkout
+        uses: actions/checkout@v4
+      - name: Download all artifacts
+        uses: actions/download-artifact@v4  # Docs: https://github.com/actions/download-artifact
+        with:
+          path: artifacts
+      - name: Run Spell Checker
+        id: spellcheck
+        uses: wow-actions/spell-checker@v1
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          include: |
+            ls
+            artifacts/**/*.html
+            artifacts/**/*.md
+            artifacts/**/*.txt
+
+      - name: Create GitHub Issue for Misspellings
+        if: ${{ steps.spellcheck.outputs.found_errors == 'true' }}
+        uses: peter-evans/create-issue-from-file@v4
+        with:
+          title: Documentation contains misspelled words
+          content-filepath: './spellcheck_report.txt'
+          labels: documentation, spelling-error
+
+      # ------------------ Link Checking ------------------
+      # - name: Hyperlink link checker
+      #   uses: untitaker/hyperlink@0.1.43
+      #   id: linkcheck
+      #   with:
+      #     args: _build/html/ --check-anchors --continue
+          
+      # - name: Create GitHub Issue listing broken links
+      #   if: ${{ success() && steps.linkcheck.outputs.broken-links != '' }}
+      #   uses: peter-evans/create-issue-from-file@v4
+      #   with:
+      #     title: Documentation contains broken links
+      #     content-filepath: './linkcheck_report.txt'
+      #     labels: documentation, broken-link
+
+      # - name: Use Lychee to check for broken links
+      #   # This step will populate `env.lychee_exit_code` with the exit code returned by lychee.
+      #   # Possible exit codes: https://github.com/lycheeverse/lychee?tab=readme-ov-file#exit-codes
+      #   # Reference: https://github.com/lycheeverse/lychee-action
+      #   id: lychee
+      #   uses: lycheeverse/lychee-action@v1.9.0
+      #   with:
+      #     # Reference: https://github.com/lycheeverse/lychee#commandline-parameters
+      #     args: --base . --verbose --no-progress './**/*.md' './**/*.html' './**/*.rst'
+      #     debug: true
+      #     output: ./lychee/out.md
+      #     fail: false
+      # - name: Create GitHub Issue listing broken links
+      #   # This step will only run if lychee returned a non-zero exit code.
+      #   # Reference: https://docs.github.com/en/actions/learn-github-actions/variables#using-the-env-context-to-access-environment-variable-values
+      #   if: ${{ env.lychee_exit_code != 0 }}
+      #   uses: peter-evans/create-issue-from-file@v4
+      #   with:
+      #     title: Markdown docs contain broken links
+      #     content-filepath: ./lychee/out.md
+      #     labels: documentation, broken-link
+
+      # - uses: actions/checkout@v4
+      # - name: Run linkspector
+      #   uses: UmbrellaDocs/action-linkspector@v1.2.4
+      #   with:
+      #     github_token: ${{ secrets.github_token }}
+      #     reporter: github-pr-review
+      #     fail_on_error: false
