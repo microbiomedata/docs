@@ -24,12 +24,15 @@ jobs:
     name: Compile main website
     uses: ./.github/workflows/compile-main-website.yml
   
-        - name: Check out repository
-        uses: actions/checkout@v4
-      - name: Download all artifacts
-        uses: actions/download-artifact@v4  # Docs: https://github.com/actions/download-artifact
-        with:
-          path: artifacts
+  checkout:
+    name: Check out repository
+    uses: actions/checkout@v4
+    
+  download-artifacts:
+    name: Download all artifacts
+    uses: actions/download-artifact@v4  # Docs: https://github.com/actions/download-artifact
+    with:
+      path: artifacts
  
   check-links:
     name: Check Links in Documentation
