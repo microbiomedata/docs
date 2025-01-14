@@ -87,7 +87,7 @@ jobs:
         id: linkcheck
         with:
           use-quiet-mode: 'yes'
-          folder-path: '/home/runner/work/docs/docs/artifacts/'
+          folder-path: '**/_build/html/'
           max-depth: -1
           file-extension: '.html'
 
@@ -118,9 +118,10 @@ jobs:
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           include: |
-            /home/runner/work/docs/docs/artifacts/**/*.md
-            /home/runner/work/docs/docs/artifacts/**/*.txt
-            /home/runner/work/docs/docs/artifacts/**/*.html
+            ls
+            **/_build/html/**/*.html
+            **/_build/html/**/*.md
+            **/_build/html/**/*.txt
 
       - name: Create GitHub Issue for Misspellings
         if: ${{ steps.spellcheck.outputs.found_errors == 'true' }}
