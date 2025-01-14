@@ -24,21 +24,17 @@ jobs:
     name: Compile main website
     uses: ./.github/workflows/compile-main-website.yml
   
-  checkout:
-    name: Check out repository
-    uses: actions/checkout@v4
-    
-  download-artifacts:
-    name: Download all artifacts
-    uses: actions/download-artifact@v4  # Docs: https://github.com/actions/download-artifact
-    with:
-      path: artifacts
- 
   check-links:
     name: Check Links in Documentation
     needs: build
     runs-on: ubuntu-latest
     steps:
+      - name: Check out commit  # Docs: https://github.com/actions/checkout
+        uses: actions/checkout@v4
+      - name: Download all artifacts
+        uses: actions/download-artifact@v4  # Docs: https://github.com/actions/download-artifact
+        with:
+          path: artifacts
 
 
       # ------------------ Link Checking ------------------
@@ -110,6 +106,12 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     steps:
+      - name: Check out commit  # Docs: https://github.com/actions/checkout
+        uses: actions/checkout@v4
+      - name: Download all artifacts
+        uses: actions/download-artifact@v4  # Docs: https://github.com/actions/download-artifact
+        with:
+          path: artifacts
       - name: Run Spell Checker
         id: spellcheck
         uses: wow-actions/spell-checker@v1.0.3
