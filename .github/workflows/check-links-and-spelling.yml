@@ -87,7 +87,7 @@ jobs:
         id: linkcheck
         with:
           use-quiet-mode: 'yes'
-          folder-path: '**/_build/html/'
+          folder-path: '.'
           max-depth: -1
           file-extension: '.html'
 
@@ -114,7 +114,7 @@ jobs:
           path: artifacts
       - name: Run Spell Checker
         id: spellcheck
-        uses: wow-actions/spell-checker@v1.0.3
+        uses: wow-actions/spell-checker@v1
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           include: |
