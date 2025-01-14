@@ -1,75 +1,74 @@
 #  Running the Workflows
-
-## NMDC EDGE Quick Start User Guide
 ![](../_static/images/howto_guides/workflows/quickStart/image1.png)
 
-### Register for an account 
+## NMDC EDGE Quick Start User Guide
 
-Users must register for an account within the NMDC EDGE platform or login using the user's ORCiD account. 
+### Register for an account
 
-![](../_static/images/howto_guides/workflows/quickStart/image2.png)
+1. Visit the homepage for NMDC EDGE platform using the link below.\
+https://nmdc-edge.org/home
 
-![](../_static/images/howto_guides/workflows/quickStart/image3.png)
+2. Click on "ORCID LOGIN" to login to your account on the NMDC EDGE platform. 
 
-### User Profile
+    ![](../_static/images/howto_guides/workflows/quickStart/image16.png)
 
-Once logged in, the green button with the user's initials on the right provides a drop-down menu which allows the user to manage their projects and uploads; there is also a button which allows users to edit their profile. On this profile page, there are two options: 1) the option to receive email notification of a project's status (OFF by default) and 2) the option to change the user's password (also OFF by default).
+3. Login using your ORCiD and ORCiD password. If you dont have an ORCiD click on "Register Now" and follow the instructions to setup an ORCiD account.
 
-![](../_static/images/howto_guides/workflows/quickStart/image4.png)
+    ![](../_static/images/howto_guides/workflows/quickStart/image17.png)
+
+4. If you are logging in for the first time, click on "My Profile" and optionally provide your First Name, Last Name, Email. You can also set the "Project Status Notification" to ON (OFF by default). If ON, the notifications will be sent to the Email you provided. Click on "Save Changes"
+
+    ![](../_static/images/howto_guides/workflows/quickStart/image18.png)
+
 
 ### Upload data
 
-Two options are available for users to upload their own data to process through the workflows. The first is using the button in the left menu bar. The second is through the drop-down menu shown when clicking the green button with the user's initials on the right. Either button will open a window which allows the user to drag and drop files or browse for the user's data files. (There are also some datasets in the Public Data folder for users to test the platform.) 
+You can upload your own data to process through the workflows. Click on "Upload Files" in the left menu bar. This will open a window which allows you to drag and drop files or browse previously uploaded data files. If you do not have a data set to test, you can download this [**test data**](https://portal.nersc.gov/cfs/m3408/test_data/SRR7877884/SRR7877884-int-0.1.fastq.gz) and upload to the NMDC EDGE platform. 
 
-![](../_static/images/howto_guides/workflows/quickStart/image5.png)
+Additionally, there are some datasets in the Public Data folder for you to test within the NMDC EDGE platform.
+
+![](../_static/images/howto_guides/workflows/quickStart/image19.png)
 
 ### Running a single workflow 
 
-To run a workflow, the user must provide:
+Click on "Metagenomics" then select "Run a Single Workflow" option.
+
+ ![](../_static/images/howto_guides/workflows/quickStart/image20.png)
+
+To run a single workflow, the user must provide:
 
 1.  A unique Project/Run Name with no spaces (underscores are fine).
 
-2.  A description is optional, but recommended.
+2.  A description (optional, but recommended).
 
-3.  The user then selects the workflow desired from the drop-down menu.
+3.  The workflow desired from the drop-down menu.
 
-4.  For metagenomic/metatranscriptomic data, the user must also select if the input data is interleaved or separate files for the paired reads.
+4.  Select if the input data is interleaved (YES by default). If the data is paired select NO and it will allow you to upload both, forward and reverse files.
 
-5.  Then the input file(s) from the available list of files. 
+5.  Then select the input file(s). Clicking on the button to the right of the "interleaved FASTQ #1" (as indicated in the image above) opens a box called "Select a file" (as indicated in the image below) to allow the user to find the desired files, either from the public data folder, or files you uploaded in "Upload Data" section. 
 
-6.  The user should click "Submit.
+    ![](../_static/images/howto_guides/workflows/quickStart/image21.png)
 
-> ![](../_static/images/howto_guides/workflows/quickStart/image6.png)
-
-Note: Clicking on the buttons to the right of the data input blanks
-opens a box called "Select a file" to allow the user to find the desired files (shown in purple) from previously run
-projects, the public data folder, or user uploaded files.
-
-![](../_static/images/howto_guides/workflows/quickStart/image7.png)
+6.  Click "Submit.
 
 ### Running multiple workflows
 
-1.  Another option is to select "Run Multiple Workflows" if the user
-    desires to run more than one of the metagenomic workflows or the
+1.  Another option is to select "Run Multiple Workflows" if you
+    desire to run more than one of the metagenomic workflows or the
     entire metagenomic pipeline.
 
 2.  Enter a **unique** Project/Run Name with no spaces
     (underscores are fine).
 
-3.  A description is optional, but recommended.
+3.  A description (optional, but recommended).
 
-4.  The user must also select if the input data is interleaved or
-    separate files for the paired reads.
+4.  Select if the input data is interleaved (YES by default). If the data is paired select NO and it will allow you to upload both, forward and reverse files.
 
-> ![](../_static/images/howto_guides/workflows/quickStart/image8.png)
+> ![](../_static/images/howto_guides/workflows/quickStart/image22.png)
 
-All five of the metagenomic workflows are "ON" by default, but the user
-can select to turn off any workflows not desired. The pipeline uses the
-output of each workflow as the input for subsequent workflows. (Note:
-Some workflows require input data from prior workflows, so turning one
-workflow off may result in other workflows also automatically turning
-off.) Then the user can click "Submit."
-![](../_static/images/howto_guides/workflows/quickStart/image9.png)
+5.  Then select the input file(s). Clicking on the button to the right of the "interleaved FASTQ #1" (as indicated in the image above) opens a box called "Select a file" (as indicated in the image below) to allow the user to find the desired files, either from the public data folder, or files you uploaded in "Upload Data" section.
+    ![](../_static/images/howto_guides/workflows/quickStart/image21.png)
+6.  Click "Submit.
 
 ### Output 
 
