@@ -23,19 +23,20 @@ jobs:
   build:
     name: Compile main website
     uses: ./.github/workflows/compile-main-website.yml
- 
-  check-docs:
-    name: Check Links and Spelling in Documentation
-    needs: build
-    runs-on: ubuntu-latest
-    steps:
-      - name: Check out repository
+  
+        - name: Check out repository
         uses: actions/checkout@v4
       - name: Download all artifacts
         uses: actions/download-artifact@v4  # Docs: https://github.com/actions/download-artifact
         with:
           path: artifacts
-      
+ 
+  check-links:
+    name: Check Links in Documentation
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+
 
       # ------------------ Link Checking ------------------
       # - name: Hyperlink link checker
@@ -81,24 +82,40 @@ jobs:
       #     github_token: ${{ secrets.github_token }}
       #     reporter: github-pr-review
       #     fail_on_error: false
-      
+
       - name: Run Markdown Link Check
         uses: gaurav-nelson/github-action-markdown-link-check@v1
+        id: linkcheck
         with:
           use-quiet-mode: 'yes'
-          folder-path: '_build/html/'
+          folder-path: '/home/runner/work/docs/docs/artifacts/'
           max-depth: -1
           file-extension: '.html'
+
+      - name: Create GitHub Issue for Broken Links
+        if: ${{ steps.linkcheck.outputs.found_errors == 'true' }}
+        uses: peter-evans/create-issue-from-file@v4
+        with:
+          title: Documentation contains misspelled words
+          content-filepath: './linkcheck_report.txt'
+          labels: documentation, broken-link
+
+
       # ------------------ Spell Checking ------------------
+  check-spelling:
+    name: Check Spelling in Documentation
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
       - name: Run Spell Checker
         id: spellcheck
         uses: wow-actions/spell-checker@v1.0.3
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           include: |
-            _build/html/**/*.md
-            _build/html/**/*.txt
-            _build/html/**/*.html
+            /home/runner/work/docs/docs/artifacts/**/*.md
+            /home/runner/work/docs/docs/artifacts/**/*.txt
+            /home/runner/work/docs/docs/artifacts/**/*.html
 
       - name: Create GitHub Issue for Misspellings
         if: ${{ steps.spellcheck.outputs.found_errors == 'true' }}
