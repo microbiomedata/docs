@@ -17,6 +17,10 @@ on:
   workflow_dispatch: { }
   workflow_call: { }
 
+env:
+  JSON_FILE: spell-check.json
+  DICTIONARY_FILE: .github/workflows/dictionary.txt
+
 jobs:
 
   compile-home-docs:
@@ -84,18 +88,31 @@ jobs:
         id: linkcheck
         with:
           use-quiet-mode: 'yes'
+          use-verbose-mode: 'no'
           folder-path: 'artifacts/'
           max-depth: -1
           file-extension: '.html'
-
+          base-branch: 'main'
+     - name: Save Link Check Output
+        run: |
+          mkdir -p linkcheck_reports
+          # Save the output to a file
+          echo "${{ steps.linkcheck.outputs.result }}" > linkcheck_reports/linkcheck_output.txt
+      - name: Analyze Link Check Results
+        id: analyze-linkcheck
+        run: |
+          if grep -q "ERROR" linkcheck_reports/linkcheck_output.txt; then
+            echo "found_errors=true" >> $GITHUB_ENV
+          else
+            echo "found_errors=false" >> $GITHUB_ENV
+          fi
       - name: Create GitHub Issue for Broken Links
-        if: ${{ steps.linkcheck.outputs.found_errors == 'true' }}
+        if: env.found_errors == 'true'
         uses: peter-evans/create-issue-from-file@v4
         with:
-          title: Documentation contains misspelled words
-          content-filepath: './linkcheck_report.txt'
+          title: "Broken links detected in documentation"
+          content-filepath: 'linkcheck_reports/linkcheck_output.txt'
           labels: documentation, broken-link
-
 
       # ------------------ Spell Checking ------------------
   check-spelling:
@@ -110,22 +127,28 @@ jobs:
         with:
           path: artifacts
       - name: Run Spell Checker
-        id: spellcheck
-        uses: wow-actions/spell-checker@v1
-        with:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          include: |
-            ls
-            artifacts/**/*.html
-            artifacts/**/*.md
-            artifacts/**/*.txt
+        id: spellchecker-cli
+        # uses: tbroadley/spellchecker-cli-action@v1
+        # with:
+        #   files: "**/*.html"
+        #   language: "en-US"
+        #   quiet: true
+        #   reports: true
+        #   plugins: "spell indefinite-article repeated-words syntax-mentions syntax-urls"
+        continue-on-error: true
+        run: |
+          npx -y spellchecker-cli --files artifacts/**/*.html \
+            --dictionaries $DICTIONARY_FILE \
+            --plugins spell indefinite-article repeated-words syntax-mentions syntax-urls \
+            --reports $JSON_FILE
+
 
       - name: Create GitHub Issue for Misspellings
-        if: ${{ steps.spellcheck.outputs.found_errors == 'true' }}
+        if: ${{ steps.spellchecker-cli.conclusion == 'success' }}
         uses: peter-evans/create-issue-from-file@v4
         with:
           title: Documentation contains misspelled words
-          content-filepath: './spellcheck_report.txt'
+          content-filepath: $JSON_FILE
           labels: documentation, spelling-error
 
       # ------------------ Link Checking ------------------
