@@ -3,7 +3,7 @@
 name: Build and deploy to GitHub Pages
 
 on:
-  push: { branches: [ main ] }
+  push: { branches: [ 61-add-link-checker ] }
   workflow_dispatch: { }
 
 # Reference: https://docs.github.com/en/actions/using-jobs/using-concurrency
@@ -62,20 +62,24 @@ jobs:
         with:
           path: _build/html
 
-  deploy:
-    name: Deploy website
-    needs:
-      - build
-    runs-on: ubuntu-latest
-    # Reference: https://github.com/actions/deploy-pages
-    permissions:
-      pages: write
-      id-token: write
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    steps:
-      # Reference: https://github.com/actions/deploy-pages
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+  check-links-and-spelling:
+    name: Check Links and Spelling
+    uses: ./.github/workflows/check-links-and-spelling.yml
+
+  # deploy:
+  #   name: Deploy website
+  #   needs:
+  #     - build
+  #   runs-on: ubuntu-latest
+  #   # Reference: https://github.com/actions/deploy-pages
+  #   permissions:
+  #     pages: write
+  #     id-token: write
+  #   environment:
+  #     name: github-pages
+  #     url: ${{ steps.deployment.outputs.page_url }}
+  #   steps:
+  #     # Reference: https://github.com/actions/deploy-pages
+  #     - name: Deploy to GitHub Pages
+  #       id: deployment
+  #       uses: actions/deploy-pages@v4

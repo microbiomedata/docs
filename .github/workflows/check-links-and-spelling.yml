@@ -18,61 +18,15 @@ on:
   workflow_call: { }
 
 jobs:
-  compile-home-docs:
-    name: Compile home docs
-    uses: ./.github/workflows/compile-home-docs.yml
-  fetch-and-compile-runtime-docs:
-    name: Fetch and compile Runtime docs
-    uses: ./.github/workflows/fetch-and-compile-runtime-docs.yml
-  fetch-and-compile-workflow-docs:
-    name: Fetch and compile workflow docs
-    uses: ./.github/workflows/fetch-and-compile-workflow-docs.yml
-
-  build:
-    name: Compile main website
-    needs:
-      - compile-home-docs
-      - fetch-and-compile-runtime-docs
-      - fetch-and-compile-workflow-docs
-    runs-on: ubuntu-latest
-    permissions:
-      contents: read
-    steps:
-      - name: Check out commit  # Docs: https://github.com/actions/checkout
-        uses: actions/checkout@v4
-      - name: Download all artifacts
-        uses: actions/download-artifact@v4  # Docs: https://github.com/actions/download-artifact
-        with:
-          path: artifacts
-      # Note: We use the `-T` option of the `cp` command so that the source directory name does not
-      #       get appended to the destination directory name. It's short for `--no-target-directory`.
-      #       Reference: https://www.gnu.org/software/coreutils/manual/html_node/Target-directory.html
-      - name: Assemble website file tree
-        run: |
-          mkdir -p \
-            _build/html/runtime \
-            _build/html/workflows
-          cp -R -T artifacts/home-docs-as-html        _build/html
-          cp -R -T artifacts/runtime-docs-as-html     _build/html/runtime
-          cp -R -T artifacts/workflow-docs-as-html    _build/html/workflows
-      - name: Inject robots.txt file into assembled website file tree
-        run: |
-          cp content/robots.txt _build/html/robots.txt
-          ls -R _build/html
-      - name: Save the result for publishing to GitHub Pages  # Docs: https://github.com/actions/upload-pages-artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: _build/html
-      
   check-links:
     name: Check Links in Documentation
     needs: build
     runs-on: ubuntu-latest
     steps:
-      - name: Check out commit  # Docs: https://github.com/actions/checkout
+      - name: Check out commit  
         uses: actions/checkout@v4
       - name: Download all artifacts
-        uses: actions/download-artifact@v4  # Docs: https://github.com/actions/download-artifact
+        uses: actions/download-artifact@v4 
         with:
           path: artifacts
       - name: Run Markdown Link Check
@@ -80,30 +34,25 @@ jobs:
         id: linkcheck
         continue-on-error: true
         with:
-          use-quiet-mode: 'yes'
-          use-verbose-mode: 'no'
+          use-quiet-mode: yes
+          use-verbose-mode: no
           folder-path: 'artifacts/'
           max-depth: -1
-          file-extension: '.html'
-          base-branch: 'main'
+          file-extension: .html
+          base-branch: main
+          output: linkcheck_output.txt
       - name: Save Link Check Output
         run: |
           mkdir -p linkcheck_reports 
           echo "${{ steps.linkcheck.outputs.result }}" > linkcheck_reports/linkcheck_output.txt
-      - name: Analyze Link Check Results
-        id: analyze-linkcheck
-        run: |
-          if grep -q "ERROR" linkcheck_reports/linkcheck_output.txt; then
-            echo "found_errors=true" >> $GITHUB_ENV
-          else
-            echo "found_errors=false" >> $GITHUB_ENV
-          fi
+          ls 
+          ls linkcheck_reports
       - name: Create GitHub Issue for Broken Links
-        if: env.found_errors == 'true'
+        if: ${{ steps.linkcheck.outcome != 'success' }}
         uses: peter-evans/create-issue-from-file@v4
         with:
-          title: "Broken links detected in documentation"
-          content-filepath: 'linkcheck_reports/linkcheck_output.txt'
+          title: Broken links detected in documentation
+          content-filepath: linkcheck_reports/linkcheck_output.txt
           labels: documentation, broken-link
 
       # ------------------ Spell Checking ------------------
@@ -122,18 +71,25 @@ jobs:
         id: spellchecker-cli
         continue-on-error: true
         run: |
-          mkdir -p spellcheck_reports 
+          mkdir -p spellcheck_reports
           npx -y spellchecker-cli --files artifacts/**/*.html \
             --dictionaries .github/workflows/dictionary.txt \
             --plugins spell indefinite-article repeated-words syntax-mentions syntax-urls \
-            --reports spellcheck_reports/spellcheck_output.txt
-
+            --reports spellcheck_reports/spellcheck_report.json \
+            > spellcheck_reports/spellcheck_output.txt
+          ls
+          ls spellcheck_reports/
+      # - name: Upload Spell Check Artifacts
+      #   uses: actions/upload-artifact@v3
+      #   if: ${{ steps.spellchecker-cli.outcome == 'success' }}
+      #   with:
+      #     path: spellcheck_reports
       - name: Create GitHub Issue for Misspellings
-        if: ${{ steps.spellchecker-cli.conclusion == 'success' }}
+        if: ${{ steps.spellchecker-cli.outcome == 'success' }}
         uses: peter-evans/create-issue-from-file@v4
         with:
           title: Documentation contains misspelled words
-          content-filepath: 'spellcheck_reports/spellcheck_output.txt'
+          content-filepath: spellcheck_reports/spellcheck_output.txt
           labels: documentation, spelling-error
 
      
