@@ -73,7 +73,7 @@ jobs:
             --reports spellcheck_reports/spellcheck_report.json 
       - name: Save Spell Check Output
         run: |
-          echo "${{ steps.linkcheck.outputs.result }}" > spellcheck_reports/spellcheck_output.txt
+          echo "${{ steps.spellchecker-cli.outputs.result }}" > spellcheck_reports/spellcheck_output.txt
       - name: Create GitHub Issue for Misspellings
         if: ${{ steps.spellchecker-cli.outcome == 'success' }}
         uses: peter-evans/create-issue-from-file@v4
