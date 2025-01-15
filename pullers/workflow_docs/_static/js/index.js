@@ -28,10 +28,6 @@
 
     // Register a callback function to run when the web page has fully loaded.
     window.addEventListener("load", (event) => {
-        displayBanner(`
-            <strong>This website is in early development.</strong>
-            You can access our production documentation
-            <a href="https://microbiomedata.org/documentation/" style="color: black; text-decoration: underline;">here</a>.
-        `);
+        // Note: This is where you might invoke the `displayBanner` function on special occasions.
     });
 })();
