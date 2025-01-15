@@ -1,2 +1,22 @@
 NMDC
+NMDC's
 NMDC EDGE
+Microbiome
+biosample
+multi-omics
+Mgt.
+nmdc-runtime
+Diátaxis
+JSON 
+changesheets
+MkDocs
+Metagenomic
+Metagenome
+MetaG
+Metatranscriptome
+Metatranscriptomic
+MetaT
+Metaproteomic
+Metabolomics
+Lipidomics
+IMG

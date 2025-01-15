@@ -82,6 +82,7 @@ jobs:
       - name: Run Markdown Link Check
         uses: gaurav-nelson/github-action-markdown-link-check@v1
         id: linkcheck
+        continue-on-error: true
         with:
           use-quiet-mode: 'yes'
           use-verbose-mode: 'no'
@@ -91,8 +92,7 @@ jobs:
           base-branch: 'main'
       - name: Save Link Check Output
         run: |
-          mkdir -p linkcheck_reports
-          # Save the output to a file
+          mkdir -p linkcheck_reports 
           echo "${{ steps.linkcheck.outputs.result }}" > linkcheck_reports/linkcheck_output.txt
       - name: Analyze Link Check Results
         id: analyze-linkcheck
@@ -143,7 +143,7 @@ jobs:
         uses: peter-evans/create-issue-from-file@v4
         with:
           title: Documentation contains misspelled words
-          content-filepath: $JSON_FILE
+          content-filepath: env.JSON_FILE
           labels: documentation, spelling-error
 
      
