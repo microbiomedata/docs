@@ -1,0 +1,44 @@
+name: Check Links
+
+on:
+  push: { branches: [ main ] }
+  workflow_dispatch: { }
+  workflow_call: { }
+
+jobs:
+  check-links:
+    name: Check Links in Documentation
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out commit  
+        uses: actions/checkout@v4
+      - name: Download all artifacts
+        uses: actions/download-artifact@v4 
+        with:
+          path: artifacts
+      - name: Run Markdown Link Check
+        uses: gaurav-nelson/github-action-markdown-link-check@v1
+        id: linkcheck
+        continue-on-error: true
+        with:
+          use-quiet-mode: yes
+          use-verbose-mode: no
+          folder-path: 'artifacts/'
+          max-depth: -1
+          file-extension: .html
+          base-branch: main
+          output: linkcheck_output.txt
+      - name: Save Link Check Output
+        run: |
+          mkdir -p linkcheck_reports 
+          echo "${{ steps.linkcheck.outputs.result }}" > linkcheck_reports/linkcheck_output.txt
+          ls 
+          ls linkcheck_reports
+      - name: Create GitHub Issue for Broken Links
+        if: ${{ steps.linkcheck.outcome != 'success' }}
+        uses: peter-evans/create-issue-from-file@v4
+        with:
+          title: Broken links detected in documentation
+          content-filepath: linkcheck_reports/linkcheck_output.txt
+          labels: documentation, broken-link
