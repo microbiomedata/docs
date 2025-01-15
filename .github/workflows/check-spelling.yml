@@ -8,7 +8,6 @@ on:
 jobs:
   check-spelling:
     name: Check Spelling in Documentation
-    needs: build
     runs-on: ubuntu-latest
     steps:
       - name: Check out commit  # Docs: https://github.com/actions/checkout
