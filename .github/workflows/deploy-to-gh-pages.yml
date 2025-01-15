@@ -62,12 +62,11 @@ jobs:
         with:
           path: _build/html
 
-  check-links:
-    name: Check Links
-    uses: ./.github/workflows/check-links.yml
-  check-spelling:
-    name: Check Spelling
-    uses: ./.github/workflows/check-spelling.yml
+  check-links-and-spelling:
+    name: Check Links and Spelling in Documentation
+    uses: ./.github/workflows/check-links-and-spelling.yml
+    needs: build
+
 
   # deploy:
   #   name: Deploy website
