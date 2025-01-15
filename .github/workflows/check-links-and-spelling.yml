@@ -37,7 +37,6 @@ jobs:
           max-depth: -1
           file-extension: .html
           base-branch: main
-          output: linkcheck_output.txt
       - name: Save Link Check Output
         run: |
           mkdir -p linkcheck_reports 
@@ -65,11 +64,14 @@ jobs:
         continue-on-error: true
         run: |
           mkdir -p spellcheck_reports
-          npx -y spellchecker-cli --files artifacts/**/*.html \
+          npx -y spellchecker-cli \
+            --files artifacts/**/*.html \
             --dictionaries .github/workflows/dictionary.txt \
             --plugins spell indefinite-article repeated-words syntax-mentions syntax-urls \
-            --reports spellcheck_reports/spellcheck_report.json \
-            > spellcheck_reports/spellcheck_output.txt
+            --reports spellcheck_reports/spellcheck_report.json 
+      - name: Save Spell Check Output
+        run: |
+          echo "${{ steps.linkcheck.outputs.result }}" > spellcheck_reports/spellcheck_output.txt
       - name: Create GitHub Issue for Misspellings
         if: ${{ steps.spellchecker-cli.outcome == 'success' }}
         uses: peter-evans/create-issue-from-file@v4
