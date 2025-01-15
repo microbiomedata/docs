@@ -27,16 +27,16 @@ jobs:
         with:
           path: artifacts
       - name: Run Markdown Link Check
-        uses: gaurav-nelson/github-action-markdown-link-check@v1
+        uses: gaurav-nelson/github-action-markdown-link-check@v1 # Source: https://github.com/tcort/markdown-link-check
         id: linkcheck
         continue-on-error: true
         with:
           use-quiet-mode: yes
           use-verbose-mode: no
-          folder-path: artifacts
+          folder-path: 'artifacts/'
           max-depth: -1
-          file-extension: .html
-          base-branch: main
+          file-extension: '.html'
+          base-branch: 'main'
       - name: Save Link Check Output
         run: |
           mkdir -p linkcheck_reports 
@@ -62,6 +62,8 @@ jobs:
       - name: Run Spell Checker
         id: spellchecker-cli
         continue-on-error: true
+        # Source: https://github.com/tbroadley/spellchecker-cli and https://github.com/austenstone/spellchecker-cli-action-summary
+        # Based off: https://github.com/austenstone/spellchecker-cli-action-summary/blob/main/.github/workflows/spellcheck.yml
         run: |
           mkdir -p spellcheck_reports
           npx -y spellchecker-cli \
