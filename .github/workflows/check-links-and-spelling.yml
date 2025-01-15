@@ -70,14 +70,12 @@ jobs:
             --files artifacts/**/*.html \
             --dictionaries .github/workflows/dictionary.txt \
             --plugins spell indefinite-article repeated-words syntax-mentions syntax-urls \
-            --reports spellcheck_reports/spellcheck_report.json 
-      - name: Save Spell Check Output
-        run: |
-          echo "${{ steps.spellchecker-cli.outputs }}" > spellcheck_reports/spellcheck_output.txt
+            --reports spellcheck_reports/spellcheck_report.json \
+            > spellcheck_reports/spellcheck_output.txt
       - name: Create GitHub Issue for Misspellings
         if: ${{ steps.spellchecker-cli.outcome != 'success' }}
         uses: peter-evans/create-issue-from-file@v4
         with:
           title: Documentation contains misspelled words
-          content-filepath: spellcheck_reports/spellcheck_report.json 
+          content-filepath: spellcheck_reports/spellcheck_output.txt
           labels: documentation, spelling-error
