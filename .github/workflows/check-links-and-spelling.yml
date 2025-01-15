@@ -22,7 +22,6 @@ env:
   DICTIONARY_FILE: .github/workflows/dictionary.txt
 
 jobs:
-
   compile-home-docs:
     name: Compile home docs
     uses: ./.github/workflows/compile-home-docs.yml
@@ -35,8 +34,6 @@ jobs:
 
   build:
     name: Compile main website
-    # This job depends upon other jobs succeeding.
-    # Reference: https://docs.github.com/en/actions/writing-workflows/workflow-syntax-for-github-actions#jobsjob_idneeds
     needs:
       - compile-home-docs
       - fetch-and-compile-runtime-docs
@@ -71,7 +68,6 @@ jobs:
         with:
           path: _build/html
       
-  
   check-links:
     name: Check Links in Documentation
     needs: build
@@ -93,7 +89,7 @@ jobs:
           max-depth: -1
           file-extension: '.html'
           base-branch: 'main'
-     - name: Save Link Check Output
+      - name: Save Link Check Output
         run: |
           mkdir -p linkcheck_reports
           # Save the output to a file
@@ -142,7 +138,6 @@ jobs:
             --plugins spell indefinite-article repeated-words syntax-mentions syntax-urls \
             --reports $JSON_FILE
 
-
       - name: Create GitHub Issue for Misspellings
         if: ${{ steps.spellchecker-cli.conclusion == 'success' }}
         uses: peter-evans/create-issue-from-file@v4
@@ -151,47 +146,4 @@ jobs:
           content-filepath: $JSON_FILE
           labels: documentation, spelling-error
 
-      # ------------------ Link Checking ------------------
-      # - name: Hyperlink link checker
-      #   uses: untitaker/hyperlink@0.1.43
-      #   id: linkcheck
-      #   with:
-      #     args: _build/html/ --check-anchors --continue
-          
-      # - name: Create GitHub Issue listing broken links
-      #   if: ${{ success() && steps.linkcheck.outputs.broken-links != '' }}
-      #   uses: peter-evans/create-issue-from-file@v4
-      #   with:
-      #     title: Documentation contains broken links
-      #     content-filepath: './linkcheck_report.txt'
-      #     labels: documentation, broken-link
-
-      # - name: Use Lychee to check for broken links
-      #   # This step will populate `env.lychee_exit_code` with the exit code returned by lychee.
-      #   # Possible exit codes: https://github.com/lycheeverse/lychee?tab=readme-ov-file#exit-codes
-      #   # Reference: https://github.com/lycheeverse/lychee-action
-      #   id: lychee
-      #   uses: lycheeverse/lychee-action@v1.9.0
-      #   with:
-      #     # Reference: https://github.com/lycheeverse/lychee#commandline-parameters
-      #     args: --base . --verbose --no-progress './**/*.md' './**/*.html' './**/*.rst'
-      #     debug: true
-      #     output: ./lychee/out.md
-      #     fail: false
-      # - name: Create GitHub Issue listing broken links
-      #   # This step will only run if lychee returned a non-zero exit code.
-      #   # Reference: https://docs.github.com/en/actions/learn-github-actions/variables#using-the-env-context-to-access-environment-variable-values
-      #   if: ${{ env.lychee_exit_code != 0 }}
-      #   uses: peter-evans/create-issue-from-file@v4
-      #   with:
-      #     title: Markdown docs contain broken links
-      #     content-filepath: ./lychee/out.md
-      #     labels: documentation, broken-link
-
-      # - uses: actions/checkout@v4
-      # - name: Run linkspector
-      #   uses: UmbrellaDocs/action-linkspector@v1.2.4
-      #   with:
-      #     github_token: ${{ secrets.github_token }}
-      #     reporter: github-pr-review
-      #     fail_on_error: false
+     
