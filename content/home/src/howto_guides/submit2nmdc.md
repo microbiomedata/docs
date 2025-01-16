@@ -150,7 +150,7 @@ This app is designed to streamline real-time registration and collection of stan
 
 Upon first use, each section of the app will automatically launch a quick tour. You can press the "→" button to continue the tour or press the "X" button to end it. To re-initialize the tours at any time, visit the Settings page and tap "Reset tours".
 
-Available in the app is general fieldwork guidance and recommendations for collecting proper metadata for your sample type(s) to help you plan your fieldwork and metadata collection. We recommend viewing this information before you go out into the field.
+The "Guide" section of the app contains recommendations about fieldwork in general, and about collecting metadata for specific sample type(s). We recommend viewing it before going out into the field.
 
 TODO: Add screen shot images
 
