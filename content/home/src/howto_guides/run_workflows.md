@@ -66,7 +66,7 @@ To run a single workflow, the user must provide:
 
 > ![](../_static/images/howto_guides/workflows/quickStart/image22.png)
 
-5.  Then select the input file(s). Clicking on the button to the right of the "interleaved FASTQ #1" (as indicated in the image above) opens a box called "Select a file" (as indicated in the image below) to allow the user to find the desired files, either from the public data folder, or files you uploaded in "Upload Data" section.
+5.  Then select the input file(s). Clicking on the button to select "interleaved FASTQ #1" opens a box called "Select a file" (as shown in the image below) to allow the user to find the desired files, either from the public data folder, or files you uploaded in "Upload Data" section.
     ![](../_static/images/howto_guides/workflows/quickStart/image21.png)
 6.  Click "Submit.
 
@@ -78,9 +78,9 @@ To run a single workflow, the user must provide:
 
 3.  The "Status" column shows whether the job is in the queue (gray), submitted (purple), running (yellow), has failed (red) or completed (green). If a project fails, a log will give the error messages for troubleshooting.
 
-4.  Clicking on the icon to the left of a project name opens up the results page for that project. 
+4.  Clicking on the icon in "Result" field opens up the results page for that project. 
 
-> ![](../_static/images/howto_guides/workflows/quickStart/image10.png)
+> ![](../_static/images/howto_guides/workflows/quickStart/image23.png)
 
 ### Project Summary (Results)
 
@@ -99,9 +99,7 @@ This example shows the results of a ReadsQC workflow run which shows run time un
 ![](../_static/images/howto_guides/workflows/quickStart/image12.png)
 
 
-The full Metagenome pipeline or "Multiple Workflow" run results show
-the results of each workflow under a separate tab and the associated
-files available for download are in separate workflow folders under the
+The full Metagenome pipeline or "Multiple Workflow" run results show the results of each workflow under a separate tab and the associated files available for download are in separate workflow folders under the
 Browser/Download Outputs tab.
 
 ![](../_static/images/howto_guides/workflows/quickStart/image13.png)
