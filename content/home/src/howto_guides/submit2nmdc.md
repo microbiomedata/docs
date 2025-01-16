@@ -52,17 +52,22 @@ Once signed in with an ORCiD, you will see an option to ‘Create New Submission
 
 [![](../_static/images/howto_guides/portal_guide/submission_context.png)](../_static/images/howto_guides/portal_guide/submision_context.png)
 
-On the Submission Context screen, users are asked whether data has already been generated for their study.  If a user selects ‘Yes’ a DOI associated with the data can be entered. For data generated at either JGI or EMSL (DOE user facilities), the specific Award DOI (e.g., 10.46936/10.25585/60001289) should be entered, along with selecting the checkbox for this option. If the data was not generated at a DOE User Facility, a valid data DOI can be entered. A data DOI is not the same as a publication DOI, and would be issued through a separate resource as a unique persistent identifier (e.g., 10.48443/e4zf-b917). 
+On the Submission Context screen, submitters are asked whether data has already been generated for their study.  If a user selects ‘Yes’ a DOI associated with the data can be entered. For data generated at either JGI or EMSL (DOE user facilities), the specific Award DOI (e.g., 10.46936/10.25585/60001289) should be entered, along with selecting the checkbox for this option. If the data was not generated at a DOE User Facility, a valid data DOI can be entered. A data DOI is not the same as a publication DOI, and would be issued through a separate resource as a unique persistent identifier (e.g., 10.48443/e4zf-b917). 
 
 [![](../_static/images/howto_guides/portal_guide/shipping_info.png)](../_static/images/howto_guides/portal_guide/shipping_info.png)
 
-If a user selects ‘No’, a user will be asked whether samples will be submitted to JGI, EMSL, or both User Facilities. Selecting EMSL will further prompt the user to provide shipping information for EMSL, along with indicating what project type is associated with an active User proposal (e.g., CSP, BERSS, BRC, FICUS, MONet, or other).  
+If a user selects ‘No’, a user will be asked whether samples will be submitted to JGI, EMSL, or both User Facilities. Selecting EMSL will further prompt the user to provide shipping information for EMSL, along with indicating what project type is associated with an active User proposal and the award DOI that is provided (e.g., CSP, BERSS, BRC, FICUS, MONet, or other).  
 
 ### Study
 
 [![](../_static/images/howto_guides/portal_guide/study_info.png)](../_static/images/howto_guides/portal_guide/study_info.png)
 
-The Study Information page requires a valid ‘Study Name’ along with a valid email address. We highly recommend the use of standardized, informative study names as described by the GOLD team (Mukherjee et. al., 2023). Further information can be provided to include relevant links to webpages and a description of the study. Last, a user can include ‘Contributors’ to acknowledge members of a research team associated with the study. This includes listing Contributor names, ORCiDs, and associating role(s) based on the CRediT (Contributor Roles Taxonomy). A Contributor can have a single or multiple roles.  
+The Study Information page requires a valid ‘Study Name’ along with a valid email address. We highly recommend the use of standardized, informative study names as described by the GOLD team (Mukherjee et. al., 2023). Further information can be provided to include relevant links to webpages and a description of the study. Studies should also include a funding source that provides the grant or award number. Last, a user can include ‘Contributors’ to acknowledge members of a research team associated with the study. 
+
+[![](../_static/images/howto_guides/portal_guide/contributors.png)](../_static/images/howto_guides/portal_guide/contributors.png)
+
+This includes listing Contributor names, ORCiDs, associating role(s) based on the CRediT (Contributor Roles Taxonomy), and their submission access permission. A Contributor can have a single or multiple roles.  
+Permission roles are granted by ORCID provided and are as follows: Viewer, will have permission to view the entire submission, and cannot make any edits; Metadata Contributor, will have permission to view the entire submission, and can edit **only** the sample metadata section of the submission; Editor, will have full view and edit access to all parts of the submission, **except** contributors; none, no permissions or view granted. The Principal Investigator will be granted the same permissions as the submittion and **can edit the entire submission**.
 
 ### Multi-omics Data
 
