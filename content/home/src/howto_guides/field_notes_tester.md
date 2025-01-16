@@ -42,7 +42,7 @@ Please note that this app is currently in the testing phase, and is not meant to
 The NMDC Field Notes app is designed to work with or without network access. However, there are a few important limitations to be aware of when using it without network access. Please review these carefully if you intend to work in an area without network access.
 
 * Most features of the app require signing in via [ORCID](https://orcid.org/) in order to get your NMDC user profile and any existing studies associated with your account. That information will be stored for offline use, but the **initial sign-in must be done while you have network access**.  
-* Creating and deleting studies cannot be done while offline. *Updating* studies (including adding, updating, and removing samples associated with a study) can be done while offline. **Please create your study or studies before going to an area where you will not have network access.** Due to a known bug, we also recommend adding one temporary sample to the study while online as well.
+* Creating and deleting studies cannot be done while offline. *Updating* studies (including adding, updating, and removing samples associated with a study) can be done while offline. Those changes will be synced to the NMDC Submission Portal the next time you're online. **Please create your study or studies before going to an area where you will not have network access.** Due to a known bug, we also recommend adding one temporary sample to the study while online as well.
 
 ### Multiple users accessing a single study
 
