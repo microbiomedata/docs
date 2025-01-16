@@ -138,7 +138,7 @@ TODO: ADD TEST AND IMAGE
 
 All fields in the metadata template innately fall into one of three color categories: Grey, Yellow, or Purple. Grey, or no highlighted color, indicates optional fields. Required columns are denoted with yellow. These yellow columns must be correctly completed or the submission will not validate. Recommended fields, highlighted purple, are required where applicable. If any of the purple columns provide information relevant to the study, they should be completed. For example, if samples are from a moisture manipulation study, the column ‘watering regimen’ should be filled in to provide context and information about the samples. 
 
-After selecting the validate button, cells will become color coded to indicate invalid and incomplete metadata. Dark pink cells indicate a required cell has been left empty. Light pink indicates that there is an error in the formatting of the information entered into that cell. The ‘Column Information’ tool, described above, provides expected structure patterns and examples of valid metadata in order to help remedy errors and invalid inputs.
+After selecting the validate button, cells will become color coded to indicate invalid and incomplete metadata. Dark pink cells indicate a required cell has been left empty. Light pink indicates that there is an error in the formatting of the information entered into that cell. The "Column Information" tool, described above, provides expected structure patterns and examples of valid metadata, which you can refer to when addressing validation errors.
 
 ## Field Notes Functionality
 
