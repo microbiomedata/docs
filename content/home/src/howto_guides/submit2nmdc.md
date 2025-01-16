@@ -28,11 +28,12 @@ The DOE User Facilities JGI and EMSL are key partners for the NMDC because they 
 
 ## Product Access
 
+
 [![](../_static/images/howto_guides/portal_guide/portal_functionality.png)](../_static/images/howto_guides/portal_guide/portal_functionality.png)
 
 All NMDC products are accessible from the "Products" tab on https://microbiomedata.org/.
 
-TODO: UPDATE THIS IMAGE
+
 [![](../_static/images/howto_guides/portal_guide/ORCiD.png)](../_static/images/howto_guides/portal_guide/ORCiD.png)
 
 NMDC Products require ORCiD authentication for full access and functionality.
