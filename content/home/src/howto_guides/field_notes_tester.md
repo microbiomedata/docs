@@ -35,7 +35,7 @@ There is no automatic update process for beta versions on Android devices. Pleas
 
 ## Known bugs and limitations
 
-Please note that this app is currently in the testing phase, and is not meant to serve as the only resource for collecting sample information. We highly recommend you also record sample information without the NMDC Field Notes app to ensure a stable backup.  
+Please note that this app is currently in the testing phase, and is not meant to serve as the only resource for collecting sample information. We highly recommend you _also_ record sample information _without_ the NMDC Field Notes app to ensure a stable backup.  
 
 ### Offline support
 
