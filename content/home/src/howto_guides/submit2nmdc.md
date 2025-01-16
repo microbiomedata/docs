@@ -154,7 +154,7 @@ The "Guide" section of the app contains recommendations about fieldwork in gener
 
 TODO: Add screen shot images
 
-The Field Notes App requires ORCiD authentication to access. 
+The NMDC Field Notes app requires ORCiD authentication to access it. 
 
 Submissions via Field Notes are available in the Submission Portal as an automatic backup when connected to wifi. The app is available for offline use, but requires internet connection to **start** a submission. 
 
