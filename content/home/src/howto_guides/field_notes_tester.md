@@ -46,7 +46,7 @@ The NMDC Field Notes app is designed to work with or without network access. How
 
 ### Multiple users accessing a single study
 
-The NMDC Field Notes app synchronizes data with the NMDC Submission Portal. The NMDC Submission Portal provides the ability to add multiple contributors to a single study. Therefore, it is possible to see studies in the app which you and others have shared access to.
+The NMDC Submission Portal has long provided the ability for multiple users to manage a single study. This ability is reflected in the NMDC Field Notes app, where users have access to all of the same studies that they do on the NMDC Submission Portal. Here are some things we want you to keep in mind when working with shared studies in the NMDC Field Notes app.
 
 * The NMDC Field Notes app provides a simplified interface for creating studies. **A study created via the app will initially only be accessible to you (as the creator) and the study’s Principal Investigator** if you provide an ORCID iD for the Principal Investigator that is not your own. If necessary, more collaborators can be added later via the NMDC Submission Portal.  
 * Similar to the NMDC Submission Portal, the app allows only one person to modify a given study at a time in order to prevent conflicting updates. Therefore **you may see a warning in the app saying you cannot edit a study** (including adding, updating, and removing samples associated with the study) while it is being edited by another user.  
