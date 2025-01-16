@@ -131,7 +131,10 @@ The real-time validation tool allows submitters to check their filled-in metadat
 
 ##### Find and Replace
 
-TODO: ADD TEST AND IMAGE
+[![](../_static/images/howto_guides/portal_guide/find-replace.png)](../_static/images/howto_guides/portal_guide/find-replace.png)
+
+When validating the metadata and information provided, the submission portal provides a "Find and Replace" tool. This allows bulk updates to invalide metadata.
+
 
 ##### Color Legend
 
