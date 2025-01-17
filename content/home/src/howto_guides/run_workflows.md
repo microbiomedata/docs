@@ -117,8 +117,6 @@ As a second example, the next two figures show the results from the Read-based T
 ## Metagenomics Workflows
 ### ReadsQC
 
-![](../_static/images/howto_guides/workflows/readsQC/image2.png)
-
 #### Overview
 
 This workflow performs quality control on raw Illumina reads to
@@ -130,8 +128,7 @@ contaminants.
 
 Currently, this workflow is available in
 [GitHub](https://github.com/microbiomedata/ReadsQC) and can be run from
-the command line. (CLI instructions and requirements are found
-[here](https://nmdc-workflow-documentation.readthedocs.io/en/latest/chapters/1_RQC_index.html).)
+the command line.
 Alternatively, this workflow can be run in [NMDC
 EDGE](https://nmdc-edge.org/).
 
