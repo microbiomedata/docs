@@ -14,6 +14,7 @@ on:
   push: { branches: [ main ] }
   workflow_dispatch: { }
   workflow_call: { }
+  pull_request: {}
 
 jobs:
   check-links:
@@ -44,7 +45,7 @@ jobs:
             --verbose \
             artifacts/**/*.html |
            tee linkcheck_reports/linkcheck_output.txt
-
+          grep -q 'ERROR' linkcheck_reports/linkcheck_output.txt
           if grep -q 'ERROR' linkcheck_reports/linkcheck_output.txt; then
             echo "links_broken=true" >> $GITHUB_OUTPUT
           else
@@ -82,7 +83,8 @@ jobs:
             --plugins spell indefinite-article repeated-words syntax-mentions syntax-urls \
             --reports spellcheck_reports/spellcheck_report.json |
             tee spellcheck_reports/spellcheck_output.txt
-
+          cat spellcheck_reports/spellcheck_report.json  
+          grep -q 'misspelt' spellcheck_reports/spellcheck_output.txt
           if grep -q 'misspelt' spellcheck_reports/spellcheck_output.txt; then
             echo "misspelt=true" >> $GITHUB_OUTPUT
           else
@@ -94,5 +96,5 @@ jobs:
       #   uses: peter-evans/create-issue-from-file@v4
       #   with:
       #     title: Documentation contains misspelled words
-      #     content-filepath: spellcheck_reports/spellcheck_output.txt
+      #     content-filepath: spellcheck_reports/spellcheck_report.json
       #     labels: documentation, spelling-error

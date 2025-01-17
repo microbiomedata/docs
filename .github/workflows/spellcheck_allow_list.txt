@@ -4,6 +4,8 @@ Biosample
 biosample
 Changesheets
 changesheets
+Community-centric
+community-centric
 Diátaxis
 Globus
 IMG
