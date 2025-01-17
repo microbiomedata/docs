@@ -1,5 +1,15 @@
-# This `robots.txt` file is designed to tell web crawlers that we do not want them to crawl any pages on this website.
-# Reference: https://developers.google.com/search/docs/crawling-indexing/robots/robots_txt
-# TODO: Loosen or remove this rule once we are ready to launch the website or run a respectful link checker against it.
-User-agent: *
-Disallow: /
+# ----------------------------------------------------------------------------------------------------------------------
+#                                           .o8
+#                                          "888
+#       ooo. .oo.   ooo. .oo.  .oo.    .oooo888   .ooooo.
+#       `888P"Y88b  `888P"Y88bP"Y88b  d88' `888  d88' `"Y8
+#        888   888   888   888   888  888   888  888
+#        888   888   888   888   888  888   888  888   .o8
+#       o888o o888o o888o o888o o888o `Y8bod88P" `Y8bod8P'
+#
+# Note: This `robots.txt` file can be used to tell web crawlers which pages we do and don't want them to crawl.
+#       Reference: https://developers.google.com/search/docs/crawling-indexing/robots/robots_txt
+#
+#       Since it does not contain any directives (i.e. it only contains comments), it will not influence
+#       the behavior of crawlers as is. We can add some directives to it later, should we want to.
+# ----------------------------------------------------------------------------------------------------------------------
