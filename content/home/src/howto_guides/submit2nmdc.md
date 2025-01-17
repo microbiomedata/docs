@@ -213,7 +213,7 @@ When samples are added to a study, they are listed at the bottom of the submissi
 
 [![](../_static/images/howto_guides/portal_guide/column_help.png)](../_static/images/howto_guides/portal_guide/column_help.png)
 
-Similar to [header](#column-information) for the Submission Portal, when you select a term to complete metadata, term help will be included below the input field. This provides a description of the term, additional guidance, and examples of valid completion. 
+Similar to [column information](#column-information) for the Submission Portal, when you select a term to complete metadata, term help will be included below the input field. This provides a description of the term, additional guidance, and examples of valid completion. 
 
 ##### Location Provided Metadata
 
