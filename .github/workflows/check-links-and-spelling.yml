@@ -38,14 +38,14 @@ jobs:
             --verbose \
             artifacts/**/*.html |
            tee linkcheck_reports/linkcheck_output.txt
-          # if grep -q 'Error' linkcheck_reports/linkcheck_output.txt; then
-          #   echo "links_broken=true" >> $GITHUB_ENV
-          # else
-          #   echo "links_broken=false" >> $GITHUB_ENV
-          # fi
+          if grep -q 'Error' linkcheck_reports/linkcheck_output.txt; then
+            echo "links_broken=true" >> $GITHUB_OUTPUT
+          else
+            echo "links_broken=false" >> $GITHUB_OUTPUT
+          fi
 
       - name: Create GitHub Issue for Broken Links
-        if: ${{ steps.linkcheck.outcome != 'success' }}
+        if: ${{ steps.linkcheck.outputs.links_broken == 'true' }}
         uses: peter-evans/create-issue-from-file@v4
         with:
           title: Broken links detected in documentation
@@ -73,7 +73,8 @@ jobs:
             --files artifacts/**/*.html \
             --dictionaries .github/workflows/spellcheck_allow_list.txt \
             --plugins spell indefinite-article repeated-words syntax-mentions syntax-urls \
-            --reports spellcheck_reports/spellcheck_report.json
+            --reports spellcheck_reports/spellcheck_report.json |
+            tee spellcheck_reports/spellcheck_output.txt
           # if grep -q 'misspelt' spellcheck_reports/spellcheck_report.json; then
           #   echo "misspelt=true" >> $GITHUB_OUTPUT
           # else
@@ -85,5 +86,5 @@ jobs:
         uses: peter-evans/create-issue-from-file@v4
         with:
           title: Documentation contains misspelled words
-          content-filepath: spellcheck_reports/spellcheck_report.json
+          content-filepath: spellcheck_reports/spellcheck_output.txt
           labels: documentation, spelling-error
