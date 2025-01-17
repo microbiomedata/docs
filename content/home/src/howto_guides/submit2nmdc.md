@@ -179,7 +179,7 @@ The Study Information page requires a valid ‘Study Name’ and a valid email a
 
 Also in the New Study you will select the "Environment Template" that best fits your samples. The templates available correspond to the GSC Environmental Extensions. More information is available [above](#environmental-extension). Multiple environments can be selected and submitted in one submission.
 
-Select "Save" once study information has been complete.
+Select "Save" once study information has been completed.
 
 ### Select Fields
 
