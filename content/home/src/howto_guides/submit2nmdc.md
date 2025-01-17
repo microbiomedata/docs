@@ -161,8 +161,6 @@ The NMDC Field Notes app requires ORCiD authentication to access it.
 Submissions via Field Notes are available in the Submission Portal as an automatic backup when connected to wifi. The app is available for offline use, but requires internet connection to **start** a submission. 
 
 
-TODO: Update all these to field notes!
-
 (Step 1 of 3) Welcome to the NMDC Field Notes mobile app! 
 
 [![](../_static/images/howto_guides/portal_guide/new-study.png)](../_static/images/howto_guides/portal_guide/new-study.png)
@@ -180,8 +178,6 @@ Also in the New Study you will select the "Environment Template" that best fits 
 Select "Save" once study information has been completed.
 
 ### Select Fields
-
-TODO: Add Image
 
 The Field Notes App allows the submitter to select the metadata fields that will be visible and available on the app and when working in the field. 
 
