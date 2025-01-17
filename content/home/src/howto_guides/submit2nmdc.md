@@ -62,7 +62,9 @@ If a user selects ‘No’, a user will be asked whether samples will be submitt
 
 [![](../_static/images/howto_guides/portal_guide/study_info.png)](../_static/images/howto_guides/portal_guide/study_info.png)
 
-The Study Information page requires a valid ‘Study Name’ along with a valid email address. We highly recommend the use of standardized, informative study names as described by the GOLD team (Mukherjee et. al., 2023). Further information can be provided to include relevant links to webpages and a description of the study. Studies should also include a funding source that provides the grant or award number. Last, a user can include ‘Contributors’ to acknowledge members of a research team associated with the study. 
+The Study Information page requires a valid "Study Name" along with a valid email address. We highly recommend the use of standardized, informative study names as described by the GOLD team (Mukherjee et. al., 2023). Further information can be provided to include relevant links to webpages and a description of the study. The "Study Description" should provide a summary that includes the context of your study, research, goals, and design. We recommend this be similar to abstract format, describing the entire study similar to how an abstract describes a single publication.
+Studies should also include a funding source. The "Funding Source" of the research performed under this study should be provided and include an awarding program and the award or grant number. See an [existing study](https://data.microbiomedata.org/details/study/nmdc:sty-11-8fb6t785) for an example.  
+Last, a user can include ‘Contributors’ to acknowledge members of a research team associated with the study. 
 
 [![](../_static/images/howto_guides/portal_guide/contributors.png)](../_static/images/howto_guides/portal_guide/contributors.png)
 
