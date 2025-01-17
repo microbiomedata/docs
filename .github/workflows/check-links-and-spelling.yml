@@ -40,6 +40,7 @@ jobs:
         run: |
           mkdir -p linkcheck_reports 
           npx markdown-link-check \
+            --quiet \
             --verbose \
             artifacts/**/*.html 
       #      > linkcheck_reports/linkcheck_output.txt
