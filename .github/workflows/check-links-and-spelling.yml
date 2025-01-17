@@ -27,8 +27,10 @@ jobs:
         uses: actions/download-artifact@v4 
         with:
           path: artifacts
-      - name: Run Markdown Link Check         # Source: https://github.com/tcort/markdown-link-check
+
+      - name: Run Markdown Link Check         
         id: linkcheck
+        # Source: https://github.com/tcort/markdown-link-check
         continue-on-error: true
         run: |
           mkdir -p linkcheck_reports 
