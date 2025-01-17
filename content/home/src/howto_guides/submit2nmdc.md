@@ -196,7 +196,7 @@ We recommend completing all "New Study" steps prior to and in preparation of fie
 
 In Field Notes, the sample metadata interface consists of a form like structure where metadata is entered individually, unlike the grid format of the Submission Portal.
 
-Required metadata is marked with a ⚠️ symbol. Though, these fields can be left empty and the sample will still be saved.
+Fields marked with a ⚠️ symbol indicate a validation issue. For example, a required value is missing or a value is not in the expected format. These do not prevent your updates from being saved. The issues only need to be resolved before the final submission to NMDC for review.
 Once a sample has been started, you can return to the Study page via the ← button in the upper left. Your new sample will now appear at the bottom of your screen.
 
 Additional information about sample metadata can be found above in [header](#sample-metadata). 
