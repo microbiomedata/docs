@@ -39,10 +39,10 @@ jobs:
         #   base-branch: 'main'
         run: |
           mkdir -p linkcheck_reports 
-          npx -y markdown-link-check \
+          npx markdown-link-check \
             --verbose \
-            artifacts/**/*.html \
-            > linkcheck_reports/linkcheck_output.txt
+            artifacts/**/*.html 
+      #      > linkcheck_reports/linkcheck_output.txt
 
       # - name: Run linkspector
       #   uses: umbrelladocs/action-linkspector@v1
@@ -55,13 +55,13 @@ jobs:
       #   run: |
       #     mkdir -p linkcheck_reports 
       #     echo "${{ steps.linkcheck.outputs }}" > linkcheck_reports/linkcheck_output.txt
-      - name: Create GitHub Issue for Broken Links
-        if: ${{ steps.linkcheck.outcome != 'success' }}
-        uses: peter-evans/create-issue-from-file@v4
-        with:
-          title: Broken links detected in documentation
-          content-filepath: linkcheck_reports/linkcheck_output.txt
-          labels: documentation, broken-link
+      # - name: Create GitHub Issue for Broken Links
+      #   if: ${{ steps.linkcheck.outcome != 'success' }}
+      #   uses: peter-evans/create-issue-from-file@v4
+      #   with:
+      #     title: Broken links detected in documentation
+      #     content-filepath: linkcheck_reports/linkcheck_output.txt
+      #     labels: documentation, broken-link
 
   check-spelling:
     name: Check Spelling in Documentation
@@ -87,10 +87,10 @@ jobs:
             --reports spellcheck_reports/spellcheck_report.json |
             grep "misspelt" \
             > spellcheck_reports/spellcheck_output.txt
-      - name: Create GitHub Issue for Misspellings
-        if: ${{ steps.spellchecker-cli.outcome != 'success' }}
-        uses: peter-evans/create-issue-from-file@v4
-        with:
-          title: Documentation contains misspelled words
-          content-filepath: spellcheck_reports/spellcheck_output.txt
-          labels: documentation, spelling-error
+      # - name: Create GitHub Issue for Misspellings
+      #   if: ${{ steps.spellchecker-cli.outcome != 'success' }}
+      #   uses: peter-evans/create-issue-from-file@v4
+      #   with:
+      #     title: Documentation contains misspelled words
+      #     content-filepath: spellcheck_reports/spellcheck_output.txt
+      #     labels: documentation, spelling-error
