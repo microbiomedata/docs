@@ -38,14 +38,14 @@ jobs:
             --verbose \
             artifacts/**/*.html |
            tee linkcheck_reports/linkcheck_output.txt
-          if grep -q 'Error' linkcheck_reports/linkcheck_output.txt; then
-            echo "links_broken=true" >> $GITHUB_ENV
-          else
-            echo "links_broken=false" >> $GITHUB_ENV
-          fi
+          # if grep -q 'Error' linkcheck_reports/linkcheck_output.txt; then
+          #   echo "links_broken=true" >> $GITHUB_ENV
+          # else
+          #   echo "links_broken=false" >> $GITHUB_ENV
+          # fi
 
       - name: Create GitHub Issue for Broken Links
-        if: ${{ steps.linkcheck.outputs.links_broken == 'true' }}
+        if: ${{ steps.linkcheck.outcome != 'success' }}
         uses: peter-evans/create-issue-from-file@v4
         with:
           title: Broken links detected in documentation
@@ -74,14 +74,14 @@ jobs:
             --dictionaries .github/workflows/spellcheck_allow_list.txt \
             --plugins spell indefinite-article repeated-words syntax-mentions syntax-urls \
             --reports spellcheck_reports/spellcheck_report.json
-          if grep -q 'misspelt' spellcheck_reports/spellcheck_report.json; then
-            echo "misspelt=true" >> $GITHUB_OUTPUT
-          else
-            echo "misspelt=false" >> $GITHUB_OUTPUT
-          fi
+          # if grep -q 'misspelt' spellcheck_reports/spellcheck_report.json; then
+          #   echo "misspelt=true" >> $GITHUB_OUTPUT
+          # else
+          #   echo "misspelt=false" >> $GITHUB_OUTPUT
+          # fi
 
       - name: Create GitHub Issue for Misspellings
-        if: ${{ steps.spellcheck.outputs.misspelt == 'true' }}
+        if: ${{ steps.spellcheck.outcome != 'success' }}
         uses: peter-evans/create-issue-from-file@v4
         with:
           title: Documentation contains misspelled words
