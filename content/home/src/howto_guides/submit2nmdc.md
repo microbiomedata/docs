@@ -175,7 +175,7 @@ Once signed in with an ORCiD, you will have the ability to access existing studi
 
 [![](../_static/images/howto_guides/portal_guide/study_info.png)](../_static/images/howto_guides/portal_guide/study_info.png)
 
-The Study Information page requires a valid ‘Study Name’ and a valid email address. All other fields are optional and can be completed in the app or in the Submission Portal. Study names and all other information can be updated or added via the app or Submission Portal. See [header](#submission-portal-functionality) [header](#study) for more details about Study information.
+The Study Information page requires a valid ‘Study Name’ and a valid email address. All other fields are optional and can be completed in the app or in the Submission Portal. Study names and all other information can be updated or added via the app or Submission Portal. See [header](#submission-portal-functionality) [Study](#study) for more details about Study information.
 
 Also in the New Study you will select the "Environment Template" that best fits your samples. The templates available correspond to the GSC Environmental Extensions. More information is available above in sections [header](#environmental-package). Multiple environments can be selected and submitted in one submission.
 
