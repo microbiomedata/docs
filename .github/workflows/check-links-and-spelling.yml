@@ -45,8 +45,14 @@ jobs:
             artifacts/**/*.html |
            tee linkcheck_reports/linkcheck_output.txt
 
+          if grep -q 'ERROR' linkcheck_reports/linkcheck_output.txt; then
+            echo "links_broken=true" >> $GITHUB_OUTPUT
+          else
+            echo "links_broken=false" >> $GITHUB_OUTPUT
+          fi
+
       - name: Create GitHub Issue for Broken Links
-        if: ${{ contains(linkcheck_reports/linkcheck_output.txt, 'ERROR') }}
+        if: ${{ steps.linkcheck.outputs.links_broken == 'true' }}
         uses: peter-evans/create-issue-from-file@v4
         with:
           title: Broken links detected in documentation
@@ -64,7 +70,7 @@ jobs:
         with:
           path: artifacts
       - name: Run Spell Checker
-        id: spellchecker-cli
+        id: spellcheck
         continue-on-error: true
         # Source: https://github.com/tbroadley/spellchecker-cli and https://github.com/austenstone/spellchecker-cli-action-summary
         # Based off: https://github.com/austenstone/spellchecker-cli-action-summary/blob/main/.github/workflows/spellcheck.yml
@@ -76,8 +82,15 @@ jobs:
             --plugins spell indefinite-article repeated-words syntax-mentions syntax-urls \
             --reports spellcheck_reports/spellcheck_report.json |
             tee spellcheck_reports/spellcheck_output.txt
+
+          if grep -q 'misspelt' spellcheck_reports/spellcheck_output.txt; then
+            echo "misspelt=true" >> $GITHUB_OUTPUT
+          else
+            echo "misspelt=false" >> $GITHUB_OUTPUT
+          fi
+
       # - name: Create GitHub Issue for Misspellings
-      #   if: ${{ steps.spellchecker-cli.outcome != 'success' }}
+      #   if: ${{ steps.spellcheck.outputs.misspelt == 'true' }}
       #   uses: peter-evans/create-issue-from-file@v4
       #   with:
       #     title: Documentation contains misspelled words
