@@ -156,8 +156,6 @@ Upon first use, each section of the app will automatically launch a quick tour. 
 
 The "Guide" section of the app contains recommendations about fieldwork in general, and about collecting metadata for specific sample type(s). We recommend viewing it before going out into the field.
 
-TODO: Add screen shot images
-
 The NMDC Field Notes app requires ORCiD authentication to access it. 
 
 Submissions via Field Notes are available in the Submission Portal as an automatic backup when connected to wifi. The app is available for offline use, but requires internet connection to **start** a submission. 
@@ -167,13 +165,13 @@ TODO: Update all these to field notes!
 
 (Step 1 of 3) Welcome to the NMDC Field Notes mobile app! 
 
-[![](../_static/images/howto_guides/portal_guide/Create_submission.png)](../_static/images/howto_guides/portal_guide/Create_submission.png)
+[![](../_static/images/howto_guides/portal_guide/new-study.png)](../_static/images/howto_guides/portal_guide/new-study.png)
 
 Once signed in with an ORCiD, you will have the ability to access existing studies or create a study using the 'New’ button. Details about each section are outlined below. Users can also return to existing submissions saved under the ORCiD account to resume their work at any point. 
 
 ### New Study
 
-[![](../_static/images/howto_guides/portal_guide/study_info.png)](../_static/images/howto_guides/portal_guide/study_info.png)
+[![](../_static/images/howto_guides/portal_guide/app-study-page.png)](../_static/images/howto_guides/portal_guide/app-study-page.png)
 
 The Study Information page requires a valid ‘Study Name’ and a valid email address. All other fields are optional and can be completed in the app or in the Submission Portal. Study names and all other information can be updated or added via the app or Submission Portal. See [header](#submission-portal-functionality) [Study](#study) for more details about Study information.
 
@@ -209,9 +207,7 @@ When samples are added to a study, they are listed at the bottom of the submissi
 
 ##### Term Information
 
-[![](../_static/images/howto_guides/portal_guide/sub_portal_enviro_package.png)](../_static/images/howto_guides/portal_guide/sub_portal_enviro_package.png)
-
-[![](../_static/images/howto_guides/portal_guide/column_help.png)](../_static/images/howto_guides/portal_guide/column_help.png)
+[![](../_static/images/howto_guides/portal_guide/slot_info.png)](../_static/images/howto_guides/portal_guide/slot_info.png)
 
 Similar to [column information](#column-information) for the Submission Portal, when you select a term to complete metadata, term help will be included below the input field. This provides a description of the term, additional guidance, and examples of valid completion. 
 
@@ -221,8 +217,4 @@ Field Notes can use your mobile device information and location to populate some
 
 ##### Real Time Validation  
 
-[![](../_static/images/howto_guides/portal_guide/validate.png)](../_static/images/howto_guides/portal_guide/validate.png)
-
 Real time validation available in Field Notes is similar to that in the Submission Portal [header](#real-time-validation). No color coding, but the ⚠️ will disappear when metadata is valid, and a note below the input box will provide if a required field is missing or if a field is misformatted. 
-
-##### OTHER TOOLS IN APP?
