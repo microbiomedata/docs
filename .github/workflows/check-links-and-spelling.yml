@@ -27,17 +27,9 @@ jobs:
         uses: actions/download-artifact@v4 
         with:
           path: artifacts
-      - name: Run Markdown Link Check
-        # uses: gaurav-nelson/github-action-markdown-link-check@v1 # Source: https://github.com/tcort/markdown-link-check
+      - name: Run Markdown Link Check # Source: https://github.com/tcort/markdown-link-check
         id: linkcheck
         continue-on-error: true
-        # with:
-        #   use-quiet-mode: yes
-        #   use-verbose-mode: no
-        #   folder-path: 'artifacts/'
-        #   max-depth: -1
-        #   file-extension: '.html'
-        #   base-branch: 'main'
         run: |
           mkdir -p linkcheck_reports 
           npx markdown-link-check \
@@ -45,8 +37,8 @@ jobs:
             --verbose \
             artifacts/**/*.html |
            tee linkcheck_reports/linkcheck_output.txt
-          grep -q 'ERROR' linkcheck_reports/linkcheck_output.txt
-          if grep -q 'ERROR' linkcheck_reports/linkcheck_output.txt; then
+      #    grep -q 'ERROR' linkcheck_reports/linkcheck_output.txt
+          if grep -q 'Error' linkcheck_reports/linkcheck_output.txt; then
             echo "links_broken=true" >> $GITHUB_OUTPUT
           else
             echo "links_broken=false" >> $GITHUB_OUTPUT
@@ -81,20 +73,20 @@ jobs:
             --files artifacts/**/*.html \
             --dictionaries .github/workflows/spellcheck_allow_list.txt \
             --plugins spell indefinite-article repeated-words syntax-mentions syntax-urls \
-            --reports spellcheck_reports/spellcheck_report.json |
-            tee spellcheck_reports/spellcheck_output.txt
-          cat spellcheck_reports/spellcheck_report.json  
-          grep -q 'misspelt' spellcheck_reports/spellcheck_output.txt
+            --reports spellcheck_reports/spellcheck_report.json 
+        #    tee spellcheck_reports/spellcheck_output.txt
+        #  cat spellcheck_reports/spellcheck_report.json  
+       #    grep -q 'misspelt' spellcheck_reports/spellcheck_output.txt
           if grep -q 'misspelt' spellcheck_reports/spellcheck_output.txt; then
             echo "misspelt=true" >> $GITHUB_OUTPUT
           else
             echo "misspelt=false" >> $GITHUB_OUTPUT
           fi
 
-      # - name: Create GitHub Issue for Misspellings
-      #   if: ${{ steps.spellcheck.outputs.misspelt == 'true' }}
-      #   uses: peter-evans/create-issue-from-file@v4
-      #   with:
-      #     title: Documentation contains misspelled words
-      #     content-filepath: spellcheck_reports/spellcheck_report.json
-      #     labels: documentation, spelling-error
+      - name: Create GitHub Issue for Misspellings
+        if: ${{ steps.spellcheck.outputs.misspelt == 'true' }}
+        uses: peter-evans/create-issue-from-file@v4
+        with:
+          title: Documentation contains misspelled words
+          content-filepath: spellcheck_reports/spellcheck_report.json
+          labels: documentation, spelling-error
