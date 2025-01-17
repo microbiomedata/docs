@@ -1,7 +1,7 @@
 ###############################################################################
 # Introduction:
 # -------------
-# This workflow builds the NMDC documentation, checks for broken links, 
+# This workflow builds the NMDC documentation, checks for broken links,
 # and identifies any spelling errors in the documentation.
 # If any issues are found (broken links or misspelled words), it creates
 # GitHub Issues containing lists of the errors for further review and fixing.
@@ -21,25 +21,23 @@ jobs:
     name: Check Links in Documentation
     runs-on: ubuntu-latest
     steps:
-      - name: Check out commit  
+      - name: Check out commit
         uses: actions/checkout@v4
       - name: Download all artifacts
-        uses: actions/download-artifact@v4 
+        uses: actions/download-artifact@v4
         with:
           path: artifacts
-
-      - name: Run Markdown Link Check         
+      - name: Run Markdown Link Check
         id: linkcheck
         # Source: https://github.com/tcort/markdown-link-check
         continue-on-error: true
         run: |
-          mkdir -p linkcheck_reports 
+          mkdir -p linkcheck_reports
           npx markdown-link-check \
             --quiet \
             --verbose \
             artifacts/**/*.html |
            tee linkcheck_reports/linkcheck_output.txt
-      #    grep -q 'ERROR' linkcheck_reports/linkcheck_output.txt
           if grep -q 'Error' linkcheck_reports/linkcheck_output.txt; then
             echo "links_broken=true" >> $GITHUB_ENV
           else
@@ -58,10 +56,10 @@ jobs:
     name: Check Spelling in Documentation
     runs-on: ubuntu-latest
     steps:
-      - name: Check out commit  
+      - name: Check out commit
         uses: actions/checkout@v4
       - name: Download all artifacts
-        uses: actions/download-artifact@v4  
+        uses: actions/download-artifact@v4
         with:
           path: artifacts
       - name: Run Spell Checker
@@ -75,10 +73,7 @@ jobs:
             --files artifacts/**/*.html \
             --dictionaries .github/workflows/spellcheck_allow_list.txt \
             --plugins spell indefinite-article repeated-words syntax-mentions syntax-urls \
-            --reports spellcheck_reports/spellcheck_report.json 
-        #    tee spellcheck_reports/spellcheck_output.txt
-        #  cat spellcheck_reports/spellcheck_report.json  
-       #    grep -q 'misspelt' spellcheck_reports/spellcheck_output.txt
+            --reports spellcheck_reports/spellcheck_report.json
           if grep -q 'misspelt' spellcheck_reports/spellcheck_report.json; then
             echo "misspelt=true" >> $GITHUB_OUTPUT
           else
