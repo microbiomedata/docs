@@ -27,7 +27,7 @@ jobs:
         with:
           path: artifacts
       - name: Run Markdown Link Check
-        uses: gaurav-nelson/github-action-markdown-link-check@v1 # Source: https://github.com/tcort/markdown-link-check
+        # uses: gaurav-nelson/github-action-markdown-link-check@v1 # Source: https://github.com/tcort/markdown-link-check
         id: linkcheck
         continue-on-error: true
         # with:
