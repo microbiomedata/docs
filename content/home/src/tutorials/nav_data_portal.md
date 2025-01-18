@@ -1,9 +1,9 @@
 # Navigating the Data Portal
 
-<div align="center">
-    <video src="https://nmdc-edge.org/docs/videos/NMDC_portal_tutorial.mp4" width="80%" height="80%" controls />
+<div style="text-align: center; margin-bottom: 2rem;">
+    <!-- Note: The following HTML snippet was copied from the "Share > Embed" popup on the video's YouTube page. -->
+    <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/JV-8QWoL4aY?si=mjVu2BCrEDuDYUIu" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
-<br><br>
 
 >NMDC Data Portal Tutorial Practice 
 >
