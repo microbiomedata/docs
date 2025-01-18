@@ -40,7 +40,7 @@ NMDC Products require ORCiD authentication for full access and functionality.
 
 ## Submission Portal Functionality
 
-https://data.microbiomedata.org/submission/home 
+[https://data.microbiomedata.org/submission/home](https://data.microbiomedata.org/submission/home) 
 
 The Submission Portal requires ORCiD authentication to access. If you have already signed in via ORCID, you will not see this login screen in the NMDC Submission Portal.
 
