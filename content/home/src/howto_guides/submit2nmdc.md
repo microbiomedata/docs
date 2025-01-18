@@ -148,7 +148,7 @@ After selecting the validate button, cells will become color coded to indicate i
 
 ## Field Notes Functionality
 
-https://microbiomedata.org/field-notes/
+[https://microbiomedata.org/field-notes/](https://microbiomedata.org/field-notes/)
 
 The NMDC Field Notes app is for mobile device use. It runs on both Apple (iOS) and Android devices. It's currently available for beta testing. See [here](./field_notes_tester) to sign up!
 
