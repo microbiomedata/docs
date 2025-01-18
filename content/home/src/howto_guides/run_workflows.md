@@ -30,7 +30,7 @@ Additionally, there are some datasets in the Public Data folder for you to test 
 ![](../_static/images/howto_guides/workflows/quickStart/image19.png)
 
 Alternatively, you can select "Retrieve SRA Data" in the left menu bar and input an NCBI SRA accession number to pull data directly from SRA. 
-![](../_static/images/howto_guides/workflows/quickStart/Retrieve_SRA.png)
+![](../_static/images/howto_guides/workflows/quickStart/retrieve_sra.png)
 
 ### Running a single metagenomics workflow 
 
@@ -95,7 +95,7 @@ The project summary page will show three categories. Clicking on the bar or tab 
 
 3.  Download Outputs contains all the output files available for downloading. There may be several folders.
 
-> ![](../_static/images/howto_guides/workflows/quickStart/metaG_test_results_overview.png)
+> ![](../_static/images/howto_guides/workflows/quickStart/metag_test_results_overview.png)
 
 This example shows the results of a metagenome workflow run which shows run time under the General tab, the workflow results of each individual metagenome workflow, and the files available for download under the Download Outputs tab.
 
