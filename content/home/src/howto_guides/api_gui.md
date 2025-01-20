@@ -5,7 +5,7 @@
          that are no longer being referenced by this document.
 -->
 
-_Note: This guide was written while using `nmdc-runtime` version `1.2.0`._
+> Note: This guide was written with respect to NMDC API version `1.2.0`.
 
 ## Retrieving Metadata using the ___Find___ and ___Metadata___ API Endpoints
 
@@ -106,3 +106,64 @@ For the latest, complete list of ___metadata___ endpoints, consult the "Metadata
    ![metadata example step4](../_static/images/howto_guides/api_gui/metadata_example_step4and5.png)
 6. View the results in JSON format, available to download by clicking **Download**; or copy the results by clicking the clipboard icon in the bottom right corner of the response. In this case, two studies were retrieved. Note that the curl and request URL are provided as well.
    ![metadata example step6](../_static/images/howto_guides/api_gui/metadata_example_step6.png)
+
+## Retrieving Metadata using a ___Queries___ API Endpoint
+
+### "Public" versus "Private" API endpoints
+
+The previous section was about some endpoints that people could access without being logged into the NMDC API.
+People sometimes refer to endpoints like that as "public" API endpoints. In contrast, this next section will be
+about some endpoints that can only be accessed _when_ logged into the NMDC API. People sometimes refer to endpoints
+like this as "private" API endpoints. We'll be using those terms—"public" and "private"—that way in this section.
+
+### Getting an API access token
+
+Here's how you can get an API access token via the NMDC API GUI.
+
+1. Visit the [NMDC API GUI](https://api.microbiomedata.org/docs) in your web browser if you aren't already there.
+   > Notice that the padlock icon on the "Authorize" button is _open_, which signifies that you aren't currently logged
+   > into the NMDC API.
+   > 
+   > _Editor's note: Several people have [reported](https://github.com/swagger-api/swagger-ui/issues/3322#issuecomment-321312974)
+   > that they find that choice of icon—which the NMDC API GUI inherits from a third-party API documentation library—to
+   > be counterintuitive._
+2. Near the top of the page, click the link that says "Login with ORCID".
+   > The "Sign in to ORCID" page will appear.
+3. On the "Sign in to ORCID" page, enter and submit your ORCID credentials.
+   > The API GUI page will reappear, including a blue box that says "You are now authorized."
+   > Also, the padlock icon on the "Authorize" button will be _closed_; signifying that you are logged _into_ the NMDC API.
+4. (Optional) In the blue box, click the "Show token" button to see your NMDC API access token.
+   > You can use that access token when submitting API requests via the command line (e.g., via curl).
+
+At this point, you are logged into the NMDC API.
+
+### Accessing a "private" ___Queries___ API endpoint
+
+**Now that you are logged into the NMDC API**, you can access "private" API endpoints.
+
+Here's how you can access a "private" ___Queries___ API endpoint:
+
+1. Visit the [NMDC API GUI](https://api.microbiomedata.org/docs) in your web browser if you aren't already there.
+2. Confirm the "Authorize" button has a _closed_ padlock icon on it.
+3. Scroll down to the "Queries" group of API endpoints.
+4. Click the `POST /queries:run` section to expand it.
+5. Click the "Try it out" button next to the "Parameters" heading.
+6. Populate the "Request body" field with the following JSON snippet:
+   ```json
+   {
+        "find": "study_set",
+        "filter": {"ecosystem_category": "Aquatic"}
+   }
+   ```
+7. Click the "Execute" button.
+   > The API GUI will send an HTTP request to the NMDC API and display the response from the NMDC API.
+   >
+   > Notice that the "Curl" command includes an `Authorization` header that includes your access token. If you were
+   > making the API request via your command line instead of via the NMDC API GUI, you could include that same header
+   > in order to access "private" API endpoints.
+8. View the API response body in the "Response body" section.
+   > The API response body is a JSON object having several properties, including `ok` and `cursor`. The `cursor` property
+contains an object having a `firstBatch` property. That `firstBatch` property contains the array of results that met
+the filter criteria that was specified in the API request. In this case, it contains all studies having
+an `ecosystem_category` value of "`Aquatic`".
+
