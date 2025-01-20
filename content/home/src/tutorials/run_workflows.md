@@ -2,10 +2,11 @@
 
 ## NMDC EDGE QuickStart
 
-<div style="text-align: center; margin-bottom: 2rem;">
-    <!-- Note: The following HTML snippet was copied from the "Share > Embed" popup on the video's YouTube page. -->
-    <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/Z5Oq7BXo43k?si=pEVuglBAlggXqUBX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-</div>
+<!--
+    Note: The following HTML snippet was copied from the "Share > Embed" popup on the video's YouTube page, then, its
+          original `width="560" height="315"` attribute pair was replaced with `class="nmdc-embedded-youtube-video"`.  
+-->
+<iframe class="nmdc-embedded-youtube-video" src="https://www.youtube-nocookie.com/embed/Z5Oq7BXo43k?si=pEVuglBAlggXqUBX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 >NMDC EDGE QuickStart Tutorial Practice
 >
