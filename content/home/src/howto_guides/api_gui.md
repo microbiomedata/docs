@@ -111,14 +111,15 @@ For the latest, complete list of ___metadata___ endpoints, consult the "Metadata
 
 ### "Public" versus "Private" API endpoints
 
-The previous section was about some endpoints that people could access without being logged into the NMDC API.
+The previous section was about some API endpoints that people could access without being logged into the NMDC API GUI.
 People sometimes refer to endpoints like that as "public" API endpoints. In contrast, this next section will be
-about some endpoints that can only be accessed _when_ logged into the NMDC API. People sometimes refer to endpoints
-like this as "private" API endpoints. We'll be using those terms—"public" and "private"—that way in this section.
+about API endpoints that people can only access when they are logged into the NMDC API GUI. People sometimes refer to
+API endpoints like these as "private" API endpoints. We'll be using those terms—"public" and "private"—that way,
+in this section.
 
-### Getting an API access token
+### Logging into the NMDC API GUI
 
-Here's how you can get an API access token via the NMDC API GUI.
+Here's how you can log into the NMDC API GUI:
 
 1. Visit the [NMDC API GUI](https://api.microbiomedata.org/docs) in your web browser if you aren't already there.
    > Notice that the padlock icon on the "Authorize" button is _open_, which signifies that you aren't currently logged
@@ -135,18 +136,18 @@ Here's how you can get an API access token via the NMDC API GUI.
 4. (Optional) In the blue box, click the "Show token" button to see your NMDC API access token.
    > You can use that access token when submitting API requests via the command line (e.g., via curl).
 
-At this point, you are logged into the NMDC API.
+At this point, you are logged into the NMDC API GUI.
 
 ### Accessing a "private" ___Queries___ API endpoint
 
-**Now that you are logged into the NMDC API**, you can access "private" API endpoints.
+**Now that you are logged into the NMDC API GUI**, you can use the NMDC API GUI to access "private" API endpoints.
 
 Here's how you can access a "private" ___Queries___ API endpoint:
 
 1. Visit the [NMDC API GUI](https://api.microbiomedata.org/docs) in your web browser if you aren't already there.
-2. Confirm the "Authorize" button has a _closed_ padlock icon on it.
+2. Confirm the "Authorize" button has a _closed_ padlock icon on it, indicating that you are logged in.
 3. Scroll down to the "Queries" group of API endpoints.
-4. Click the `POST /queries:run` section to expand it.
+4. Click the `POST /queries:run` section (which has a padlock icon next to it) to expand it.
 5. Click the "Try it out" button next to the "Parameters" heading.
 6. Populate the "Request body" field with the following JSON snippet:
    ```json
@@ -156,14 +157,13 @@ Here's how you can access a "private" ___Queries___ API endpoint:
    }
    ```
 7. Click the "Execute" button.
-   > The API GUI will send an HTTP request to the NMDC API and display the response from the NMDC API.
+   > The NMDC API GUI will send an HTTP request to the NMDC API and display the response from the NMDC API.
    >
-   > Notice that the "Curl" command includes an `Authorization` header that includes your access token. If you were
+   > Notice that the "Curl" command includes an `Authorization` header that contains your access token. If you were
    > making the API request via your command line instead of via the NMDC API GUI, you could include that same header
    > in order to access "private" API endpoints.
 8. View the API response body in the "Response body" section.
    > The API response body is a JSON object having several properties, including `ok` and `cursor`. The `cursor` property
-contains an object having a `firstBatch` property. That `firstBatch` property contains the array of results that met
+contains an object having a `firstBatch` property, which contains the array of results that met
 the filter criteria that was specified in the API request. In this case, it contains all studies having
 an `ecosystem_category` value of "`Aquatic`".
-
