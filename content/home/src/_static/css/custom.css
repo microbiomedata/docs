@@ -11,3 +11,11 @@ div.rst-versions > div.rst-other-versions > div.injected > dl:nth-child(4) {
 .wy-table-responsive table td, .wy-table-responsive table th {
     white-space: inherit;
 }
+
+/* Format embedded YouTube videos.
+   Reference: https://yoast.com/how-to-make-youtube-videos-responsive/ */
+.nmdc-embedded-youtube-video {
+    aspect-ratio: 16 / 9;
+    width: 100%;
+    margin-bottom: 2rem;
+}
