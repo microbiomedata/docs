@@ -19,7 +19,7 @@ iteration of the NMDC Data Portal was released in March 2021 and
 continues to expand its data hosting and functionality on an ongoing basis.
 
 There is a short video tutorial showing how to navigate the portal on
-Youtube (<https://www.youtube.com/watch?v=KJQDrCnJRho>).
+Youtube (<https://www.youtube.com/watch?v=KJQDrCnJRho](https://youtu.be/JV-8QWoL4aY>).
 
 ## User-Centered Design Process
 
