@@ -46,4 +46,4 @@
 >
 >Task 4, Question 1: There are 53 samples collected from freshwater river biomes in 2015 which have metagenomic data.
 >
->Task 4, Question 2: There are also proteomics and metabolomics data for 32 of these samples.
+>Task 4, Question 2: There are also proteomics, lipidomics and metabolomics data for 32 of these samples.
