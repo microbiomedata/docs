@@ -61,6 +61,16 @@ docker compose build --no-cache runtime-docs
 docker compose up --detach      runtime-docs
 ```
 
+If you **only** make changes to the documentation source files that reside in _this_ repository
+(i.e. those in `pullers/runtime_docs`), then you can issue this sequence of commands instead,
+which will allow Docker to _avoid refetching_ the source files from the upstream repo:
+
+```shell
+docker compose down             runtime-docs
+docker compose build            runtime-docs
+docker compose up --detach      runtime-docs
+```
+
 #### Workflow docs
 
 Nothing will automatically happen in the development environment when someone

@@ -1,6 +1,14 @@
 # Running the NMDC Workflows in NMDC EDGE Tutorials
 
-### NMDC EDGE QuickStart Tutorial Practice
+## NMDC EDGE QuickStart
+
+<!--
+    Note: The following HTML snippet was copied from the "Share > Embed" popup on the video's YouTube page, then, its
+          original `width="560" height="315"` attribute pair was replaced with `class="nmdc-embedded-youtube-video"`.  
+-->
+<iframe class="nmdc-embedded-youtube-video" src="https://www.youtube-nocookie.com/embed/Z5Oq7BXo43k?si=pEVuglBAlggXqUBX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+>NMDC EDGE QuickStart Tutorial Practice
 >
 >Task 1:  Create an NMDC EDGE account with your ORCiD information.
 >
