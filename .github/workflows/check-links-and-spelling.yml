@@ -28,16 +28,40 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           path: artifacts
-      - name: Run Markdown Link Check
+      - name: Run Markdown Link Check using linkinator
         id: linkcheck
         # Source: https://github.com/filiph/linkcheck
         continue-on-error: true
+        # run using an npm tool
         run: |
           npx linkinator "artifacts/**/*.html" \
-            --verbosity DEBUG \
             --recurse |
             tee linkcheck_reports/linkcheck_output.txt
+            #             --verbosity DEBUG \
 
+  check-links-pt2:
+    steps:
+      - name: Check out commit
+        uses: actions/checkout@v4
+      - name: Download all artifacts
+        uses: actions/download-artifact@v4
+        with:
+          path: artifacts
+      - name: Start local Python server
+        run: |
+          python3 -m http.server 8000 &
+        working-directory: artifacts/ 
+
+      # 3. Wait for the server to fully start
+      - name: Wait for server
+        run: sleep 5
+
+      # 4. Run Filiph's linkcheck
+      - name: Run linkcheck
+        run: |
+          dart pub global activate linkcheck
+          linkcheck http://localhost:8000
+         
         # run: |
         #   mkdir -p linkcheck_reports
         #   npx linkinator artifacts/ --recurse \
@@ -51,13 +75,13 @@ jobs:
         #     echo "links_broken=false" >> $GITHUB_OUTPUT
         #   fi
 
-      - name: Create GitHub Issue for Broken Links
-        if: ${{ steps.linkcheck.outputs.links_broken == 'true' }}
-        uses: peter-evans/create-issue-from-file@v4
-        with:
-          title: Broken links detected in documentation
-          content-filepath: linkcheck_reports/linkcheck_output.txt
-          labels: documentation, broken-link
+      # - name: Create GitHub Issue for Broken Links
+      #   if: ${{ steps.linkcheck.outputs.links_broken == 'true' }}
+      #   uses: peter-evans/create-issue-from-file@v4
+      #   with:
+      #     title: Broken links detected in documentation
+      #     content-filepath: linkcheck_reports/linkcheck_output.txt
+      #     labels: documentation, broken-link
 
   check-spelling:
     name: Check Spelling in Documentation
@@ -88,10 +112,10 @@ jobs:
             echo "misspelt=false" >> $GITHUB_OUTPUT
           fi
 
-      - name: Create GitHub Issue for Misspellings
-        if: ${{ steps.spellcheck.outputs.misspelt == 'true' }}
-        uses: peter-evans/create-issue-from-file@v4
-        with:
-          title: Documentation contains misspelled words
-          content-filepath: spellcheck_reports/spellcheck_output.txt
-          labels: documentation, spelling-error
+      # - name: Create GitHub Issue for Misspellings
+      #   if: ${{ steps.spellcheck.outputs.misspelt == 'true' }}
+      #   uses: peter-evans/create-issue-from-file@v4
+      #   with:
+      #     title: Documentation contains misspelled words
+      #     content-filepath: spellcheck_reports/spellcheck_output.txt
+      #     labels: documentation, spelling-error
