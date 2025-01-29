@@ -24,71 +24,20 @@ jobs:
     steps:
       - name: Check out commit
         uses: actions/checkout@v4
-      - name: Download all artifacts
+      - name: Download final build artifact
         uses: actions/download-artifact@v4
         with:
-          path: artifacts
+          path: _build/html
       - name: Run Markdown Link Check using linkinator
         id: linkcheck
-        # Source: https://github.com/filiph/linkcheck
+        # https://www.npmjs.com/package/linkinator
         continue-on-error: true
         # run using an npm tool
         run: |
-          npx linkinator "artifacts/**/*.html" \
+          npx linkinator "_build/html/**/*.html" \
             --recurse |
             tee linkcheck_reports/linkcheck_output.txt
             #             --verbosity DEBUG \
-
-  check-links-pt2:
-    name: Check Links in Documentation using linkcheck
-    runs-on: ubuntu-latest
-    steps:
-      - name: Check out commit
-        uses: actions/checkout@v4
-      - name: Download all artifacts
-        uses: actions/download-artifact@v4
-        with:
-          path: artifacts
-      - name: Start local Python server
-        run: |
-          python3 -m http.server 8000 &
-        working-directory: artifacts/ 
-
-      # 3. Wait for the server to fully start
-      - name: Wait for server
-        run: sleep 5
-
-      - name: Run linkcheck
-        continue-on-error: true
-        run: |
-          dart pub global activate linkcheck && linkcheck http://localhost:8000
-         
-  check-links-pt3:
-    name: Check Links in Documentation using markdown link check
-    runs-on: ubuntu-latest
-    steps:
-      - name: Check out commit
-        uses: actions/checkout@v4
-      - name: Download all artifacts
-        uses: actions/download-artifact@v4
-        with:
-          path: artifacts
-      - name: Run Markdown Link Check
-        id: linkcheck
-        # Source: https://github.com/tcort/markdown-link-check
-        continue-on-error: true
-        run: |
-          mkdir -p linkcheck_reports
-          npx markdown-link-check \
-            --quiet \
-            --verbose \
-            artifacts/**/*.html |
-           tee linkcheck_reports/linkcheck_output.txt
-          if grep -q 'Error' linkcheck_reports/linkcheck_output.txt; then
-            echo "links_broken=true" >> $GITHUB_OUTPUT
-          else
-            echo "links_broken=false" >> $GITHUB_OUTPUT
-          fi
 
       # - name: Create GitHub Issue for Broken Links
       #   if: ${{ steps.linkcheck.outputs.links_broken == 'true' }}
@@ -104,10 +53,10 @@ jobs:
     steps:
       - name: Check out commit
         uses: actions/checkout@v4
-      - name: Download all artifacts
+      - name: Download final build artifact
         uses: actions/download-artifact@v4
         with:
-          path: artifacts
+          path: _build/html
       - name: Run Spell Checker
         id: spellcheck
         continue-on-error: true
@@ -116,7 +65,7 @@ jobs:
         run: |
           mkdir -p spellcheck_reports
           npx -y spellchecker-cli \
-            --files artifacts/**/*.html \
+            --files _build/html/**/*.html \
             --dictionaries .github/workflows/spellcheck_allow_list.txt \
             --plugins spell indefinite-article repeated-words syntax-mentions syntax-urls \
             --reports spellcheck_reports/spellcheck_report.json |
