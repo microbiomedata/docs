@@ -11,41 +11,47 @@
 name: Check Links and Spelling in Documentation
 
 on:
-  # push: { branches: [ main ] }
+  # FIXME: Revert the branch name here to its original value.
+  push: { branches: [ 61-add-link-checker ] }
   workflow_dispatch: { }
   workflow_call: { }
-  # pull_request: 
+  # pull_request:
   #   branches: [main]
 
 jobs:
   check-links:
     name: Check Links in Documentation
     runs-on: ubuntu-latest
+    permissions:
+      issues: write # required for peter-evans/create-issue-from-file
     steps:
-      - name: Check out commit
-        uses: actions/checkout@v4
-      - name: Download final build artifact
+      - name: Get website file tree
         uses: actions/download-artifact@v4
         with:
           path: _build/html
-      - name: Run Markdown Link Check using linkinator
-        id: linkcheck
-        # https://www.npmjs.com/package/linkinator
-        continue-on-error: true
-        # run using an npm tool
-        run: |
-          npx linkinator "_build/html/**/*.html" \
-            --recurse |
-            tee linkcheck_reports/linkcheck_output.txt
-            #             --verbosity DEBUG \
 
-      # - name: Create GitHub Issue for Broken Links
-      #   if: ${{ steps.linkcheck.outputs.links_broken == 'true' }}
-      #   uses: peter-evans/create-issue-from-file@v4
-      #   with:
-      #     title: Broken links detected in documentation
-      #     content-filepath: linkcheck_reports/linkcheck_output.txt
-      #     labels: documentation, broken-link
+      # Note: Most of this snippet was copied from https://github.com/microbiomedata/nmdc-schema/blob/9c663673f3110a31f3a54a26a0698211c42b6143/.github/workflows/check-links.yaml#L38C1-L58C45.
+      #       A few parts were copied from https://github.com/lycheeverse/lychee-action.
+      - name: Use Lychee to check for broken links
+        # This step will populate `env.lychee_exit_code` with the exit code returned by lychee.
+        # Possible exit codes: https://github.com/lycheeverse/lychee?tab=readme-ov-file#exit-codes
+        # Reference: https://github.com/lycheeverse/lychee-action
+        id: lychee
+        uses: lycheeverse/lychee-action@v1.9.0
+        with:
+          # Reference: https://github.com/lycheeverse/lychee#commandline-parameters
+          args: --base docs --verbose --no-progress --format markdown --timeout 5 '_build/html/**/*.html'
+          debug: true
+          output: ./lychee/out.md
+          fail: false
+      - name: Create GitHub Issue listing broken links
+        # This step will only run if lychee returned a non-zero exit code.
+        # Reference: https://docs.github.com/en/actions/learn-github-actions/variables#using-the-env-context-to-access-environment-variable-values
+        if: steps.lychee.outputs.exit_code != 0
+        uses: peter-evans/create-issue-from-file@v5
+        with:
+          title: Website file tree contains broken links
+          content-filepath: ./lychee/out.md
 
   check-spelling:
     name: Check Spelling in Documentation
