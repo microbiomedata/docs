@@ -10,13 +10,9 @@
 
 name: Check Links and Spelling in Documentation
 
+# Make it so this workflow only runs when called by another workflow.
 on:
-  # FIXME: Revert the branch name here to its original value.
-  push: { branches: [ 61-add-link-checker ] }
-  workflow_dispatch: { }
   workflow_call: { }
-  # pull_request:
-  #   branches: [main]
 
 jobs:
   check-links:
