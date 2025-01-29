@@ -40,6 +40,8 @@ jobs:
             #             --verbosity DEBUG \
 
   check-links-pt2:
+    name: Check Links in Documentation using linkcheck
+    runs-on: ubuntu-latest
     steps:
       - name: Check out commit
         uses: actions/checkout@v4
@@ -56,24 +58,37 @@ jobs:
       - name: Wait for server
         run: sleep 5
 
-      # 4. Run Filiph's linkcheck
       - name: Run linkcheck
+        continue-on-error: true
         run: |
-          dart pub global activate linkcheck
-          linkcheck http://localhost:8000
+          dart pub global activate linkcheck && linkcheck http://localhost:8000
          
-        # run: |
-        #   mkdir -p linkcheck_reports
-        #   npx linkinator artifacts/ --recurse \
-        #     --quiet \
-        #     --verbose \
-        #     artifacts/**/*.html |
-        #    tee linkcheck_reports/linkcheck_output.txt
-        #   if grep -q 'Error' linkcheck_reports/linkcheck_output.txt; then
-        #     echo "links_broken=true" >> $GITHUB_OUTPUT
-        #   else
-        #     echo "links_broken=false" >> $GITHUB_OUTPUT
-        #   fi
+  check-links-pt3:
+    name: Check Links in Documentation using markdown link check
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out commit
+        uses: actions/checkout@v4
+      - name: Download all artifacts
+        uses: actions/download-artifact@v4
+        with:
+          path: artifacts
+      - name: Run Markdown Link Check
+        id: linkcheck
+        # Source: https://github.com/tcort/markdown-link-check
+        continue-on-error: true
+        run: |
+          mkdir -p linkcheck_reports
+          npx markdown-link-check \
+            --quiet \
+            --verbose \
+            artifacts/**/*.html |
+           tee linkcheck_reports/linkcheck_output.txt
+          if grep -q 'Error' linkcheck_reports/linkcheck_output.txt; then
+            echo "links_broken=true" >> $GITHUB_OUTPUT
+          else
+            echo "links_broken=false" >> $GITHUB_OUTPUT
+          fi
 
       # - name: Create GitHub Issue for Broken Links
       #   if: ${{ steps.linkcheck.outputs.links_broken == 'true' }}
