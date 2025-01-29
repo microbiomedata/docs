@@ -40,7 +40,7 @@ NMDC Products require ORCiD authentication for full access and functionality.
 
 ## Submission Portal Functionality
 
-https://data.microbiomedata.org/submission/home 
+[https://data.microbiomedata.org/submission/home](https://data.microbiomedata.org/submission/home) 
 
 The Submission Portal requires ORCiD authentication to access. If you have already signed in via ORCID, you will not see this login screen in the NMDC Submission Portal.
 
@@ -62,7 +62,9 @@ If a user selects ‘No’, a user will be asked whether samples will be submitt
 
 [![](../_static/images/howto_guides/portal_guide/study_info.png)](../_static/images/howto_guides/portal_guide/study_info.png)
 
-The Study Information page requires a valid ‘Study Name’ along with a valid email address. We highly recommend the use of standardized, informative study names as described by the GOLD team (Mukherjee et. al., 2023). Further information can be provided to include relevant links to webpages and a description of the study. Studies should also include a funding source that provides the grant or award number. Last, a user can include ‘Contributors’ to acknowledge members of a research team associated with the study. 
+The Study Information page requires a valid "Study Name" along with a valid email address. We highly recommend the use of standardized, informative study names as described by the GOLD team (Mukherjee et. al., 2023). Further information can be provided to include relevant links to web pages and a description of the study. The "Study Description" should provide a summary that includes the context of your study, research, goals, and design. We recommend this be similar to abstract format, describing the entire study similar to how an abstract describes a single publication.
+Studies should also include a funding source. The "Funding Source" of the research performed under this study should be provided and include an awarding program and the award or grant number. See an [existing study](https://data.microbiomedata.org/details/study/nmdc:sty-11-8fb6t785) for an example.  
+Last, a user can include "Contributors" to acknowledge members of a research team associated with the study. 
 
 [![](../_static/images/howto_guides/portal_guide/contributors.png)](../_static/images/howto_guides/portal_guide/contributors.png)
 
@@ -146,7 +148,7 @@ After selecting the validate button, cells will become color coded to indicate i
 
 ## Field Notes Functionality
 
-https://microbiomedata.org/field-notes/
+[https://microbiomedata.org/field-notes/](https://microbiomedata.org/field-notes/)
 
 The NMDC Field Notes app is for mobile device use. It runs on both Apple (iOS) and Android devices. It's currently available for beta testing. See [here](./field_notes_tester) to sign up!
 
@@ -160,8 +162,6 @@ The NMDC Field Notes app requires ORCiD authentication to access it.
 
 Submissions via Field Notes are available in the Submission Portal as an automatic backup when connected to wifi. The app is available for offline use, but requires internet connection to **start** a submission. 
 
-
-TODO: Update all these to field notes!
 
 (Step 1 of 3) Welcome to the NMDC Field Notes mobile app! 
 
@@ -180,8 +180,6 @@ Also in the New Study you will select the "Environment Template" that best fits 
 Select "Save" once study information has been completed.
 
 ### Select Fields
-
-TODO: Add Image
 
 The Field Notes App allows the submitter to select the metadata fields that will be visible and available on the app and when working in the field. 
 

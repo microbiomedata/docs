@@ -1,9 +1,10 @@
 # Navigating the Data Portal
 
-<div align="center">
-    <video src="https://nmdc-edge.org/docs/videos/NMDC_portal_tutorial.mp4" width="80%" height="80%" controls />
-</div>
-<br><br>
+<!--
+    Note: The following HTML snippet was copied from the "Share > Embed" popup on the video's YouTube page, then, its
+          original `width="560" height="315"` attribute pair was replaced with `class="nmdc-embedded-youtube-video"`.  
+-->
+<iframe class="nmdc-embedded-youtube-video" src="https://www.youtube-nocookie.com/embed/JV-8QWoL4aY?si=mjVu2BCrEDuDYUIu" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 >NMDC Data Portal Tutorial Practice 
 >
@@ -45,4 +46,4 @@
 >
 >Task 4, Question 1: There are 53 samples collected from freshwater river biomes in 2015 which have metagenomic data.
 >
->Task 4, Question 2: There are also proteomics and metabolomics data for 32 of these samples.
+>Task 4, Question 2: There are also proteomics, lipidomics and metabolomics data for 32 of these samples.
