@@ -20,7 +20,7 @@ jobs:
         with:
           name: github-pages
           path: _downloads
-      - name: Untar the archive
+      - name: Un-tar the archive
         run: |
           mkdir -p _build/html
           tar -xvf _downloads/artifact.tar -C _build/html

@@ -3,8 +3,8 @@
 name: Compile home documentation into HTML
 
 on:
-  # Run this workflow whenever someone opens or adds commits to a PR whose base branch is `main`.
-  # Reference: https://docs.github.com/en/actions/writing-workflows/choosing-when-your-workflow-runs/events-that-trigger-workflows#pull_request
+  # Allow this workflow to be run manually (e.g., via the "Actions" tab on GitHub).
+  # Reference: https://docs.github.com/en/actions/writing-workflows/choosing-when-your-workflow-runs/events-that-trigger-workflows#workflow_dispatch
   workflow_dispatch: { }
   # Allow this workflow to be called by other workflows.
   # Reference: https://docs.github.com/en/actions/using-workflows/reusing-workflows
