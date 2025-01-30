@@ -1,8 +1,8 @@
 ###############################################################################
 # Introduction:
 # -------------
-# This workflow builds the NMDC documentation, checks for broken links,
-# and identifies any spelling errors in the documentation.
+# This workflow downloads the website file tree built by a different GitHub
+# Actions workflow, then checks it for broken links and for spelling errors.
 # If any issues are found (broken links or misspelled words), it creates
 # GitHub Issues containing lists of the errors for further review and fixing.
 #
@@ -10,22 +10,39 @@
 
 name: Check Links and Spelling in Documentation
 
-# Make it so this workflow only runs when called by another workflow.
 on:
+  push: { branches: [ main ] }
+  # Run this workflow whenever someone opens or adds commits to a PR whose base branch is `main`.
+  # Reference: https://docs.github.com/en/actions/writing-workflows/choosing-when-your-workflow-runs/events-that-trigger-workflows#pull_request
+  pull_request: { branches: [main] }
+  workflow_dispatch: { }
+  # Allow this workflow to be called by other workflows.
+  # Reference: https://docs.github.com/en/actions/using-workflows/reusing-workflows
   workflow_call: { }
 
 jobs:
+  # Use an existing workflow to assemble the website file tree that, in this workflow, we will scan.
+  # Reference: https://docs.github.com/en/actions/using-workflows/reusing-workflows#calling-a-reusable-workflow
+  assemble-website:
+    name: Assemble website
+    uses: ./.github/workflows/assemble-website.yml
+
   check-links:
     name: Check Links in Documentation
+    needs:
+      - assemble-website
     runs-on: ubuntu-latest
     permissions:
       issues: write # required for peter-evans/create-issue-from-file
     steps:
       - name: Get website file tree
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v4  # docs: https://github.com/actions/download-artifact
         with:
+          name: github-pages
           path: _build/html
-
+      # TODO: Remove this debug step.
+      - name: Dump the file tree
+        run: ls -lR _build/html
       # Note: Most of this snippet was copied from https://github.com/microbiomedata/nmdc-schema/blob/9c663673f3110a31f3a54a26a0698211c42b6143/.github/workflows/check-links.yaml#L38C1-L58C45.
       #       A few parts were copied from https://github.com/lycheeverse/lychee-action.
       - name: Use Lychee to check for broken links
@@ -52,14 +69,18 @@ jobs:
 
   check-spelling:
     name: Check Spelling in Documentation
+    needs:
+      - assemble-website
     runs-on: ubuntu-latest
     steps:
-      - name: Check out commit
-        uses: actions/checkout@v4
-      - name: Download final build artifact
-        uses: actions/download-artifact@v4
+      - name: Get website file tree
+        uses: actions/download-artifact@v4  # docs: https://github.com/actions/download-artifact
         with:
+          name: github-pages
           path: _build/html
+      # TODO: Remove this debug step.
+      - name: Dump the file tree
+        run: ls -lR _build/html
       - name: Run Spell Checker
         id: spellcheck
         continue-on-error: true
