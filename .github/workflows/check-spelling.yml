@@ -27,9 +27,11 @@ jobs:
           ls -lR _build/html
       - name: Run Spellchecker CLI (action)
         id: spellchecker-cli
-        uses: tbroadley/spellchecker-cli-action@v1  # docs: https://github.com/marketplace/actions/spellchecker-cli
+        uses: tbroadley/spellchecker-cli-action@v1.1.1  # docs: https://github.com/marketplace/actions/spellchecker-cli?version=v1.1.1
         continue-on-error: true
         with:
+          # Note: The Spellchecker CLI uses Globby to resolve these patterns.
+          #       Reference: https://github.com/tbroadley/spellchecker-cli?tab=readme-ov-file#globs
           files: _build/html/**/*.html
           dictionaries: .github/workflows/supporting_files/spellcheck_allow_list.txt
           plugins: spell indefinite-article repeated-words syntax-mentions syntax-urls
