@@ -97,7 +97,7 @@ jobs:
           mkdir -p spellcheck_reports
           npx -y spellchecker-cli \
             --files _build/html/**/*.html \
-            --dictionaries .github/workflows/spellcheck_allow_list.txt \
+            --dictionaries .github/workflows/supporting_files/spellcheck_allow_list.txt \
             --plugins spell indefinite-article repeated-words syntax-mentions syntax-urls \
             --reports spellcheck_reports/spellcheck_report.json |
             tee spellcheck_reports/spellcheck_output.txt
