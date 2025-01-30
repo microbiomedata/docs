@@ -1,9 +1,9 @@
-# This GitHub Actions workflow creates a production build of the website and deploys it to GitHub Pages.
+# This GitHub Actions workflow deploys the website file tree to GitHub Pages.
 # Reference: https://docs.github.com/en/actions/writing-workflows/workflow-syntax-for-github-actions
-name: Build and deploy to GitHub Pages
+name: Deploy to GitHub Pages
 
 on:
-  push: { branches: [ 61-add-link-checker ] }
+  push: { branches: [ main ] }
   workflow_dispatch: { }
 
 # Reference: https://docs.github.com/en/actions/using-jobs/using-concurrency
@@ -12,76 +12,31 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  # Use existing workflows to compile the home, Runtime, and workflow documentation.
+  # Use an existing workflow to assemble the website file tree that, in this workflow, we will deploy to GitHub Pages.
   # Reference: https://docs.github.com/en/actions/using-workflows/reusing-workflows#calling-a-reusable-workflow
-  compile-home-docs:
-    name: Compile home docs
-    uses: ./.github/workflows/compile-home-docs.yml
-  fetch-and-compile-runtime-docs:
-    name: Fetch and compile Runtime docs
-    uses: ./.github/workflows/fetch-and-compile-runtime-docs.yml
-  fetch-and-compile-workflow-docs:
-    name: Fetch and compile workflow docs
-    uses: ./.github/workflows/fetch-and-compile-workflow-docs.yml
+  assemble-website:
+    name: Assemble website
+    uses: ./.github/workflows/assemble-website.yml
 
-  build:
-    name: Compile main website
-    # This job depends upon other jobs succeeding.
-    # Reference: https://docs.github.com/en/actions/writing-workflows/workflow-syntax-for-github-actions#jobsjob_idneeds
+  deploy:
+    name: Deploy website
     needs:
-      - compile-home-docs
-      - fetch-and-compile-runtime-docs
-      - fetch-and-compile-workflow-docs
+      - assemble-website
     runs-on: ubuntu-latest
+    # Reference: https://github.com/actions/deploy-pages
     permissions:
-      contents: read
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - name: Check out commit  # Docs: https://github.com/actions/checkout
-        uses: actions/checkout@v4
-      - name: Download all artifacts
-        uses: actions/download-artifact@v4  # Docs: https://github.com/actions/download-artifact
+      # Reference: https://github.com/actions/deploy-pages
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
         with:
-          path: artifacts
-      # Note: We use the `-T` option of the `cp` command so that the source directory name does not
-      #       get appended to the destination directory name. It's short for `--no-target-directory`.
-      #       Reference: https://www.gnu.org/software/coreutils/manual/html_node/Target-directory.html
-      - name: Assemble website file tree
-        run: |
-          mkdir -p \
-            _build/html/runtime \
-            _build/html/workflows
-          cp -R -T artifacts/home-docs-as-html        _build/html
-          cp -R -T artifacts/runtime-docs-as-html     _build/html/runtime
-          cp -R -T artifacts/workflow-docs-as-html    _build/html/workflows
-      - name: Inject robots.txt file into assembled website file tree
-        run: |
-          cp content/robots.txt _build/html/robots.txt
-          ls -R _build/html
-      - name: Save the result for publishing to GitHub Pages  # Docs: https://github.com/actions/upload-pages-artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: _build/html
-
-  check-links-and-spelling:
-    name: Check Links and Spelling in Documentation
-    uses: ./.github/workflows/check-links-and-spelling.yml
-    needs: build
-
-
-  # deploy:
-  #   name: Deploy website
-  #   needs:
-  #     - build
-  #   runs-on: ubuntu-latest
-  #   # Reference: https://github.com/actions/deploy-pages
-  #   permissions:
-  #     pages: write
-  #     id-token: write
-  #   environment:
-  #     name: github-pages
-  #     url: ${{ steps.deployment.outputs.page_url }}
-  #   steps:
-  #     # Reference: https://github.com/actions/deploy-pages
-  #     - name: Deploy to GitHub Pages
-  #       id: deployment
-  #       uses: actions/deploy-pages@v4
+          # Note: The artifact name is "github-pages" by default; so, this specification is redundant. We include it
+          #       anyway, here, as a reminder for people that will be implementing workflows that consume the same
+          #       artifact; e.g., spell checkers and link checkers.
+          artifact_name: github-pages

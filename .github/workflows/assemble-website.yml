@@ -1,0 +1,63 @@
+# This GitHub Actions workflow creates a file tree consisting of several smaller file trees and a few additional files.
+# Reference: https://docs.github.com/en/actions/writing-workflows/workflow-syntax-for-github-actions
+name: Assemble website
+
+on:
+  workflow_dispatch: { }
+  # Allow this workflow to be called by other workflows.
+  # Reference: https://docs.github.com/en/actions/using-workflows/reusing-workflows
+  workflow_call: { }
+
+jobs:
+  # Use existing workflows to compile the home, Runtime, and workflow documentation.
+  # Reference: https://docs.github.com/en/actions/using-workflows/reusing-workflows#calling-a-reusable-workflow
+  compile-home-docs:
+    name: Compile home docs
+    uses: ./.github/workflows/compile-home-docs.yml
+  fetch-and-compile-runtime-docs:
+    name: Fetch and compile Runtime docs
+    uses: ./.github/workflows/fetch-and-compile-runtime-docs.yml
+  fetch-and-compile-workflow-docs:
+    name: Fetch and compile workflow docs
+    uses: ./.github/workflows/fetch-and-compile-workflow-docs.yml
+
+  assemble:
+    name: Assemble website file tree
+    # This job depends upon other jobs succeeding.
+    # Reference: https://docs.github.com/en/actions/writing-workflows/workflow-syntax-for-github-actions#jobsjob_idneeds
+    needs:
+      - compile-home-docs
+      - fetch-and-compile-runtime-docs
+      - fetch-and-compile-workflow-docs
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - name: Check out commit  # Docs: https://github.com/actions/checkout
+        uses: actions/checkout@v4
+      - name: Download all artifacts
+        uses: actions/download-artifact@v4  # Docs: https://github.com/actions/download-artifact
+        with: { path: artifacts }
+      # Note: We use the `-T` option of the `cp` command so that the source directory name does not
+      #       get appended to the destination directory name. It's short for `--no-target-directory`.
+      #       Reference: https://www.gnu.org/software/coreutils/manual/html_node/Target-directory.html
+      - name: Assemble website file tree
+        run: |
+          mkdir -p \
+            _build/html/runtime \
+            _build/html/workflows
+          cp -R -T artifacts/home-docs-as-html        _build/html
+          cp -R -T artifacts/runtime-docs-as-html     _build/html/runtime
+          cp -R -T artifacts/workflow-docs-as-html    _build/html/workflows
+      - name: Inject robots.txt file into assembled website file tree
+        run: |
+          cp content/robots.txt _build/html/robots.txt
+          ls -R _build/html
+      - name: Save the result for publishing to GitHub Pages  # Docs: https://github.com/actions/upload-pages-artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _build/html
+          # Note: The artifact name is "github-pages" by default; so, this specification is redundant. We include it
+          #       anyway, here, as a reminder for people that will be implementing workflows that consume the same
+          #       artifact; e.g., spell checkers and link checkers.
+          name: github-pages
