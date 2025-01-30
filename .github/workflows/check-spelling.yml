@@ -1,14 +1,6 @@
-###############################################################################
-# Introduction:
-# -------------
-# This workflow downloads the website file tree built by a different GitHub
-# Actions workflow, then checks it for broken links and for spelling errors.
-# If any issues are found (broken links or misspelled words), it creates
-# GitHub Issues containing lists of the errors for further review and fixing.
-#
-###############################################################################
-
-name: Check Links and Spelling in Documentation
+# This GitHub Actions workflow checks spelling in HTML files and creates a GitHub Issue if it finds misspelled words.
+# Reference: https://docs.github.com/en/actions/writing-workflows/workflow-syntax-for-github-actions
+name: Check spelling
 
 on:
   push: { branches: [ main ] }
@@ -27,50 +19,8 @@ jobs:
     name: Assemble website
     uses: ./.github/workflows/assemble-website.yml
 
-  check-links:
-    name: Check Links in Documentation
-    needs:
-      - assemble-website
-    runs-on: ubuntu-latest
-    permissions:
-      issues: write # required for peter-evans/create-issue-from-file
-    steps:
-      - name: Get website file tree
-        uses: actions/download-artifact@v4  # docs: https://github.com/actions/download-artifact
-        with:
-          name: github-pages
-          path: _downloads
-      - name: Untar the archive
-        run: |
-          mkdir -p _build/html
-          tar -xvf _downloads/artifact.tar -C _build/html
-          ls -lR _build/html
-      # Note: Most of this snippet was copied from https://github.com/microbiomedata/nmdc-schema/blob/9c663673f3110a31f3a54a26a0698211c42b6143/.github/workflows/check-links.yaml#L38C1-L58C45.
-      #       A few parts were copied from https://github.com/lycheeverse/lychee-action.
-      - name: Use Lychee to check for broken links
-        # This step will populate `env.lychee_exit_code` with the exit code returned by lychee.
-        # Possible exit codes: https://github.com/lycheeverse/lychee?tab=readme-ov-file#exit-codes
-        # Reference: https://github.com/lycheeverse/lychee-action
-        id: lychee
-        uses: lycheeverse/lychee-action@v2
-        with:
-          # Note: The `--format` option refers to the format of the report, not the documents being scanned.
-          # Reference: https://github.com/lycheeverse/lychee#commandline-parameters
-          args: --base '_build/html' --verbose --no-progress --format markdown '_build/html/**/*.html'
-          debug: true
-          output: ./lychee/out.md
-          fail: false
-      - name: Create GitHub Issue listing broken links
-        # This step will only run if lychee returned a non-zero exit code.
-        # Reference: https://docs.github.com/en/actions/learn-github-actions/variables#using-the-env-context-to-access-environment-variable-values
-        if: steps.lychee.outputs.exit_code != 0
-        uses: peter-evans/create-issue-from-file@v5
-        with:
-          title: Website file tree contains broken links
-          content-filepath: ./lychee/out.md
-
   check-spelling:
-    name: Check Spelling in Documentation
+    name: Check spelling
     needs:
       - assemble-website
     runs-on: ubuntu-latest
