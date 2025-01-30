@@ -22,6 +22,7 @@ jobs:
           path: _downloads
       - name: Un-tar the archive
         run: |
+          pwd
           mkdir -p _build/html
           tar -xvf _downloads/artifact.tar -C _build/html
           ls -lR _build/html
