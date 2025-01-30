@@ -38,29 +38,22 @@ jobs:
           mkdir -p _build/html
           tar -xvf _downloads/artifact.tar -C _build/html
           ls -lR _build/html
-      - name: Run Spellchecker CLI
-        id: spellcheck
+      - name: Run Spellchecker CLI (action)
+        id: spellchecker-cli
+        uses: tbroadley/spellchecker-cli-action@v1  # docs: https://github.com/marketplace/actions/spellchecker-cli
         continue-on-error: true
-        # Source: https://github.com/tbroadley/spellchecker-cli and https://github.com/austenstone/spellchecker-cli-action-summary
-        # Based off: https://github.com/austenstone/spellchecker-cli-action-summary/blob/main/.github/workflows/spellcheck.yml
-        run: |
-          mkdir -p spellcheck_reports
-          npx -y spellchecker-cli \
-            --files _build/html/**/*.html \
-            --dictionaries .github/workflows/supporting_files/spellcheck_allow_list.txt \
-            --plugins spell indefinite-article repeated-words syntax-mentions syntax-urls \
-            --reports spellcheck_reports/spellcheck_report.json |
-            tee spellcheck_reports/spellcheck_output.txt
-          if grep -q 'misspelt' spellcheck_reports/spellcheck_report.json; then
-            echo "misspelt=true" >> $GITHUB_OUTPUT
-          else
-            echo "misspelt=false" >> $GITHUB_OUTPUT
-          fi
-
-      # - name: Create GitHub Issue for Misspellings
-      #   if: ${{ steps.spellcheck.outputs.misspelt == 'true' }}
-      #   uses: peter-evans/create-issue-from-file@v4
-      #   with:
-      #     title: Documentation contains misspelled words
-      #     content-filepath: spellcheck_reports/spellcheck_output.txt
-      #     labels: documentation, spelling-error
+        with:
+          files: _build/html/**/*.html
+          dictionaries: .github/workflows/supporting_files/spellcheck_allow_list.txt
+          plugins: spell indefinite-article repeated-words syntax-mentions syntax-urls
+          reports: spellcheck_reports/spellcheck_report.json
+      - name: Dump spell check report
+        run: cat spellcheck_reports/spellcheck_report.json
+      # Use "Spellchecker CLI Summary" to report the spelling errors on GitHub.
+      # Reference: https://github.com/austenstone/spellchecker-cli-action-summary
+      - name: Report spelling errors
+        uses: austenstone/spellchecker-cli-action-summary@v1.0
+        with:
+          file-json: spellcheck_reports/spellcheck_report.json
+          # TODO: Be more specific about which files have changed.
+          files-changed: _build/html/**/*.html
