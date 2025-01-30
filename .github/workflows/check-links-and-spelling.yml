@@ -41,7 +41,9 @@ jobs:
           name: github-pages
           path: _downloads
       - name: Untar the archive
-        run: tar -xvf _downloads/artifact.tar -C _build/html
+        run: |
+          mkdir -p _build/html
+          tar -xvf _downloads/artifact.tar -C _build/html
       # TODO: Remove this debug step.
       - name: Dump the file tree
         run: ls -lR _build/html
@@ -81,7 +83,9 @@ jobs:
           name: github-pages
           path: _downloads
       - name: Untar the archive
-        run: tar -xvf _downloads/artifact.tar -C _build/html
+        run: |
+          mkdir -p _build/html
+          tar -xvf _downloads/artifact.tar -C _build/html
       # TODO: Remove this debug step.
       - name: Dump the file tree
         run: ls -lR _build/html
