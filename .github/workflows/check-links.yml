@@ -3,26 +3,13 @@
 name: Check links
 
 on:
-  push: { branches: [ main ] }
-  # Run this workflow whenever someone opens or adds commits to a PR whose base branch is `main`.
-  # Reference: https://docs.github.com/en/actions/writing-workflows/choosing-when-your-workflow-runs/events-that-trigger-workflows#pull_request
-  pull_request: { branches: [main] }
-  workflow_dispatch: { }
   # Allow this workflow to be called by other workflows.
   # Reference: https://docs.github.com/en/actions/using-workflows/reusing-workflows
   workflow_call: { }
 
 jobs:
-  # Use an existing workflow to assemble the website file tree that, in this workflow, we will scan.
-  # Reference: https://docs.github.com/en/actions/using-workflows/reusing-workflows#calling-a-reusable-workflow
-  assemble-website:
-    name: Assemble website
-    uses: ./.github/workflows/assemble-website.yml
-
   check-links:
     name: Check links
-    needs:
-      - assemble-website
     runs-on: ubuntu-latest
     permissions:
       issues: write # required for peter-evans/create-issue-from-file
