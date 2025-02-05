@@ -1,0 +1,47 @@
+# This GitHub Actions workflow finds links in HTML files and creates a GitHub Issue if any of them doesn't work.
+# Reference: https://docs.github.com/en/actions/writing-workflows/workflow-syntax-for-github-actions
+name: Check links
+
+on:
+  # Allow this workflow to be called by other workflows.
+  # Reference: https://docs.github.com/en/actions/using-workflows/reusing-workflows
+  workflow_call: { }
+
+jobs:
+  check-links:
+    name: Check links
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write # required for peter-evans/create-issue-from-file
+    steps:
+      - name: Get website file tree
+        uses: actions/download-artifact@v4  # docs: https://github.com/actions/download-artifact
+        with:
+          name: github-pages
+          path: _downloads
+      - name: Un-tar the archive
+        run: |
+          pwd
+          mkdir -p _build/html
+          tar -xvf _downloads/artifact.tar -C _build/html
+          ls -lR _build/html
+      - name: Use Lychee to check for broken links
+        # This step will populate `steps.lychee.outputs.exit_code` with the exit code returned by lychee.
+        # Reference: https://github.com/lycheeverse/lychee-action
+        id: lychee
+        uses: lycheeverse/lychee-action@v2
+        with:
+          # Note: The `--format` option refers to the format of the report, not the documents being scanned.
+          # Reference: https://github.com/lycheeverse/lychee#commandline-parameters
+          args: --base '_build/html' --verbose --no-progress --format markdown '_build/html/**/*.html'
+          debug: true
+          output: ./lychee/out.md
+          fail: false
+      - name: Create GitHub Issue listing broken links
+        # This step will only run if both (a) lychee returned a non-zero exit code and (b) we are on the `main` branch.
+        # Reference: https://docs.github.com/en/actions/learn-github-actions/variables#using-the-env-context-to-access-environment-variable-values
+        if: steps.lychee.outputs.exit_code != 0 && github.ref == 'refs/heads/main'
+        uses: peter-evans/create-issue-from-file@v5
+        with:
+          title: Website file tree contains broken links
+          content-filepath: ./lychee/out.md

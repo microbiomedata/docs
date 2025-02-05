@@ -3,7 +3,11 @@
 name: Deploy to GitHub Pages
 
 on:
+  # Run this workflow whenever someone pushes commits or tags to the `main` branch.
+  # Reference: https://docs.github.com/en/actions/writing-workflows/choosing-when-your-workflow-runs/events-that-trigger-workflows#push
   push: { branches: [ main ] }
+  # Allow this workflow to be run manually (e.g., via the "Actions" tab on GitHub).
+  # Reference: https://docs.github.com/en/actions/writing-workflows/choosing-when-your-workflow-runs/events-that-trigger-workflows#workflow_dispatch
   workflow_dispatch: { }
 
 # Reference: https://docs.github.com/en/actions/using-jobs/using-concurrency
