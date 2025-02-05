@@ -67,9 +67,14 @@ jobs:
           #       artifact; e.g., spell checkers and link checkers.
           name: github-pages
 
-  # Use existing workflow(s) to check the file tree for broken links.
+  # Use existing workflows to check the file tree for broken links and spelling errors.
   check-links:
     name: Check links
     uses: ./.github/workflows/check-links.yml
+    needs:
+      - assemble
+  check-spelling:
+    name: Check spelling
+    uses: ./.github/workflows/check-spelling.yml
     needs:
       - assemble
