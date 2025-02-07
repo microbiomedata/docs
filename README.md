@@ -26,7 +26,7 @@ flowchart TD
   * [Introduction](#introduction)
   * [Table of contents](#table-of-contents)
   * [Repository structure](#repository-structure)
-  * [Content Editor Quick Reference ✍️](#content-editor-quick-reference-)
+  * [Content Editor Quick Reference ✍️](#content-editor-quick-reference-%EF%B8%8F)
   * [The Home section](#the-home-section)
     * [Making changes](#making-changes)
       * [Basic workflow (to edit 1 file)](#basic-workflow-to-edit-1-file)
