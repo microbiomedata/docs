@@ -1,5 +1,6 @@
 matrix:
 - name: HTML
+  sources: [ "_build/html/**/*.html" ]
   aspell: { lang: en }
   pipeline:
   # Docs: https://github.com/facelessuser/pyspelling/blob/master/pyspelling/filters/html.py

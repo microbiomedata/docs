@@ -34,5 +34,4 @@ jobs:
         uses: rojopolis/spellcheck-github-actions@0.47.0
         with:
           config_path: .github/workflows/supporting_files/spellcheck.yml
-          source_files: _build/html/**/*.html
           task_name: HTML
