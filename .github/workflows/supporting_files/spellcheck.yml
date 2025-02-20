@@ -8,8 +8,10 @@ matrix:
     encoding: utf-8
   aspell: { lang: en }
   pipeline:
-  # Docs: https://github.com/facelessuser/pyspelling/blob/master/pyspelling/filters/html.py
+  # Docs: https://facelessuser.github.io/pyspelling/filters/html/
   - pyspelling.filters.html:
       comments: false
       ignores: [ code, pre ]
+  # Docs: https://facelessuser.github.io/pyspelling/filters/url/
+  - pyspelling.filters.url: {}
   default_encoding: utf-8
