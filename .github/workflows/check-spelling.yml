@@ -12,7 +12,7 @@ jobs:
     name: Check spelling
     runs-on: ubuntu-latest
     steps:
-      # Check out the commit so that we have access to the "allow list" residing in the repository.
+      # Check out the commit so that we have access to the spellcheck configuration file residing in the repository.
       - name: Check out commit
         uses: actions/checkout@v4
       - name: Get website file tree
@@ -26,26 +26,13 @@ jobs:
           mkdir -p _build/html
           tar -xvf _downloads/artifact.tar -C _build/html
           ls -lR _build/html
-      - name: Create directory for report
-        run: mkdir -p _spellcheck_reports
-      - name: Run Spellchecker CLI
-        id: spellchecker-cli
-        uses: tbroadley/spellchecker-cli-action@v1.1.1  # docs: https://github.com/marketplace/actions/spellchecker-cli?version=v1.1.1
-        continue-on-error: true
+      # Use `GitHub Spellcheck Action`, from the GHA Marketplace, to check spelling.
+      # Reference: https://github.com/marketplace/actions/github-spellcheck-action
+      - name: Dump Spellcheck configuration file
+        run: cat .github/workflows/supporting_files/spellcheck.yml
+      - name: Run Spellcheck
+        uses: rojopolis/spellcheck-github-actions@0.47.0
         with:
-          # Note: The Spellchecker CLI uses Globby to resolve these patterns.
-          #       Reference: https://github.com/tbroadley/spellchecker-cli?tab=readme-ov-file#globs
-          files: _build/html/**/*.html
-          dictionaries: .github/workflows/supporting_files/spellcheck_allow_list.txt
-          plugins: spell indefinite-article repeated-words syntax-mentions syntax-urls
-          reports: _spellcheck_reports/spellcheck_report.json
-      - name: Dump spell check report
-        run: cat _spellcheck_reports/spellcheck_report.json
-      # Use "Spellchecker CLI Summary" to report the spelling errors on GitHub.
-      # Reference: https://github.com/austenstone/spellchecker-cli-action-summary
-      - name: Report spelling errors
-        uses: austenstone/spellchecker-cli-action-summary@v1.0
-        with:
-          file-json: _spellcheck_reports/spellcheck_report.json
-          # TODO: Be more specific about which files have changed.
-          files-changed: _build/html/**/*.html
+          config_path: .github/workflows/supporting_files/spellcheck.yml
+          source_files: _build/html/**/*.html
+          task_name: HTML
