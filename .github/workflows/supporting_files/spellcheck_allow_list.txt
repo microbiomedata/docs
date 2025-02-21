@@ -1,5 +1,7 @@
+acyclic
 APK
 APIs
+AST
 Bioinformatics
 bioinformatics
 Biomes
@@ -13,7 +15,10 @@ changesheets
 Community-centric
 community-centric
 Dagit
+Dagster
+Dagster's
 DataHarmonizer
+DataObject
 Diátaxis
 DOI
 ENVO
@@ -63,6 +68,7 @@ Mgt
 MkDocs
 multi-omics
 NCBI
+NERSC
 NMDC
 NMDC's
 NOM
@@ -73,8 +79,12 @@ Omics
 omics
 PNNL
 PNNL's
+programmatically
 Proteomics
 proteomics
 RESTful
+Runtime
+Runtime's
 Sankey
 TestFlight
+YAML
