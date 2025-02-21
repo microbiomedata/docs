@@ -31,9 +31,24 @@ jobs:
         id: lychee
         uses: lycheeverse/lychee-action@v2
         with:
-          # Note: The `--format` option refers to the format of the report, not the documents being scanned.
+          #
+          # Notes:
+          # - The `>` symbol tells the YAML parser to replace newlines with whitespace. This way, we don't
+          #   have to terminate each line with a `\` character to escape the invisible newline character.
+          # - The `--format` option refers to the format of the report, not the documents being scanned.
+          # - The `--exclude-loopback` option makes it so Lychee does not check "localhost" URLs.
+          # - The `--exclude <PATTERN>` option can be used multiple times.
+          #
           # Reference: https://github.com/lycheeverse/lychee#commandline-parameters
-          args: --base '_build/html' --verbose --no-progress --format markdown '_build/html/**/*.html'
+          #
+          args: >
+            --base '_build/html'
+            --exclude-loopback
+            --exclude '^https://rancher2.spin.nersc.gov'
+            --verbose
+            --no-progress
+            --format markdown
+            '_build/html/**/*.html'
           debug: true
           output: ./lychee/out.md
           fail: false
