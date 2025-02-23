@@ -11,7 +11,12 @@ matrix:
   # Docs: https://facelessuser.github.io/pyspelling/filters/html/
   - pyspelling.filters.html:
       comments: false
-      ignores: [ code, pre ]
+      # CSS selectors supported: https://facelessuser.github.io/soupsieve/
+      ignores:
+      - code
+      - pre
+      # Ignore code cells in Jupyter notebooks; i.e., `.jp-CodeCell` elements within `.jupyter-wrapper` elements.
+      - .jupyter-wrapper .jp-CodeCell
   # Docs: https://facelessuser.github.io/pyspelling/filters/url/
   - pyspelling.filters.url: {}
   default_encoding: utf-8
