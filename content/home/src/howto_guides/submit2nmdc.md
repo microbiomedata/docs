@@ -69,7 +69,7 @@ Last, a user can include "Contributors" to acknowledge members of a research tea
 [![](../_static/images/howto_guides/portal_guide/contributors.png)](../_static/images/howto_guides/portal_guide/contributors.png)
 
 This includes listing Contributor names, ORCiDs, associating role(s) based on the CRediT (Contributor Roles Taxonomy), and their submission access permission. A Contributor can have a single or multiple roles.  
-Permission roles are granted by ORCID provided and are as follows: Viewer, will have permission to view the entire submission, and cannot make any edits; Metadata Contributor, will have permission to view the entire submission, and can edit **only** the sample metadata section of the submission; Editor, will have full view and edit access to all parts of the submission, **except** contributors; none, no permissions or view granted. The Principal Investigator will be granted the same permissions as the submittion and **can edit the entire submission**.
+Permission roles are granted by ORCID provided and are as follows: Viewer, will have permission to view the entire submission, and cannot make any edits; Metadata Contributor, will have permission to view the entire submission, and can edit **only** the sample metadata section of the submission; Editor, will have full view and edit access to all parts of the submission, **except** contributors; none, no permissions or view granted. The Principal Investigator will be granted the same permissions as the submission and **can edit the entire submission**.
 
 ### Multi-omics Data
 
@@ -115,7 +115,7 @@ When column headers are double clicked, or when metadata validation is performed
 
 [![](../_static/images/howto_guides/portal_guide/column_visibility.png)](../_static/images/howto_guides/portal_guide/column_visibility.png)
 
-Users are encouraged to populate as many of the columns as possible, but not all are required or relevant to all sample types or research. To accommodate such needs, the BIosample Metadata interface distinguishes between required, recommended, and optional columns. Which columns appear on the screen can be controlled with the show/hide menu.  This tool can be used to hide optional or optional + recommended columns, and the show sub-menu can be used to center a particular section on the user’s screen.
+Users are encouraged to populate as many of the columns as possible, but not all are required or relevant to all sample types or research. To accommodate such needs, the Biosample Metadata interface distinguishes between required, recommended, and optional columns. Which columns appear on the screen can be controlled with the show/hide menu.  This tool can be used to hide optional or optional + recommended columns, and the show sub-menu can be used to center a particular section on the user’s screen.
 
 
 ##### Jump to Column Search 
@@ -135,7 +135,7 @@ The real-time validation tool allows submitters to check their filled-in metadat
 
 [![](../_static/images/howto_guides/portal_guide/find-replace.png)](../_static/images/howto_guides/portal_guide/find-replace.png)
 
-When validating the metadata and information provided, the submission portal provides a "Find and Replace" tool. This allows bulk updates to invalide metadata.
+When validating the metadata and information provided, the submission portal provides a "Find and Replace" tool. This allows bulk updates to invalid metadata.
 
 
 ##### Color Legend
