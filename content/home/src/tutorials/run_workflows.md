@@ -69,7 +69,7 @@
 
 >NMDC EDGE MAGs Generation Tutorial Practice 
 >
->Task: Log into NMDC EDGE and run the Metagenome MAGs workflow. Use the assembled contigs and the read mapping file which are output from the project run in the Assembly Tutorial (assembled_contigs.fna and pairedMapped_sorted.bam) and the combined functional annotation file from the Annotation Tutorial (the file ending in fuctional_annotation.gff). When the run finishes, answer the questions below using the workflow outputs.
+>Task: Log into NMDC EDGE and run the Metagenome MAGs workflow. Use the assembled contigs and the read mapping file which are output from the project run in the Assembly Tutorial (assembled_contigs.fna and pairedMapped_sorted.bam) and the combined functional annotation file from the Annotation Tutorial (the file ending in functional_annotation.gff). When the run finishes, answer the questions below using the workflow outputs.
 >
 >&nbsp;&nbsp;&nbsp;&nbsp;Question 1:  Calculate the percentage of the contigs that were binned.
 >

@@ -82,7 +82,7 @@ such as biomes, environmental features, and environmental materials.
 These EnvO entities are the recommended values for several of the
 mandatory terms in the MIxS packages, often referred to as the "MIxS
 triad".  Where appropriate, we also support terms from the Plant Ontology (PO) (7) and Uberon (8), 
-an anotomical ontology. 
+an anatomical ontology. 
 
 ### *Genomes OnLine Database (GOLD)*
 
@@ -179,7 +179,7 @@ provides an interactive visualization of the GOLD classification system.
 Similarly, ENVO, PO and Uberon terms are classification systems that can be used to
 describe environments where samples were collected from which can be used to query the portal.  
 Users can search by broad-scale environmental context, local environmental context, 
-and envioronmental medium.  These terms are required by NMDC because they are required by
+and environmental medium.  These terms are required by NMDC because they are required by
 the GSC.
 
 ## Interactive visualizations
