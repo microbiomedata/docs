@@ -1,42 +1,75 @@
-#  Running the Workflows
-![](../_static/images/howto_guides/workflows/quickStart/image1.png)
 
-## NMDC EDGE Quick Start User Guide
+# ![Logo for NMDC EDGE product, a multicolored M and a square green graphic with EDGE](../_static/images/nmdc-edge-logo.png) NMDC EDGE Quick Start User Guide
+
+
+## Setting Up
 
 ### Register for an account
 
-1. Visit the homepage for NMDC EDGE platform using the link below.\
-https://nmdc-edge.org/home
+1. Visit the homepage for NMDC EDGE platform by going to [https://nmdc-edge.org](https://nmdc-edge.org/home)
 
 2. Click on "ORCiD LOGIN" to login to your account on the NMDC EDGE platform. 
 
-    ![](../_static/images/howto_guides/workflows/quickStart/image16.png)
+    ![Home page for NMDC EDGE with a bubble labeled 2 for the ORCiD LOGIN button](../_static/images/howto_guides/workflows/quickStart/03102025_login-in.svg)
 
-3. Login using your ORCiD and ORCiD password. If you do not have an ORCiD, click on "Register Now" and follow the instructions to set-up an ORCiD account.
+3. Log in to ORCiD using your registered credentials. If you do not have an ORCiD, click on "Register Now" and follow the instructions to set-up an ORCiD account.
 
-    ![](../_static/images/howto_guides/workflows/quickStart/image17.png)
+    ![ORCiD login page with bubble labeled 3 for "Register now"](../_static/images/howto_guides/workflows/quickStart/03102025_orcid.svg)
 
-4. If you are logging in for the first time, click on "My Profile" and optionally provide your First Name, Last Name, and Email. You can also set the "Project Status Notification" to ON (OFF by default). If ON, notifications about your workflow runs will be sent to the Email you provided. Click on "Save Changes"
+4. If you are logging in for the first time, click on "My Profile" and optionally provide your First Name, Last Name, and Email. The first grayed out box will already have your ORCiD. You can also set the "Project Status Notification" to ON (OFF by default). If ON, notifications about your workflow runs will be sent to the Email you provided. Click on "Save Changes"
 
-    ![](../_static/images/howto_guides/workflows/quickStart/image18.png)
+    ![NMDC EDGE "My Profile" page with bubble labeled 4 for the highlighted "My Profile" button](../_static/images/howto_guides/workflows/quickStart/03102025_my_profile.svg)
 
 
 ### Upload data
 
-You can upload your own data to process through the workflows. Click on "Upload Files" in the left menu bar. This will open a window which allows you to drag and drop files or browse for your data files. If you do not have a dataset to test, you can download this [**test data**](https://portal.nersc.gov/cfs/m3408/test_data/SRR7877884/SRR7877884-int-0.1.fastq.gz) and upload it to the NMDC EDGE platform. 
+You can upload your own data to process through the workflows. Click on "Upload Files" in the left menu bar. This will open a window which allows you to drag and drop files or browse for your data files. If you do not have a dataset to test, you can download this metagenomic [test data](https://portal.nersc.gov/cfs/m3408/test_data/SRR7877884/SRR7877884-int-0.1.fastq.gz) and upload it to the NMDC EDGE platform. 
+
+!["Upload Files" page on NMDC EDGE, with a bubble labeled 1 pointing to the "Upload Files" tab in left vertical navigation bar, and a bubble labeled 2 under "Drag files or Click to Browse"](../_static/images/howto_guides/workflows/quickStart/03102025_upload_files.svg)
 
 Additionally, there are some datasets in the Public Data folder for you to test within the NMDC EDGE platform.
 
-![](../_static/images/howto_guides/workflows/quickStart/image19.png)
 
-Alternatively, you can select "Retrieve SRA Data" in the left menu bar and input an NCBI SRA accession number to pull data directly from SRA. 
-![](../_static/images/howto_guides/workflows/quickStart/retrieve_sra.png)
+Alternatively, you can select "Retrieve SRA Data" in the left menu bar and input NCBI SRA accession number(s) to pull data directly from SRA. 
+
+!["Retrieve SRA Data" page on NMDC EDGE, with a bubble labeled 1 pointing to the "Retrieve SRA Data" tab in left vertical navigation bar, and a bubble labeled 2 pointing to a text box for SRA accession number(s) entry](../_static/images/howto_guides/workflows/quickStart/03102025_retrieve_SRA.svg)
+
+
+##  Running the Workflows
+
+One of the core end-to-end tools available to NMDC EDGE users is the Metagenomics workflow. It takes raw, short-read FASTQ files and runs the following workflows:
+
+ - ReadsQC (reads quality control)
+ - Read-based Taxonomy (read-based taxonomic classification)
+ - MetaAssembly (metagenome assembly)
+ - Virus and Plasmids (virus and plasmid genome identification)
+ - MG Annotation (metagenome annotation)
+ - MetaMAGs (binning of population genomes to generate metagenome-assembled genomes)
+
+More information on these workflows is available in the [documentation](/Users/kli/Documents/NMDC/docs/pullers/workflow_docs/metagenome_workflow_overview/docs/index.rst). 
+
+### Running the full metagenomic workflow
+
+In this example, we will run the interleaved FASTQ file for SRR7877884, which is available in the public data folder in NMDC EDGE file section options and [online](https://portal.nersc.gov/cfs/m3408/test_data/SRR7877884/SRR7877884-int.fastq.gz). Note that this is a larger file at 3.65 GB. A smaller option ([10% subset of SRR7877884](https://portal.nersc.gov/cfs/m3408/test_data/SRR7877884/SRR7877884-int-0.1.fastq.gz)) is available at 367.25 MB. 
+
+!["Run Multiple Workflows" submission page with bubbles labeled 1 through 7 pointing at different clickable buttons and typeable fields](../_static/images/howto_guides/workflows/metaG/03102025_run_metag.svg)
+
+
+1. Click on the "Metagenomics" tab on the left vertical navigation bar. 
+2. Select the "Run Multiple Workflows" option from the dropdown.
+3.  Enter a **unique** Project/Run Name with no spaces (underscores are fine).
+4.  A description (optional, but recommended).
+5.  Select if the input data is interleaved (YES by default). If the data is paired select NO and it will allow you to upload both, forward and reverse files.
+6.  Then select the input file(s). Clicking on the button to select "interleaved FASTQ #1" opens a box called "Select a file" (as shown in the image below) to allow the user to find the desired files, either from the public data folder, or files uploaded by the user.
+
+    ![A pop-up window titled "Select a file" over a grayed out background for the workflow submission page. It shows a file structure for public metagenomic test data.](../_static/images/howto_guides/workflows/metaG/03102025_run_metag_file.svg)
+    
+7.  Click "Submit" to start a metagenome workflow run.
 
 ### Running a single metagenomics workflow 
 
-Click on "Metagenomics" then select the "Run a Single Workflow" option.
+Each component of the end-to-end Metagenomics workflow can be run on its own, provided with the correct input types. The following are some examples for running these individual workflows.
 
- ![](../_static/images/howto_guides/workflows/quickStart/image20.png)
 
 To run a single workflow, the user must provide:
 
@@ -54,24 +87,7 @@ To run a single workflow, the user must provide:
 
 6.  Click "Submit" to start a workflow run.
 
-### Running multiple workflows
 
-1.  Another option is to select "Run Multiple Workflows" if you
-    desire to run the entire metagenomic pipeline that includes multiple workflows.
-
-2.  Enter a **unique** Project/Run Name with no spaces
-    (underscores are fine).
-
-3.  A description (optional, but recommended).
-
-4.  Select if the input data is interleaved (YES by default). If the data is paired select NO and it will allow you to upload both, forward and reverse files.
-
-> ![](../_static/images/howto_guides/workflows/quickStart/image22.png)
-
-5.  Then select the input file(s). Clicking on the button to select "interleaved FASTQ #1" opens a box called "Select a file" (as shown in the image below) to allow the user to find the desired files, either from the public data folder, or files uploaded by the user.
-    ![](../_static/images/howto_guides/workflows/quickStart/image21.png)
-    
-7.  Click "Submit" to start a metagenome workflow run.
 
 ### Output 
 
