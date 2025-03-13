@@ -60,7 +60,7 @@ In this example, we will run the interleaved FASTQ file for SRR7877884, which is
 3.  Enter a **unique** Project/Run Name with no spaces (underscores are fine).
 4.  A description (optional, but recommended).
 5.  Select if the input data is interleaved (YES by default). If the data is paired select NO and it will allow you to upload both, forward and reverse files.
-6.  Then select the input file(s). Clicking on the button to select "interleaved FASTQ #1" opens a box called "Select a file" (as shown in the image below) to allow the user to find the desired files, either from the public data folder, or files uploaded by the user.
+6.  Then select the input file(s). Clicking on the button to select "interleaved FASTQ #1" opens a box called "Select a file" (as shown in the image below) to allow the user to find the desired files, either from the public data folder, or files uploaded by the user. If the files are uploaded to an accessible URL, the URL can be pasted into the box.
 
     ![A pop-up window titled "Select a file" over a grayed out background for the workflow submission page. It shows a file structure for public metagenomic test data.](../_static/images/howto_guides/workflows/metaG/03102025_run_metag_file.svg)
     
@@ -70,22 +70,22 @@ In this example, we will run the interleaved FASTQ file for SRR7877884, which is
 
 Each component of the end-to-end Metagenomics workflow can be run on its own, provided with the correct input types. The following are some examples for running these individual workflows.
 
+!["Run a Single Workflow" page with dropdown menu listing the individual workflows available to run.](../_static/images/howto_guides/workflows/metaG/03102025_single_wf_dropdown.svg)
 
-To run a single workflow, the user must provide:
 
-1.  A unique Project/Run Name with no spaces (underscores are fine).
+For example, to run a paired set of FASTQ files through ReadsQC, the user will provide:
 
-2.  A description (optional, but recommended).
+!["Run a Single Workflow" page with fields filled out for a non-interleaved ReadsQC run.](../_static/images/howto_guides/workflows/metaG/03102025_run_qc_paired.svg)
 
-3.  The workflow desired from the drop-down menu.
-
-4.  Select if the input data is interleaved (YES by default). If the data is paired select NO and it will allow you to upload both forward and reverse files.
-
-5.  Then select the input file(s). Clicking on the button to the right of the "interleaved FASTQ #1" (as indicated in the image above) opens a box called "Select a file" (as indicated in the image below) to allow the user to find the desired files, either from the public data folder, or files that were uploaded by the user. 
-
-    ![](../_static/images/howto_guides/workflows/quickStart/image21.png)
-
-6.  Click "Submit" to start a workflow run.
+1. Click on the "Metagenomics" tab on the left vertical navigation bar. 
+2. Select the "Run a Single Workflow" option from the dropdown.
+3. A unique Project/Run Name with no spaces (underscores are fine).
+4. A description (optional, but recommended).
+5. The workflow desired from the drop-down menu.
+6. Select if the input data is interleaved (YES by default). If the data is paired select NO and it will allow you to upload both forward and reverse files. 
+7. Select the input file box and paste in the desired URL or choose a file from the button on the right. For this example, we will use [SRR7877884's R1](https://portal.nersc.gov/cfs/m3408/test_data/SRR7877884/SRR7877884_1.fastq.gz).
+8. Paste the FASTQ URL for the associated R2 file ([SRR7877884's R2](https://portal.nersc.gov/cfs/m3408/test_data/SRR7877884/SRR7877884_2.fastq.gz)) or select a file using the file selection menu.
+9. Click "Submit" to start a workflow run.
 
 
 
