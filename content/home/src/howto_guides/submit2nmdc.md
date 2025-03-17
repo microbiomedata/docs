@@ -2,7 +2,7 @@
 
 
 ## Introduction
-The NMDC has developed two products for improving metadata capture: the [NMDC Submission Portal](https://data.microbiomedata.org/submission/home) (released April, 2022) and the [NMDC Field Notes](https://microbiomedata.org/field-notes/) app (currently in beta testing). Each product was designed to lower barriers to capturing metadata and adhering to community standards, thereby addressing the critical gap of collecting necessary metadata describing a study and its biosamples.
+The NMDC has developed two products for improving metadata capture: the [NMDC Submission Portal](https://data.microbiomedata.org/submission/home) (released April, 2022) and the [NMDC Field Notes](https://microbiomedata.org/field-notes/) app. Each product was designed to lower barriers to capturing metadata and adhering to community standards, thereby addressing the critical gap of collecting necessary metadata describing a study and its biosamples.
 
 ### NMDC Submission Portal
 The NMDC Submission Portal was designed using a flexible framework leveraging a new modeling approach called the Linked Data Modeling Language (LinkML) and the template-driven spreadsheet tool, [DataHarmonizer](https://github.com/cidgoh/DataHarmonizer). It supports several different community standards, such as the _Minimal Information about any (x) Sequence_ (MIxS) standard from the Genomic Standards Consortium (GSC), the _PROV_ standard for provenance metadata, the _Proteomics Standards Initiative_ (PSI) standards for metaproteomics, and the _Metabolomics Standards Initiative_ (MSI) standards for metabolomics. The NMDC Submission Portal is an intuitive interface that allows researchers to provide information about their study, the metadata about the study’s biosamples, multi-omics data associated with the study, and whether Department of Energy (DOE) user facility proposals are associated with the data. Updates and new features are continually being implemented as user research provides new insights to improve usability, and as standards are updated and improved. 
@@ -150,7 +150,7 @@ After selecting the validate button, cells will become color coded to indicate i
 
 [https://microbiomedata.org/field-notes/](https://microbiomedata.org/field-notes/)
 
-The NMDC Field Notes app is for mobile device use. It runs on both Apple (iOS) and Android devices. It's currently available for beta testing. See [here](./field_notes_tester) to sign up!
+The NMDC Field Notes app is for mobile device use. It runs on both Apple (iOS) and Android devices and is available in the app store.
 
 This app is designed to streamline real-time registration and collection of standardized metadata and field measurements. 
 
@@ -162,6 +162,7 @@ The NMDC Field Notes app requires ORCiD authentication to access it.
 
 Submissions via Field Notes are available in the Submission Portal as an automatic backup when connected to wifi. The app is available for offline use, but requires internet connection to **start** a submission. 
 
+[![](../_static/images/howto_guides/portal_guide/app-home-page.png)](../_static/images/howto_guides/portal_guide/app-home-page.png)
 
 (Step 1 of 3) Welcome to the NMDC Field Notes mobile app! 
 
