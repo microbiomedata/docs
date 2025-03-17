@@ -216,4 +216,4 @@ Field Notes can use your mobile device information and location to populate some
 
 ##### Real Time Validation  
 
-Real time validation available in Field Notes is similar to that in the Submission Portal [header](#real-time-validation). No color coding, but the ⚠️ will disappear when metadata is valid, and a note below the input box will provide if a required field is missing or if a field is misformatted. 
+Real time validation available in Field Notes is similar to that in the Submission Portal [validation](#real-time-validation). No color coding, but the ⚠️ will disappear when metadata is valid, and a note below the input box will provide if a required field is missing or if a field is misformatted. 
