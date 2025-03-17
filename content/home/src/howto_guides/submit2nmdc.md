@@ -166,13 +166,13 @@ Submissions via Field Notes are available in the Submission Portal as an automat
 
 (Step 1 of 3) Welcome to the NMDC Field Notes mobile app! 
 
-[![](../_static/images/howto_guides/portal_guide/new-study.png)](../_static/images/howto_guides/portal_guide/new-study.png)
+[![](../_static/images/howto_guides/portal_guide/new-study.png)](../_static/images/howto_guides/portal_guide/new-study.png) ##UPDATE
 
 Once signed in with an ORCiD, you will have the ability to access existing studies or create a study using the 'New’ button. Details about each section are outlined below. Users can also return to existing submissions saved under the ORCiD account to resume their work at any point. 
 
 ### New Study
 
-[![](../_static/images/howto_guides/portal_guide/app-study-page.png)](../_static/images/howto_guides/portal_guide/app-study-page.png)
+[![](../_static/images/howto_guides/portal_guide/app-study-page.png)](../_static/images/howto_guides/portal_guide/app-study-page.png) ##UPDATE
 
 The Study Information page requires a valid ‘Study Name’ and a valid email address. All other fields are optional and can be completed in the app or in the Submission Portal. Study names and all other information can be updated or added via the app or Submission Portal. See [header](#submission-portal-functionality) [Study](#study) for more details about Study information.
 
@@ -206,7 +206,7 @@ When samples are added to a study, they are listed at the bottom of the submissi
 
 ##### Term Information
 
-[![](../_static/images/howto_guides/portal_guide/slot_info.png)](../_static/images/howto_guides/portal_guide/slot_info.png)
+[![](../_static/images/howto_guides/portal_guide/slot_info.png)](../_static/images/howto_guides/portal_guide/slot_info.png) ##UPDATE
 
 Similar to [column information](#column-information) for the Submission Portal, when you select a term to complete metadata, term help will be included below the input field. This provides a description of the term, additional guidance, and examples of valid completion. 
 
