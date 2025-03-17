@@ -164,7 +164,7 @@ Submissions via Field Notes are available in the Submission Portal as an automat
 
 [![](../_static/images/howto_guides/portal_guide/app-home-page.png)](../_static/images/howto_guides/portal_guide/app-home-page.png)
 
-(Step 1 of 3) Welcome to the NMDC Field Notes mobile app! 
+### Welcome to the NMDC Field Notes mobile app! 
 
 [![](../_static/images/howto_guides/portal_guide/new-study.png)](../_static/images/howto_guides/portal_guide/new-study.png) ##UPDATE
 
