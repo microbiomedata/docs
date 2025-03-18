@@ -46,7 +46,7 @@ One of the core end-to-end tools available to NMDC EDGE users is the Metagenomic
  - MG Annotation (metagenome annotation)
  - MetaMAGs (binning of population genomes to generate metagenome-assembled genomes)
 
-More information on these workflows is available in the [documentation](/Users/kli/Documents/NMDC/docs/pullers/workflow_docs/metagenome_workflow_overview/docs/index.rst). 
+More information on these metagenomic workflows is available in the [workflow documentation](../../../../pullers/workflow_docs/metagenome_workflow_overview/docs/index.rst). 
 
 ### Running the full metagenomic workflow
 
@@ -70,10 +70,10 @@ In this example, we will run the interleaved FASTQ file for SRR7877884, which is
 
 Each component of the end-to-end Metagenomics workflow can be run on its own, provided with the correct input types. The following are some examples for running these individual workflows.
 
-!["Run a Single Workflow" page with dropdown menu listing the individual workflows available to run.](../_static/images/howto_guides/workflows/metaG/03102025_single_wf_dropdown.svg)
+!["Run a Single Workflow" page with dropdown menu listing the individual workflows available to run.](../_static/images/howto_guides/workflows/metaG/03102025_run_single_wf_dropdown.svg)
 
 
-For example, to run a paired set of FASTQ files through ReadsQC, the user will provide:
+For example, to run a paired set of FASTQ files through ReadsQC, the user can perform the following steps:
 
 !["Run a Single Workflow" page with fields filled out for a non-interleaved ReadsQC run.](../_static/images/howto_guides/workflows/metaG/03102025_run_qc_paired.svg)
 
@@ -87,19 +87,37 @@ For example, to run a paired set of FASTQ files through ReadsQC, the user will p
 8. Paste the FASTQ URL for the associated R2 file ([SRR7877884's R2](https://portal.nersc.gov/cfs/m3408/test_data/SRR7877884/SRR7877884_2.fastq.gz)) or select a file using the file selection menu.
 9. Click "Submit" to start a workflow run.
 
+### Inputs
 
+Some other options for inputs include multiple sets of FASTQ files in interleaved or paired form for samples that may want to be run together. One such example is as follows, with Step 7 being the button to allow for the multiple file selections.
+
+!["Run a Single Workflow" page with 2 sets of paired FASTQ file inputs for ReadsQC](../_static/images/howto_guides/workflows/metaG/03102025_run_multi_rqc.svg) ![File selection for 2 sets of paired FASTQ file inputs](../_static/images/howto_guides/workflows/metaG/03102025_run_multi_rqc_files.svg)
+
+Other ways the inputs for each workflow may change include the types of files needed as well as the number of different types of files. For example, with Read Based Analysis, the input is a filtered FASTQ file. This can be uploaded by the user, input as a URL, or taken from the result of other workflows run on NMDC EDGE. The results of your other workflows will be available in the file selection menu if the file type is right for the workflow you need to run. For the Read-based Taxonomy Classification workflow, the input is filtered FASTQ files, which is the output of the ReadsQC workflow.
+
+!["Run a Single Workflow" page for Read-based Taxonomy Classification](../_static/images/howto_guides/workflows/metaG/03102025_run_rba.svg) ![File selection showing projects that the user](../_static/images/howto_guides/workflows/metaG/03102025_run_rba_file.svg)
+
+Each workflow submission page will list the types of files necessary. For further reading, please refer to the [individual workflow documentation](../../../../pullers/workflow_docs/index.rst) for a full list of inputs and outputs. 
 
 ### Output 
 
-1.  The link for "My Projects" opens the list of projects for that user
+![](../_static/images/howto_guides/workflows/quickStart/03102025_projects_page.svg)
 
-2.  Links (in the purple circles) are provided to share projects, make projects public, or delete projects
+1. To view the status of projects and their outputs, navigate to the My Projects tab at the top of the page. 
+2. For a quick summary on the specific project, click the dropdown arrow to the left of the project checkbox.
+3. To view the full project results, click on the folder with the arrow under the Result column.
+4. The link for "My Projects" opens the list of projects for that user
 
-3.  The "Status" column shows whether the job is in the queue (gray), submitted (blue), running (yellow), has failed (red) or completed (green). If a project fails, a log will give the error messages for troubleshooting.
+5.  Links (in the purple circles) are provided to share projects, make projects public, or delete projects
 
-4.  Clicking on the icon in the "Result" field opens up the results page for that project. 
+6.  The "Status" column shows whether the job is in the queue (gray), submitted (blue), running (yellow), has failed (red) or completed (green). If a project fails, a log will give the error messages for troubleshooting.
 
-> ![](../_static/images/howto_guides/workflows/quickStart/image23.png)
+7.  Clicking on the icon in the "Result" field opens up the results page for that project. 
+
+Other actions that can be performed on this page include deletion, sharing, and privacy settings for selected projects indicated under "My Projects".
+
+In this example, we will view the results of the end-to-end metagenomics run set up in the [run multiple workflows](#running-the-full-metagenomic-workflow) section.
+
 
 ### Project Summary (Results)
 
