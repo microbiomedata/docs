@@ -72,7 +72,12 @@ Last, a user can include "Contributors" to acknowledge members of a research tea
 [![](../_static/images/howto_guides/portal_guide/contributors.png)](../_static/images/howto_guides/portal_guide/contributors.png)
 
 This includes listing Contributor names, ORCiDs, associating role(s) based on the CRediT (Contributor Roles Taxonomy), and their submission access permission. A Contributor can have a single or multiple roles.  
-Permission roles are granted by ORCID provided and are as follows: Viewer, will have permission to view the entire submission, and cannot make any edits; Metadata Contributor, will have permission to view the entire submission, and can edit **only** the sample metadata section of the submission; Editor, will have full view and edit access to all parts of the submission, **except** contributors; none, no permissions or view granted. The Principal Investigator will be granted the same permissions as the submission and **can edit the entire submission**.
+Permission roles are granted by ORCiD and are as follows: 
+- Viewer: will have permission to view the entire submission, and cannot make any edits
+- Metadata Contributor: will have permission to view the entire submission, and can edit **only** the sample metadata section of the submission
+- Editor: will have full view and edit access to all parts of the submission, **except** contributors
+- None: no permissions or view granted 
+The Principal Investigator will be granted the same permissions as the submitter and **can edit the entire submission**.
 
 ### Multi-omics Data
 
