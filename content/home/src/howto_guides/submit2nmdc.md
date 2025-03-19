@@ -101,7 +101,11 @@ The NMDC uses sections for clarity, and to identify when MIxS specifications hav
 Biosample metadata can be entered manually (by typing each row), or the data can be entered in bulk by importing a Microsoft Excel XLSX file. The metadata is updated in a NMDC database each time the user navigates across the submission template. Upon completion, the study submission and metadata will be reviewed by a member of the NMDC team, and once approved, the submitting user will indicate when data are ready to be published to the Data Portal.
  
 #### Metadata Sections
-Detailed biosample metadata input is captured using a  curated metadata template. This page allows users to input biosample metadata into standardized fields based on the selected environmental template. The biosample metadata fields are split into 4 sections: Sample ID which consists of sample and environmental identification information; MIxS which are fields that are identical to those provided in MIxS templates, MIxS (modified) & Inspired which are similar to the MIxS fields, but have been altered in some way or were added based on user feedback. These updated and additional fields are meant to provide clearer context and expectations for the submitter to better capture information about their samples.
+Detailed biosample metadata input is captured using a  curated metadata template. This page allows users to input biosample metadata into standardized fields based on the selected environmental template. The biosample metadata fields are split into 4 sections: 
+- Sample ID which consists of sample and environmental identification information
+- MIxS which are fields that are identical to those provided in MIxS templates
+- MIxS (modified) & MIxS Inspired which are similar to the MIxS fields, but have been altered in some way or were added based on user feedback. 
+These updated and additional fields are meant to provide clearer context and expectations for the submitter to better capture information about their samples.
 
 #### Download and Import
 
