@@ -218,8 +218,8 @@ Similar to [column information](#column-information) for the Submission Portal, 
 
 ##### Location Provided Metadata
 
-Field Notes can use your mobile device information and location to populate some metadata fields. For example, selecting "Set to today" for the term "collection date" will auto populate with the current date. Additionally, mobile GPS coordinates can be used to populate "latitude and longitude" field by selecting "Use GPS location". This along with other auto-populating fields ensure accurate and structured metadata in real time and minimizes human error.
+Field Notes can use your mobile device information and location to populate some metadata fields. For example, selecting "Set to today" for the term "collection date" will auto-populate with the current date. Additionally, mobile GPS coordinates can be used to populate the "latitude and longitude" field by selecting "Use GPS location". This along with other auto-populating fields ensure accurate and structured metadata in real time and minimizes human error.
 
 ##### Real Time Validation  
 
-Real time validation available in Field Notes is similar to that in the Submission Portal [validation](#real-time-validation). No color coding, but the ⚠️ will disappear when metadata is valid, and a note below the input box will provide if a required field is missing or if a field is misformatted. 
+Real time validation available in the Field Notes mobile app is similar to that in the Submission Portal [validation](#real-time-validation). No color coding, but the ⚠️ will disappear when metadata is valid, and a note below the input box will provide information if a required field is missing or if a field is misformatted. 
