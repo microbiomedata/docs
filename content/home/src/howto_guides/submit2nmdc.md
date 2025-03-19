@@ -59,7 +59,7 @@ On the Submission Context screen, submitters are asked whether data has already 
 
 [![](../_static/images/howto_guides/portal_guide/shipping_info.png)](../_static/images/howto_guides/portal_guide/shipping_info.png)
 
-If a user selects ‘No’, a user will be asked whether samples will be submitted to JGI, EMSL, or both User Facilities. Selecting EMSL will further prompt the user to provide shipping information for EMSL, along with indicating what project type is associated with an active User proposal and the award DOI that is provided (e.g., CSP, BERSS, BRC, FICUS, MONet, or other).  
+If a user selects ‘No’, a user will be asked whether samples will be submitted to the JGI, EMSL, or both User Facilities. Selecting EMSL will further prompt the user to provide shipping information for EMSL, along with indicating what project type is associated with an active User proposal and the award DOI that is provided (e.g., CSP, BERSS, BRC, FICUS, MONet, or other).  
 
 ### Study
 
