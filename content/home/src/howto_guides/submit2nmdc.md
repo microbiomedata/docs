@@ -189,12 +189,14 @@ Select "Save" once study information has been completed.
 
 ### Select Fields
 
-The Field Notes App allows the submitter to select the metadata fields that will be visible and available on the app and when working in the field. 
-
-Available terms can be selected and de-selected individually or in bulk based on the section they're assigned to. The available sections are: "Common", terms commonly measured at the time of sample collection; "Occasional", terms that may sometimes be measured at the time of sample collection; "Uncommon", terms that are rarely measured at the time of sample collection. This allows the submitter to tailor their metadata interface to be more focused for field collection.
-
-If you are completing metadata for multiple sample types in multiple templates you will need to select your fields for each individual template. 
-We recommend completing all "New Study" steps prior to and in preparation of field work.
+The Field Notes mobile app allows the submitter to select the metadata fields that will be visible and available on the app and when working in the field. 
+Available terms can be selected and de-selected individually or in bulk based on the section they're assigned to. The available sections are: 
+- "Common", terms commonly measured at the time of sample collection
+- "Occasional", terms that may sometimes be measured at the time of sample collection
+- "Uncommon", terms that are rarely measured at the time of sample collection. 
+This allows the submitter to tailor their metadata interface to be more focused for field collection.
+If you are completing metadata for multiple sample types in multiple templates, you will need to select your fields for each individual template. 
+We recommend completing all "New Study" steps prior to and in preparation for field work.
 
 ### Samples
 
