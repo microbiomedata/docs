@@ -158,21 +158,17 @@ All fields in the metadata template innately fall into one of three color catego
 
 After selecting the validate button, cells will become color coded to indicate invalid and incomplete metadata. Dark pink cells indicate a required cell has been left empty. Light pink indicates that there is an error in the formatting of the information entered into that cell. The "Column Information" tool, described above, provides expected structure patterns and examples of valid metadata, which you can refer to when addressing validation errors.
 
-## Field Notes Functionality
+## NMDC Field Notes mobile app functionality
 
 [https://microbiomedata.org/field-notes/](https://microbiomedata.org/field-notes/)
 
 The NMDC Field Notes app is for mobile device use. It runs on both Apple (iOS) and Android devices and is available in the app store.
-
 This app is designed to streamline real-time registration and collection of standardized metadata and field measurements. 
-
 Upon first use, each section of the app will automatically launch a quick tour. You can press the "→" button to continue the tour or press the "X" button to end it. To re-initialize the tours at any time, visit the Settings page and tap "Reset tours".
+The "Guide" section of the app contains recommendations about fieldwork in general, and about collecting metadata for specific sample type(s). It also provides important considerations for synchronization with the Submission Portal. We recommend viewing it before going out into the field.
 
-The "Guide" section of the app contains recommendations about fieldwork in general, and about collecting metadata for specific sample type(s). We recommend viewing it before going out into the field.
-
-The NMDC Field Notes app requires ORCiD authentication to access it. 
-
-Submissions via Field Notes are available in the Submission Portal as an automatic backup when connected to wifi. The app is available for offline use, but requires internet connection to **start** a submission. 
+The NMDC Field Notes mobile app requires ORCiD authentication to access it. 
+Submissions via the Field Notes mobile app are available in the Submission Portal as an automatic backup when connected to wifi. The app is available for offline use, but requires internet connection to **start** a submission. 
 
 [![](../_static/images/howto_guides/portal_guide/app-home-page.png)](../_static/images/howto_guides/portal_guide/app-home-page.png)
 
