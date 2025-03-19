@@ -27,29 +27,29 @@ Developed by the Centre for Infectious Disease Genomics and One Health (CIDGOH) 
 The NMDC is a resource designed together with and for the scientific community. In 2022, the NMDC team conducted three rounds of user interviews (17 user interviews total) from three target groups: general microbiome researchers, potential data submitters, and metadata generators. The Submission Portal has been the subject of several rounds of user research and usability testing, and additional interviews and beta-testing rounds are scheduled to occur throughout the year. New features are continuously added and tested by the microbiome research community, and the NMDC team implements fixes, changes, and enhancements based on this community feedback. The NMDC team and the NMDC Ambassadors run several workshops throughout the year, and feedback from workshop participants is also incorporated into new Submission Portal improvements. The Submission Portal will continue to be shaped by our user-centered design approach.
 
 ### Support for DOE User Facilities
-The DOE User Facilities JGI and EMSL are key partners for the NMDC because they support the environmental research community. The NMDC team collaborates closely with the JGI and EMSL to support integration of multi-omics data generated across these Facilities, and particularly as part of the Facilities Integrating Collaborations for User Science (FICUS) Program. The Submission Portal has been designed upfront to be compliant with both JGI and EMSL sample submission requirements, ensuring study and biosample information is consistently collected to support interoperability and data reuse. To demonstrate feasibility, several FICUS user projects have been submitted using the Submission Portal with feedback that has informed improvements and new features. Through the Submission Portal, study and biosample metadata is validated against the NMDC schema, with ‘realtime’ checks on data integrity (accuracy, completeness, and consistency). Further developments will also support data embargo information in accordance with the JGI and EMSL Data Policies.
+The DOE User Facilities, the JGI and EMSL, are key partners for the NMDC because they support the environmental research community. The NMDC team collaborates closely with the JGI and EMSL to support integration of multi-omics data generated across these Facilities, and particularly as part of the Facilities Integrating Collaborations for User Science (FICUS) Program. The Submission Portal has been designed upfront to be compliant with both JGI and EMSL sample submission requirements, ensuring study and biosample information is consistently collected to support interoperability and data reuse. To demonstrate feasibility, several FICUS user projects have been submitted using the Submission Portal with feedback that has informed improvements and new features. Through the Submission Portal, study and biosample metadata is validated against the NMDC schema, with ‘realtime’ checks on data integrity (accuracy, completeness, and consistency). Further developments will also support data embargo information in accordance with the JGI and EMSL Data Policies.
 
-## Product Access
+## Resource Access
 
 
 [![](../_static/images/howto_guides/portal_guide/portal_functionality.png)](../_static/images/howto_guides/portal_guide/portal_functionality.png)
 
-All NMDC products are accessible from the "Products" tab on https://microbiomedata.org/.
+All NMDC resources are accessible from the "Products" tab on https://microbiomedata.org/.
 
 
 [![](../_static/images/howto_guides/portal_guide/ORCiD.png)](../_static/images/howto_guides/portal_guide/ORCiD.png)
 
-NMDC Products require ORCiD authentication for full access and functionality.
+NMDC resources require ORCiD authentication for full access and functionality.
 
 ## Submission Portal Functionality
 
 [https://data.microbiomedata.org/submission/home](https://data.microbiomedata.org/submission/home) 
 
-The Submission Portal requires ORCiD authentication to access. If you have already signed in via ORCID, you will not see this login screen in the NMDC Submission Portal.
+The Submission Portal requires ORCiD authentication to access. If you have already signed in via ORCID, you will not see this login screen within the Submission Portal.
 
 [![](../_static/images/howto_guides/portal_guide/Create_submission.png)](../_static/images/howto_guides/portal_guide/Create_submission.png)
 
-Once signed in with an ORCiD, you will see an option to ‘Create New Submission’ with subsequent guidance to provide information required for submission to NMDC. Details about each section are outlined below. Submitters can return to existing submissions saved under the ORCiD account to resume their work at any point.   
+Once signed in with an ORCiD, you will see an option to ‘Create New Submission’ with subsequent guidance to provide information required for submission to the NMDC. Details about each section are outlined below. Submitters can return to existing submissions saved under the ORCiD account to resume their work at any point.   
 
 ### Submission Context
 
