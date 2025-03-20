@@ -39,7 +39,7 @@ All NMDC resources are accessible from the "Products" tab on https://microbiomed
 
 [![](../_static/images/howto_guides/portal_guide/ORCiD.png)](../_static/images/howto_guides/portal_guide/ORCiD.png)
 
-NMDC resources require ORCiD authentication for full access and functionality.
+NMDC resources require ORCID authentication for full access and functionality.
 
 ## Submission Portal Functionality
 
