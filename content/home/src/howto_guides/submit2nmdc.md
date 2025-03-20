@@ -165,7 +165,7 @@ Upon first use, each section of the app will automatically launch a quick tour. 
 The "Guide" section of the app contains recommendations about fieldwork in general, and about collecting metadata for specific sample type(s). It also provides important considerations for synchronization with the Submission Portal. We recommend viewing it before going out into the field.
 
 The NMDC Field Notes mobile app requires ORCID authentication to access it. 
-Submissions via the Field Notes mobile app are available in the Submission Portal as an automatic backup when connected to wifi. The app is available for offline use, but requires internet connection to **start** a submission. 
+Submissions created in the Field Notes mobile app are available in the Submission Portal. This sync happens automatically when connected to the internet. The app is available for offline use, but requires internet connection to **start** a submission. 
 
 [![](../_static/images/howto_guides/portal_guide/app-home-page.png)](../_static/images/howto_guides/portal_guide/app-home-page.png)
 
