@@ -49,7 +49,7 @@ The Submission Portal requires ORCID authentication to access. If you have alrea
 
 [![](../_static/images/howto_guides/portal_guide/Create_submission.png)](../_static/images/howto_guides/portal_guide/Create_submission.png)
 
-Once signed in with an ORCiD, you will see an option to ‘Create New Submission’ with subsequent guidance to provide information required for submission to the NMDC. Details about each section are outlined below. Submitters can return to existing submissions saved under the ORCiD account to resume their work at any point.   
+Once signed in with an ORCID, you will see an option to ‘Create New Submission’ with subsequent guidance to provide information required for submission to the NMDC. Details about each section are outlined below. Submitters can return to existing submissions saved under the ORCID account to resume their work at any point.   
 
 ### Submission Context
 
