@@ -164,7 +164,7 @@ This app is designed to streamline real-time registration and collection of stan
 Upon first use, each section of the app will automatically launch a quick tour. You can press the "→" button to continue the tour or press the "X" button to end it. To re-initialize the tours at any time, visit the Settings page and tap "Reset tours".
 The "Guide" section of the app contains recommendations about fieldwork in general, and about collecting metadata for specific sample type(s). It also provides important considerations for synchronization with the Submission Portal. We recommend viewing it before going out into the field.
 
-The NMDC Field Notes mobile app requires ORCiD authentication to access it. 
+The NMDC Field Notes mobile app requires ORCID authentication to access it. 
 Submissions via the Field Notes mobile app are available in the Submission Portal as an automatic backup when connected to wifi. The app is available for offline use, but requires internet connection to **start** a submission. 
 
 [![](../_static/images/howto_guides/portal_guide/app-home-page.png)](../_static/images/howto_guides/portal_guide/app-home-page.png)
