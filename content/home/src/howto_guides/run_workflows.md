@@ -296,7 +296,7 @@ The Heatmap presents the completeness of the modules shows in the bar plot.
 
 The Krona plot contains the KO analysis results for metagenome bins at two levels of module binning.
 
-![Download section dropdown with clickable file names for downloading the workflow outputs.](/Users/kli/Documents/NMDC/docs/content/home/src/_static/images/howto_guides/workflows/metaG/03102025_download_mags.svg)
+![Download section dropdown with clickable file names for downloading the workflow outputs.](../_static/images/howto_guides/workflows/metaG/03102025_download_mags.svg)
 
 The Download Output section provides output files available to download. The primary output file is the zipped file with all bins determined to be high quality or medium quality (`hqmq.zip`).
 
