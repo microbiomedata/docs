@@ -8,6 +8,24 @@ The NMDC has developed two integrated resources for improving metadata capture: 
 The NMDC Submission Portal was designed using a flexible framework leveraging a new modeling approach called the Linked Data Modeling Language (LinkML) and the template-driven spreadsheet tool, [DataHarmonizer](https://github.com/cidgoh/DataHarmonizer). It supports several different community standards, such as the _Minimum Information about any (x) Sequence_ (MIxS) standard from the Genomic Standards Consortium ([GSC](https://www.gensc.org/pages/standards-intro.html)), the _PROV_ standard for provenance metadata, the _Proteomics Standards Initiative_ ([PSI](https://hupo.org/Proteomics-Standards-Initiative-(PSI))) standards for metaproteomics, and the _Metabolomics Standards Initiative_ ([MSI](https://github.com/MSI-Metabolomics-Standards-Initiative/MSIO)) standards for metabolomics. The NMDC Submission Portal is an intuitive interface that allows researchers to provide information about their study, biosample metadata, and multi-omics data generated from the biosamples. For Department of Energy (DOE) researchers, we support data and analysis outputs generated at the Joint Genome Institute (JGI) and the Environmental Molecular Sciences Laboratory (EMSL). Updates and new features are continually being implemented as user research provides new insights to improve usability, and as standards are updated and improved. 
 
 ### NMDC Field Notes mobile app
+
+<p style="text-align: center;">
+    <a href="https://apps.apple.com/app/apple-store/id6575364655?pt=278434&ct=docs&mt=8 ">
+        <img 
+            alt="Download on the App Store" 
+            src="https://toolbox.marketingtools.apple.com/api/v2/badges/download-on-the-app-store/black/en-us?releaseDate=1740873600" 
+            style="padding: 12px; height: 76px;" 
+        />
+    </a>
+    <a href="https://play.google.com/store/apps/details?id=org.microbiomedata.fieldnotes&utm_source=docs">
+        <img 
+            alt="Get it on Google Play" 
+            src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"
+            style="height: 76px;" 
+        />
+    </a>
+</p>
+
 The NMDC Field Notes mobile app is designed to support real-time registration and collection of standardized metadata and field measurements. This mobile app is built following the same schema format as the Submission Portal and similarly supports the community standards [described above](#nmdc-submission-portal) as well as in [Collaboration to support Community Standards](#collaboration-to-support-community-standards) below. When using the NMDC Field Notes mobile app, metadata can be captured for your samples while in the field using in-app tools and formatting. The NMDC Field Notes mobile app can be used offline and provides a direct connection to the NMDC Submission Portal so your metadata is already there upon field work completion.
 
 #### Connecting NMDC Field Notes and the NMDC Submission Portal
