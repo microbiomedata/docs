@@ -37,6 +37,7 @@ NMDC Documentation
    NMDC Runtime <runtime.rst>
    NMDC Workflows <workflows.rst>
    NMDC Data Portal <./reference/data_portal.md>
+   Developing NMDC Software <./reference/software_development.md>
 
 .. toctree::
    :maxdepth: 2
