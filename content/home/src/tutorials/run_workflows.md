@@ -64,21 +64,21 @@ Task: Run the Metagenome Read-based Taxonomy Classification workflow with all th
 
     <details><summary>Answer</summary>
 
-    There are seven species called by more than one taxonomy tool: *Pseudomonas aeruginosa, Salmonella enterica, Listeria monocytogenes, Enterococcus faecalis, Lactobacillus fermentum, Bacillus subtilis, and Escherichia coli.* 
+    There are seven species called by more than one taxonomy tool: *Pseudomonas aeruginosa*, *Salmonella enterica*, *Listeria monocytogenes*, *Enterococcus faecalis*, *Lactobacillus fermentum*, *Bacillus subtilis*, and *Escherichia coli*. 
     </details>
 
 - Question 2:  List the **genera** that are identified by all three tools within the Top 10.
 
     <details><summary>Answer</summary>
 
-    There are four genera called by all three taxonomy classification tools: *Pseudomonas, Bacillus, Enterococcus, and Lactobacillus.* 
+    There are four genera called by all three taxonomy classification tools: *Pseudomonas*, *Bacillus*, *Enterococcus*, and *Lactobacillus*. 
     </details>
 
-- Question 3:  From the Krona plot shown from the Centrifuge results at the **species level**, what percentage of the sample is estimated to be _Pseudomonas aeruginosa_? 
+- Question 3:  From the Krona plot shown from the Centrifuge results at the **species level**, what percentage of the sample is estimated to be *Pseudomonas aeruginosa*? 
 
     <details><summary>Answer</summary>
 
-    The Krona plot shows that Centrifuge estimates that 12% of the sample is *Pseudomonas aeruginosa.*
+    The Krona plot shows that Centrifuge estimates that 12% of the sample is *Pseudomonas aeruginosa*.
     </details>
 
 ### Assembly
@@ -107,7 +107,7 @@ NMDC EDGE Metagenome Annotation Tutorial Practice
 
 Task: Log into NMDC EDGE and run the Metagenome Annotation workflow. Use the assembled contigs which are output from the project run in the Assembly Tutorial (assembled_contigs.fna). When the run finishes, answer the questions below using the workflow outputs.
 
-- Question 1:  How many contigs had genes called (sequences_with_genes)?
+- Question 1:  How many contigs had genes called `sequences_with_genes`?
     <details><summary>Answer</summary>
 
     3,031 contigs had genes called.
@@ -150,5 +150,5 @@ Task: Log into NMDC EDGE and run the Metagenome MAGs workflow. Use the assembled
 
     <details><summary>Answer</summary>
 
-    The organism called by GTDBTK for the highest quality bin is *Bacillus marinus.*
+    The organism called by GTDBTK for the highest quality bin is *Bacillus marinus*.
     </details>

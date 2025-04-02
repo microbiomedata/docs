@@ -62,7 +62,7 @@ In this example, we will run the interleaved FASTQ file for Zymobiomics mock-com
 
 1. Click on the "Metagenomics" tab on the left vertical navigation bar. 
 2. Select the "Run Multiple Workflows" option from the dropdown.
-3.  Enter a **unique** Project/Run Name with no spaces (underscores are fine).
+3.  Enter a unique Project/Run Name with no spaces (underscores are fine).
 4.  Enter a description (optional, but recommended).
 5.  Select if the input data is interleaved (YES by default). If the data is paired select NO and it will allow you to upload both, forward and reverse files.
 6.  Then select the input file(s). Clicking on the button to select "Interleaved FASTQ #1" opens a box called "Select a file" (as shown in the image below) to allow the user to find the desired files, either from the public data folder, or files uploaded by the user. If the files are uploaded to an accessible URL, the URL can be pasted into the box.
