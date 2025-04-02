@@ -8,29 +8,32 @@
 
 1. Visit the homepage for NMDC EDGE platform by going to [https://nmdc-edge.org](https://nmdc-edge.org/home)
 
-2. Click on "ORCiD LOGIN" to login to your account on the NMDC EDGE platform. 
-
 ![Home page for NMDC EDGE with a bubble labeled 2 for the ORCiD LOGIN button](../_static/images/howto_guides/workflows/quickStart/03102025_login-in.png)
 
-3. Log in to ORCiD using your registered credentials. If you do not have an ORCiD, click on "Register Now" and follow the instructions to set-up an ORCiD account.
+2. Click on "ORCiD LOGIN" to login to your account on the NMDC EDGE platform. 
 
 ![ORCiD login page with bubble labeled 3 for "Register now"](../_static/images/howto_guides/workflows/quickStart/03102025_orcid.png)
 
-4. If you are logging in for the first time, click on "My Profile" and optionally provide your First Name, Last Name, and Email. The first grayed out box will already have your ORCiD. You can also set the "Project Status Notification" to ON (OFF by default). If ON, notifications about your workflow runs will be sent to the Email you provided. Click on "Save Changes"
+3. Log in to ORCiD using your registered credentials. If you do not have an ORCiD, click on "Register Now" and follow the instructions to set-up an ORCiD account.
 
 ![NMDC EDGE "My Profile" page with bubble labeled 4 for the highlighted "My Profile" button](../_static/images/howto_guides/workflows/quickStart/03102025_my_profile.png)
+
+4. If you are logging in for the first time, click on "My Profile" and optionally provide your First Name, Last Name, and Email. The first grayed out box will already have your ORCiD. You can also set the "Project Status Notification" to ON (OFF by default). If ON, notifications about your workflow runs will be sent to the Email you provided. Click on "Save Changes"
+
 
 
 ### Upload data
 
-You can upload your own data to process through the workflows. Click on "Upload Files" in the left menu bar. This will open a window which allows you to drag and drop files or browse for your data files. If you do not have a dataset to test, you can download this metagenomic [test data](https://portal.nersc.gov/cfs/m3408/test_data/SRR7877884/SRR7877884-int-0.1.fastq.gz) and upload it to the NMDC EDGE platform. 
+You can upload your own data to process through the workflows. 
+1. Click on "Upload Files" in the left menu bar. 
+2. This will open a page which allows you to drag and drop files or browse for your data files. If you do not have a dataset to test, you can download this metagenomic [test data](https://portal.nersc.gov/cfs/m3408/test_data/SRR7877884/SRR7877884-int-0.1.fastq.gz) and upload it to the NMDC EDGE platform. 
 
 !["Upload Files" page on NMDC EDGE, with a bubble labeled 1 pointing to the "Upload Files" tab in left vertical navigation bar, and a bubble labeled 2 under "Drag files or Click to Browse"](../_static/images/howto_guides/workflows/quickStart/03102025_upload_files.png)
 
 Additionally, there are some datasets in the Public Data folder for you to test within the NMDC EDGE platform.
 
 
-Alternatively, you can select "Retrieve SRA Data" in the left menu bar and input NCBI SRA accession number(s) to pull data directly from SRA. 
+Alternatively, you can (1) select "Retrieve SRA Data" in the left menu bar and (2) input NCBI SRA accession number(s) to pull data directly from SRA. 
 
 !["Retrieve SRA Data" page on NMDC EDGE, with a bubble labeled 1 pointing to the "Retrieve SRA Data" tab in left vertical navigation bar, and a bubble labeled 2 pointing to a text box for SRA accession number(s) entry](../_static/images/howto_guides/workflows/quickStart/03102025_retrieve_SRA.png)
 
@@ -42,7 +45,7 @@ One of the core end-to-end tools available to NMDC EDGE users is the Metagenomic
  - [ReadsQC](https://github.com/microbiomedata/ReadsQC) (reads quality control)
  - [Read-based Taxonomy](https://github.com/microbiomedata/ReadbasedAnalysis) (read-based taxonomic classification)
  - [MetaAssembly](https://github.com/microbiomedata/metaAssembly) (metagenome assembly)
- - [Virus and Plasmids](https://portal.nersc.gov/genomad/) (virus and plasmid genome identification)
+ - [Viruses and Plasmids](https://portal.nersc.gov/genomad/) (virus and plasmid genome identification)
  - [MG Annotation](https://github.com/microbiomedata/mg_annotation) (metagenome annotation)
  - [MetaMAGs](https://github.com/microbiomedata/metaMAGs) (binning of population genomes to generate metagenome-assembled genomes)
 
@@ -52,7 +55,7 @@ A summary of the workflows and link to their documentation is available in [this
 
 ### Running the full metagenomic workflow
 
-In this example, we will run the interleaved FASTQ file for SRR7877884, which is available in the public data folder in NMDC EDGE file section options and [online](https://portal.nersc.gov/cfs/m3408/test_data/SRR7877884/SRR7877884-int.fastq.gz). Note that this is a larger file at 3.65 GB. A smaller option (10% subset of SRR7877884) is available at 367.25 MB both in the public data folder (as `SRR7877884-int-0.1.fastq.gz`) and online as a [URL](https://portal.nersc.gov/cfs/m3408/test_data/SRR7877884/SRR7877884-int-0.1.fastq.gz). To copy the file URLs, right click (CTRL+Left Click on Mac) and select "Copy Link".
+In this example, we will run the interleaved FASTQ file for Zymobiomics mock-community DNA control ([SRR7877884](https://www.ncbi.nlm.nih.gov/sra/SRX4716743)), which is available in the public data folder in NMDC EDGE file section options and [online](https://portal.nersc.gov/cfs/m3408/test_data/SRR7877884/SRR7877884-int.fastq.gz). Note that this is a larger file at 3.65 GB. A smaller option (10% subset of SRR7877884) is available at 367.25 MB both in the public data folder (as `SRR7877884-int-0.1.fastq.gz`) and online as a [URL](https://portal.nersc.gov/cfs/m3408/test_data/SRR7877884/SRR7877884-int-0.1.fastq.gz). To copy the file URLs, right click (CTRL+Left Click on Mac) and select "Copy Link".
 
 !["Run Multiple Workflows" submission page with bubbles labeled 1 through 7 pointing at different clickable buttons and typeable fields](../_static/images/howto_guides/workflows/metaG/03102025_run_metag.png)
 
@@ -60,7 +63,7 @@ In this example, we will run the interleaved FASTQ file for SRR7877884, which is
 1. Click on the "Metagenomics" tab on the left vertical navigation bar. 
 2. Select the "Run Multiple Workflows" option from the dropdown.
 3.  Enter a **unique** Project/Run Name with no spaces (underscores are fine).
-4.  A description (optional, but recommended).
+4.  Enter a description (optional, but recommended).
 5.  Select if the input data is interleaved (YES by default). If the data is paired select NO and it will allow you to upload both, forward and reverse files.
 6.  Then select the input file(s). Clicking on the button to select "interleaved FASTQ #1" opens a box called "Select a file" (as shown in the image below) to allow the user to find the desired files, either from the public data folder, or files uploaded by the user. If the files are uploaded to an accessible URL, the URL can be pasted into the box.
 
@@ -70,7 +73,7 @@ In this example, we will run the interleaved FASTQ file for SRR7877884, which is
 
 ### Running a single metagenomics workflow 
 
-Each component of the end-to-end Metagenomics workflow can be run on its own, provided with the correct input types. The following are some examples for running these individual workflows.
+Each component of the end-to-end Metagenomics workflow can be run on its own if given the correct input file type(s). The following are some examples for running these individual workflows.
 
 !["Run a Single Workflow" page with dropdown menu listing the individual workflows available to run.](../_static/images/howto_guides/workflows/metaG/03102025_run_single_wf_dropdown.png)
 
@@ -81,9 +84,9 @@ For example, to run a paired set of FASTQ files through ReadsQC, the user can pe
 
 1. Click on the "Metagenomics" tab on the left vertical navigation bar. 
 2. Select the "Run a Single Workflow" option from the dropdown.
-3. A unique Project/Run Name with no spaces (underscores are fine).
-4. A description (optional, but recommended).
-5. The workflow desired from the drop-down menu.
+3. Enter a unique Project/Run Name with no spaces (underscores are fine).
+4. Enter a description (optional, but recommended).
+5. Select the workflow desired from the drop-down menu.
 6. Select if the input data is interleaved (YES by default). If the data is paired select NO and it will allow you to upload both forward and reverse files. 
 7. Select the input file box and paste in the desired URL or choose a file from the button on the right. For this example, we will use [SRR7877884's R1](https://portal.nersc.gov/cfs/m3408/test_data/SRR7877884/SRR7877884_1.fastq.gz).
 8. Paste the FASTQ URL for the associated R2 file ([SRR7877884's R2](https://portal.nersc.gov/cfs/m3408/test_data/SRR7877884/SRR7877884_2.fastq.gz)) or select a file using the file selection menu.
@@ -95,7 +98,7 @@ Some other options for inputs include multiple sets of FASTQ files in interleave
 
 !["Run a Single Workflow" page with 2 sets of paired FASTQ file inputs for ReadsQC](../_static/images/howto_guides/workflows/metaG/03102025_run_multi_rqc.png) ![File selection for 2 sets of paired FASTQ file inputs](../_static/images/howto_guides/workflows/metaG/03102025_run_multi_rqc_files.png)
 
-Other ways the inputs for each workflow may change include the types of files needed as well as the number of different types of files. For example, with Read Based Analysis, the input is a filtered FASTQ file. This can be uploaded by the user, input as a URL, or taken from the result of other workflows run on NMDC EDGE. The results of your other workflows will be available in the file selection menu if the file type is right for the workflow you need to run. For the Read-based Taxonomy Classification workflow, the input is filtered FASTQ files, which is the output of the ReadsQC workflow.
+Other ways the inputs for each workflow may change include the types of files needed as well as the number of different types of files. For example, with Read-based Taxonomy, the input is a filtered FASTQ file. This can be uploaded by the user, input as a URL, or taken from the result of other workflows run on NMDC EDGE. The results of your other workflows will be available in the file selection menu if the file type is right for the workflow you need to run. For the Read-based Taxonomy Classification workflow, the input is filtered FASTQ files, which is the output of the ReadsQC workflow.
 
 !["Run a Single Workflow" page for Read-based Taxonomy Classification](../_static/images/howto_guides/workflows/metaG/03102025_run_rba.png) ![File selection showing projects that the user](../_static/images/howto_guides/workflows/metaG/03102025_run_rba_file.png)
 
@@ -118,7 +121,7 @@ In this example, we will view the results of the end-to-end metagenomics run set
 
 ![Project summary page for a full metagenomic workflow run.](../_static/images/howto_guides/workflows/metaG/03102025_view_full_metag.png)
 
-The project results page contains a quick summary of the workflow(s) run, a direct link for [Data Portal Submission](https://docs.microbiomedata.org/howto_guides/submit2nmdc), drop-down sections for a quick tabular/visual overview of results, and an area to download the output files. 
+The project results page contains a quick summary of the workflow(s) run, a direct link to [create an entry in the NMDC Submission Portal](https://docs.microbiomedata.org/howto_guides/submit2nmdc), drop-down sections for a quick tabular/visual overview of results, and an area to download the output files. 
 
 For a quick overview of every output type available for metagenomic analysis, we will be looking at the results of "Run Multiple Workflows".
 
@@ -126,7 +129,7 @@ For a quick overview of every output type available for metagenomic analysis, we
 
 ![Project summary page with expanded "General" dropdown with details about the workflow run.](../_static/images/howto_guides/workflows/metaG/03102025_view_full_metag_general.png)
 
-This example shows the results of a metagenome workflow run which shows run time under the General tab, the workflow results of each individual metagenome workflow, and the files available for download under the Download Outputs tab.
+This example shows the results of a metagenome workflow run, which shows run time under the General tab, the workflow results of each individual metagenome workflow, and the files available for download under the Download Outputs tab.
 
 --------
 
@@ -141,12 +144,12 @@ Before diving into more detail on inputs and outputs for components of the Metag
 |-------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------|------------------------------------------------------------|--------------------------------------------------------------------------|------------------------------------------------------------------|
 | [ReadsQC](https://docs.microbiomedata.org/workflows/chapters/3_Metagenome_Reads_QC/index.html )                               | Quality control on raw Illumina reads                                     | `.fastq`, `.fq`, `.fastq.gz`, `.fq.gz`                     | `fq.gz`                                                                  | Read-based Taxonomy, MetaAssembly                                |
 | [Read-based Taxonomy](https://docs.microbiomedata.org/workflows/chapters/2_Read_Based_Taxonomy/index.html)                    | Taxonomic classification profiling of Illumina sequencing file reads      | (filtered) `.fastq`, `.fq`, `.fastq.gz`, `.fq.gz`          | `.tsv`, `.html`                                                          |                                                                  |
-| [MetaAssembly](https://docs.microbiomedata.org/workflows/chapters/4_Metagenome_Assembly/index.html )                          | Error correction, contig assembly, and contig mapping                     | (filtered) `.fastq`, `.fq`, `.fastq.gz`, `.fq.gz`          | `.agp`, `.fna`, `.sam.gz`, `.bam`, `.json`                               | MG Annotation, Virus and Plasmids                                |
-| [Virus and Plasmids](https://portal.nersc.gov/genomad/index.html)                                                             | Identifies virus and plasmid genomes from nucleotide sequences            |  `.fasta`, `.fa`, `.fna`                                   | `.tsv`, `.faa`, `.json`                                                  |                                                                  |
+| [MetaAssembly](https://docs.microbiomedata.org/workflows/chapters/4_Metagenome_Assembly/index.html )                          | Error correction, contig assembly, and contig mapping                     | (filtered) `.fastq`, `.fq`, `.fastq.gz`, `.fq.gz`          | `.agp`, `.fna`, `.sam.gz`, `.bam`, `.json`                               | MG Annotation, Viruses and Plasmids                                |
+| [Viruses and Plasmids](https://portal.nersc.gov/genomad/index.html)                                                             | Identifies virus and plasmid genomes from nucleotide sequences            |  `.fasta`, `.fa`, `.fna`                                   | `.tsv`, `.faa`, `.json`                                                  |                                                                  |
 | [MG Annotation](https://docs.microbiomedata.org/workflows/chapters/5_Metagenome_and_Metatranscriptome_Annotation/index.html)  | Structural and functional annotation of assembled metagenomes             | `.fasta`, `.fa`, `.fna`, `.fasta.gz`, `.fa.gz`, `.fna.gz`  | `.html`, `.gff`, `.tsv`, `.fna`                                          | MetaMAGs                                                         |
 | [MetaMAGs](https://docs.microbiomedata.org/workflows/chapters/6_Metagenome_Assembled_Genome/index.html)                       | Classifies contigs into bins and refines them using functional annotation | `.fasta`, `.fa`, `.fna`, `.sam.gz`, `.bam`,`.gff`          | `tar.gz` bins of `.html`, `.pdf`, `.txt`, `.tsv`, `.faa`, `.fna`, `.gff` |                                                                  |
-| [Metagenomics](https://docs.microbiomedata.org/workflows/chapters/1_Metagenome_Workflow_Overview/index.html)                  | Standardized end-to-end metagenome workflow                               | `.fastq`, `.fq`, `.fastq.gz`, `.fq.gz`                     | All the above                                                            | Components can be submitted to: ReadsQC, Read-based Taxonomy, MetaAssembly, Virus and Plasmids, MG Annotation, MetaMAGs |
-| [Metatranscriptomics](https://docs.microbiomedata.org/workflows/chapters/7_Metatranscriptome_Workflow_Overview/index.html)    | Standardized end-to-end metatranscriptome workflow                        | `.fastq`, `.fq`, `.fastq.gz`, `.fq.gz`                     | All the above                                                            | MG Annotation, Virus and Plasmids                                |
+| [Metagenomics](https://docs.microbiomedata.org/workflows/chapters/1_Metagenome_Workflow_Overview/index.html)                  | Standardized end-to-end metagenome workflow                               | `.fastq`, `.fq`, `.fastq.gz`, `.fq.gz`                     | All the above                                                            | Components can be submitted to: ReadsQC, Read-based Taxonomy, MetaAssembly, Viruses and Plasmids, MG Annotation, MetaMAGs |
+| [Metatranscriptomics](https://docs.microbiomedata.org/workflows/chapters/7_Metatranscriptome_Workflow_Overview/index.html)    | Standardized end-to-end metatranscriptome workflow                        | `.fastq`, `.fq`, `.fastq.gz`, `.fq.gz`                     | All the above                                                            | MG Annotation, Viruses and Plasmids                                |
 | [Metaproteomics](https://docs.microbiomedata.org/workflows/chapters/11_Metaproteomics/index.html)                             | End-to-end data processing pipeline for studying proteomes using LC-MS/MS | `RAW` MS/MS, `.fasta` `.faa` output of MG Annotation       | `.tsv`, `.txt`, `.fasta`, `.gff`                                         |                                                                  |
 | [Natural Organic Matter](https://docs.microbiomedata.org/workflows/chapters/13_Natural_Organic_Matter/index.html)             | Signal processing and molecular formula assignment of DI FT-MS data       | mass list, `.tsv`, `.txt`                                  | `.csv`, `.rsv`, `.hdf`, `.xlsx`, `.json`                                 |                                                                  |
 
@@ -190,7 +193,7 @@ The Read-based Taxonomy Classification Result section has a summary section at t
 
 ![Circular graph with different species, genus, and family organization of workflow output.](../_static/images/howto_guides/workflows/metaG/03102025_view_rba_graph.png) 
 
-The tables are followed by an interactive multilevel pie charts to visualize organisms and classifications. The Krona plots are generated for the results at each of the three taxonomic levels for each of the tools and these can also be found in the Detail section. 
+The tables are followed by interactive multilevel pie charts to visualize organisms and classifications. The Krona plots are generated for the results at each of the three taxonomic levels for each of the tools and these can also be found in the Detail section. 
 
 ![Download section dropdown with clickable file names for downloading the workflow outputs.](../_static/images/howto_guides/workflows/metaG/03102025_download_rba.png)
 
@@ -211,13 +214,13 @@ On the next tab, the Report shows contig based statistics and graph of the sizes
 
 The Download Output section provides output files available to download. The primary result is the `assembly_contigs.fna` file which can also be the input for the Metagenome Annotation workflow. The `pairedMapped_sorted.bam` file along with the assembled contigs file can be the input for the MAGs Generation workflow.
 
-#### Virus and Plasmids
+#### Viruses and Plasmids
 
-This workflow takes in assembly files (such as `contigs.fasta` or `contigs.fna`) and runs the geNomad workflow, followed by checkV to determine the quality and confidence of the geNomad results. The taxonomy that is reported is based on the [ICTV guidelines](https://ictv.global/vmr). A quickstart guide for geNomad can be found [here](https://portal.nersc.gov/genomad/quickstart.html). This workflow can be run as part of the larger Metagenome workflow or on its own. As part of the larger workflow, Virus and Plasmids is run after Assembly. 
+This workflow takes in assembly files (such as `contigs.fasta` or `contigs.fna`) and runs the geNomad workflow, followed by checkV to determine the quality and confidence of the geNomad results. The taxonomy that is reported is based on the [ICTV guidelines](https://ictv.global/vmr). A quickstart guide for geNomad can be found [here](https://portal.nersc.gov/genomad/quickstart.html). This workflow can be run as part of the larger Metagenome workflow or on its own. As part of the larger workflow, Viruses and Plasmids is run after Assembly. 
 
-![Run Workflow page for Viruses and Plasmids with numbered steps and open Run Option dropdown.](../_static/images/howto_guides/workflows/metaG/03102025_run_vp.png) ![File selection pop-up for Virus and Plasmids.](../_static/images/howto_guides/workflows/metaG/03102025_run_vp_file.png)
+![Run Workflow page for Viruses and Plasmids with numbered steps and open Run Option dropdown.](../_static/images/howto_guides/workflows/metaG/03102025_run_vp.png) ![File selection pop-up for Viruses and Plasmids.](../_static/images/howto_guides/workflows/metaG/03102025_run_vp_file.png)
 
-On its own, this workflow has parameter three options when submitting the workflow, show in the opened dropdown box above (Step 5). The following is an explanation of the parameters. 
+On its own, this workflow has three parameter options when submitting the workflow, shown in the opened dropdown box above (Step 5). The following is an explanation of the parameters. 
 
 | Parameter Setting    | Minimum Score | Hallmark Gene Requirement | Additional Notes |
 |---------------------|--------------|---------------------------|------------------|
@@ -237,15 +240,15 @@ Another table in this section provides the plasmid prediction summary which incl
 
 ![Virus quality summary table in Results section (tab 3).](../_static/images/howto_guides/workflows/metaG/03102025_view_vp_result_3.png)
 
-A virus quality summary table is also provided, where it details the contig ID, contig length provirus information, gene counts, quality information, completeness information, completeness method, contamination, k-mer frequency, and any relevant warnings
+A virus quality summary table is also provided, where it details the contig ID, contig length, provirus information, gene counts, quality information, completeness information, completeness method, contamination, k-mer frequency, and any relevant warnings
 
-All output files are available to download under the Browser/Download Outputs tab at the bottom of the results page. However, downloadable results for Virus and Plasmids differ when running on its own versus as part of the full metagenomic pipeline. 
+All output files are available to download under the Download Outputs tab at the bottom of the results page. However, downloadable results for Viruses and Plasmids differ when running on its own versus as part of the full metagenomic pipeline. 
 
-![Results to download for Virus and Plasmids run on its own.](../_static/images/howto_guides/workflows/metaG/03102025_download_vp_single.png)
+![Results to download for Viruses and Plasmids run on its own.](../_static/images/howto_guides/workflows/metaG/03102025_download_vp_single.png)
 
 The basic results of the pipeline are CheckV and geNomad output files.
 
-![Results to download for Virus and Plasmids as part of larger metagenomic workflow.](../_static/images/howto_guides/workflows/metaG/03102025_download_vp_metag.png)
+![Results to download for Viruses and Plasmids as part of larger metagenomic workflow.](../_static/images/howto_guides/workflows/metaG/03102025_download_vp_metag.png)
 
 As part of the metagenome pipeline, additional output files consist of more classifications and annotations.
 
@@ -274,7 +277,7 @@ The Download Output section provides output files available to download. The pri
 
 #### MAGs Generation
 
-For all processed metagenomes, it classifies contigs into bins. Next, the bins are refined using the functional Annotation file (GFF) from the Metagenome Annotation workflow and optional contig lineage information. The completeness of and the contamination present in the bins are evaluated bins are assigned a quality level (High Quality (HQ), Medium Quality (MQ), Low Quality (LQ)).
+For all processed metagenomes, it classifies contigs into bins. Next, the bins are refined using the functional Annotation file (GFF) from the Metagenome Annotation workflow and optional contig lineage information. The completeness of and the contamination present in the bins are evaluated and assigned a quality level (High Quality (HQ), Medium Quality (MQ), Low Quality (LQ)).
 
 ![MAGs Result Summary statistics (tab 1).](../_static/images/howto_guides/workflows/metaG/03102025_view_mags_results_1.png)
 
@@ -290,7 +293,7 @@ The Bar Plot contains information regarding metabolism module categories per gen
 
 ![MAGs Result module completeness heatmap (tab 4).](../_static/images/howto_guides/workflows/metaG/03102025_view_mags_results_4.png)
 
-The Heatmap presents the completeness of the modules shows in the bar plot.
+The Heatmap presents the completeness of the modules shown in the bar plot.
 
 ![MAGs Result Krona plot for bins and classification (tab 5).](../_static/images/howto_guides/workflows/metaG/03102025_view_mags_results_5.png)
 
