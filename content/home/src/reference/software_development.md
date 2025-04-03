@@ -1,16 +1,42 @@
-# Developing NMDC Software
+# Developing NMDC software
 
-This page is under construction.
+Here's an overview of the tools and techniques NMDC team members use when developing NMDC software.
 
-## Programming Languages and Frameworks
+## Programming languages and frameworks
 
-- **Python** (versions vary between projects currently)
-- **Web app development frameworks**
-- **API development frameworks**: FastAPI / Swagger / OpenAPI
-- **JS/TS**: Front end web: Vue (`nmdc-server`) and React (`nmdc-field-notes`)
-- **Bash and WDL** for workflows?
-- **Mobile app development frameworks**: Ionic & Capacitor (`nmdc-field-notes`)
-- **Jupyter notebooks**
+### Web application servers
+
+We build **web application servers** using [Python](https://www.python.org/) and the [FastAPI](https://fastapi.tiangolo.com/) framework. We use [Swagger UI](https://swagger.io/tools/swagger-ui/) to render our [OpenAPI](https://www.openapis.org/) specifications as interactive API documentation.
+
+> Examples: [NMDC Runtime API](https://github.com/microbiomedata/nmdc-runtime) and [NMDC Data Portal](https://github.com/microbiomedata/nmdc-server)
+
+### Web application clients
+
+We build **web application clients** using [TypeScript](https://www.typescriptlang.org/), [Vue.js](https://vuejs.org/), and the [Vuetify](https://vuetifyjs.com/en/) component framework, as well as HTML and CSS. 
+
+> Example: [NMDC Data Portal](https://github.com/microbiomedata/nmdc-server)
+
+### Mobile application clients
+
+We build **mobile application clients** using [TypeScript](https://www.typescriptlang.org/), [React](https://react.dev/), the [Ionic](https://ionicframework.com/) mobile SDK, and the [Capacitor](https://capacitorjs.com/) runtime. 
+
+> Example: [NMDC Field Notes](https://github.com/microbiomedata/nmdc-field-notes)
+
+### Notebooks
+
+We demonstrate things using [Jupyter](https://jupyter.org/) **notebooks** containing [Python](https://www.python.org/) and [R](https://www.r-project.org/) code. 
+
+> Example: [NMDC Notebooks](https://github.com/microbiomedata/nmdc_notebooks)
+
+### Configuration
+
+We **configure** things using [YAML](https://yaml.org/) and [TOML](https://toml.io/en/).
+
+> Examples: GitHub Actions and Python Poetry
+
+<!--
+TODO: What about Bash and WDL, which I think are both used for bioinformatics workflows?
+-->
 
 ## Package/Dependency Management Tools
 
@@ -38,6 +64,10 @@ This page is under construction.
 ## Development Environments
 
 - "How to get up and running locally for development"
+
+<!-- TODO: What about code editor software; e.g. PyCharm, VS Code, Vim -->
+
+<!-- TODO: What about database clients; e.g. Mongo Compass, pgAdmin, Beekeeper Studio, DataGrip -->
 
 ## Schema/Data Model Development Framework – LinkML
 
