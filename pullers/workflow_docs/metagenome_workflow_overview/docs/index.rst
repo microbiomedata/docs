@@ -6,27 +6,37 @@
           https://sphinx-rtd-theme.readthedocs.io/en/stable/configuring.html#confval-github_url
 
 Metagenomic Workflow
-================================================
+=====================
 
 .. image:: ./metag_workflow2024.svg
    :align: center
 
+.. _Workflow Overview:
+
 Workflow Overview
 -----------------
-The NMDC standardized metagenome workflow leverages parts of JGI's production pipeline for short-read data and consists of: `reads quality control (QC) <https://github.com/microbiomedata/ReadsQC>`_, `metagenome assembly <https://github.com/microbiomedata/metaAssembly>`_, `metagenome annotation <https://github.com/microbiomedata/mg_annotation>`_, `read-based taxonomy <https://github.com/microbiomedata/ReadbasedAnalysis>`_, and binning of population genomes to `generate metagenome-assembled genomes (MAGs) <https://github.com/microbiomedata/metaMAGs>`_ workflows.
+The NMDC standardized metagenome workflow leverages parts of JGI's production pipeline for short-read data and consists of: 
+`reads quality control (QC) <https://docs.microbiomedata.org/workflows/chapters/3_Metagenome_Reads_QC/index.html>`_,
+`metagenome assembly <https://docs.microbiomedata.org/workflows/chapters/4_Metagenome_Assembly/index.html>`_, 
+`metagenome annotation <https://docs.microbiomedata.org/workflows/chapters/5_Metagenome_and_Metatranscriptome_Annotation/index.html>`_, 
+`read-based taxonomy <https://docs.microbiomedata.org/workflows/chapters/2_Read_Based_Taxonomy/index.html>`_, 
+and binning of population genomes to `generate metagenome-assembled genomes (MAGs) <https://docs.microbiomedata.org/workflows/chapters/6_Metagenome_Assembled_Genome/index.html>`_ workflows (with links to documentation).
 
 The reads QC workflow utilizes rqcfilter2 to trim and filter low quality data from raw metagenome Illumina reads (FASTQ files). The workflow additionally removes artifacts, linkers, adapters, spike-in reads, and reads mapping to several hosts and common contaminants.
 
 The read-based taxonomy classification workflow utilizes GOTTCHA2, Kraken2, and Centrifuge to profile quality-controlled reads to accommodate varied project goals and sequencing approaches that cover a spectrum from high sensitivity to high specificity that is dependent on the algorithms and cut-off levels chosen from different tools. 
 
-The metagenome assembly workflow uses bbcms, metaSPAdes, and BBMap to run error correction, assembly, and assembly validation, respectively. The metagenome annotation workflow takes in assembled metagenomes and generates structural and functional annotations. The MAGs workflow uses MetaBAT 2 to generate metagenome bins and applies the MIMAG standards using annotated tRNAs, rRNAs, and marker genes with checkM to estimate completeness and contamination and subsequent taxonomic lineage assignment.
+The metagenome assembly workflow uses bbcms, metaSPAdes, and BBMap to run error correction, assembly, and assembly validation, respectively. The metagenome annotation workflow takes in assembled metagenomes and generates structural and functional annotations. The MAGs workflow uses MetaBAT 2 to generate metagenome bins and applies the MiMAG standards using annotated tRNAs, rRNAs, and marker genes with checkM to estimate completeness and contamination and subsequent taxonomic lineage assignment.
 
 Users can run a single workflow within the metagenome pipeline with the appropriate input files, but the entire metagenome workflow is available to run from start to finish on NMDC EDGE from a single input raw Illumina file.
 
 
+.. _Workflow Availability:
+
 Workflow Availability
 ---------------------
-The workflow is available in its individual components on GitHub and as a whole to run on `NMDC EDGE <https://nmdc-edge.org/home>`_. 
+
+The workflow is available in its individual components on GitHub (repositories linked) and as a whole to run on `NMDC EDGE <https://nmdc-edge.org/home>`_. Documentation links are available in :ref:`Workflow Overview`.
 
 - `ReadsQC <https://github.com/microbiomedata/ReadsQC>`_ 
 - `MetaAssembly <https://github.com/microbiomedata/metaAssembly>`_
@@ -36,7 +46,7 @@ The workflow is available in its individual components on GitHub and as a whole 
 
 
 Requirements for Execution outside `NMDC EDGE <nmdc-edge.org>`_:  
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 (recommendations are in **bold**)
 
@@ -93,7 +103,7 @@ To run the full workflow via NMDC EDGE web UI, the following inputs are needed:
 #. Interleaved fastq(s), (FASTQ #1; FASTQ #2...)
 #. If non-interleaved paired-end reads, Pair(FASTQ R1, FASTQ R2)...
 
-To run individual workflows, see website or individual GitHub repositories. (See Workflow Availability links)
+To run individual workflows, see website or individual GitHub repositories. (See :ref:`Workflow Availability` links)
 
 
 Output:
