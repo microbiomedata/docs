@@ -71,6 +71,29 @@ nav:
       - FAIR Data: explanation/fair_data.md
       - Community Conversations: explanation/community_conversations.md
 
+extra:
+  # This configures the social links in the footer.
+  # Docs: https://squidfunk.github.io/mkdocs-material/setup/setting-up-the-footer/#social-links
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/microbiomedata
+      name: NMDC on GitHub
+    - icon: fontawesome/brands/bluesky
+      link: https://bsky.app/profile/microbiomedata.org
+      name: NMDC on Bluesky
+    - icon: fontawesome/brands/instagram
+      link: https://www.instagram.com/microbiomedata
+      name: NMDC on Instagram
+    - icon: fontawesome/brands/youtube
+      link: https://www.youtube.com/channel/UCyBqKc46NQZ_YgZlKGYegIw/featured
+      name: NMDC on YouTube
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/company/microbiomedata/
+      name: NMDC on LinkedIn
+    - icon: fontawesome/brands/x-twitter
+      link: https://twitter.com/microbiomedata
+      name: NMDC on X (Twitter)
+
 extra_css:
   - _static/css/custom.css
 extra_javascript:
