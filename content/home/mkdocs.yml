@@ -41,8 +41,11 @@ theme:
 
   features:
     - navigation.sections
-    - navigation.path
     - content.action.edit
+
+    # This shows a "Back to top" button once the user starts scrolling upward.
+    # Docs: https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/?h=breadc#back-to-top-button
+    - navigation.top
 
 # There are the links that will appear in the left-hand navigation sidebar.
 nav:
