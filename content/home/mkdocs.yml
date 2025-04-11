@@ -31,12 +31,12 @@ theme:
     - scheme: default  # light
       media: "(prefers-color-scheme: light)"
       toggle:
-        icon: material/brightness-7
+        icon: material/toggle-switch
         name: Switch to dark mode
     - scheme: slate  # dark
       media: "(prefers-color-scheme: dark)"
       toggle:
-        icon: material/brightness-4
+        icon: material/toggle-switch-off-outline
         name: Switch to light mode
 
   features:
