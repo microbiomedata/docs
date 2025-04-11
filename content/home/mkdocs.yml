@@ -1,0 +1,81 @@
+docs_dir: /app/src
+
+site_name: NMDC Documentation
+site_author: National Microbiome Data Collaborative
+site_description: Documentation about the NMDC
+site_url: https://docs.microbiomedata.org/
+
+# Docs: https://squidfunk.github.io/mkdocs-material/setup/adding-a-git-repository/
+repo_url: https://github.com/microbiomedata/docs
+repo_name: microbiomedata/docs
+edit_uri: edit/main/content/home/src/
+
+# Docs: https://squidfunk.github.io/mkdocs-material/setup/setting-up-the-footer/?h=copyright#copyright-notice
+copyright: "&copy; Copyright 2025, National Microbiome Data Collaborative"
+
+theme:
+  name: material
+
+  # Docs: https://squidfunk.github.io/mkdocs-material/setup/changing-the-logo-and-icons/#favicon
+  logo: _static/images/nmdc-logo-bg-white.png
+  favicon: _static/favicon.ico
+
+  # Docs: https://squidfunk.github.io/mkdocs-material/setup/adding-a-git-repository/#repository-icon
+  icon:
+    repo: fontawesome/brands/github
+    edit: material/pencil
+
+  # TODO: Apply the NMDC color palette.
+  # Docs: https://squidfunk.github.io/mkdocs-material/setup/changing-the-colors/#color-palette-toggle
+  palette:
+    - scheme: default  # light
+      media: "(prefers-color-scheme: light)"
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate  # dark
+      media: "(prefers-color-scheme: dark)"
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+
+  features:
+    - navigation.sections
+    - navigation.path
+    - content.action.edit
+
+# There are the links that will appear in the left-hand navigation sidebar.
+nav:
+  - Home: index.md
+  - Tutorials:
+      - Submitting to NMDC: tutorials/submission_portal.md
+      - Running the Workflows: tutorials/run_workflows.md
+      - Navigating the Data Portal: tutorials/nav_data_portal.md
+  - How-To Guides:
+      - Creating a Data Mgt. Plan: howto_guides/data_plan.md
+      - Submitting to NMDC: howto_guides/submit2nmdc.md
+      - Running the Workflows: howto_guides/run_workflows.md
+      - Navigating the Data Portal: howto_guides/portal_guide.md
+      - Using the NMDC API GUI: howto_guides/api_gui.md
+      - Downloading Data via Globus: howto_guides/globus.md
+  - Reference:
+      - NMDC Schema: https://w3id.org/nmdc/about
+      - NMDC Runtime: runtime/
+      - NMDC Workflows: workflows/
+      - NMDC Data Portal: reference/data_portal.md
+      # - Developing NMDC Software: reference/software_development.md
+  - Explanation:
+      - FAIR Data: explanation/fair_data.md
+      - Community Conversations: explanation/community_conversations.md
+
+extra_css:
+  - _static/css/custom.css
+extra_javascript:
+  - _static/js/index.js
+
+plugins:
+  - search
+  # Docs: https://github.com/mkdocs/mkdocs-redirects
+  - redirects:
+      redirect_maps:
+        "reference/combined_workflow_docs.md": "https://docs.microbiomedata.org/workflows/"
