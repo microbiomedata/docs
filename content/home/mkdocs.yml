@@ -1,4 +1,4 @@
-docs_dir: /app/src
+docs_dir: src
 
 site_name: NMDC Documentation
 site_author: National Microbiome Data Collaborative
