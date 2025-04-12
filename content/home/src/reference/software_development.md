@@ -84,7 +84,7 @@ _Examples: [nmdc-field-notes](https://github.com/microbiomedata/nmdc-field-notes
 
 ## Data pipelines and orchestration
 
-There are a number of pipelines that produce data assets (e.g., JSON, XML files, etc.) and accomplish various ad-hoc tasks (like asset ingest, scheduled routine jobs, etc.) in the NMDC runtime framework. It's important that we have a one-stop shop for the orchestration of these data pipelines, and we use [Dagster](https://docs.dagster.io/) as our solution of choice for this problem.
+There are a number of pipelines that produce data assets (e.g., JSON, XML files, etc.) and accomplish various ad hoc tasks (like asset ingest, scheduled routine jobs, etc.) in the NMDC runtime framework. It's important that we have a one-stop shop for the orchestration of these data pipelines, and we use [Dagster](https://docs.dagster.io/) as our solution of choice for this problem.
 
 _Repository: [nmdc-runtime](https://github.com/microbiomedata/nmdc-runtime)_
 
