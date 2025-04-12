@@ -337,7 +337,7 @@ Once a PR has been signed off on ("approved") it can be merged in, either by the
 
 ## Release process
 
-For our public-facing deployed applications (namely, `nmdc-server` and `nmdc-runtime`) we have a monthly release cadence. Since both of these applications rely on the schema and need to use the same schema version, we also take nmdc-schema into account in the monthly releases. The overall process is:
+For our public-facing deployed applications (namely, `nmdc-server` and `nmdc-runtime`) we have a monthly release cadence. Since both of these applications rely on the schema and need to use the same schema version, we also take `nmdc-schema` into account in the monthly releases. The overall process is:
 
 - During normal development of `nmdc-server` and `nmdc-runtime`, changes merged into the `main` branch are automatically deployed to our dev environment.
 - Approximately a week before the target release date, we ensure that a new version of `nmdc-schema` has been released and that both `nmdc-runtime` and `nmdc-server` depend upon that version of `nmdc-schema`. During this week, we test the applications in the dev environment and are more selective about which changes we merge into those repositories' `main` branches.
