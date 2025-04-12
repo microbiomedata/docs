@@ -72,7 +72,7 @@ _Examples: [nmdc-schema](https://github.com/microbiomedata/nmdc-schema) and [geo
 
 ### GitHub Actions
 
-We use [GitHub Actions](https://docs.github.com/en/actions) for a variety of automation tasks. In general, we strive to automate as many tasks as possible. The things we do using GitHub Actions include:
+We use [GitHub Actions](https://docs.github.com/en/actions) for a variety of automation tasks. In general, we strive to automate as many tasks as possible. Here are some tasks we've automated using GitHub Actions:
 
 - Running automated tests and code quality assessment tools
 - Regenerating and deploying web-based documentation to [GitHub Pages](https://pages.github.com/)
@@ -84,7 +84,7 @@ _Examples: [nmdc-field-notes](https://github.com/microbiomedata/nmdc-field-notes
 
 ## Data pipelines and orchestration
 
-There are a number of pipelines that produce data assets (e.g., JSON, XML files, etc.) and accomplish various ad hoc tasks (like asset ingest, scheduled routine jobs, etc.) in the NMDC runtime framework. It's important that we have a one-stop shop for the orchestration of these data pipelines, and we use [Dagster](https://docs.dagster.io/) as our solution of choice for this problem.
+There are a number of pipelines that produce data assets (e.g., JSON, XML files, etc.) and accomplish various ad hoc tasks (like asset ingest, scheduled routine jobs, etc.) in the NMDC runtime framework. We use [Dagster](https://docs.dagster.io/) as a one-stop shop for orchestrating data pipelines.
 
 _Repository: [nmdc-runtime](https://github.com/microbiomedata/nmdc-runtime)_
 
@@ -109,7 +109,7 @@ Here are the guidelines we follow when developing and using workflows.
 
 ### WDL validation
 
-- Use [WOMtool](https://cromwell.readthedocs.io/en/stable/WOMtool/), [miniwdl](https://miniwdl.readthedocs.io/en/latest/), or [jaws validate](https://jaws-docs.readthedocs.io/en/latest/jaws/jaws_usage.html#specialty-commands) to confirm your WDL is valid; e.g., `miniwdl check --strict <wdl>`
+- Use [WOMtool](https://cromwell.readthedocs.io/en/stable/WOMtool/), [miniwdl](https://miniwdl.readthedocs.io/en/latest/), or [jaws validate](https://jaws-docs.readthedocs.io/en/latest/jaws/jaws_usage.html#specialty-commands) to confirm that your WDL is valid. For example: `miniwdl check --strict <wdl>`
 
 ### Docker containers
 
@@ -146,7 +146,7 @@ The NMDC Submission Schema (i.e., `submission-schema`) is derived from NMDC Sche
 ### Schema development and use
 
 - The `nmdc-schema` is serialized as multiple YAML files. Those files live in the `src/schema` directory in the `nmdc-schema` repository.
-- We currently have a highly modular schema with `imports`, but might switch to having just the `nmdc.yaml` and `mixs.yaml`
+- We currently have a highly modular schema with `imports`, but we may switch to using only `nmdc.yaml` and `mixs.yaml` in the future
 - If we decide to stick with a modular design, we should work towards getting the modules to compile independently
 - Some slot constraints are expressed as `structured_pattern.syntax`. A version of the schema in which all modules have been merged—and in which the `structured_pattern.syntax`es have been converted into regular expressions—is available at [https://github.com/microbiomedata/nmdc-schema/blob/main/nmdc_schema/nmdc_materialized_patterns.yaml](https://github.com/microbiomedata/nmdc-schema/blob/main/nmdc_schema/nmdc_materialized_patterns.yaml)
 
@@ -155,7 +155,7 @@ The NMDC Submission Schema (i.e., `submission-schema`) is derived from NMDC Sche
 - Follow standard LinkML naming conventions (e.g., `UpperCamelCase` for classes and enums, `snake_case` for slots). Element names should not include whitespace
 - Use LinkML linter to check style and conventions
 - Class names should be nouns or noun-phrases (e.g., `Person`, `SequenceAlignment`, `Annotation`)
-- Spell out abbreviations except for common terms (e.g., "DNA")
+- Spell out abbreviations, except for widely-recognized ones (e.g., "DNA")
 - Multivalued slots should be named as plurals
 - Pre-existing elements may be "grandfathered in" with legacy naming
 
@@ -268,13 +268,13 @@ The Submission Portal uses the Postgres database to store submission information
 
 ## Testing
 
-To test Python code, we use the [pytest](https://docs.pytest.org/) test framework. In addition, in some projects, we use the [pytest-cov](https://pypi.org/project/pytest-cov/) package to measure code coverage, which we use to determine which parts of the codebase the tests cover.
+To test Python code, we use the [pytest](https://docs.pytest.org/) test framework. In some projects, we also use the [pytest-cov](https://pypi.org/project/pytest-cov/) package to measure code coverage, helping us identify which parts of the codebase are covered by tests.
 
 To test TypeScript/JavaScript code, we use the [Vitest](https://vitest.dev/) test framework. We also sometimes use [Storybook](https://storybook.js.org/) to preview UI components in isolation.
 
 ## Documentation and communication
 
-We try to keep in mind that source code is generally read more often than it is written. We try to make it easy for the next person that looks at the code we write, to understand what we were thinking when we wrote it.
+We try to keep in mind that source code is generally read more often than it is written. We aim to make it easy for future readers of our code to understand our thought process when writing it.
 
 In code, we try to document each function, including indicating the data types of its parameters and return value. For recursive functions and other complex code, we err on the side of including more documentation than may be necessary, in an attempt to help the reader along.
 
@@ -339,6 +339,6 @@ Once a PR has been signed off on ("approved") it can be merged in, either by the
 
 For our public-facing deployed applications (namely, `nmdc-server` and `nmdc-runtime`) we have a monthly release cadence. Since both of these applications rely on the schema and need to use the same schema version, we also take nmdc-schema into account in the monthly releases. The overall process is:
 
-- During normal development of `nmdc-server` and `nmdc-runtime`, as changes are merged into the `main` branch they are deployed automatically to our dev environment
+- During normal development of `nmdc-server` and `nmdc-runtime`, changes merged into the `main` branch are automatically deployed to our dev environment.
 - Approximately a week before the target release date, we ensure that a new version of `nmdc-schema` has been released and that both `nmdc-runtime` and `nmdc-server` depend upon that version of `nmdc-schema`. During this week, we test the applications in the dev environment and are more selective about which changes we merge into those repositories' `main` branches.
 - On the release day, we create [GitHub Releases](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository) with associated [semantic version](https://semver.org/) tags (e.g., `v2.0.3`) from the `main` branches of both `nmdc-server` and `nmdc-runtime`. This triggers a deployment of the code from those tags to the production environment.
