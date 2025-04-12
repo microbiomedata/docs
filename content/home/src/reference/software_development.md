@@ -74,11 +74,11 @@ _Examples: [nmdc-schema](https://github.com/microbiomedata/nmdc-schema) and [geo
 
 We use [GitHub Actions](https://docs.github.com/en/actions) for a variety of automation tasks. In general, we strive to automate as many tasks as possible. The things we do using GitHub Actions include:
 
-- Running automated code quality checks and tests when contributors or [Pull Requests](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request)
-- Regenerating and deploying documentation to [GitHub Pages](https://pages.github.com/) when Pull Request changes are accepted and merged
-- Building and pushing Docker images to container registries
+- Running automated tests and code quality assessment tools
+- Regenerating and deploying web-based documentation to [GitHub Pages](https://pages.github.com/)
+- Deploying web applications to their hosting environments (e.g., NERSC Spin)
+- Building and pushing container images to container registries (e.g., GHCR)
 - Building and publishing Python packages to PyPI
-- Triggering redeployments of deployed applications
 
 _Examples: [nmdc-field-notes](https://github.com/microbiomedata/nmdc-field-notes), [submission-schema](https://github.com/microbiomedata/submission-schema), [docs](https://github.com/microbiomedata/docs)_
 
@@ -297,7 +297,7 @@ LBNL employees have access to the [CBORG](https://cborg.lbl.gov/) system, which 
 
 ## Git and GitHub
 
-All code being developed in the NMDC ecosystem/toolchain is open sourced and all repositories are made publicly accessible via GitHub, under the [microbiomedata](https://github.com/microbiomedata/) organization. By choosing GitHub as our code collaboration platform of choice, we are marrying ourselves to [Git](https://git-scm.com/doc) as our de-facto version control tool. We follow the typical Git/GitHub workflow for getting "new code" (for bug fixes, feature enhancements, etc.) into our codebase which is: create an issue for your request → make a corresponding branch → add your commits to that branch → make a PR which will be reviewed by "owners" (experts) → merge into `main` → delete branch. Releases for the various repositories are also coordinated/managed via [GitHub Releases](https://docs.github.com/en/repositories/releasing-projects-on-github/about-releases) by following a thoroughly documented and standardized “release process”.
+All code being developed in the NMDC ecosystem/toolchain is open sourced and all repositories are made publicly accessible via GitHub, under the [microbiomedata](https://github.com/microbiomedata/) organization. By choosing GitHub as our code collaboration platform of choice, we are marrying ourselves to [Git](https://git-scm.com/doc) as our de facto version control tool. We follow the typical Git/GitHub workflow for getting "new code" (for bug fixes, feature enhancements, etc.) into our codebase which is: create an issue for your request → make a corresponding branch → add your commits to that branch → make a PR which will be reviewed by "owners" (experts) → merge into `main` → delete branch. Releases for the various repositories are also coordinated/managed via [GitHub Releases](https://docs.github.com/en/repositories/releasing-projects-on-github/about-releases) by following a thoroughly documented and standardized “release process”.
 
 ## DevOps and infrastructure
 
@@ -321,11 +321,11 @@ Database backups are performed nightly at NERSC using Kubernetes CronJobs that i
 
 We encourage the use of [black](https://github.com/psf/black), a highly configurable Python code formatter, on our Python codebases. It helps ensure consistent formatting, making the code easier to read and maintain.
 
-Another powerful tool we use to check [PEP8](https://peps.python.org/pep-0008/) compliance is [flake8](https://flake8.pycqa.org/en/latest/).
+Another tool we use to check [PEP8](https://peps.python.org/pep-0008/) compliance is [flake8](https://flake8.pycqa.org/en/latest/).
 
-We have however started porting over some of our repositories to use [ruff](https://github.com/astral-sh/ruff) which is a dual linter and formatter for Python, and might become the de facto code quality and maintainability checker in the future.
+We have, however, started porting over some of our repositories to use [ruff](https://github.com/astral-sh/ruff), which is a linter and formatter for Python. It might become our de facto code quality and maintainability checker in the future.
 
-A few tools that we use for type checking are [mypy](https://github.com/python/mypy) (for static type checking) and [Pydantic](https://github.com/pydantic/pydantic) (for data validation using Python type hints).
+Some tools that we use for type checking are [mypy](https://github.com/python/mypy) (for static type checking) and [Pydantic](https://github.com/pydantic/pydantic) (for data validation using Python type hints).
 
 ## Code review
 
