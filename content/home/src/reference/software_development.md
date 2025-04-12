@@ -60,7 +60,7 @@ _Examples: [nmdc-runtime](https://github.com/microbiomedata/nmdc-runtime) and [n
 
 Projects which are designed to be run as deployed applications should be containerized (e.g., using [Docker](https://www.docker.com/)). This means that the repository, itself, should contain at least one [Dockerfile](https://docs.docker.com/get-started/docker-concepts/building-images/writing-a-dockerfile/). Once a Docker image has been built according to the Dockerfile, it can be pushed to a container registry (we use the [GitHub Container Registry](https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-container-registry); i.e., GHCR). In a deployment environment, the appropriate image can be pulled from the container registry and instantiated as a Docker container.
 
-For containerized applications, in addition to at least one Dockerfile, we typically include a [Docker Compose](https://docs.docker.com/compose/) file. This allows other containers necessary for local development (, a database, a static file server, etc.) to be run alongside the main application container.
+For containerized applications, in addition to at least one Dockerfile, we typically include a [Docker Compose](https://docs.docker.com/compose/) file. This allows other containers necessary for local development (e.g., a database, a static file server, etc.) to be run alongside the main application container.
 
 _Examples: [nmdc-server](https://github.com/microbiomedata/nmdc-server), [nmdc-runtime](https://github.com/microbiomedata/nmdc-runtime)_
 
@@ -290,7 +290,7 @@ This is a new and fast evolving area. NMDC staff have experience using the follo
 
 - [ChatGPT](http://chatgpt.com/)
 - [Claude](https://claude.ai/)
-- [Github Copilot](https://github.com/features/copilot)
+- [GitHub Copilot](https://github.com/features/copilot)
 - [Gemini](https://gemini.google.com/)
 
 LBNL employees have access to the [CBORG](https://cborg.lbl.gov/) system, which provides access to several commercial and internally-hosted LLMs.
