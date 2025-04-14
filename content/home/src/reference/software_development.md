@@ -278,7 +278,7 @@ We try to keep in mind that source code is generally read more often than it is 
 
 In code, we try to document each function, including indicating the data types of its parameters and return value. For recursive functions and other complex code, we err on the side of including more documentation than may be necessary, in an attempt to help the reader along.
 
-Also, we try to include a README.md file in the root directory of each repository. That file usually contains the name of the project, a high-level summary of the contents of the repo, instructions for using the contents of the repo, and instructions for contributing to the repo.
+Also, we try to include a `README.md` file in the root directory of each repository. That file usually contains the name of the project, a high-level summary of the contents of the repo, instructions for using the contents of the repo, and instructions for contributing to the repo.
 
 For diagramming, we usually use either Mermaid or diagrams.net (draw.io).
 
@@ -297,7 +297,7 @@ LBNL employees have access to the [CBORG](https://cborg.lbl.gov/) system, which 
 
 ## Git and GitHub
 
-All code being developed in the NMDC ecosystem/toolchain is open sourced and all repositories are made publicly accessible via GitHub, under the [microbiomedata](https://github.com/microbiomedata/) organization. By choosing GitHub as our code collaboration platform of choice, we are marrying ourselves to [Git](https://git-scm.com/doc) as our de facto version control tool. We follow the typical Git/GitHub workflow for getting "new code" (for bug fixes, feature enhancements, etc.) into our codebase which is: create an issue for your request → make a corresponding branch → add your commits to that branch → make a PR which will be reviewed by "owners" (experts) → merge into `main` → delete branch. Releases for the various repositories are also coordinated/managed via [GitHub Releases](https://docs.github.com/en/repositories/releasing-projects-on-github/about-releases) by following a thoroughly documented and standardized “release process”.
+All code being developed in the NMDC ecosystem/toolchain is open sourced and all repositories are made publicly accessible via GitHub, under the [microbiomedata](https://github.com/microbiomedata/) organization. By choosing GitHub as our code collaboration platform of choice, we are marrying ourselves to [Git](https://git-scm.com/doc) as our de facto version control tool. We follow the typical Git/GitHub workflow for getting "new code" (for bug fixes, feature enhancements, etc.) into our codebase which is: create an issue for your request → make a corresponding branch → add your commits to that branch → make a PR which will be reviewed by "owners" (experts) → merge into `main` → delete branch. Releases for the various repositories are also coordinated/managed via [GitHub Releases](https://docs.github.com/en/repositories/releasing-projects-on-github/about-releases) by following a thoroughly-documented and standardized "release process".
 
 ## DevOps and infrastructure
 
