@@ -34,7 +34,7 @@ We configure things using [YAML](https://yaml.org/) and [TOML](https://toml.io/e
 
 _Examples: GitHub Actions and Python Poetry_
 
-## Package/dependency management tools
+## Dependency management
 
 ### Python dependency management
 
@@ -48,7 +48,7 @@ For TypeScript/JavaScript projects, we use [npm](https://nodejs.org/) to manage 
 
 _Examples: [nmdc-field-notes](https://github.com/microbiomedata/nmdc-field-notes) (npm), [nmdc-server](https://github.com/microbiomedata/nmdc-server) (yarn)_
 
-## Application deployment and artifact generation
+## Packaging and deployment
 
 ### Make
 
@@ -135,7 +135,7 @@ The general expectation is that the databases will be loaded locally. Database d
 
 Team members use a variety of text editors and IDEs when working with source code. Examples include Visual Studio Code and Jetbrains PyCharm.
 
-## NMDC Schema design principles and LinkML usage
+## Schema development (LinkML)
 
 The NMDC Schema (i.e., `nmdc-schema`) describes data that are legal in NMDC's metadata store. It's written in [LinkML](https://linkml.io/) and its source files are accessible at [https://github.com/microbiomedata/nmdc-schema](https://github.com/microbiomedata/nmdc-schema).
 
