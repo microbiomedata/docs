@@ -25,10 +25,13 @@ theme:
     repo: fontawesome/brands/github
     edit: material/pencil
 
-  # TODO: Apply the NMDC color palette.
+  # Note: The "nmdc" color scheme, and customizations to the "slate" color scheme, are defined in
+  #       the `src/_static/css/custom.css` file.
+  #
+  # Docs: https://squidfunk.github.io/mkdocs-material/setup/changing-the-colors/#custom-color-schemes
   # Docs: https://squidfunk.github.io/mkdocs-material/setup/changing-the-colors/#color-palette-toggle
   palette:
-    - scheme: default  # light
+    - scheme: nmdc  # light
       media: "(prefers-color-scheme: light)"
       toggle:
         icon: material/toggle-switch
