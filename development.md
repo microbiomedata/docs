@@ -36,9 +36,9 @@ docker compose up --detach
 That will start up several Docker containers, which you can access via the URLs below:
 
 - http://localhost:9000 - the entire website
-- http://localhost:9002 - only the Home section of the website
-- http://localhost:9003 - only the Runtime section of the website
-- http://localhost:9004 - only the Workflows section of the website
+- http://localhost:9001 - only the Home section of the website
+- http://localhost:9002 - only the Runtime section of the website
+- http://localhost:9003 - only the Workflows section of the website
 
 ### Applying changes
 

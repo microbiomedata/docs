@@ -16,7 +16,7 @@ services:
       context: pullers/runtime_docs
       dockerfile: Dockerfile
     ports:
-      - "9003:8000"
+      - "9002:8000"
 
   workflow-docs:
     # Use the container image built from `pullers/workflow_docs/Dockerfile`.
@@ -24,7 +24,7 @@ services:
       context: pullers/workflow_docs
       dockerfile: Dockerfile
     ports:
-      - "9004:8000"
+      - "9003:8000"
 
   main-website:
     image: nginx  # Docs: https://hub.docker.com/_/nginx
