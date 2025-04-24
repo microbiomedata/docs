@@ -3,3 +3,6 @@
 
 # Ignore all the `.venv` directories in the child directories of the current directory.
 /*/.venv
+
+# Ignore all `__pycache__` directories, at any level of the file tree.
+__pycache__

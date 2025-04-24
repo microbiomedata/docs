@@ -108,3 +108,7 @@ plugins:
   - redirects:
       redirect_maps:
         "reference/combined_workflow_docs.md": "https://docs.microbiomedata.org/workflows/"
+
+# Docs: https://www.mkdocs.org/user-guide/configuration/#hooks
+hooks:
+  - src/_hooks/override_edit_url_via_front_matter.py
