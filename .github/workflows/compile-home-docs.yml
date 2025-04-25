@@ -1,4 +1,4 @@
-# This GitHub Actions workflow compiles the Sphinx documentation into web-based documentation.
+# This GitHub Actions workflow compiles the MkDocs documentation into web-based documentation.
 # Reference: https://docs.github.com/en/actions/writing-workflows/workflow-syntax-for-github-actions
 name: Compile home documentation into HTML
 
@@ -27,12 +27,25 @@ jobs:
       - name: Set up Python  # Docs: https://github.com/actions/setup-python
         uses: actions/setup-python@v5
         with: { python-version: '3.12' }
-      - name: Install Sphinx  # Docs: https://pypi.org/project/Sphinx/
-        run: pip install Sphinx
-      - name: Install other dependencies
+      - name: Install Python dependencies
         run: pip install -r requirements.txt
       - name: Compile source documents into HTML
-        run: sphinx-build -b html src ${{ github.workspace }}/content/home/_build/html
+        #
+        # References:
+        # - https://www.mkdocs.org/user-guide/cli/
+        # - https://www.mkdocs.org/user-guide/configuration/#configuration-inheritance
+        #
+        run: |
+          echo '{
+            "INHERIT": "mkdocs.yml",
+            "site_dir": "_dist",
+            "extra": {
+              "analytics": {
+                "provider": "google",
+                "property": "G-VH6HKVLCWN"
+              }
+            }
+          }' | mkdocs build -f -
         # Upload the result as an "artifact" so it can then be downloaded and used by another job.
       - name: Save the HTML for publishing later  # Docs: https://github.com/actions/upload-artifact
         uses: actions/upload-artifact@v4
@@ -40,6 +53,6 @@ jobs:
           name: home-docs-as-html
           # Note: Relative `path` values here are relative to the _workspace_, not to the current working directory.
           #       Reference: https://github.com/actions/upload-artifact/pull/477#issue-2044900649
-          path: content/home/_build/html
+          path: content/home/_dist
           if-no-files-found: error
           retention-days: 1  # Note: 1 day is the shortest period possible

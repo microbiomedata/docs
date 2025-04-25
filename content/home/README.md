@@ -1,5 +1,11 @@
 # Home
 
+This directory contains files related to building the Home section of the website.
+
+On April 11, 2025, we switched this section of the website from using the [Sphinx](https://www.sphinx-doc.org/) framework
+with the [Read the Docs](https://sphinx-rtd-theme.readthedocs.io/) theme, to using the [MkDocs](https://www.mkdocs.org/) framework
+with the [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/) theme.
+
 ## The `src` directory
 
 Most of the files in `src` are files that we copied from
@@ -15,13 +21,6 @@ paths shown here are relative to the root directory of _that_ repository):
 - Schema element documentation in `docs/reference/metadata`
 - Schema-related images in `docs/_static/images/reference/metadata`
 - Schema in `docs/_static/jsonschema`
-
-Instead of maintaining a local copy of the schema documentation here, we will redirect visitors to the _standalone_
-[schema documentation](https://microbiomedata.github.io/nmdc-schema/).
-
-> **Example:** When someone visits `/reference/metadata/xylene.html` on this documentation website,
-> they'll be automatically redirected to https://microbiomedata.github.io/nmdc-schema/xylene/. This redirection
-> is configured in `./src/conf.py`.
 
 You can compare the `.src/` directory with the corresponding directory in the
 upstream repository, by issuing these commands from the **root directory** of _this_ repository:
