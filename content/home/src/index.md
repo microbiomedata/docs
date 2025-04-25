@@ -15,4 +15,4 @@ To support a systematic approach to our technical documentation, we have adopted
 
 Let us know if you have suggestions to further support your research by [reaching out to us](https://microbiomedata.org/contact)!
 
-![The Diátaxis quadrants](../_static/images/overview/diataxis_documentation_graphic.png)
+![The Diátaxis quadrants](./_static/images/overview/diataxis_documentation_graphic.png)
