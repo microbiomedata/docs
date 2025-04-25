@@ -71,7 +71,7 @@ Once signed in with an ORCID, you will see an option to ‘Create New Submission
 
 ### Submission Context
 
-[![](../_static/images/howto_guides/portal_guide/submission_context.png)](../_static/images/howto_guides/portal_guide/submision_context.png)
+[![](../_static/images/howto_guides/portal_guide/submission_context.png)](../_static/images/howto_guides/portal_guide/submission_context.png)
 
 On the Submission Context screen, submitters are asked whether data has already been generated for their study.  If a user selects ‘Yes’ a DOI associated with the data can be entered. For data generated at either the JGI or EMSL, the specific Award DOI (e.g., 10.46936/10.25585/60001289) should be entered, along with selecting the checkbox for this option. If the data was not generated at a DOE User Facility, a valid data DOI can be entered. A data DOI is not the same as a publication DOI, and would be issued through a separate resource as a unique persistent identifier (e.g., 10.48443/e4zf-b917). 
 
