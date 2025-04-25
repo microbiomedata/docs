@@ -49,7 +49,7 @@ One of the core end-to-end tools available to NMDC EDGE users is the Metagenomic
  - [MG Annotation](https://github.com/microbiomedata/mg_annotation) (metagenome annotation)
  - [MetaMAGs](https://github.com/microbiomedata/metaMAGs) (binning of population genomes to generate metagenome-assembled genomes)
 
-More information on these metagenomic workflows is available in the [workflow documentation](../../../../pullers/workflow_docs/metagenome_workflow_overview/docs/index.rst). 
+More information on these metagenomic workflows is available in the [workflow documentation](https://docs.microbiomedata.org/workflows/chapters/1_Metagenome_Workflow_Overview/index.html). 
 
 A summary of the workflows and link to their documentation is available in [this table](#workflow-summaries).
 
@@ -102,9 +102,9 @@ Other ways the inputs for each workflow may change include the types of files ne
 
 !["Run a Single Workflow" page for Read-based Taxonomy Classification](../_static/images/howto_guides/workflows/metaG/03102025_run_rba.png) ![File selection showing projects that the user](../_static/images/howto_guides/workflows/metaG/03102025_run_rba_file.png)
 
-Each workflow submission page will list the types of files necessary. For further reading, please refer to the [individual workflow documentation](../../../../pullers/workflow_docs/index.rst) for a full list of inputs and outputs. 
+Each workflow submission page will list the types of files necessary. For further reading, please refer to the [individual workflow documentation](https://docs.microbiomedata.org/workflows/) for a full list of inputs and outputs. 
 
-### Output 
+### Output
 
 ![My Projects page containing a list of projects submitted by user in various run states and bubble labels for different buttons.](../_static/images/howto_guides/workflows/quickStart/03102025_projects_page.png)
 
