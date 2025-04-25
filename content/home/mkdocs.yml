@@ -69,7 +69,7 @@ nav:
       - NMDC Runtime: runtime/
       - NMDC Workflows: workflows/
       - NMDC Data Portal: reference/data_portal.md
-      # - Developing NMDC Software: reference/software_development.md
+      - Developing NMDC Software: reference/software_development.md
   - Explanation:
       - FAIR Data: explanation/fair_data.md
       - Community Conversations: explanation/community_conversations.md
