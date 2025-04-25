@@ -288,7 +288,7 @@ For diagramming, we usually use either Mermaid or diagrams.net (draw.io).
 
 This is a new and fast evolving area. NMDC staff have experience using the following tools for code generation and coding and writing assistance:
 
-- [ChatGPT](http://chatgpt.com/)
+- [ChatGPT](https://chatgpt.com/)
 - [Claude](https://claude.ai/)
 - [GitHub Copilot](https://github.com/features/copilot)
 - [Gemini](https://gemini.google.com/)
@@ -311,7 +311,7 @@ We use the JGI Archive and Metadata Organizer (JAMO) system for data lifecycle m
 
 ### Globus
 
-We use [Globus](https://www.globus.org/) to enable managed, high-performance, bulk data [access to NMDC data](https://docs.microbiomedata.org/howto_guides/globus.html).
+We use [Globus](https://www.globus.org/) to enable managed, high-performance, bulk data [access to NMDC data](https://docs.microbiomedata.org/howto_guides/globus/).
 
 ### Database backups
 

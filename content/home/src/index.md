@@ -6,7 +6,7 @@ We have built the National Microbiome Data Collaborative (NMDC) to advance how s
 
 ## About our documentation
 
-To support a systematic approach to our technical documentation, we have adopted the [Diátaxis framework](https://diataxis.fr/>) which identifies four distinct forms of documentation: tutorials, how-to guides, technical reference, and explanation. We aim for our documentation to be accessible to a broad audience, so whether you are new to microbiome research or a leading scientist in the field, we welcome everyone to learn more from our:
+To support a systematic approach to our technical documentation, we have adopted the [Diátaxis framework](https://diataxis.fr/) which identifies four distinct forms of documentation: tutorials, how-to guides, technical reference, and explanation. We aim for our documentation to be accessible to a broad audience, so whether you are new to microbiome research or a leading scientist in the field, we welcome everyone to learn more from our:
 
 1. Tutorials (Learning-oriented): get started through short, hands-on activities
 2. How-To Guides (Task-oriented): step-by-step instructions for using NMDC's products and resources
