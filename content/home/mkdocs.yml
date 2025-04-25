@@ -127,7 +127,6 @@ plugins:
         reference/data_portal.html.md: reference/data_portal.md
         reference/software_development.html.md: reference/software_development.md
         tutorials/nav_data_portal.html.md: tutorials/nav_data_portal.md
-        tutorials/prepare_metadata.html.md: tutorials/prepare_metadata.md
         tutorials/run_workflows.html.md: tutorials/run_workflows.md
         tutorials/submission_portal.html.md: tutorials/submission_portal.md
 
