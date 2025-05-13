@@ -95,7 +95,8 @@ Permission roles are granted based on ORCID iD and are as follows:
 - Viewer: will have permission to view the entire submission, and cannot make any edits
 - Metadata Contributor: will have permission to view the entire submission, and can edit **only** the sample metadata section of the submission
 - Editor: will have full view and edit access to all parts of the submission, **except** contributors
-- None: no permissions or view granted 
+- None: no permissions or view granted
+
 The Principal Investigator will be granted the same permissions as the submitter and **can edit the entire submission**.
 
 ### Multi-omics Data
