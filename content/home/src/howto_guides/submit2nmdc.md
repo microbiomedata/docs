@@ -89,8 +89,9 @@ Last, a user can include "Contributors" to acknowledge members of a research tea
 
 [![](../_static/images/howto_guides/portal_guide/contributors.png)](../_static/images/howto_guides/portal_guide/contributors.png)
 
-This includes listing Contributor names, ORCID iDs, associating role(s) based on the CRediT (Contributor Roles Taxonomy), and their submission access permission. A Contributor can have a single or multiple roles.  
-Permission roles are granted based on ORCID iD and are as follows: 
+This includes listing Contributor names, ORCID iDs, associating role(s) based on the CRediT (Contributor Roles Taxonomy), and their submission access permission. A Contributor can have a single or multiple roles.
+
+Permission roles are granted based on ORCID iD and are as follows:
 
 - Viewer: will have permission to view the entire submission, and cannot make any edits
 - Metadata Contributor: will have permission to view the entire submission, and can edit **only** the sample metadata section of the submission
