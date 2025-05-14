@@ -152,9 +152,15 @@ This column information can also be accessed by double clicking the column heade
 
 When validating the metadata and information provided, the Submission Portal provides a "Find and Replace" tool. This allows bulk updates to invalid metadata.
 
+##### Suggester Tool
+
+[![](../_static/images/howto_guides/portal_guide/2025-05_Suggester.png)](../_static/images/howto_guides/portal_guide/2025-05_Suggester.png)
+
+This tool provides suggested metadata based on other information provided. It can be triggered or run automatically and suggestions can be accepted individually or in bulk. This tool currently suggestes an elevation value, based on the provided latitude and longitude metadata. This tool will be expanded to other metadata fields and the NMDC welcomes your feedback and suggestions. This can be provided via the [We are here to help](#we-are-here-to-help) tab.
+
 #### Download and Import
 
-[![](../_static/images/howto_guides/portal_guide/sub_portal_input.png)](../_static/images/howto_guides/portal_guide/sub_portal_input.png)
+[![](../_static/images/howto_guides/portal_guide/2025-05_ImportExport.png)](../_static/images/howto_guides/portal_guide/2025-05_ImportExport.png)
 
 The NMDC Submission Portal allows users to enter sample metadata directly into the web interface. However, if a submitter prefers to work in other applications and programs, such as Microsoft Excel, the NMDC sample metadata template can be downloaded as a .xlsx file, opened via a separate application where users can add metadata, and imported back into the Submission Portal for completion and validation. 
 
