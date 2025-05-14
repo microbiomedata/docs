@@ -106,7 +106,7 @@ The Multi-omics Data page will prompt users to specify what data types have eith
 
 To share retrospective data and metadata that was **not** generated at a [DOE User Facility](#support-for-doe-user-facilities), you will be prompted to answer questions about how your -omics data was generated. This provides the information necessary to determine if your data can be analyzed via NMDC workflows. Regardless of these answers, we encourage those interested in sharing their study, metadata, and data to use the NMDC products to capture metadata! 
 
-To share retrospectve data and metadata that was generated at a [DOE user facilities](#support-for-doe-user-facilities), similar questions will be asked about what facilities and data types. Extended questions about data generation methods will not be required. 
+To share retrospectve data and metadata that was generated at a [DOE User Facility](#support-for-doe-user-facilities), similar questions will be asked about what facilities and data types. Extended questions about data generation methods will not be required. 
 
 For retrospective and publically available data, a DOI associated with the data can be entered. A data DOI is not the same as a publication DOI, and would be issued through a separate resource as a unique persistent identifier (e.g., 10.48443/e4zf-b917). 
 
