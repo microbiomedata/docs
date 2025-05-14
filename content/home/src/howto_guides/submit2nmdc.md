@@ -63,9 +63,11 @@ NMDC resources require ORCID authentication for full access and functionality.
 
 [https://data.microbiomedata.org/submission/home](https://data.microbiomedata.org/submission/home) 
 
+[![](../_static/images/howto_guides/portal_guide/2025-05_LogIn.png)](../_static/images/howto_guides/portal_guide/2025-05_LogIn.png)
+
 The Submission Portal requires ORCID authentication to access. If you have already signed in via ORCID iD, you will not see this login screen within the Submission Portal.
 
-[![](../_static/images/howto_guides/portal_guide/Create_submission.png)](../_static/images/howto_guides/portal_guide/Create_submission.png)
+[![](../_static/images/howto_guides/portal_guide/2025-05_CreateSubmission.png)](../_static/images/howto_guides/portal_guide/2025-05_CreateSubmission.png)
 
 Once signed in with an ORCID, you will see an option to ‘Create New Submission’ with subsequent guidance to provide information required for submission to the NMDC. Details about each section are outlined below. Submitters can return to existing submissions saved under the ORCID account to resume their work at any point.   
 
