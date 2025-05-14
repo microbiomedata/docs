@@ -131,24 +131,26 @@ The NMDC uses sections for clarity, and to identify when MIxS specifications hav
 Biosample metadata can be entered manually (by typing each row), or the data can be entered in bulk by importing a Microsoft Excel XLSX file. The metadata is updated each time a user navigates across the submission template, without the need for manually clicking ‘save’. Upon completion, the study submission and metadata will be reviewed by a member of the NMDC team, and once approved, the submitting user will indicate when data are ready to be published to the Data Portal.
  
 #### Metadata Sections
-Detailed biosample metadata input is captured using a  curated metadata template. This page allows users to input biosample metadata into standardized fields based on the selected environmental template. The biosample metadata fields are split into 4 sections: Sample ID which consists of sample and environmental identification information; MIxS which are fields that are identical to those provided in MIxS templates; MIxS (modified) & MIxS Inspired which are similar to the MIxS fields, but have been altered in some way or were added based on user feedback. 
+
+Detailed biosample metadata input is captured using a curated metadata template. This page allows users to input biosample metadata into standardized fields based on the selected environmental template. The biosample metadata fields are split into 4 sections: Sample ID which consists of sample and environmental identification information; MIxS which are fields that are identical to those provided in MIxS templates; MIxS (modified) & MIxS Inspired which are similar to the MIxS fields, but have been altered in some way or were added based on user feedback. 
 These updated and additional fields are meant to provide clearer context and expectations for the submitter to better capture information about their samples.
+
+#### Tools and Features 
+
+An information and tools tab can be expanded on the right side of your submission. See [Column Information](#column-information) below.
+
+##### Column Information
+
+[![](../_static/images/howto_guides/portal_guide/2025-05_ColumnInfo.png)](../_static/images/howto_guides/portal_guide/2025-05_ColumnInfo.png)
+
+Column Information is provided to guide a submitter on the required format and information collected for each metadata term provided here includes a description of the metadata term, additional guidance, and examples of valid completion. 
+This column information can also be accessed by double clicking the column header.
 
 #### Download and Import
 
 [![](../_static/images/howto_guides/portal_guide/sub_portal_input.png)](../_static/images/howto_guides/portal_guide/sub_portal_input.png)
 
 The NMDC Submission Portal allows users to enter sample metadata directly into the web interface. However, if a submitter prefers to work in other applications and programs, such as Microsoft Excel, the NMDC sample metadata template can be downloaded as a .xlsx file, opened via a separate application where users can add metadata, and imported back into the Submission Portal for completion and validation. 
-
-#### Tools and Features 
-
-##### Column Information
-
-[![](../_static/images/howto_guides/portal_guide/sub_portal_enviro_package.png)](../_static/images/howto_guides/portal_guide/sub_portal_enviro_package.png)
-
-[![](../_static/images/howto_guides/portal_guide/column_help.png)](../_static/images/howto_guides/portal_guide/column_help.png)
-
-When column headers are double clicked, or when metadata validation is performed, a column help box will appear. This provides a description of the field, additional guidance, and examples of valid completion. 
 
 ##### Show/Hide 
 
