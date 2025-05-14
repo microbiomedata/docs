@@ -164,34 +164,37 @@ This tool provides suggested metadata based on other information provided. It ca
 
 The NMDC Submission Portal allows users to enter sample metadata directly into the web interface. However, if a submitter prefers to work in other applications and programs, such as Microsoft Excel, the NMDC sample metadata template can be downloaded as a .xlsx file, opened via a separate application where users can add metadata, and imported back into the Submission Portal for completion and validation. 
 
+##### We are here to help
+
+[![](../_static/images/howto_guides/portal_guide/2025-05_Help.png)](../_static/images/howto_guides/portal_guide/2025-05_Help.png)
+
+If you have any issues, need assistance, experience a bug, or have a recommendation for the NMDC, please reach out to us! Our products are built for the research community and at NMDC our goal is to provide useful tools to lower the barriers to data reuse and metadata capture!
+
 ##### Show/Hide 
 
-[![](../_static/images/howto_guides/portal_guide/column_visibility.png)](../_static/images/howto_guides/portal_guide/column_visibility.png)
+[![](../_static/images/howto_guides/portal_guide/2025-05_ShowHide.png)](../_static/images/howto_guides/portal_guide/2025-05_ShowHide.png)
 
 Users are encouraged to populate as many of the columns as possible, but not all are required or relevant to all sample types or research. To accommodate such needs, the Biosample Metadata interface distinguishes between required, recommended, and optional columns. Which columns appear on the screen can be controlled with the show/hide menu.  This tool can be used to hide optional or optional + recommended columns, and the show sub-menu can be used to center a particular section on the user’s screen.
 
-
 ##### Jump to Column Search 
 
-[![](../_static/images/howto_guides/portal_guide/jump_to_column.png)](../_static/images/howto_guides/portal_guide/jump_to_column.png)
-[![](../_static/images/howto_guides/portal_guide/column_search.png)](../_static/images/howto_guides/portal_guide/column_search.png)
+[![](../_static/images/howto_guides/portal_guide/2025-05_ColumnSearch.png)](../_static/images/howto_guides/portal_guide/2025-05_ColumnSearch.png)
 
 A ‘Jump to column’ feature is available for searching for specific metadata fields.  The columns in the ‘Jump to column’ menu are listed in the order they appear on the interface when no visibility constraint has been applied. Users can either scroll though the listed columns or type in any portion of a column's name. For example, as shown above, users can search for the term ‘carbon’ in order to find the ‘carbon/nitrogen ratio’ column. Many slots are available for sample metadata completion, but not all are required or relevant depending on your research questions. The ‘Jump to column’ feature allows the submitter to find the attributes they need and those relevant to their samples.
 
 ##### Real Time Validation  
 
-[![](../_static/images/howto_guides/portal_guide/validate.png)](../_static/images/howto_guides/portal_guide/validate.png)
+[![](../_static/images/howto_guides/portal_guide/2025-05_Validation1.png)](../_static/images/howto_guides/portal_guide/2025-05_Validation1.png)
 
 The real-time validation tool allows submitters to check their filled-in metadata and overall progress as they submit values to ensure the submission will be valid and adhere to the NMDC schema. 
 
-
 ##### Color Legend
 
-[![](../_static/images/howto_guides/portal_guide/color_legend.png)](../_static/images/howto_guides/portal_guide/color_legend.png)
+[![](../_static/images/howto_guides/portal_guide/2025-05_Validation2.png)](../_static/images/howto_guides/portal_guide/2025-05_Validation2.png)
 
-All fields in the metadata template innately fall into one of three color categories: Grey, Yellow, or Purple. Grey, or no highlighted color, indicates optional fields. Required columns are denoted with yellow. These yellow columns must be correctly completed or the submission will not validate. Recommended fields, highlighted purple, are required where applicable. If any of the purple columns provide information relevant to the study, they should be completed. For example, if samples are from a moisture manipulation study, the column ‘watering regimen’ should be filled in to provide context and information about the samples. 
+All fields in the metadata template innately fall into one of three color categories: Grey, Yellow, or Purple. Grey, or no highlighted color, indicates optional fields. Required columns are denoted with yellow. These yellow columns must be correctly completed or the submission will not validate. Recommended fields, highlighted purple, are required where applicable. If any of the purple columns are relevant to the study, they should be completed. For example, if samples are from a moisture manipulation study, the column ‘watering regimen’ should be filled in to provide context and information about the samples. 
 
-After selecting the validate button, cells will become color coded to indicate invalid and incomplete metadata. Dark pink cells indicate a required cell has been left empty. Light pink indicates that there is an error in the formatting of the information entered into that cell. The "Column Information" tool, described above, provides expected structure patterns and examples of valid metadata, which you can refer to when addressing validation errors.
+After selecting the validate button, cells will become color coded to indicate invalid and incomplete metadata. Dark pink cells indicate a required cell has been left empty. Light pink indicates that there is an error in the formatting of the information entered into that cell. The [Column Information](#column-information) tool, described above, provides expected structure patterns and examples of valid metadata, which you can refer to when addressing validation errors.
 
 ## NMDC Field Notes mobile app functionality
 
