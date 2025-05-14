@@ -7,20 +7,12 @@
 ### Register for an account
 
 1. Visit the homepage for NMDC EDGE platform by going to [https://nmdc-edge.org](https://nmdc-edge.org/home)
-
-![Home page for NMDC EDGE with a bubble labeled 2 for the ORCiD LOGIN button](../_static/images/howto_guides/workflows/quickStart/03102025_login-in.png)
-
+   ![Home page for NMDC EDGE with a bubble labeled 2 for the ORCiD LOGIN button](../_static/images/howto_guides/workflows/quickStart/03102025_login-in.png)
 2. Click on "ORCiD LOGIN" to login to your account on the NMDC EDGE platform. 
-
-![ORCiD login page with bubble labeled 3 for "Register now"](../_static/images/howto_guides/workflows/quickStart/03102025_orcid.png)
-
+   ![ORCiD login page with bubble labeled 3 for "Register now"](../_static/images/howto_guides/workflows/quickStart/03102025_orcid.png)
 3. Log in to ORCiD using your registered credentials. If you do not have an ORCiD, click on "Register Now" and follow the instructions to set-up an ORCiD account.
-
-![NMDC EDGE "My Profile" page with bubble labeled 4 for the highlighted "My Profile" button](../_static/images/howto_guides/workflows/quickStart/03102025_my_profile.png)
-
+   ![NMDC EDGE "My Profile" page with bubble labeled 4 for the highlighted "My Profile" button](../_static/images/howto_guides/workflows/quickStart/03102025_my_profile.png)
 4. If you are logging in for the first time, click on "My Profile" and optionally provide your First Name, Last Name, and Email. The first grayed out box will already have your ORCiD. You can also set the "Project Status Notification" to ON (OFF by default). If ON, notifications about your workflow runs will be sent to the Email you provided. Click on "Save Changes"
-
-
 
 ### Upload data
 
@@ -37,6 +29,7 @@ Alternatively, you can (1) select "Retrieve SRA Data" in the left menu bar and (
 
 !["Retrieve SRA Data" page on NMDC EDGE, with a bubble labeled 1 pointing to the "Retrieve SRA Data" tab in left vertical navigation bar, and a bubble labeled 2 pointing to a text box for SRA accession number(s) entry](../_static/images/howto_guides/workflows/quickStart/03102025_retrieve_SRA.png)
 
+---
 
 ##  Running the Workflows
 
@@ -66,9 +59,7 @@ In this example, we will run the interleaved FASTQ file for Zymobiomics mock-com
 4.  Enter a description (optional, but recommended).
 5.  Select if the input data is interleaved (YES by default). If the data is paired select NO and it will allow you to upload both, forward and reverse files.
 6.  Then select the input file(s). Clicking on the button to select "Interleaved FASTQ #1" opens a box called "Select a file" (as shown in the image below) to allow the user to find the desired files, either from the public data folder, or files uploaded by the user. If the files are uploaded to an accessible URL, the URL can be pasted into the box.
-
-![A pop-up window titled "Select a file" over a grayed out background for the workflow submission page. It shows a file structure for public metagenomic test data.](../_static/images/howto_guides/workflows/metaG/03102025_run_metag_file.png)
-    
+    ![A pop-up window titled "Select a file" over a grayed out background for the workflow submission page. It shows a file structure for public metagenomic test data.](../_static/images/howto_guides/workflows/metaG/03102025_run_metag_file.png)
 7.  Click "Submit" to start a metagenome workflow run.
 
 ### Running a single metagenomics workflow 
@@ -131,10 +122,7 @@ For a quick overview of every output type available for metagenomic analysis, we
 
 This example shows the results of a metagenome workflow run, which shows run time under the General tab, the workflow results of each individual metagenome workflow, and the files available for download under the Download Outputs tab.
 
---------
-
---------
-
+---
 
 ## Workflow Summaries 
 
