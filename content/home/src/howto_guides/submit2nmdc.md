@@ -146,6 +146,12 @@ An information and tools tab can be expanded on the right side of your submissio
 Column Information is provided to guide a submitter on the required format and information collected for each metadata term provided here includes a description of the metadata term, additional guidance, and examples of valid completion. 
 This column information can also be accessed by double clicking the column header.
 
+##### Find and Replace
+
+[![](../_static/images/howto_guides/portal_guide/2025-05_FindReplace.png)](../_static/images/howto_guides/portal_guide/2025-05_FindReplace.png)
+
+When validating the metadata and information provided, the Submission Portal provides a "Find and Replace" tool. This allows bulk updates to invalid metadata.
+
 #### Download and Import
 
 [![](../_static/images/howto_guides/portal_guide/sub_portal_input.png)](../_static/images/howto_guides/portal_guide/sub_portal_input.png)
@@ -171,12 +177,6 @@ A ‘Jump to column’ feature is available for searching for specific metadata 
 [![](../_static/images/howto_guides/portal_guide/validate.png)](../_static/images/howto_guides/portal_guide/validate.png)
 
 The real-time validation tool allows submitters to check their filled-in metadata and overall progress as they submit values to ensure the submission will be valid and adhere to the NMDC schema. 
-
-##### Find and Replace
-
-[![](../_static/images/howto_guides/portal_guide/find-replace.png)](../_static/images/howto_guides/portal_guide/find-replace.png)
-
-When validating the metadata and information provided, the Submission Portal provides a "Find and Replace" tool. This allows bulk updates to invalid metadata.
 
 
 ##### Color Legend
