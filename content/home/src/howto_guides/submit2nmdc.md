@@ -52,7 +52,7 @@ The DOE User Facilities, the JGI and EMSL, are key partners for the NMDC because
 
 [![](../_static/images/howto_guides/portal_guide/portal_functionality.png)](../_static/images/howto_guides/portal_guide/portal_functionality.png)
 
-All NMDC resources are accessible from the "Products" tab on https://microbiomedata.org/.
+All NMDC resources are accessible from the "Products" tab on [https://microbiomedata.org/](https://microbiomedata.org/).
 
 
 [![](../_static/images/howto_guides/portal_guide/ORCiD.png)](../_static/images/howto_guides/portal_guide/ORCiD.png)
@@ -63,33 +63,27 @@ NMDC resources require ORCID authentication for full access and functionality.
 
 [https://data.microbiomedata.org/submission/home](https://data.microbiomedata.org/submission/home) 
 
-The Submission Portal requires ORCID authentication to access. If you have already signed in via ORCID, you will not see this login screen within the Submission Portal.
+[![](../_static/images/howto_guides/portal_guide/2025-05_LogIn.png)](../_static/images/howto_guides/portal_guide/2025-05_LogIn.png)
 
-[![](../_static/images/howto_guides/portal_guide/Create_submission.png)](../_static/images/howto_guides/portal_guide/Create_submission.png)
+The Submission Portal requires ORCID authentication to access. If you have already signed in via ORCID iD, you will not see this login screen within the Submission Portal.
+
+[![](../_static/images/howto_guides/portal_guide/2025-05_CreateSubmission.png)](../_static/images/howto_guides/portal_guide/2025-05_CreateSubmission.png)
 
 Once signed in with an ORCID, you will see an option to ‘Create New Submission’ with subsequent guidance to provide information required for submission to the NMDC. Details about each section are outlined below. Submitters can return to existing submissions saved under the ORCID account to resume their work at any point.   
 
-### Submission Context
-
-[![](../_static/images/howto_guides/portal_guide/submission_context.png)](../_static/images/howto_guides/portal_guide/submission_context.png)
-
-On the Submission Context screen, submitters are asked whether data has already been generated for their study.  If a user selects ‘Yes’ a DOI associated with the data can be entered. For data generated at either the JGI or EMSL, the specific Award DOI (e.g., 10.46936/10.25585/60001289) should be entered, along with selecting the checkbox for this option. If the data was not generated at a DOE User Facility, a valid data DOI can be entered. A data DOI is not the same as a publication DOI, and would be issued through a separate resource as a unique persistent identifier (e.g., 10.48443/e4zf-b917). 
-
-[![](../_static/images/howto_guides/portal_guide/shipping_info.png)](../_static/images/howto_guides/portal_guide/shipping_info.png)
-
-If a user selects ‘No’, a user will be asked whether samples will be submitted to the JGI, EMSL, or both User Facilities. Selecting EMSL will further prompt the user to provide shipping information for EMSL, along with indicating what project type is associated with an active User proposal and the award DOI that is provided (e.g., CSP, BERSS, BRC, FICUS, MONet, or other).  
+Creating a 'Test Submission' is available to test and experiment with the NMDC Submission Portal. Test submissions cannot be submitted or changed to a real submission. Any sample metadata entered in a test submission can be exported, and imported into a real submission. See [download and import](#download-and-import) below.
 
 ### Study
 
-[![](../_static/images/howto_guides/portal_guide/study_info.png)](../_static/images/howto_guides/portal_guide/study_info.png)
+[![](../_static/images/howto_guides/portal_guide/2025-05_StudyInformation.png)](../_static/images/howto_guides/portal_guide/2025-05_StudyInformation.png)
 
 The Study Information page requires a valid "Study Name" along with a valid email address. We highly recommend the use of standardized, informative study names as described by the GOLD team (Mukherjee et. al., 2023). Further information can be provided to include relevant links to web pages and a description of the study. The "Study Description" should provide a summary that includes the context of your study, research, goals, and design. We recommend this be similar to abstract format, describing the entire study similar to how an abstract describes a single publication.
-Studies should also include a funding source. The "Funding Source" of the research performed under this study should be provided and include an awarding program and the award or grant number. See an [existing study](https://data.microbiomedata.org/details/study/nmdc:sty-11-8fb6t785) for an example.  
-Last, a user can include "Contributors" to acknowledge members of a research team associated with the study. 
 
-[![](../_static/images/howto_guides/portal_guide/contributors.png)](../_static/images/howto_guides/portal_guide/contributors.png)
+[![](../_static/images/howto_guides/portal_guide/2025-05_Contributors-Funding.png)](../_static/images/howto_guides/portal_guide/2025-05_Contributors-Funding.png)
 
-This includes listing Contributor names, ORCID iDs, associating role(s) based on the CRediT (Contributor Roles Taxonomy), and their submission access permission. A Contributor can have a single or multiple roles.
+Studies should also include a funding source and contributors. The "Funding Source" of the research performed under this study should be provided and include an awarding program and the award or grant number. See an [existing study](https://data.microbiomedata.org/details/study/nmdc:sty-11-8fb6t785) for an example.  
+
+A submission's "Contributors" is included to acknowledge members of a research team associated with the study. This includes listing Contributor names, ORCID iDs, associating role(s) based on the CRediT ([Contributor Roles Taxonomy](https://credit.niso.org/)), and their submission access permission. A Contributor can have a single or multiple roles.
 
 Permission roles are granted based on ORCID iD and are as follows:
 
@@ -100,81 +94,107 @@ Permission roles are granted based on ORCID iD and are as follows:
 
 The Principal Investigator will be granted the same permissions as the submitter and **can edit the entire submission**.
 
+[![](../_static/images/howto_guides/portal_guide/2025-05_ExternalIdentifiers.png)](../_static/images/howto_guides/portal_guide/2025-05_ExternalIdentifiers.png)
+
+The last step in the study information is to provide external identifiers for this study. This will ensure any study, project, or sample sets can be linked to your NMDC Study. This information will be used to access the data for NMDC workflows, to share data, and provide valuable connections related to this study. 
+
 ### Multi-omics Data
 
-[![](../_static/images/howto_guides/portal_guide/multiomics.png)](../_static/images/howto_guides/portal_guide/multiomics.png)
+[![](../_static/images/howto_guides/portal_guide/2025-05_Data-Generated.png)](../_static/images/howto_guides/portal_guide/2025-05_Data-Generated.png)
 
-The Multi-omics Data page will prompt users to specify what data types have either already been generated or are anticipated to be generated, depending on the previously entered information. There are no limits to the number of data combinations that can be selected. If any data type attributed to the JGI or EMSL (or both) are selected, a user will be required to input the respective proposal number for tracking purposes. Importantly, these selections will be used to support coordinated submission of biosample information with multiple data types. For example, if a user plans to generate paired metagenome and metaproteome data from aliquots of the same physical experimental sample, this information will be captured on the subsequent customized metadata template.   
+The Multi-omics Data page will prompt submitters to specify what data types have either already been generated or are anticipated to be generated. The NMDC supports the capture of retrospective (data has already been generated) and prospective (data has not yet been generated) metadata capture and data sharing.
 
+To share retrospective data and metadata that was **not** generated at a [DOE User Facility](#support-for-doe-user-facilities), you will be prompted to answer questions about how your -omics data was generated. This provides the information necessary to determine if your data can be analyzed via NMDC workflows. Regardless of these answers, we encourage those interested in sharing their study, metadata, and data to use the NMDC products to capture metadata! 
 
-### Environmental Extension
+To share retrospective data and metadata that was generated at a [DOE User Facility](#support-for-doe-user-facilities), similar questions will be asked about what facilities and data types. Extended questions about data generation methods will not be required. 
 
-[![](../_static/images/howto_guides/portal_guide/enviro_package.png)](../_static/images/howto_guides/portal_guide/enviro_package.png)
+For retrospective and publically available data, a DOI associated with the data can be entered. A data DOI is not the same as a publication DOI, and would be issued through a separate resource as a unique persistent identifier (e.g., 10.48443/e4zf-b917). 
+
+[![](../_static/images/howto_guides/portal_guide/2025-05_Data-UF.png)](../_static/images/howto_guides/portal_guide/2025-05_Data-UF.png)
+
+The NMDC supports metadata capture for sample submission to [DOE User Facility](#support-for-doe-user-facilities) JGI and EMSL. This allows for the capture of metadata for NMDC, JGI, and EMSL in one place. Required information for submitting samples to JGI or EMSL are the user proposal IDs, the type of proposal, and the data that will be generated for the samples being submitted. You will also be prompted to provide your Award DOI (e.g., 10.46936/10.25585/60001289) for the user project. Importantly, these selections will be used to support coordinated submission of biosample information with multiple data types. For example, if a user plans to generate paired metagenome and metaproteome data from aliquots of the same experimental sample, this information will be captured on the subsequent customized metadata template.
+
+**All** submissions to NMDC are kept private and adhere to DOE's data embargo, aligning with user facility data release policies. Submissions are reviewed and once approved the submission will be held until ready for release.
+
+### Sample Environment
+
+[![](../_static/images/howto_guides/portal_guide/2025-05_SampleEnv.png)](../_static/images/howto_guides/portal_guide/2025-05_SampleEnv.png)
 
 The Biosample metadata portion of the Submission Portal uses the GSC’s environmental extensions (previously termed packages) to define data entry screens that are suitable for samples from a particular environment. The available environmental extensions include: air, built environment, host-associated, hydrocarbon resources- core, hydrocarbon resources- fluids swab, microbial material biofilm, plant-associated, sediment, soil, wastewater sludge, water, and miscellaneous natural or artificial environment. Incorporation of additional GSC extensions will be completed upon further user research. A submitter selects the environmental extension(s) that best fit the sample environment(s), with the ability to select a single or multiple extensions as appropriate for the study. The selected extension determines which metadata fields are required, recommended, or optional for each sample type. Additionally, curated EnvO and GOLD ecosystem classification terms and other enumerations that can be selected by dropdown menus are available for some extensions. 
 
 ### Sample Metadata
 
-The Sample Metadata interface consists of a grid in which each row represents one sample and each column represents one attribute of a Biosample. Users are provided with numerous convenience and organizational features (described below) to assist in metadata completion.
+The Sample Metadata interface consists of a grid in which each row represents one sample and each column represents one attribute of a Biosample. Submitters are provided with numerous convenience and organizational features (described below) to assist in metadata completion.
 
 The NMDC uses sections for clarity, and to identify when MIxS specifications have been used as published by the GSC, or when the NMDC team has modified the description, examples, or validation rules for a MIxS attribute captured in their respective columns. These modifications are based on user research and feedback provided to the NMDC.
 
-Biosample metadata can be entered manually (by typing each row), or the data can be entered in bulk by importing a Microsoft Excel XLSX file. The metadata is updated each time a user navigates across the submission template, without the need for manually clicking ‘save’. Upon completion, the study submission and metadata will be reviewed by a member of the NMDC team, and once approved, the submitting user will indicate when data are ready to be published to the Data Portal.
+Biosample metadata can be entered manually (by typing each row), or the data can be entered in bulk by importing a Microsoft Excel XLSX file. The metadata is updated each time a submitter navigates across the submission template, without the need for manually clicking ‘save’. Upon completion, the study submission and metadata will be reviewed by a member of the NMDC team, and once approved, the submitter will indicate when data are ready to be published to the Data Portal.
  
 #### Metadata Sections
-Detailed biosample metadata input is captured using a  curated metadata template. This page allows users to input biosample metadata into standardized fields based on the selected environmental template. The biosample metadata fields are split into 4 sections: Sample ID which consists of sample and environmental identification information; MIxS which are fields that are identical to those provided in MIxS templates; MIxS (modified) & MIxS Inspired which are similar to the MIxS fields, but have been altered in some way or were added based on user feedback. 
+
+Detailed biosample metadata input is captured using a curated metadata template. This page allows submitters to input biosample metadata into standardized fields based on the selected environmental template. The biosample metadata fields are split into 4 sections: Sample ID which consists of sample and environmental identification information; MIxS which are fields that are identical to those provided in MIxS templates; MIxS (modified) & MIxS Inspired which are similar to the MIxS fields, but have been altered in some way or were added based on user feedback. 
 These updated and additional fields are meant to provide clearer context and expectations for the submitter to better capture information about their samples.
-
-#### Download and Import
-
-[![](../_static/images/howto_guides/portal_guide/sub_portal_input.png)](../_static/images/howto_guides/portal_guide/sub_portal_input.png)
-
-The NMDC Submission Portal allows users to enter sample metadata directly into the web interface. However, if a submitter prefers to work in other applications and programs, such as Microsoft Excel, the NMDC sample metadata template can be downloaded as a .xlsx file, opened via a separate application where users can add metadata, and imported back into the Submission Portal for completion and validation. 
 
 #### Tools and Features 
 
+An information and tools tab can be expanded on the right side of your submission. See [Column Information](#column-information) below.
+
 ##### Column Information
 
-[![](../_static/images/howto_guides/portal_guide/sub_portal_enviro_package.png)](../_static/images/howto_guides/portal_guide/sub_portal_enviro_package.png)
+[![](../_static/images/howto_guides/portal_guide/2025-05_ColumnInfo.png)](../_static/images/howto_guides/portal_guide/2025-05_ColumnInfo.png)
 
-[![](../_static/images/howto_guides/portal_guide/column_help.png)](../_static/images/howto_guides/portal_guide/column_help.png)
-
-When column headers are double clicked, or when metadata validation is performed, a column help box will appear. This provides a description of the field, additional guidance, and examples of valid completion. 
-
-##### Show/Hide 
-
-[![](../_static/images/howto_guides/portal_guide/column_visibility.png)](../_static/images/howto_guides/portal_guide/column_visibility.png)
-
-Users are encouraged to populate as many of the columns as possible, but not all are required or relevant to all sample types or research. To accommodate such needs, the Biosample Metadata interface distinguishes between required, recommended, and optional columns. Which columns appear on the screen can be controlled with the show/hide menu.  This tool can be used to hide optional or optional + recommended columns, and the show sub-menu can be used to center a particular section on the user’s screen.
-
-
-##### Jump to Column Search 
-
-[![](../_static/images/howto_guides/portal_guide/jump_to_column.png)](../_static/images/howto_guides/portal_guide/jump_to_column.png)
-[![](../_static/images/howto_guides/portal_guide/column_search.png)](../_static/images/howto_guides/portal_guide/column_search.png)
-
-A ‘Jump to column’ feature is available for searching for specific metadata fields.  The columns in the ‘Jump to column’ menu are listed in the order they appear on the interface when no visibility constraint has been applied. Users can either scroll though the listed columns or type in any portion of a column's name. For example, as shown above, users can search for the term ‘carbon’ in order to find the ‘carbon/nitrogen ratio’ column. Many slots are available for sample metadata completion, but not all are required or relevant depending on your research questions. The ‘Jump to column’ feature allows the submitter to find the attributes they need and those relevant to their samples.
-
-##### Real Time Validation  
-
-[![](../_static/images/howto_guides/portal_guide/validate.png)](../_static/images/howto_guides/portal_guide/validate.png)
-
-The real-time validation tool allows submitters to check their filled-in metadata and overall progress as they submit values to ensure the submission will be valid and adhere to the NMDC schema. 
+Column Information is provided to guide a submitter on the required format and information collected for each metadata term provided here includes a description of the metadata term, additional guidance, and examples of valid completion. 
+This column information can also be accessed by double clicking the column header.
 
 ##### Find and Replace
 
-[![](../_static/images/howto_guides/portal_guide/find-replace.png)](../_static/images/howto_guides/portal_guide/find-replace.png)
+[![](../_static/images/howto_guides/portal_guide/2025-05_FindReplace.png)](../_static/images/howto_guides/portal_guide/2025-05_FindReplace.png)
 
 When validating the metadata and information provided, the Submission Portal provides a "Find and Replace" tool. This allows bulk updates to invalid metadata.
 
+##### Suggester Tool
+
+[![](../_static/images/howto_guides/portal_guide/2025-05_Suggester.png)](../_static/images/howto_guides/portal_guide/2025-05_Suggester.png)
+
+This tool provides suggested metadata based on other information provided. It can be triggered or run automatically and suggestions can be accepted individually or in bulk. This tool currently suggests an elevation value, based on the provided latitude and longitude metadata. This tool will be expanded to other metadata fields and the NMDC welcomes your feedback and suggestions. This can be provided via the [We are here to help](#we-are-here-to-help) tab.
+
+##### Download and Import
+
+[![](../_static/images/howto_guides/portal_guide/2025-05_ImportExport.png)](../_static/images/howto_guides/portal_guide/2025-05_ImportExport.png)
+
+The NMDC Submission Portal allows submitters to enter sample metadata directly into the web interface. However, if a submitter prefers to work in other applications and programs, such as Microsoft Excel, the NMDC sample metadata template can be downloaded as a .xlsx file, opened via a separate application where submitters can add metadata, and imported back into the Submission Portal for completion and validation. 
+
+##### We are here to help
+
+[![](../_static/images/howto_guides/portal_guide/2025-05_Help.png)](../_static/images/howto_guides/portal_guide/2025-05_Help.png)
+
+If you have any issues, need assistance, experience a bug, or have a recommendation for the NMDC, please reach out to us! Our products are built for the research community and at NMDC our goal is to provide useful tools to lower the barriers to data reuse and metadata capture!
+
+##### Show/Hide 
+
+[![](../_static/images/howto_guides/portal_guide/2025-05_ShowHide.png)](../_static/images/howto_guides/portal_guide/2025-05_ShowHide.png)
+
+Submitters are encouraged to populate as many of the columns as possible, but not all are required or relevant to all sample types or research. To accommodate such needs, the Biosample Metadata interface distinguishes between required, recommended, and optional columns. Which columns appear on the screen can be controlled with the show/hide menu.  This tool can be used to hide optional or optional + recommended columns, and the show sub-menu can be used to center a particular section on the submitter’s screen.
+
+##### Jump to Column Search 
+
+[![](../_static/images/howto_guides/portal_guide/2025-05_ColumnSearch.png)](../_static/images/howto_guides/portal_guide/2025-05_ColumnSearch.png)
+
+A ‘Jump to column’ feature is available for searching for specific metadata fields.  The columns in the ‘Jump to column’ menu are listed in the order they appear on the interface when no visibility constraint has been applied. Submitters can either scroll though the listed columns or type in any portion of a column's name. For example, as shown above, submitters can search for the term ‘carbon’ in order to find the ‘carbon/nitrogen ratio’ column. Many slots are available for sample metadata completion, but not all are required or relevant depending on your research questions. The ‘Jump to column’ feature allows the submitter to find the attributes they need and those relevant to their samples.
+
+##### Real Time Validation  
+
+[![](../_static/images/howto_guides/portal_guide/2025-05_Validation1.png)](../_static/images/howto_guides/portal_guide/2025-05_Validation1.png)
+
+The real-time validation tool allows submitters to check their filled-in metadata and overall progress as they submit values to ensure the submission will be valid and adhere to the NMDC schema. 
 
 ##### Color Legend
 
-[![](../_static/images/howto_guides/portal_guide/color_legend.png)](../_static/images/howto_guides/portal_guide/color_legend.png)
+[![](../_static/images/howto_guides/portal_guide/2025-05_Validation2.png)](../_static/images/howto_guides/portal_guide/2025-05_Validation2.png)
 
-All fields in the metadata template innately fall into one of three color categories: Grey, Yellow, or Purple. Grey, or no highlighted color, indicates optional fields. Required columns are denoted with yellow. These yellow columns must be correctly completed or the submission will not validate. Recommended fields, highlighted purple, are required where applicable. If any of the purple columns provide information relevant to the study, they should be completed. For example, if samples are from a moisture manipulation study, the column ‘watering regimen’ should be filled in to provide context and information about the samples. 
+All fields in the metadata template innately fall into one of three color categories: Grey, Yellow, or Purple. Grey, or no highlighted color, indicates optional fields. Required columns are denoted with yellow. These yellow columns must be correctly completed or the submission will not validate. Recommended fields, highlighted purple, are required where applicable. If any of the purple columns are relevant to the study, they should be completed. For example, if samples are from a moisture manipulation study, the column ‘watering regimen’ should be filled in to provide context and information about the samples. 
 
-After selecting the validate button, cells will become color coded to indicate invalid and incomplete metadata. Dark pink cells indicate a required cell has been left empty. Light pink indicates that there is an error in the formatting of the information entered into that cell. The "Column Information" tool, described above, provides expected structure patterns and examples of valid metadata, which you can refer to when addressing validation errors.
+After selecting the validate button, cells will become color coded to indicate invalid and incomplete metadata. Dark pink cells indicate a required cell has been left empty. Light pink indicates that there is an error in the formatting of the information entered into that cell. The [Column Information](#column-information) tool, described above, provides expected structure patterns and examples of valid metadata, which you can refer to when addressing validation errors.
 
 ## NMDC Field Notes mobile app functionality
 
@@ -194,7 +214,7 @@ Submissions created in the Field Notes mobile app are available in the Submissio
 
 [![](../_static/images/howto_guides/portal_guide/new-study.png)](../_static/images/howto_guides/portal_guide/new-study.png)
 
-Once signed in with an ORCiD, you will have the ability to access existing studies or create a study using the 'New’ button. Details about each section are outlined below. Users can also return to existing submissions saved under the ORCiD account to resume their work at any point. 
+Once signed in with an ORCiD, you will have the ability to access existing studies or create a study using the 'New’ button. Details about each section are outlined below. Submitters can also return to existing submissions saved under the ORCiD account to resume their work at any point. 
 
 ### New Study
 
