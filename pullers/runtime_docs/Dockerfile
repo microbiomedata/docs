@@ -35,6 +35,11 @@ COPY mkdocs_overrides/main.html nmdc-runtime/docs/mkdocs_overrides/main.html
 
 # Compile source documents into HTML.
 #
+# Note: Since passing configuration overrides via STDIN (i.e. with `-f -`)
+#       establishes the current working directory as the reference point from
+#       which relative paths defined in `mkdocs.yml` are resolved, we change
+#       the working directory to the directory containing the `mkdocs.yml` file.
+#
 # References:
 # - https://www.mkdocs.org/user-guide/cli/
 # - https://www.mkdocs.org/user-guide/configuration/#configuration-inheritance
@@ -42,14 +47,11 @@ COPY mkdocs_overrides/main.html nmdc-runtime/docs/mkdocs_overrides/main.html
 # - https://squidfunk.github.io/mkdocs-material/setup/setting-up-the-footer/?h=copyright#copyright-notice
 #
 RUN cd nmdc-runtime && \
+    cd docs && \
     echo '{\
-        "INHERIT": "docs/mkdocs.yml",\
-        "docs_dir": "docs/content",\
+        "INHERIT": "mkdocs.yml",\
         "site_dir": "/html",\
         "site_url": "http://localhost:8000/",\
-        "theme": {\
-          "custom_dir": "docs/mkdocs_overrides"\
-        },\
         "extra": {\
           "analytics": {\
             "provider": "google",\
