@@ -6,3 +6,6 @@
 
 # Ignore all `__pycache__` directories, at any level of the file tree.
 __pycache__
+
+# Ignore `.DS_Store` files, at any level of the file tree.
+.DS_Store
