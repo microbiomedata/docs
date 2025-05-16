@@ -41,10 +41,11 @@ jobs:
           cp pullers/runtime_docs/mkdocs_overrides/main.html _clones/microbiomedata/nmdc-runtime/docs/mkdocs_overrides/main.html
       - name: Compile source documents into HTML
         #
-        # Note: Since passing configuration overrides via STDIN (i.e. with `-f -`)
-        #       establishes the current working directory as the reference point from
-        #       which relative paths defined in `mkdocs.yml` are resolved, we change
-        #       the working directory to the directory containing the `mkdocs.yml` file.
+        # Note: Since passing configuration overrides to `mkdocs` via STDIN (i.e. with the `-f -` option)
+        #       establishes the current working directory as the reference point from which relative paths
+        #       defined in `mkdocs.yml` are resolved, we change the working directory to the directory
+        #       containing the `mkdocs.yml` file. That way, relative paths are once again relative to
+        #       the `mkdocs.yml` file (which is the norm when not overriding config via STDIN).
         #
         # References:
         # - https://www.mkdocs.org/user-guide/cli/
