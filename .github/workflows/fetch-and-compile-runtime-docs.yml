@@ -53,12 +53,12 @@ jobs:
         run: |
           echo '{
             "INHERIT": "docs/mkdocs.yml",
-            "docs_dir": "docs/content",\
+            "docs_dir": "docs/content",
             "site_dir": "${{ github.workspace }}/_dist",
             "site_url": "https://docs.microbiomedata.org/runtime/",
-            "theme": {\
-              "custom_dir": "docs/mkdocs_overrides"\
-            },\
+            "theme": {
+              "custom_dir": "docs/mkdocs_overrides"
+            },
             "extra": {
               "analytics": {
                 "provider": "google",
