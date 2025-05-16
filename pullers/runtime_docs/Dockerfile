@@ -27,13 +27,11 @@ RUN python -m pip install --upgrade pip && \
 RUN git clone --no-checkout --depth=1 --single-branch --branch=main --filter=tree:0 \
       https://github.com/microbiomedata/nmdc-runtime && \
     cd nmdc-runtime && \
-    git sparse-checkout set --no-cone /docs /mkdocs_overrides /mkdocs.yml && \
+    git sparse-checkout set --no-cone /docs && \
     git checkout
 
 # Copy files we can use to override parts of the Material for MkDocs theme.
-# Note: The `mkdocs.yml` file we pull from the `nmdc-runtime` repo sets the overrides directory to `mkdocs_overrides`.
-COPY mkdocs_overrides/main.html nmdc-runtime/mkdocs_overrides/main.html
-COPY assets/images/favicon.ico  nmdc-runtime/docs/assets/images/favicon.ico
+COPY mkdocs_overrides/main.html nmdc-runtime/docs/mkdocs_overrides/main.html
 
 # Compile source documents into HTML.
 #
@@ -45,11 +43,13 @@ COPY assets/images/favicon.ico  nmdc-runtime/docs/assets/images/favicon.ico
 #
 RUN cd nmdc-runtime && \
     echo '{\
-        "INHERIT": "mkdocs.yml",\
-        "copyright": "&copy; Copyright 2025, National Microbiome Data Collaborative",\
+        "INHERIT": "docs/mkdocs.yml",\
+        "docs_dir": "docs/content",\
         "site_dir": "/html",\
         "site_url": "http://localhost:8000/",\
-        "theme": {"favicon": "assets/images/favicon.ico"},\
+        "theme": {\
+          "custom_dir": "docs/mkdocs_overrides"\
+        },\
         "extra": {\
           "analytics": {\
             "provider": "google",\
