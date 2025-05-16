@@ -24,8 +24,6 @@ jobs:
           ref: main
           sparse-checkout: |
             docs
-            mkdocs_overrides
-            mkdocs.yml
           path: _clones/microbiomedata/nmdc-runtime  # where, locally, to create the clone
         # Docs: https://github.com/actions/setup-python
       - name: Set up Python
@@ -38,12 +36,9 @@ jobs:
             mkdocs-mermaid2-plugin \
             mkdocs-jupyter \
             pymdown-extensions
-        # Note: The `mkdocs.yml` file we pull from the `nmdc-runtime` repo sets the overrides directory to `mkdocs_overrides`.
       - name: Copy files that override or customize parts of theme
         run: |
-          mkdir -p _clones/microbiomedata/nmdc-runtime/docs/assets/images/
-          cp pullers/runtime_docs/mkdocs_overrides/main.html _clones/microbiomedata/nmdc-runtime/mkdocs_overrides/main.html
-          cp pullers/runtime_docs/assets/images/favicon.ico  _clones/microbiomedata/nmdc-runtime/docs/assets/images/favicon.ico
+          cp pullers/runtime_docs/mkdocs_overrides/main.html _clones/microbiomedata/nmdc-runtime/docs/mkdocs_overrides/main.html
       - name: Compile source documents into HTML
         #
         # References:
@@ -57,11 +52,13 @@ jobs:
         working-directory: _clones/microbiomedata/nmdc-runtime
         run: |
           echo '{
-            "INHERIT": "mkdocs.yml",
-            "copyright": "&copy; Copyright 2025, National Microbiome Data Collaborative",
+            "INHERIT": "docs/mkdocs.yml",
+            "docs_dir": "docs/content",\
             "site_dir": "${{ github.workspace }}/_dist",
             "site_url": "https://docs.microbiomedata.org/runtime/",
-            "theme": {"favicon": "assets/images/favicon.ico"},
+            "theme": {\
+              "custom_dir": "docs/mkdocs_overrides"\
+            },\
             "extra": {
               "analytics": {
                 "provider": "google",
