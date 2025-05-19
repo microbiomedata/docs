@@ -170,14 +170,13 @@ The Download Output section provides output files available to download. The cle
 
 #### Read-based Taxonomy Classification
 
-This workflow takes in Illumina sequencing files (single-end or paired-end) and profiles the reads using multiple taxonomic classification tools. 
+This workflow takes in Illumina sequencing files (single-end or paired-end) or PabBio long-reads and profiles the reads using multiple taxonomic classification tools. 
 
 !["Run a Single Workflow" page for Read-based Taxonomy Classification.](../_static/images/howto_guides/workflows/metaG/03102025_run_rba.png)
 
-This workflow allows for the selection of three analysis tools: GOTTCHA2, Kraken2, and Centrifuge. All three are selected by default when running the full metagenomic pipeline, but can be changed when running as a stand-alone workflow (Step 6).
+This workflow goes through three analysis tools: GOTTCHA2, Kraken2, and Centrifuge.
 
 ![Results page for Read-based Taxonomy Classification, showing summary tables generated from workflow outputs.](../_static/images/howto_guides/workflows/metaG/03102025_view_rba.png) 
-
 
 The Read-based Taxonomy Classification Result section has a summary section at the top and results for each tool at three levels of taxonomy in the Taxonomy Top 10 section. The Detail section has classified reads results and relative abundance results for each tool at three levels of taxonomy.
 
