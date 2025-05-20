@@ -87,7 +87,7 @@ For example, to run a paired set of FASTQ files through ReadsQC, the user can pe
 
 ### Inputs
 
-Some other options for inputs include multiple sets of FASTQ files in interleaved or paired form for samples that may want to be run together. One such example is as follows, with Step 7 being the button to allow for the multiple file selections.
+Some other options for inputs include multiple sets of FASTQ files in interleaved or paired form for samples that may want to be run together. One such example is as follows, with Step 8 being the button to allow for the multiple file selections.
 
 !["Run a Single Workflow" page with 2 sets of paired FASTQ file inputs for ReadsQC](../_static/images/howto_guides/workflows/metaG/05192025_run_multi_rqc.png) ![File selection for 2 sets of paired FASTQ file inputs](../_static/images/howto_guides/workflows/metaG/05192025_run_multi_rqc_files.png)
 
@@ -172,7 +172,7 @@ The Download Output section provides output files available to download. The cle
 
 This workflow takes in Illumina sequencing files (single-end or paired-end) or PabBio long-reads and profiles the reads using multiple taxonomic classification tools. 
 
-!["Run a Single Workflow" page for Read-based Taxonomy Classification.](../_static/images/howto_guides/workflows/metaG/03102025_run_rba.png)
+!["Run a Single Workflow" page for Read-based Taxonomy Classification.](../_static/images/howto_guides/workflows/metaG/05192025_run_rba.png)
 
 This workflow goes through three analysis tools: GOTTCHA2, Kraken2, and Centrifuge.
 
@@ -191,7 +191,7 @@ The Download Output section provides output files available to download. Each to
 
 #### Assembly
 
-This workflow takes in paired-end Illumina reads and performs error correction. Then the corrected reads are assembled using metaSPAdes. After assembly, the reads are mapped back to the contigs for coverage information.
+This workflow takes in paired-end Illumina reads and long-read PacBio Reads and performs error correction. Then the corrected reads are assembled using metaSPAdes. After assembly, the reads are mapped back to the contigs for coverage information.
 
 ![Status tab of the Metagenome Assembly Results section. Shows statistics of the assembly.](../_static/images/howto_guides/workflows/metaG/03102025_view_assy_results_1.png)
 The Metagenome Assembly Result's Status tab contains summary statistics of the assembly.
