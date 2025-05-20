@@ -124,7 +124,7 @@ Each workflow submission page will list the types of files necessary. For furthe
 4. For a quick summary on the specific project, click the dropdown arrow to the left of the project checkbox.
 5. To view the full project results, click on the folder with the arrow under the "Result" column.
 
-In this example, we will view the results of the end-to-end metagenomics run set up in the [Run Multiple Workflows](#running-the-full-metagenomic-workflow) section.
+In this example, we will view the results of the end-to-end short reads metagenomics run set up in the [Running the full metagenomic workflow for Short Reads](#running-the-full-metagenomic-workflow-for-short-reads) section.
 
 
 ### Project Summary (Results)
@@ -149,8 +149,8 @@ Before diving into more detail on inputs and outputs for components of the Metag
 
 | Workflow                                                                                                                      | Summary                                                                   | Inputs                                                     | Outputs                                                                  | Available Downstream NMDC EDGE Analysis                          |
 |-------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------|------------------------------------------------------------|--------------------------------------------------------------------------|------------------------------------------------------------------|
-| [ReadsQC](https://docs.microbiomedata.org/workflows/chapters/3_Metagenome_Reads_QC/index.html )                               | Quality control on raw Illumina reads                                     | `.fastq`, `.fq`, `.fastq.gz`, `.fq.gz`                     | `fq.gz`                                                                  | Read-based Taxonomy, MetaAssembly                                |
-| [Read-based Taxonomy](https://docs.microbiomedata.org/workflows/chapters/2_Read_Based_Taxonomy/index.html)                    | Taxonomic classification profiling of Illumina sequencing file reads      | (filtered) `.fastq`, `.fq`, `.fastq.gz`, `.fq.gz`          | `.tsv`, `.html`                                                          |                                                                  |
+| [ReadsQC](https://docs.microbiomedata.org/workflows/chapters/3_Metagenome_Reads_QC/index.html )                               | Quality control on raw Illumina reads or PacBio reads                                     | `.fastq`, `.fq`, `.fastq.gz`, `.fq.gz`                     | `fq.gz`                                                                  | Read-based Taxonomy, MetaAssembly                                |
+| [Read-based Taxonomy](https://docs.microbiomedata.org/workflows/chapters/2_Read_Based_Taxonomy/index.html)                    | Taxonomic classification profiling of Illumina or PabBio sequencing file reads      | (filtered) `.fastq`, `.fq`, `.fastq.gz`, `.fq.gz`          | `.tsv`, `.html`                                                          |                                                                  |
 | [MetaAssembly](https://docs.microbiomedata.org/workflows/chapters/4_Metagenome_Assembly/index.html )                          | Error correction, contig assembly, and contig mapping                     | (filtered) `.fastq`, `.fq`, `.fastq.gz`, `.fq.gz`          | `.agp`, `.fna`, `.sam.gz`, `.bam`, `.json`                               | MG Annotation, Viruses and Plasmids                                |
 | [Viruses and Plasmids](https://portal.nersc.gov/genomad/index.html)                                                             | Identifies virus and plasmid genomes from nucleotide sequences            |  `.fasta`, `.fa`, `.fna`                                   | `.tsv`, `.faa`, `.json`                                                  |                                                                  |
 | [MG Annotation](https://docs.microbiomedata.org/workflows/chapters/5_Metagenome_and_Metatranscriptome_Annotation/index.html)  | Structural and functional annotation of assembled metagenomes             | `.fasta`, `.fa`, `.fna`, `.fasta.gz`, `.fa.gz`, `.fna.gz`  | `.html`, `.gff`, `.tsv`, `.fna`                                          | MetaMAGs                                                         |
@@ -170,7 +170,7 @@ Before diving into more detail on inputs and outputs for components of the Metag
 
 #### ReadsQC
 
-This workflow performs quality control on raw Illumina reads to trim/filter low quality data and to remove artifacts, linkers, adapters, spike-in reads and reads mapping to several hosts and common microbial contaminants. If run on its own via the "Run Single Workflow" option, the results page would look as such:
+This workflow performs quality control on raw Illumina or PacBio reads to trim/filter low quality data and to remove artifacts, linkers, adapters, spike-in reads and reads mapping to several hosts and common microbial contaminants. If run on its own via the "Run Single Workflow" option, the results page would look as such:
 
 ![Workflow result page for a ReadsQC run via the "Run a Single Workflow" option with the "General" dropdown opened.](../_static/images/howto_guides/workflows/metaG/03102025_view_single_qc.png)
 
