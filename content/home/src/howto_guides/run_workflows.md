@@ -102,6 +102,25 @@ For example, to run a paired set of FASTQ files through ReadsQC, the user can pe
 9. Paste the FASTQ URL for the associated R2 file ([SRR7877884's R2](https://portal.nersc.gov/cfs/m3408/test_data/SRR7877884/SRR7877884_2.fastq.gz)) or select a file using the file selection menu.
 10. Click "Submit" to start a workflow run.
 
+### Running a Bulk Submission Workflow
+
+NMDC-EDGE also allows for bulk submission projects. Users can run up to 10 end-to-end Metagenomics workflows or just ReadsQC for each bulk submission.
+
+!["Run Bulk Submission" submission page with bubbles labeled 1 through 8 pointing at different clickable buttons and typeable fields.](../_static/images/howto_guides/workflows/metaG/05202025_run_bulk_submission.png)
+
+
+1. Click on the "Metagenomics" tab on the left vertical navigation bar. 
+2. Select the "Bulk Submission" option from the dropdown.
+3. Enter a unique Project/Run Name with no spaces (underscores are fine).
+4. Enter a description (optional, but recommended).
+5. Select the workflow desired from the drop-down menu. Here, we will be running "Multiple Workflows".
+    ![Drop-down menu with options "Multiple Workflows" or "ReadsQC".](../_static/images/howto_guides/workflows/metaG/05202025_run_bulk_submission_selection.png)
+6. Download the Excel Template to populate with necessary components. Hover in cells below first row to see a description of the item and whether or not an input in mandatory or optional.
+   ![Excel Spreadsheet with Columns that need to be filled to run Bulk Submission.](../_static/images/howto_guides/workflows/metaG/05202025_run_bulk_submission_input.png)
+7. Choose your populated "NMDC-EDGE-Metagenomics-pipeline-bulk-submission.xlsx" file or your own properly formatted Excel spreadsheet.
+8. Click "Submit" to start a workflow run.
+
+
 ### Inputs
 
 Some other options for inputs include multiple sets of FASTQ files in interleaved or paired form for samples that may want to be run together. One such example is as follows, with Step 8 being the button to allow for the multiple file selections.
