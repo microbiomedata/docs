@@ -50,7 +50,7 @@ A summary of the workflows and link to their documentation is available in [this
 
 In this example, we will run the interleaved FASTQ file for Zymobiomics mock-community DNA control ([SRR7877884](https://www.ncbi.nlm.nih.gov/sra/SRX4716743)), which is available in the public data folder in NMDC EDGE file section options (as `SRR7877884-int.fastq.gz`) and [online](https://portal.nersc.gov/cfs/m3408/test_data/SRR7877884/SRR7877884-int.fastq.gz). Note that this is a larger file at 3.65 GB. A smaller option (10% subset of SRR7877884) is available at 367.25 MB both in the public data folder (as `SRR7877884-int-0.1.fastq.gz`) and online as a [URL](https://portal.nersc.gov/cfs/m3408/test_data/SRR7877884/SRR7877884-int-0.1.fastq.gz). To copy the file URLs, right click (CTRL+Left Click on Mac) and select "Copy Link".
 
-!["Run Multiple Workflows" submission page with bubbles labeled 1 through 8 pointing at different clickable buttons and typeable fields](../_static/images/howto_guides/workflows/metaG/05192025_run_metag.png)
+!["Run Multiple Workflows" submission page for short reads with bubbles labeled 1 through 8 pointing at different clickable buttons and typeable fields](../_static/images/howto_guides/workflows/metaG/05212025_run_metag_short.png)
 
 
 1. Click on the "Metagenomics" tab on the left vertical navigation bar. 
@@ -60,14 +60,14 @@ In this example, we will run the interleaved FASTQ file for Zymobiomics mock-com
 5.  Select if the input data is Illumina short-read or PacBio long-read (Illumina by default).
 6.  Select if the input data is interleaved (YES by default). If the data is paired select NO and it will allow you to upload both, forward and reverse files.
 7.  Then select the input file(s). Clicking on the button to select "Interleaved FASTQ #1" opens a box called "Select a file" (as shown in the image below) to allow the user to find the desired files, either from the public data folder, or files uploaded by the user. If the files are uploaded to an accessible URL, the URL can be pasted into the box.
-    ![A pop-up window titled "Select a file" over a grayed out background for the workflow submission page. It shows a file structure for public metagenomic test data.](../_static/images/howto_guides/workflows/metaG/05192025_run_metag_file.png)
+    ![A pop-up window titled "Select a file" over a grayed out background for the workflow submission page. It shows a file structure for public metagenomic test data.](../_static/images/howto_guides/workflows/metaG/05212025_run_metag_short_file.png)
 8.  Click "Submit" to start a metagenome workflow run.
 
 ### Running the full metagenomic workflow for Long Reads
 
 In this example, we will run a PacBio file for a Zymobiomics synthetic metagenome SRR13128014, which is available in the public data folder in NMDC EDGE file section options (as `SRR13128014.pacbio.subsample.ccs.fastq.gz`) and [online](https://portal.nersc.gov/project/m3408//test_data/SRR13128014.pacbio.subsample.ccs.fastq.gz). Note that for testing we have subsampled the dataset, the original dataset is ~18GB.
 
-!["Run Multiple Workflows" submission page with bubbles labeled 1 through 7 pointing at different clickable buttons and typeable fields](../_static/images/howto_guides/workflows/metaG/05192025_run_metag_long.png)
+!["Run Multiple Workflows" submission page with bubbles labeled 1 through 7 pointing at different clickable buttons and typeable fields](../_static/images/howto_guides/workflows/metaG/05212025_run_metag_long.png)
 
 
 1. Click on the "Metagenomics" tab on the left vertical navigation bar. 
@@ -76,7 +76,7 @@ In this example, we will run a PacBio file for a Zymobiomics synthetic metagenom
 4.  Enter a description (optional, but recommended).
 5.  Select if the input data is Illumina short-read or PacBio long-read (Illumina by default). Here, we will select PacBio.
 6.  Then select the input file(s). Clicking on the button to select "PacBio FASTQ #1" opens a box called "Select a file" (as shown in the image below) to allow the user to find the desired files, either from the public data folder, or files uploaded by the user. If the files are uploaded to an accessible URL, the URL can be pasted into the box.
-    ![A pop-up window titled "Select a file" over a grayed out background for the workflow submission page. It shows a file structure for public metagenomic test data.](../_static/images/howto_guides/workflows/metaG/05192025_run_metag_long_file.png)
+    ![A pop-up window titled "Select a file" over a grayed out background for the workflow submission page. It shows a file structure for public metagenomic test data.](../_static/images/howto_guides/workflows/metaG/05212025_run_metag_long_file.png)
 8.  Click "Submit" to start a metagenome long-reads workflow run.
 
 
@@ -89,7 +89,7 @@ Each component of the end-to-end Metagenomics workflow can be run on its own if 
 
 For example, to run a paired set of FASTQ files through ReadsQC, the user can perform the following steps:
 
-!["Run a Single Workflow" page with fields filled out for a non-interleaved ReadsQC run.](../_static/images/howto_guides/workflows/metaG/05192025_run_qc_paired.png)
+!["Run a Single Workflow" page with fields filled out for a non-interleaved ReadsQC run.](../_static/images/howto_guides/workflows/metaG/05212025_run_qc_paired.png)
 
 1. Click on the "Metagenomics" tab on the left vertical navigation bar. 
 2. Select the "Run a Single Workflow" option from the dropdown.
@@ -106,7 +106,7 @@ For example, to run a paired set of FASTQ files through ReadsQC, the user can pe
 
 NMDC-EDGE also allows for bulk submission projects. Users can run up to 10 end-to-end Metagenomics workflows or just ReadsQC for each bulk submission.
 
-!["Run Bulk Submission" submission page with bubbles labeled 1 through 8 pointing at different clickable buttons and typeable fields.](../_static/images/howto_guides/workflows/metaG/05202025_run_bulk_submission.png)
+!["Run Bulk Submission" submission page with bubbles labeled 1 through 8 pointing at different clickable buttons and typeable fields.](../_static/images/howto_guides/workflows/metaG/05212025_run_bulk_submission.png)
 
 
 1. Click on the "Metagenomics" tab on the left vertical navigation bar. 
@@ -114,7 +114,7 @@ NMDC-EDGE also allows for bulk submission projects. Users can run up to 10 end-t
 3. Enter a unique Project/Run Name with no spaces (underscores are fine).
 4. Enter a description (optional, but recommended).
 5. Select the workflow desired from the drop-down menu. Here, we will be running "Multiple Workflows".
-    ![Drop-down menu with options "Multiple Workflows" or "ReadsQC".](../_static/images/howto_guides/workflows/metaG/05202025_run_bulk_submission_selection.png)
+    ![Drop-down menu with options "Multiple Workflows" or "ReadsQC".](../_static/images/howto_guides/workflows/metaG/05212025_run_bulk_submission_select.png)
 6. Download the Excel Template to populate with necessary components. Hover in cells below first row to see a description of the item and whether or not an input in mandatory or optional.
    ![Excel Spreadsheet with Columns that need to be filled to run Bulk Submission.](../_static/images/howto_guides/workflows/metaG/05202025_run_bulk_submission_input.png)
 7. Choose your populated "NMDC-EDGE-Metagenomics-pipeline-bulk-submission.xlsx" file or your own properly formatted Excel spreadsheet.
@@ -125,11 +125,11 @@ NMDC-EDGE also allows for bulk submission projects. Users can run up to 10 end-t
 
 Some other options for inputs include multiple sets of FASTQ files in interleaved or paired form for samples that may want to be run together. One such example is as follows, with Step 8 being the button to allow for the multiple file selections.
 
-!["Run a Single Workflow" page with 2 sets of paired FASTQ file inputs for ReadsQC](../_static/images/howto_guides/workflows/metaG/05192025_run_multi_rqc.png) ![File selection for 2 sets of paired FASTQ file inputs](../_static/images/howto_guides/workflows/metaG/05192025_run_multi_rqc_files.png)
+!["Run a Single Workflow" page with 2 sets of paired FASTQ file inputs for ReadsQC](../_static/images/howto_guides/workflows/metaG/05212025_run_multi_rqc.png) ![File selection for 2 sets of paired FASTQ file inputs](../_static/images/howto_guides/workflows/metaG/05212025_run_multi_rqc_file.png)
 
 Other ways the inputs for each workflow may change include the types of files needed as well as the number of different types of files. For example, with Read-based Taxonomy, the input is a filtered FASTQ file. This can be uploaded by the user, input as a URL, or taken from the result of other workflows run on NMDC EDGE. The results of your other workflows will be available in the file selection menu if the file type is right for the workflow you need to run. For the Read-based Taxonomy Classification workflow, the input is filtered FASTQ files, which is the output of the ReadsQC workflow.
 
-!["Run a Single Workflow" page for Read-based Taxonomy Classification](../_static/images/howto_guides/workflows/metaG/05192025_run_rba.png) ![File selection showing projects that the user](../_static/images/howto_guides/workflows/metaG/05192025_run_rba_file.png)
+!["Run a Single Workflow" page for Read-based Taxonomy Classification](../_static/images/howto_guides/workflows/metaG/05212025_run_rba.png) ![File selection showing projects that the user](../_static/images/howto_guides/workflows/metaG/05212025_run_rba_file.png)
 
 Each workflow submission page will list the types of files necessary. For further reading, please refer to the [individual workflow documentation](https://docs.microbiomedata.org/workflows/) for a full list of inputs and outputs. 
 
@@ -208,7 +208,7 @@ The Download Output section provides output files available to download. The cle
 
 This workflow takes in Illumina sequencing files (single-end or paired-end) or PabBio long-reads and profiles the reads using multiple taxonomic classification tools. 
 
-!["Run a Single Workflow" page for Read-based Taxonomy Classification.](../_static/images/howto_guides/workflows/metaG/05192025_run_rba.png)
+!["Run a Single Workflow" page for Read-based Taxonomy Classification.](../_static/images/howto_guides/workflows/metaG/05212025_run_rba.png)
 
 This workflow goes through three analysis tools: GOTTCHA2, Kraken2, and Centrifuge.
 
