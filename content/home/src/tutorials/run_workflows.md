@@ -58,7 +58,7 @@ Task: Log into NMDC EDGE and run the Metagenome ReadsQC workflow using the datas
 
 NMDC EDGE Metagenome Read-based Taxonomy Classification Tutorial Practice 
 
-Task: Run the Metagenome Read-based Taxonomy Classification workflow with all three taxonomy classification tools. (Note: All three tools are selected by default. While a user can opt to turn off one or two tools, it is recommended to run all three.) Use the clean data output file from the project run in the ReadsQC Tutorial. When the run finishes, answer the questions below using the workflow outputs.
+Task: Run the Metagenome Read-based Taxonomy Classification workflow with three taxonomy classification tools: GOTTCHA2, Kraken2, and Centrifuge. Use the clean data output file from the project run in the ReadsQC Tutorial. When the run finishes, answer the questions below using the workflow outputs.
 
 - Question 1:  How many of the Top 10 **species** are identified by more than one tool?
 
