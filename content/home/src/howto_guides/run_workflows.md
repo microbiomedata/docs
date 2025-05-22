@@ -46,24 +46,24 @@ More information on these metagenomic workflows is available in the [workflow do
 
 A summary of the workflows and link to their documentation is available in [this table](#workflow-summaries).
 
-### Running the full metagenomic workflow for Short Reads
+### Running the full metagenomic workflow for short-reads
 
 In this example, we will run the interleaved FASTQ file for Zymobiomics mock-community DNA control ([SRR7877884](https://www.ncbi.nlm.nih.gov/sra/SRX4716743)), which is available in the public data folder in NMDC EDGE file section options (as `SRR7877884-int.fastq.gz`) and [online](https://portal.nersc.gov/cfs/m3408/test_data/SRR7877884/SRR7877884-int.fastq.gz). Note that this is a larger file at 3.65 GB. A smaller option (10% subset of SRR7877884) is available at 367.25 MB both in the public data folder (as `SRR7877884-int-0.1.fastq.gz`) and online as a [URL](https://portal.nersc.gov/cfs/m3408/test_data/SRR7877884/SRR7877884-int-0.1.fastq.gz). To copy the file URLs, right click (CTRL+Left Click on Mac) and select "Copy Link".
 
-!["Run Multiple Workflows" submission page for short reads with bubbles labeled 1 through 8 pointing at different clickable buttons and typeable fields](../_static/images/howto_guides/workflows/metaG/05212025_run_metag_short.png)
+!["Run Multiple Workflows" submission page for short-reads with bubbles labeled 1 through 8 pointing at different clickable buttons and typeable fields](../_static/images/howto_guides/workflows/metaG/05212025_run_metag_short.png)
 
 
 1. Click on the "Metagenomics" tab on the left vertical navigation bar. 
 2. Select the "Run Multiple Workflows" option from the dropdown.
 3.  Enter a unique Project/Run Name with no spaces (underscores are fine).
 4.  Enter a description (optional, but recommended).
-5.  Select if the input data is Illumina short-read or PacBio long-read (Illumina by default).
+5.  Select if the input data is Illumina short-read or PacBio long-read (Illumina by default). Here, we will select Illumina.
 6.  Select if the input data is interleaved (YES by default). If the data is paired select NO and it will allow you to upload both, forward and reverse files.
 7.  Then select the input file(s). Clicking on the button to select "Interleaved FASTQ #1" opens a box called "Select a file" (as shown in the image below) to allow the user to find the desired files, either from the public data folder, or files uploaded by the user. If the files are uploaded to an accessible URL, the URL can be pasted into the box.
     ![A pop-up window titled "Select a file" over a grayed out background for the workflow submission page. It shows a file structure for public metagenomic test data.](../_static/images/howto_guides/workflows/metaG/05212025_run_metag_short_file.png)
 8.  Click "Submit" to start a metagenome workflow run.
 
-### Running the full metagenomic workflow for Long Reads
+### Running the full metagenomic workflow for long-reads
 
 In this example, we will run a PacBio file for a Zymobiomics synthetic metagenome SRR13128014, which is available in the public data folder in NMDC EDGE file section options (as `SRR13128014.pacbio.subsample.ccs.fastq.gz`) and [online](https://portal.nersc.gov/project/m3408//test_data/SRR13128014.pacbio.subsample.ccs.fastq.gz). Note that for testing we have subsampled the dataset, the original dataset is ~18GB.
 
@@ -143,7 +143,7 @@ Each workflow submission page will list the types of files necessary. For furthe
 4. For a quick summary on the specific project, click the dropdown arrow to the left of the project checkbox.
 5. To view the full project results, click on the folder with the arrow under the "Result" column.
 
-In this example, we will view the results of the end-to-end short reads metagenomics run set up in the [Running the full metagenomic workflow for Short Reads](#running-the-full-metagenomic-workflow-for-short-reads) section.
+In this example, we will view the results of the end-to-end short-read metagenomics run set up in the [Running the full metagenomic workflow for Short Reads](#running-the-full-metagenomic-workflow-for-short-reads) section.
 
 
 ### Project Summary (Results)
@@ -206,7 +206,7 @@ The Download Output section provides output files available to download. The cle
 
 #### Read-based Taxonomy Classification
 
-This workflow takes in Illumina sequencing files (single-end or paired-end) or PabBio long-reads and profiles the reads using multiple taxonomic classification tools. 
+This workflow takes in Illumina sequencing files (single-end or paired-end) or PacBio long-reads and profiles the reads using multiple taxonomic classification tools. 
 
 !["Run a Single Workflow" page for Read-based Taxonomy Classification.](../_static/images/howto_guides/workflows/metaG/05212025_run_rba.png)
 
