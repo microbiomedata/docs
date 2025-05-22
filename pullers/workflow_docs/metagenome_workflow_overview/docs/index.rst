@@ -15,20 +15,20 @@ Metagenomic Workflow
 
 Workflow Overview
 -----------------
-The NMDC standardized metagenome workflow leverages parts of JGI's production pipeline for short-read data and consists of: 
+The NMDC standardized metagenome workflow leverages parts of JGI's production pipeline for short-read and long-read data and consists of: 
 `reads quality control (QC) <https://docs.microbiomedata.org/workflows/chapters/3_Metagenome_Reads_QC/index.html>`_,
 `metagenome assembly <https://docs.microbiomedata.org/workflows/chapters/4_Metagenome_Assembly/index.html>`_, 
 `metagenome annotation <https://docs.microbiomedata.org/workflows/chapters/5_Metagenome_and_Metatranscriptome_Annotation/index.html>`_, 
 `read-based taxonomy <https://docs.microbiomedata.org/workflows/chapters/2_Read_Based_Taxonomy/index.html>`_, 
 and binning of population genomes to `generate metagenome-assembled genomes (MAGs) <https://docs.microbiomedata.org/workflows/chapters/6_Metagenome_Assembled_Genome/index.html>`_ workflows (with links to documentation).
 
-The reads QC workflow utilizes rqcfilter2 to trim and filter low quality data from raw metagenome Illumina reads (FASTQ files). The workflow additionally removes artifacts, linkers, adapters, spike-in reads, and reads mapping to several hosts and common contaminants.
+The reads QC workflow utilizes rqcfilter2 to trim and filter low quality data from raw metagenome Illumina reads (FASTQ files) and uses pbmarkdup and bbtools to filter PacBio reads. The workflow additionally removes artifacts, linkers, adapters, spike-in reads, and reads mapping to several hosts and common contaminants. 
 
 The read-based taxonomy classification workflow utilizes GOTTCHA2, Kraken2, and Centrifuge to profile quality-controlled reads to accommodate varied project goals and sequencing approaches that cover a spectrum from high sensitivity to high specificity that is dependent on the algorithms and cut-off levels chosen from different tools. 
 
-The metagenome assembly workflow uses bbcms, metaSPAdes, and BBMap to run error correction, assembly, and assembly validation, respectively. The metagenome annotation workflow takes in assembled metagenomes and generates structural and functional annotations. The MAGs workflow uses MetaBAT 2 to generate metagenome bins and applies the MiMAG standards using annotated tRNAs, rRNAs, and marker genes with checkM to estimate completeness and contamination and subsequent taxonomic lineage assignment.
+The metagenome assembly short reads workflow uses bbcms, metaSPAdes, and BBMap to run error correction, assembly, and assembly validation, respectively. While the metagenome assembly long reads workflow uses Flye, pbmm2, Racon, and minimap2 for assembly, alignment, polishing, and mapping, respectively. The metagenome annotation workflow takes in assembled metagenomes and generates structural and functional annotations. The MAGs workflow uses MetaBAT 2 to generate metagenome bins and applies the MiMAG standards using annotated tRNAs, rRNAs, and marker genes with checkM to estimate completeness and contamination and subsequent taxonomic lineage assignment.
 
-Users can run a single workflow within the metagenome pipeline with the appropriate input files, but the entire metagenome workflow is available to run from start to finish on NMDC EDGE from a single input raw Illumina file.
+Users can run a single workflow within the metagenome pipeline with the appropriate input files, but the entire metagenome workflow is available to run from start to finish on NMDC EDGE from a single input raw Illumina file or PacBio file.
 
 
 .. _Workflow Availability:
