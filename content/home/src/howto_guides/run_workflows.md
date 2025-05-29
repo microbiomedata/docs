@@ -8,17 +8,19 @@
 
 1. Visit the homepage for NMDC EDGE platform by going to [https://nmdc-edge.org](https://nmdc-edge.org/home)
    ![Home page for NMDC EDGE with a bubble labeled 2 for the ORCiD LOGIN button](../_static/images/howto_guides/workflows/quickStart/03102025_login-in.png)
-2. Click on "ORCiD LOGIN" to login to your account on the NMDC EDGE platform. 
-   ![ORCiD login page with bubble labeled 3 for "Register now"](../_static/images/howto_guides/workflows/quickStart/03102025_orcid.png)
-3. Log in to ORCiD using your registered credentials. If you do not have an ORCiD, click on "Register Now" and follow the instructions to set-up an ORCiD account.
+2. Click on "ORCiD LOGIN" to login to your account on the NMDC EDGE platform.  
+   <img src="../_static/images/howto_guides/workflows/quickStart/03102025_orcid.png"
+     alt="ORCiD login page with bubble labeled 3 for 'Register now'"
+     style="width: 50%; height: auto;"/>
+4. Log in to ORCiD using your registered credentials. If you do not have an ORCiD, click on "Register Now" and follow the instructions to set-up an ORCiD account.
    ![NMDC EDGE "My Profile" page with bubble labeled 4 for the highlighted "My Profile" button](../_static/images/howto_guides/workflows/quickStart/03102025_my_profile.png)
-4. If you are logging in for the first time, click on "My Profile" and optionally provide your First Name, Last Name, and Email. The first grayed out box will already have your ORCiD. You can also set the "Project Status Notification" to ON (OFF by default). If ON, notifications about your workflow runs will be sent to the Email you provided. Click on "Save Changes"
+5. If you are logging in for the first time, click on "My Profile" and optionally provide your First Name, Last Name, and Email. The first grayed out box will already have your ORCiD. You can also set the "Project Status Notification" to ON (OFF by default). If ON, notifications about your workflow runs will be sent to the Email you provided. Click on "Save Changes"
 
 ### Upload data
 
 You can upload your own data to process through the workflows. 
 1. Click on "Upload Files" in the left menu bar. 
-2. This will open a page which allows you to drag and drop files or browse for your data files. If you do not have a dataset to test, you can download this metagenomic [test data](https://portal.nersc.gov/cfs/m3408/test_data/SRR7877884/SRR7877884-int-0.1.fastq.gz) and upload it to the NMDC EDGE platform. 
+2. This will open a page which allows you to drag and drop files or browse for your data files. If you do not have a dataset to test, you can download this metagenomic [test data](https://portal.nersc.gov/cfs/m3408/test_data/SRR7877884/SRR7877884-int-0.1.fastq.gz) (Illumina interleaved file) and upload it to the NMDC EDGE platform. 
 
 !["Upload Files" page on NMDC EDGE, with a bubble labeled 1 pointing to the "Upload Files" tab in left vertical navigation bar, and a bubble labeled 2 under "Drag files or Click to Browse"](../_static/images/howto_guides/workflows/quickStart/03102025_upload_files.png)
 
@@ -50,7 +52,7 @@ A summary of the workflows and link to their documentation is available in [this
 
 In this example, we will run the interleaved FASTQ file for Zymobiomics mock-community DNA control ([SRR7877884](https://www.ncbi.nlm.nih.gov/sra/SRX4716743)), which is available in the public data folder in NMDC EDGE file section options (as `SRR7877884-int.fastq.gz`) and [online](https://portal.nersc.gov/cfs/m3408/test_data/SRR7877884/SRR7877884-int.fastq.gz). Note that this is a larger file at 3.65 GB. A smaller option (10% subset of SRR7877884) is available at 367.25 MB both in the public data folder (as `SRR7877884-int-0.1.fastq.gz`) and online as a [URL](https://portal.nersc.gov/cfs/m3408/test_data/SRR7877884/SRR7877884-int-0.1.fastq.gz). To copy the file URLs, right click (CTRL+Left Click on Mac) and select "Copy Link".
 
-!["Run Multiple Workflows" submission page for short-reads with bubbles labeled 1 through 8 pointing at different clickable buttons and typeable fields](../_static/images/howto_guides/workflows/metaG/05212025_run_metag_short.png)
+!["Run Multiple Workflows" submission page for short-reads with bubbles labeled 1 through 8 pointing at different clickable buttons and typeable fields](../_static/images/howto_guides/workflows/metaG/05292025_run_metag_short.png)
 
 
 1. Click on the "Metagenomics" tab on the left vertical navigation bar. 
@@ -67,7 +69,7 @@ In this example, we will run the interleaved FASTQ file for Zymobiomics mock-com
 
 In this example, we will run a PacBio file for a Zymobiomics synthetic metagenome SRR13128014, which is available in the public data folder in NMDC EDGE file section options (as `SRR13128014.pacbio.subsample.ccs.fastq.gz`) and [online](https://portal.nersc.gov/project/m3408//test_data/SRR13128014.pacbio.subsample.ccs.fastq.gz). Note that for testing we have subsampled the dataset, the original dataset is ~18GB.
 
-!["Run Multiple Workflows" submission page with bubbles labeled 1 through 7 pointing at different clickable buttons and typeable fields](../_static/images/howto_guides/workflows/metaG/05212025_run_metag_long.png)
+!["Run Multiple Workflows" submission page with bubbles labeled 1 through 7 pointing at different clickable buttons and typeable fields](../_static/images/howto_guides/workflows/metaG/05222025_run_metag_long.png)
 
 
 1. Click on the "Metagenomics" tab on the left vertical navigation bar. 
