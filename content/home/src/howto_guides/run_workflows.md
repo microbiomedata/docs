@@ -229,7 +229,7 @@ The Download Output section provides output files available to download. Each to
 
 #### Assembly
 
-This workflow takes in paired-end Illumina reads or long-read PacBio Reads and performs error correction. Then the corrected reads are assembled using metaSPAdes. After assembly, the reads are mapped back to the contigs for coverage information.
+This workflow takes in paired-end Illumina reads or long-read PacBio reads and performs error correction. Then the corrected reads are assembled using metaSPAdes. After assembly, the reads are mapped back to the contigs for coverage information.
 
 ![Status tab of the Metagenome Assembly Results section. Shows statistics of the assembly.](../_static/images/howto_guides/workflows/metaG/03102025_view_assy_results_1.png)
 The Metagenome Assembly Result's Status tab contains summary statistics of the assembly.
