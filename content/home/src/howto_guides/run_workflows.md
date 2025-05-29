@@ -131,7 +131,7 @@ Some other options for inputs include multiple sets of FASTQ files in interleave
 
 Other ways the inputs for each workflow may change include the types of files needed as well as the number of different types of files. For example, with Read-based Taxonomy, the input is a filtered FASTQ file. This can be uploaded by the user, input as a URL, or taken from the result of other workflows run on NMDC EDGE. The results of your other workflows will be available in the file selection menu if the file type is right for the workflow you need to run. For the Read-based Taxonomy Classification workflow, the input is filtered FASTQ files, which is the output of the ReadsQC workflow.
 
-!["Run a Single Workflow" page for Read-based Taxonomy Classification](../_static/images/howto_guides/workflows/metaG/05212025_run_rba.png) ![File selection showing projects that the user](../_static/images/howto_guides/workflows/metaG/05212025_run_rba_file.png)
+!["Run a Single Workflow" page for Read-based Taxonomy Classification](../_static/images/howto_guides/workflows/metaG/05222025_run_rba.png) ![File selection showing projects that the user](../_static/images/howto_guides/workflows/metaG/05212025_run_rba_file.png)
 
 Each workflow submission page will list the types of files necessary. For further reading, please refer to the [individual workflow documentation](https://docs.microbiomedata.org/workflows/) for a full list of inputs and outputs. 
 
@@ -210,7 +210,7 @@ The Download Output section provides output files available to download. The cle
 
 This workflow takes in Illumina sequencing files (single-end or paired-end) or PacBio long-reads and profiles the reads using multiple taxonomic classification tools. 
 
-!["Run a Single Workflow" page for Read-based Taxonomy Classification.](../_static/images/howto_guides/workflows/metaG/05212025_run_rba.png)
+!["Run a Single Workflow" page for Read-based Taxonomy Classification.](../_static/images/howto_guides/workflows/metaG/05222025_run_rba.png)
 
 This workflow goes through three analysis tools: GOTTCHA2, Kraken2, and Centrifuge.
 
