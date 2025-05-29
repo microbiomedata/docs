@@ -21,7 +21,7 @@ This is an example of the answer dropdown.
 
 Task 1: Create an NMDC EDGE account with your ORCiD information.
 
-Task 2: Download the small interleaved [data file](https://portal.nersc.gov/cfs/m3408/test_data/SRR7877884/SRR7877884-int-0.1.fastq.gz) listed here. (Note: This is paired-end data with the pairs interleaved together into a single file.) Upload the file to NMDC EDGE.
+Task 2: Download the small interleaved Illumina [data file](https://portal.nersc.gov/cfs/m3408/test_data/SRR7877884/SRR7877884-int-0.1.fastq.gz) linked here. (Note: This is paired-end data with the pairs interleaved together into a single file.) Upload the file to NMDC EDGE.
 
 Task 3 (optional): Click on "My Profile". Edit your account to receive email notification of project status by clicking “ON”.
 
