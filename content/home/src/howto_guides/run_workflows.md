@@ -52,7 +52,7 @@ A summary of the workflows and link to their documentation is available in [this
 
 In this example, we will run the interleaved FASTQ file for Zymobiomics mock-community DNA control ([SRR7877884](https://www.ncbi.nlm.nih.gov/sra/SRX4716743)), which is available in the public data folder in NMDC EDGE file section options (as `SRR7877884-int.fastq.gz`) and [online](https://portal.nersc.gov/cfs/m3408/test_data/SRR7877884/SRR7877884-int.fastq.gz). Note that this is a larger file at 3.65 GB. A smaller option (10% subset of SRR7877884) is available at 367.25 MB both in the public data folder (as `SRR7877884-int-0.1.fastq.gz`) and online as a [URL](https://portal.nersc.gov/cfs/m3408/test_data/SRR7877884/SRR7877884-int-0.1.fastq.gz). To copy the file URLs, right click (CTRL+Left Click on Mac) and select "Copy Link".
 
-!["Run Multiple Workflows" submission page for short-reads with bubbles labeled 1 through 8 pointing at different clickable buttons and typeable fields](../_static/images/howto_guides/workflows/metaG/05292025_run_metag_short.png)
+!["Run Multiple Workflows" submission page for short-reads with bubbles labeled 1 through 8 pointing at different clickable buttons and typeable fields](../_static/images/howto_guides/workflows/metaG/05302025_run_metag_short.png)
 
 
 1. Click on the "Metagenomics" tab on the left vertical navigation bar. 
