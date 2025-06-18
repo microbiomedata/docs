@@ -20,7 +20,7 @@
 
 You can upload your own data to process through the workflows. 
 1. Click on "Upload Files" in the left menu bar. 
-2. This will open a page which allows you to drag and drop files or browse for your data files. If you do not have a dataset to test, you can download this metagenomic [test data](https://portal.nersc.gov/cfs/m3408/test_data/SRR7877884/SRR7877884-int-0.1.fastq.gz) (Illumina interleaved file) and upload it to the NMDC EDGE platform. 
+2. This will open a page which allows you to drag and drop files or browse for your data files. If you do not have a dataset to test, you can download this Illumina short-read metagenomic [test data](https://portal.nersc.gov/cfs/m3408/test_data/SRR7877884/SRR7877884-int-0.1.fastq.gz) (Illumina interleaved file) and upload it to the NMDC EDGE platform. 
 
 !["Upload Files" page on NMDC EDGE, with a bubble labeled 1 pointing to the "Upload Files" tab in left vertical navigation bar, and a bubble labeled 2 under "Drag files or Click to Browse"](../_static/images/howto_guides/workflows/quickStart/03102025_upload_files.png)
 
