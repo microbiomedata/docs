@@ -108,7 +108,7 @@ For example, to run a paired set of FASTQ files through ReadsQC, the user can pe
 
 NMDC-EDGE also allows for bulk submission projects. Users can run up to 10 end-to-end Metagenomics workflows or just ReadsQC for each bulk submission.
 
-!["Run Bulk Submission" submission page with bubbles labeled 1 through 8 pointing at different clickable buttons and typeable fields.](../_static/images/howto_guides/workflows/metaG/05212025_run_bulk_submission.png)
+!["Run Bulk Submission" submission page with bubbles labeled 1 through 8 pointing at different clickable buttons and typeable fields.](../_static/images/howto_guides/workflows/metaG/061725_run_bulk_submission.png)
 
 
 1. Click on the "Metagenomics" tab on the left vertical navigation bar. 
@@ -119,7 +119,8 @@ NMDC-EDGE also allows for bulk submission projects. Users can run up to 10 end-t
     ![Drop-down menu with options "Multiple Workflows" or "ReadsQC".](../_static/images/howto_guides/workflows/metaG/05212025_run_bulk_submission_select.png)
 6. Download the Excel Template to populate with necessary components. Hover over cells below first row to see a description of the item and whether or not an input in mandatory or optional.
    ![Excel Spreadsheet with Columns that need to be filled to run Bulk Submission.](../_static/images/howto_guides/workflows/metaG/05202025_run_bulk_submission_input.png)
-7. Choose your populated "NMDC-EDGE-Metagenomics-pipeline-bulk-submission.xlsx" file or your own properly formatted Excel spreadsheet.
+7. Choose your populated "NMDC-EDGE-Metagenomics-pipeline-bulk-submission.xlsx" file or your own properly formatted Excel spreadsheet. Here, metag_1 is running long-reads, metag_2 is running short-reads, and metag_3 is running a short-reads run that neads intereleaving.
+   ![Excel Spreadsheet with Columns that are filled to run a Bulk Submission.](../_static/images/howto_guides/workflows/metaG/061725_bulk_submission_test_input.png)
 8. Click "Submit" to start a workflow run.
 
 
