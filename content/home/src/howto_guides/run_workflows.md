@@ -121,7 +121,7 @@ NMDC-EDGE also allows for bulk submission projects. Users can run up to 10 end-t
    ![Excel Spreadsheet with Columns that need to be filled to run Bulk Submission.](../_static/images/howto_guides/workflows/metaG/05202025_run_bulk_submission_input.png)
 7. Choose your populated "NMDC-EDGE-Metagenomics-pipeline-bulk-submission.xlsx" file or your own properly formatted Excel spreadsheet. Here, metag_1 is running long-reads, metag_2 is running short-reads, and metag_3 is running a short-reads run that neads intereleaving.
    ![Excel Spreadsheet with Columns that are filled to run a Bulk Submission.](../_static/images/howto_guides/workflows/metaG/061725_bulk_submission_test_input.png)
-8. Click "Submit" to start a workflow run.
+8. Click "Submit" to start a workflow run. [Results here](https://github.com/microbiomedata/docs/edit/update_edge_longreads/content/home/src/howto_guides/run_workflows.md#bulk-submissions)
 
 
 ### Inputs
@@ -335,12 +335,12 @@ The Download Output section provides output files available to download. The pri
 
 #### Bulk Submissions
 
-Bulk submissions are run as either just ReadsQC or through the entire metagenomic pipeline. Here we will be looking at the results page of a Multiple Workflows(Full metagenomic pipeline) bulk submission:
+Bulk submissions are run as either just ReadsQC or through the entire metagenomic pipeline. Here, we will be looking at the results page of a Multiple Workflows(Full metagenomic pipeline) bulk submission:
 
 ![Workflow result page for a Bulk Submissions run with the "Multiple Workflows" option.](../_static/images/howto_guides/workflows/metaG/061725_bulk_submission_result_page.png)
 
 1. Note that the results for bulk submission are in a separate tab.
-2. The results of each run are in listed. Whether you submit a workflow as a standalone run or include it in a bulk submission, each run’s output will look exactly the same as if it had been executed on its own.
+2. The results of each run are listed. Whether you submit a workflow as a standalone run or include it in a bulk submission, each run’s output will look exactly the same as if it had been executed on its own.
    ![Second tab of the Result dropdown with a bar graph of read counts and type.](../_static/images/howto_guides/workflows/metaG/061725_bulk_submssion_results.png) 
 
 
