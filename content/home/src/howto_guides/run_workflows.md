@@ -146,12 +146,12 @@ Each workflow submission page will list the types of files necessary. For furthe
 4. For a quick summary on the specific project, click the dropdown arrow to the left of the project checkbox.
 5. To view the full project results, click on the folder with the arrow under the "Result" column.
 
-In this example, we will view the results of the end-to-end short-read metagenomics run set up in the [Running the full metagenomic workflow for Short Reads](#running-the-full-metagenomic-workflow-for-short-reads) section.
+In this example, we will view the results of the end-to-end short-read metagenomics run set up in the [Running the full metagenomic workflow for Short Reads](#running-the-full-metagenomic-workflow-for-short-reads) section. However, please note that the result page is the same for short and long reads.
 
 
 ### Project Summary (Results)
 
-![Project summary page for a full metagenomic workflow run.](../_static/images/howto_guides/workflows/metaG/03102025_view_full_metag.png)
+![Project summary page for a full metagenomic workflow run for short-reads.](../_static/images/howto_guides/workflows/metaG/03102025_view_full_metag.png)
 
 The project results page contains a quick summary of the workflow(s) run, a direct link to [create an entry in the NMDC Submission Portal](https://docs.microbiomedata.org/howto_guides/submit2nmdc), drop-down sections for a quick tabular/visual overview of results, and an area to download the output files. 
 
@@ -340,7 +340,7 @@ Bulk submissions are run as either just ReadsQC or through the entire metagenomi
 ![Workflow result page for a Bulk Submissions run with the "Multiple Workflows" option.](../_static/images/howto_guides/workflows/metaG/061725_bulk_submission_result_page.png)
 
 1. Note that the results for bulk submission are in a separate tab.
-2. The results of each run are in listed. Regardless of whether the workflow was run on its own or as part of the Bulk Submissions the outputs will be the same in each individual's run result.
+2. The results of each run are in listed. Whether you submit a workflow as a standalone run or include it in a bulk submission, each run’s output will look exactly the same as if it had been executed on its own.
    ![Second tab of the Result dropdown with a bar graph of read counts and type.](../_static/images/howto_guides/workflows/metaG/061725_bulk_submssion_results.png) 
 
 
