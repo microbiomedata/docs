@@ -156,6 +156,7 @@ In this example, we will view the results of the end-to-end short-read metagenom
 The project results page contains a quick summary of the workflow(s) run, a direct link to [create an entry in the NMDC Submission Portal](https://docs.microbiomedata.org/howto_guides/submit2nmdc), drop-down sections for a quick tabular/visual overview of results, and an area to download the output files. 
 
 For a quick overview of every output type available for metagenomic analysis, we will be looking at the results of "Running the full metagenomic workflow for short-reads".
+To download the results, [go here](https://portal.nersc.gov/project/m3408//test_data/SRR7877884/SRR7877884-0.1_MetaG/).
 
 #### General
 
