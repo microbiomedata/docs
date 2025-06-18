@@ -332,3 +332,15 @@ The Krona plot contains the KO analysis results for metagenome bins at two level
 The Download Output section provides output files available to download. The primary output file is the zipped file with all bins determined to be high quality or medium quality (`hqmq_bin.zip`).
 
 
+
+#### Bulk Submissions
+
+Bulk submissions are run as either just ReadsQC or through the entire metagenomic pipeline. Here we will be looking at the results page of a Multiple Workflows(Full metagenomic pipeline) bulk submission:
+
+![Workflow result page for a Bulk Submissions run with the "Multiple Workflows" option.](../_static/images/howto_guides/workflows/metaG/061725_bulk_submission_result_page.png)
+
+1. Note that the results for bulk submission are in a separate tab.
+2. The results of each run are in listed. Regardless of whether the workflow was run on its own or as part of the Bulk Submissions the outputs will be the same in each individual's run result.
+   ![Second tab of the Result dropdown with a bar graph of read counts and type.](../_static/images/howto_guides/workflows/metaG/061725_bulk_submssion_results.png) 
+
+
