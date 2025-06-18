@@ -121,7 +121,7 @@ NMDC-EDGE also allows for bulk submission projects. Users can run up to 10 end-t
    ![Excel Spreadsheet with Columns that need to be filled to run Bulk Submission.](../_static/images/howto_guides/workflows/metaG/05202025_run_bulk_submission_input.png)
 7. Choose your populated "NMDC-EDGE-Metagenomics-pipeline-bulk-submission.xlsx" file or your own properly formatted Excel spreadsheet. Here, metag_1 is running long-reads, metag_2 is running short-reads, and metag_3 is running a short-reads run that neads intereleaving.
    ![Excel Spreadsheet with Columns that are filled to run a Bulk Submission.](../_static/images/howto_guides/workflows/metaG/061725_bulk_submission_test_input.png)
-8. Click "Submit" to start a workflow run. [Results here](https://github.com/microbiomedata/docs/edit/update_edge_longreads/content/home/src/howto_guides/run_workflows.md#bulk-submissions)
+8. Click "Submit" to start a workflow run. [Results here](https://github.com/microbiomedata/docs/blob/update_edge_longreads/content/home/src/howto_guides/run_workflows.md#bulk-submissions)
 
 
 ### Inputs
