@@ -9,12 +9,10 @@
 1. Visit the homepage for NMDC EDGE platform by going to [https://nmdc-edge.org](https://nmdc-edge.org/home)
    ![Home page for NMDC EDGE with a bubble labeled 2 for the ORCiD LOGIN button](../_static/images/howto_guides/workflows/quickStart/03102025_login-in.png)
 2. Click on "ORCiD LOGIN" to login to your account on the NMDC EDGE platform.  
-   <img src="../_static/images/howto_guides/workflows/quickStart/03102025_orcid.png"
-     alt="ORCiD login page with bubble labeled 3 for 'Register now'"
-     style="width: 50%; height: auto;"/>
-4. Log in to ORCiD using your registered credentials. If you do not have an ORCiD, click on "Register Now" and follow the instructions to set-up an ORCiD account.
+   ![ORCiD login page with bubble labeled 3 for "Register now"](../_static/images/howto_guides/workflows/quickStart/03102025_orcid.png)
+3. Log in to ORCiD using your registered credentials. If you do not have an ORCiD, click on "Register Now" and follow the instructions to set-up an ORCiD account.
    ![NMDC EDGE "My Profile" page with bubble labeled 4 for the highlighted "My Profile" button](../_static/images/howto_guides/workflows/quickStart/03102025_my_profile.png)
-5. If you are logging in for the first time, click on "My Profile" and optionally provide your First Name, Last Name, and Email. The first grayed out box will already have your ORCiD. You can also set the "Project Status Notification" to ON (OFF by default). If ON, notifications about your workflow runs will be sent to the Email you provided. Click on "Save Changes"
+4. If you are logging in for the first time, click on "My Profile" and optionally provide your First Name, Last Name, and Email. The first grayed out box will already have your ORCiD. You can also set the "Project Status Notification" to ON (OFF by default). If ON, notifications about your workflow runs will be sent to the Email you provided. Click on "Save Changes"
 
 ### Upload data
 
@@ -342,6 +340,7 @@ Bulk submissions are run as either just ReadsQC or through the entire metagenomi
 
 1. Note that the results for bulk submission are in a separate tab.
 2. The results of each run are listed. Whether you submit a workflow as a standalone run or include it in a bulk submission, each run’s output will look exactly the same as if it had been executed on its own.
-   ![Second tab of the Result dropdown with a bar graph of read counts and type.](../_static/images/howto_guides/workflows/metaG/061725_bulk_submssion_results.png) 
+
+![Bulk_submission summary results with individual projects listed.](../_static/images/howto_guides/workflows/metaG/061725_bulk_submssion_results.png) 
 
 
