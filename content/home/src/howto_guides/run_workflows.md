@@ -343,6 +343,6 @@ Bulk submissions are run as either just ReadsQC or through the entire metagenomi
 
 ![Bulk_submission summary results with individual projects listed.](../_static/images/howto_guides/workflows/metaG/061725_bulk_submssion_results.png) 
 
-The Bulk Submission Results section displays the same information you would see when viewing a project in [My Projects](#output).
+The Bulk Submission Results section displays the same information you would see when viewing a project in [My Projects](#outputs).
 
 
