@@ -84,7 +84,7 @@ In this example, we will run a PacBio file for a Zymobiomics synthetic metagenom
 
 Each component of the end-to-end Metagenomics workflow can be run on its own if given the correct input file type(s). The following are some examples for running these individual workflows.
 
-!["Run a Single Workflow" page with dropdown menu listing the individual workflows available to run.](../_static/images/howto_guides/workflows/metaG/03102025_run_single_wf_dropdown.png)
+!["Run a Single Workflow" page with dropdown menu listing the individual workflows available to run.](../_static/images/howto_guides/workflows/metaG/062425_run_single_wf_dropdown.png)
 
 
 For example, to run a paired set of FASTQ files through ReadsQC, the user can perform the following steps:
@@ -136,7 +136,7 @@ Each workflow submission page will list the types of files necessary. For furthe
 
 ### Outputs
 
-![My Projects page containing a list of projects submitted by user in various run states and bubble labels for different buttons.](../_static/images/howto_guides/workflows/quickStart/03102025_projects_page.png)
+![My Projects page containing a list of projects submitted by user in various run states and bubble labels for different buttons.](../_static/images/howto_guides/workflows/quickStart/062425_projects_page.png)
 
 1. To view the status of projects and their outputs, navigate to the My Projects tab at the top of the page. 
 2. Links (in the purple circles) are provided to share projects, make projects public, or delete projects
@@ -149,16 +149,18 @@ In this example, we will view the results of the end-to-end short-read metagenom
 
 ### Project Summary (Results)
 
-![Project summary page for a full metagenomic workflow run for short-reads.](../_static/images/howto_guides/workflows/metaG/03102025_view_full_metag.png)
+![Project summary page for a full metagenomic workflow run for short-reads.](../_static/images/howto_guides/workflows/metaG/062425_view_full_metag.png)
 
-The project results page contains a quick summary of the workflow(s) run, a direct link to [create an entry in the NMDC Submission Portal](https://docs.microbiomedata.org/howto_guides/submit2nmdc), drop-down sections for a quick tabular/visual overview of results, and an area to download the output files. 
+1. Project/Run Name
+2. A direct link to [create an entry in the NMDC Submission Portal](https://docs.microbiomedata.org/howto_guides/submit2nmdc)
+3. Contains a quick summary of the workflow(s) run and drop-down sections for a quick tabular/visual overview of results
+
+![Project summary page with expanded "General" dropdown with details about the workflow run.](../_static/images/howto_guides/workflows/metaG/03102025_view_full_metag_general.png)
+
+4. Folder of all the downloadable output files. 
 
 For a quick overview of every output type available for metagenomic analysis, we will be looking at the results of "Running the full metagenomic workflow for short-reads".
 To download the results, [go here](https://portal.nersc.gov/project/m3408//test_data/SRR7877884/SRR7877884-0.1_MetaG/).
-
-#### General
-
-![Project summary page with expanded "General" dropdown with details about the workflow run.](../_static/images/howto_guides/workflows/metaG/03102025_view_full_metag_general.png)
 
 This example shows the results of a metagenome workflow run, which shows run time under the General tab, the workflow results of each individual metagenome workflow, and the files available for download under the Download Outputs tab.
 
