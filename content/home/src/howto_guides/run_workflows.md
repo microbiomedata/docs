@@ -134,7 +134,7 @@ Other ways the inputs for each workflow may change include the types of files ne
 
 Each workflow submission page will list the types of files necessary. For further reading, please refer to the [individual workflow documentation](https://docs.microbiomedata.org/workflows/) for a full list of inputs and outputs. 
 
-### Output
+### Outputs
 
 ![My Projects page containing a list of projects submitted by user in various run states and bubble labels for different buttons.](../_static/images/howto_guides/workflows/quickStart/03102025_projects_page.png)
 
