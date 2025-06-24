@@ -117,7 +117,7 @@ NMDC-EDGE also allows for bulk submission projects. Users can run up to 10 end-t
     ![Drop-down menu with options "Multiple Workflows" or "ReadsQC".](../_static/images/howto_guides/workflows/metaG/05212025_run_bulk_submission_select.png)
 6. Download the Excel Template to populate with necessary components. Hover over cells below first row to see a description of the item and whether or not an input in mandatory or optional.
    ![Excel Spreadsheet with Columns that need to be filled to run Bulk Submission.](../_static/images/howto_guides/workflows/metaG/05202025_run_bulk_submission_input.png)
-7. Choose your populated "NMDC-EDGE-Metagenomics-pipeline-bulk-submission.xlsx" file or your own properly formatted Excel spreadsheet. Here, metag_1 is running long-reads, metag_2 is running short-reads, and metag_3 is running a short-reads run that neads intereleaving.
+7. Choose your populated "NMDC-EDGE-Metagenomics-pipeline-bulk-submission.xlsx" file or your own properly formatted Excel spreadsheet. Here, metag_1 is running long-reads, metag_2 is running short-reads, and metag_3 is running a short-reads run that neads interleaving.
    ![Excel Spreadsheet with Columns that are filled to run a Bulk Submission.](../_static/images/howto_guides/workflows/metaG/061725_bulk_submission_test_input.png)
 8. Click "Submit" to start a workflow run. [Results here](https://github.com/microbiomedata/docs/blob/update_edge_longreads/content/home/src/howto_guides/run_workflows.md#bulk-submissions)
 
@@ -144,7 +144,7 @@ Each workflow submission page will list the types of files necessary. For furthe
 4. For a quick summary on the specific project, click the dropdown arrow to the left of the project checkbox.
 5. To view the full project results, click on the folder with the arrow under the "Result" column.
 
-In this example, we will view the results of the end-to-end short-read metagenomics run set up in the [Running the full metagenomic workflow for Short Reads](#running-the-full-metagenomic-workflow-for-short-reads) section. However, please note that the result page is the same for short and long reads.
+In this example, we will view the results of the end-to-end short-read metagenomics run set up in the [Running the full metagenomic workflow for Short Reads](#running-the-full-metagenomic-workflow-for-short-reads) section. Please note that the result page is the same for short and long reads.
 
 
 ### Project Summary (Results)
@@ -342,5 +342,7 @@ Bulk submissions are run as either just ReadsQC or through the entire metagenomi
 2. The results of each run are listed. Whether you submit a workflow as a standalone run or include it in a bulk submission, each run’s output will look exactly the same as if it had been executed on its own.
 
 ![Bulk_submission summary results with individual projects listed.](../_static/images/howto_guides/workflows/metaG/061725_bulk_submssion_results.png) 
+
+The Bulk Submission Results section displays the same information you would see when viewing a project in [My Projects](https://github.com/microbiomedata/docs/blob/main/content/home/src/howto_guides/run_workflows.md#output).
 
 
