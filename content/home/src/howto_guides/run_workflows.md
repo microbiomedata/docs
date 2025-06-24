@@ -154,9 +154,7 @@ In this example, we will view the results of the end-to-end short-read metagenom
 1. Project/Run Name
 2. A direct link to [create an entry in the NMDC Submission Portal](https://docs.microbiomedata.org/howto_guides/submit2nmdc)
 3. Contains a quick summary of the workflow(s) run and drop-down sections for a quick tabular/visual overview of results
-
-![Project summary page with expanded "General" dropdown with details about the workflow run.](../_static/images/howto_guides/workflows/metaG/03102025_view_full_metag_general.png)
-
+   ![Project summary page with expanded "General" dropdown with details about the workflow run.](../_static/images/howto_guides/workflows/metaG/03102025_view_full_metag_general.png)
 4. Folder of all the downloadable output files. 
 
 For a quick overview of every output type available for metagenomic analysis, we will be looking at the results of "Running the full metagenomic workflow for short-reads".
