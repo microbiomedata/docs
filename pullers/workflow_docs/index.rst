@@ -33,6 +33,7 @@ Welcome to the NMDC Workflow documentation!
    chapters/9_Metatranscriptome_Assembly/index.rst
    chapters/10_Metatranscriptome_Expression/index.rst
    chapters/11_Metaproteomics/index.rst
-   chapters/12_Metabolomics/index.rst
-   chapters/13_Natural_Organic_Matter/index.rst
-   chapters/14_Lipidomics/index.rst
+   chapters/12_GCMS_Metabolomics/index.rst
+   chapters/13_LCMS_Metabolomics/index.rst
+   chapters/14_Natural_Organic_Matter/index.rst
+   chapters/15_LCMS_Lipidomics/index.rst

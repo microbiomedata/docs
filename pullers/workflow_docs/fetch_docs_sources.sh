@@ -29,8 +29,9 @@ mkdir -p /tmp/book/src/chapters
 # Note: The source files for Chapter 1 (the end-to-end MetaG chapter) reside in this `docs` Git repository.
 #       They get incorporated into the file tree by something other than this shell script.
 #
-# Note: The source files for Chapters `12_Metabolomics` and `14_Lipidomics` reside in the same repository as one
-#       another. Here, we move them from their respective subdirectories within that repository's `docs` directory.
+# Note: The source files for Chapters `12_GCMS_Metabolomics`, `13_LCMS_Metabolomics`, and `15_LCMS_Lipidomics`
+#       reside in the same repository as one another. Here, we move them from their respective subdirectories
+#       within that repository's `docs` directory.
 #
 mv /tmp/clones/ReadbasedAnalysis/docs        /tmp/book/src/chapters/2_Read_Based_Taxonomy
 mv /tmp/clones/ReadsQC/docs                  /tmp/book/src/chapters/3_Metagenome_Reads_QC
@@ -42,6 +43,7 @@ mv /tmp/clones/metaT_ReadsQC/docs            /tmp/book/src/chapters/8_Metatransc
 mv /tmp/clones/metaT_Assembly/docs           /tmp/book/src/chapters/9_Metatranscriptome_Assembly
 mv /tmp/clones/metaT_ReadCounts/docs         /tmp/book/src/chapters/10_Metatranscriptome_Expression
 mv /tmp/clones/metaPro/docs                  /tmp/book/src/chapters/11_Metaproteomics
-mv /tmp/clones/metaMS/docs/gcms_metabolomics /tmp/book/src/chapters/12_Metabolomics
-mv /tmp/clones/enviroMS/docs                 /tmp/book/src/chapters/13_Natural_Organic_Matter
-mv /tmp/clones/metaMS/docs/lcms_lipidomics   /tmp/book/src/chapters/14_Lipidomics
+mv /tmp/clones/metaMS/docs/gcms_metabolomics /tmp/book/src/chapters/12_GCMS_Metabolomics
+mv /tmp/clones/metaMS/docs/lcms_metabolomics /tmp/book/src/chapters/13_LCMS_Metabolomics
+mv /tmp/clones/enviroMS/docs                 /tmp/book/src/chapters/14_Natural_Organic_Matter
+mv /tmp/clones/metaMS/docs/lcms_lipidomics   /tmp/book/src/chapters/15_LCMS_Lipidomics
