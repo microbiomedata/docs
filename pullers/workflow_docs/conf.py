@@ -55,6 +55,7 @@ html_js_files = [
 # Register Sphinx extensions.
 # Reference: https://www.sphinx-doc.org/en/master/usage/extensions/index.html
 extensions = [
+    'sphinx_reredirects',
     'sphinxcontrib.googleanalytics',
 ]
 
@@ -64,3 +65,18 @@ extensions = [
 #
 googleanalytics_id: str = "G-VH6HKVLCWN"
 googleanalytics_enabled: bool = True
+
+# -- Sphinx ReRedirects extension ---------------------------
+#
+# References: 
+# - PyPI: https://pypi.org/project/sphinx-reredirects/
+# - Docs: https://documatt.com/sphinx-reredirects/usage/
+#
+# Notes:
+# - Link targets are specified relative to the source document.
+#
+redirects = {
+     "chapters/12_Metabolomics/index": "../12_GCMS_Metabolomics/index.html",
+     "chapters/13_Natural_Organic_Matter/index": "../14_Natural_Organic_Matter/index.html",
+     "chapters/14_Lipidomics/index": "../15_LCMS_Lipidomics/index.html",
+}

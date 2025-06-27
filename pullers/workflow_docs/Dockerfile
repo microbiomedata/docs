@@ -22,6 +22,7 @@ RUN python -m pip install \
     sphinx \
     sphinx_rtd_theme \
     pillow \
+    sphinx-reredirects==1.0.0 \
     sphinxcontrib-googleanalytics==0.4
 
 # Fetch individual workflow docs sources and arrange them into chapters.

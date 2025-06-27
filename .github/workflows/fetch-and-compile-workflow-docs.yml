@@ -23,6 +23,7 @@ jobs:
             sphinx \
             sphinx_rtd_theme \
             pillow \
+            sphinx-reredirects==1.0.0 \
             sphinxcontrib-googleanalytics==0.4
         # Note: This shell script will store the chapters under `/tmp/book/src/`.
         #
