@@ -36,4 +36,4 @@ Welcome to the NMDC Workflow documentation!
    GC/MS Metabolomics Workflow <chapters/12_GCMS_Metabolomics/index.rst>
    LC/MS Metabolomics Workflow <chapters/13_LCMS_Metabolomics/index.rst>
    chapters/14_Natural_Organic_Matter/index.rst
-   LC/MS Metabolomics Workflow <chapters/15_LCMS_Lipidomics/index.rst>
+   LC/MS Lipidomics Workflow <chapters/15_LCMS_Lipidomics/index.rst>
