@@ -185,6 +185,7 @@ the GSC.
 ### *Search by workflow processing*
 
 [![](../_static/images/howto_guides/portal_guide/metap_analysis_category.png)](../_static/images/howto_guides/portal_guide/metap_analysis_category.png)
+
 Workflow results can be searched by metaproteomics analysis category. 
 
 
