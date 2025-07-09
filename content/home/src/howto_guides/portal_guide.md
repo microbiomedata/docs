@@ -129,7 +129,7 @@ more information about that study and that principal investigator.
 Samples can be queried by various data generation terms
 including instrument name, data type (processing runs sorted by data
 type can also be queried using the bar plot on the main portal page),
-and processing institution.
+processing institution, mass spectrometry method, and chromatography method.
 
 ### *Search by function*
 
@@ -181,6 +181,13 @@ describe environments where samples were collected from which can be used to que
 Users can search by broad-scale environmental context, local environmental context, 
 and environmental medium.  These terms are required by NMDC because they are required by
 the GSC.
+
+### *Search by workflow processing*
+
+[![](../_static/images/howto_guides/portal_guide/metap_analysis_category.png)](../_static/images/howto_guides/portal_guide/metap_analysis_category.png)
+
+Workflow results can be searched by metaproteomics analysis category. 
+
 
 ## Interactive visualizations
 
