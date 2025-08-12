@@ -41,10 +41,17 @@ jobs:
           #
           # Reference: https://github.com/lycheeverse/lychee#commandline-parameters
           #
+          # Exclusion notes:
+          # - We exclude Rancher URLs (i.e. `https://rancher2.spin.nersc.gov`) because GHA cannot access any of
+          #   them besides the Rancher login page.
+          # - We exclude the NMDC Instagram page's URL (i.e. `https://www.instagram.com/microbiomedata`) because,
+          #   when we don't, our broken link report contains "HTTP 429 - Too Many Requests" errors for that URL.
+          #
           args: >
             --base '_build/html'
             --exclude-loopback
             --exclude '^https://rancher2.spin.nersc.gov'
+            --exclude '^https://www.instagram.com/microbiomedata$'
             --verbose
             --no-progress
             --format markdown
