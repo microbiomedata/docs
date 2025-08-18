@@ -118,23 +118,23 @@ NMDC-EDGE also allows for bulk submission projects. There is no limit to the num
    ![Excel Spreadsheet hovering over Project/Run Name.](../_static/images/howto_guides/workflows/metaG/081425_bulk_submission_project_name.png)
    - Enter a unique Project/Run Name with no spaces (underscores are fine).
      
-   ![Excel Spreadsheet hovering over Project/Run Name.](../_static/images/howto_guides/workflows/metaG/081425_bulk_submission_description.png)
+   ![Excel Spreadsheet hovering over Description.](../_static/images/howto_guides/workflows/metaG/081425_bulk_submission_description.png)
    - Enter a description (optional, but recommended)
 
-   ![Excel Spreadsheet hovering over Project/Run Name.](../_static/images/howto_guides/workflows/metaG/081425_bulk_submission_data_source.png)
+   ![Excel Spreadsheet hovering over Data Source.](../_static/images/howto_guides/workflows/metaG/081425_bulk_submission_data_source.png)
    - Select a Data Source. Options are Uploaded File, Retrieved SRA Data, or HTTP(s) URL (Uploaded File by default).
      
-   ![Excel Spreadsheet hovering over Project/Run Name.](../_static/images/howto_guides/workflows/metaG/081425_bulk_submission_interleaved.png)
+   ![Excel Spreadsheet hovering over Interleaved input section.](../_static/images/howto_guides/workflows/metaG/081425_bulk_submission_interleaved.png)
    - Use this column if your data is interleaved/single-end(ONE file). Input file name if Data Source is an uploaded file or retrieved SRA data. Input URL if HTTP(s) URL.
      
-   ![Excel Spreadsheet hovering over Project/Run Name.](../_static/images/howto_guides/workflows/metaG/081425_bulk_submission_paired_end.png)
+   ![Excel Spreadsheet hovering over non-interleaved input section.](../_static/images/howto_guides/workflows/metaG/081425_bulk_submission_paired_end.png)
    - Use this column and the next column if your data is non-interleaved/paired-end(TWO files). Input file name if Data Source is an uploaded file or retrieved SRA data. Input URL if HTTP(s) URL.
      
-   ![Excel Spreadsheet hovering over Project/Run Name.](../_static/images/howto_guides/workflows/metaG/081425_bulk_submission_sequencing_platform.png)
+   ![Excel Spreadsheet hovering over data type (Illumina or PacBio).](../_static/images/howto_guides/workflows/metaG/081425_bulk_submission_sequencing_platform.png)
    - Select if the input data is Illumina short-read or PacBio long-read (Illumina by default)
      
 8. Choose your populated "NMDC-EDGE-Metagenomics-pipeline-bulk-submission.xlsx" file or your own properly formatted Excel spreadsheet. Here, metag_1 is running long-reads, metag_2 is running short-reads, and metag_3 is running a short-reads run that neads interleaving.
-   ![Excel Spreadsheet with Columns that are filled to run a Bulk Submission.](../_static/images/howto_guides/workflows/metaG/061725_bulk_submission_test_input.png)
+   ![Excel Spreadsheet with Columns that are filled to run a Bulk Submission.](../_static/images/howto_guides/workflows/metaG/081825_bulk_submission_test_input.png)
 9. Click "Submit" to start a workflow run. [Results here](#bulk-submissions)
 
 
