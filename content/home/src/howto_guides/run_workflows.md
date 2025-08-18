@@ -124,11 +124,13 @@ NMDC-EDGE also allows for bulk submission projects. There is no limit to the num
    ![Excel Spreadsheet hovering over Data Source.](../_static/images/howto_guides/workflows/metaG/081425_bulk_submission_data_source.png)
    - Select a Data Source. Options are Uploaded File, Retrieved SRA Data, or HTTP(s) URL (Uploaded File by default).
      
-   ![Excel Spreadsheet hovering over Interleaved input section.](../_static/images/howto_guides/workflows/metaG/081425_bulk_submission_interleaved.png)
-   - Use this column if your data is interleaved/single-end(ONE file). Input file name if Data Source is an uploaded file or retrieved SRA data. Input URL if HTTP(s) URL.
-     
-   ![Excel Spreadsheet hovering over non-interleaved input section.](../_static/images/howto_guides/workflows/metaG/081425_bulk_submission_paired_end.png)
-   - Use this column and the next column if your data is non-interleaved/paired-end(TWO files). Input file name if Data Source is an uploaded file or retrieved SRA data. Input URL if HTTP(s) URL.
+   ![Excel Spreadsheet hovering over Interleaved input section.](../_static/images/howto_guides/workflows/metaG/081825_bulk_submission_interleaved.png)
+   - Use this column if your data is from Illumina or PacBio and is interleaved/single-end (i.e., only ONE file).
+   - Use the next two columns if your data is Illumina non-interleaved/paired-end (i.e., TWO files).
+      - Format Guidelines:
+        - For uploaded files, use the path format: `upload/your_file_name.fastq.gz`
+        - For SRA data, use the path format: `sra/SRAXXXXXXX.fastq.gz`
+        - For URLs, simply enter the full `http://` or `https://` link. Do not include any other path prefix.
      
    ![Excel Spreadsheet hovering over data type (Illumina or PacBio).](../_static/images/howto_guides/workflows/metaG/081425_bulk_submission_sequencing_platform.png)
    - Select if the input data is Illumina short-read or PacBio long-read (Illumina by default)
