@@ -114,18 +114,18 @@ NMDC-EDGE also allows for bulk submission projects. There is no limit to the num
 4. Enter a description (optional, but recommended).  
 5. Select the workflow desired from the drop-down menu. Here, we will be running "Multiple Workflows".  
    ![Drop-down menu with options "Multiple Workflows" or "ReadsQC".](../_static/images/howto_guides/workflows/metaG/05212025_run_bulk_submission_select.png)
-6. Download the Excel Template to populate with necessary components. Hover over cells below first row to see a description of the item and whether or not an input in mandatory or optional.
+6. Download the Excel Template to populate with necessary components. Hover over cells below first row to see a description of the item and whether an input is mandatory or optional.
    ![Excel Spreadsheet hovering over Project/Run Name.](../_static/images/howto_guides/workflows/metaG/082525_bulk_submission_project_name.png)
    Enter a unique Project/Run Name with no spaces (underscores are fine).
      
    ![Excel Spreadsheet hovering over Description.](../_static/images/howto_guides/workflows/metaG/082525_bulk_submission_description.png)
-   Enter a description (optional, but recommended)
+   Enter a description (optional, but recommended).
 
    ![Excel Spreadsheet hovering over Data Source.](../_static/images/howto_guides/workflows/metaG/082525_bulk_submission_data_source.png)
    Select a Data Source. Options are Uploaded File, Retrieved SRA Data, or HTTP(s) URL (Uploaded File by default).
 
    ![Excel Spreadsheet hovering over data type (Illumina or PacBio).](../_static/images/howto_guides/workflows/metaG/082525_bulk_submission_sequencing_platform.png)
-   Select if the input data is Illumina short-read or PacBio long-read (Illumina by default)
+   Select if the input data is Illumina short-read or PacBio long-read (Illumina by default).
      
    ![Excel Spreadsheet hovering over Interleaved input section.](../_static/images/howto_guides/workflows/metaG/082525_bulk_submission_interleaved.png)
 - **Use column E** if your data is from **Illumina** or **PacBio** and is either:
@@ -155,10 +155,10 @@ NMDC-EDGE also allows for bulk submission projects. There is no limit to the num
    ```
 
 - **For non-interleaved paired-end data**:
-   - Use **column E** for **forward reads (R1)**
-   - Use **column F** for **reverse reads (R2)**
+   - Use **column F** for **forward reads (R1)**
+   - Use **column G** for **reverse reads (R2)**
 
-> **Note:** Even paired-end samples may have multiple files **per direction**. In that case, list the **R1 files** in column E and **R2 files** in column F, comma-separated in each:
+> **Note:** Even paired-end samples may have multiple files **per direction**. In that case, list the **R1 files** in column F and **R2 files** in column G, comma-separated in each.
 
 **URLs**
 - Enter the full download link, starting with `http://` or `https://`: https://example.com/data/sample1.fastq.gz
