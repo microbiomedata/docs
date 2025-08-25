@@ -115,21 +115,25 @@ NMDC-EDGE also allows for bulk submission projects. There is no limit to the num
 5. Select the workflow desired from the drop-down menu. Here, we will be running "Multiple Workflows".  
    ![Drop-down menu with options "Multiple Workflows" or "ReadsQC".](../_static/images/howto_guides/workflows/metaG/05212025_run_bulk_submission_select.png)
 6. Download the Excel Template to populate with necessary components. Hover over cells below first row to see a description of the item and whether or not an input in mandatory or optional.
-   ![Excel Spreadsheet hovering over Project/Run Name.](../_static/images/howto_guides/workflows/metaG/081425_bulk_submission_project_name.png)
+   ![Excel Spreadsheet hovering over Project/Run Name.](../_static/images/howto_guides/workflows/metaG/082525_bulk_submission_project_name.png)
    Enter a unique Project/Run Name with no spaces (underscores are fine).
      
-   ![Excel Spreadsheet hovering over Description.](../_static/images/howto_guides/workflows/metaG/081425_bulk_submission_description.png)
+   ![Excel Spreadsheet hovering over Description.](../_static/images/howto_guides/workflows/metaG/082525_bulk_submission_description.png)
    Enter a description (optional, but recommended)
 
-   ![Excel Spreadsheet hovering over Data Source.](../_static/images/howto_guides/workflows/metaG/081425_bulk_submission_data_source.png)
+   ![Excel Spreadsheet hovering over Data Source.](../_static/images/howto_guides/workflows/metaG/082525_bulk_submission_data_source.png)
    Select a Data Source. Options are Uploaded File, Retrieved SRA Data, or HTTP(s) URL (Uploaded File by default).
+
+   ![Excel Spreadsheet hovering over data type (Illumina or PacBio).](../_static/images/howto_guides/workflows/metaG/082525_bulk_submission_sequencing_platform.png)
+   Select if the input data is Illumina short-read or PacBio long-read (Illumina by default)
      
-   ![Excel Spreadsheet hovering over Interleaved input section.](../_static/images/howto_guides/workflows/metaG/081825_bulk_submission_interleaved.png)
-- **Use column D** if your data is from **Illumina** or **PacBio** and is either:
+   ![Excel Spreadsheet hovering over Interleaved input section.](../_static/images/howto_guides/workflows/metaG/082525_bulk_submission_interleaved.png)
+- **Use column E** if your data is from **Illumina** or **PacBio** and is either:
   - **Single-end** (only forward reads)
   - Or **paired-end and interleaved** (forward and reverse reads combined into **one file**)
 
-- **Use the next two columns, E & F,** if your data is **Illumina non-interleaved paired-end**, where forward and reverse reads are stored in **two separate files** (commonly labeled with `_R1` and `_R2`).
+   ![Excel Spreadsheet hovering over Interleaved input section.](../_static/images/howto_guides/workflows/metaG/082525_bulk_submission_non_interleaved.png)
+- **Use the next two columns, F & G,** if your data is **Illumina non-interleaved paired-end**, where forward and reverse reads are stored in **two separate files** (commonly labeled with `_R1` and `_R2`).
 
 ---
 
@@ -159,11 +163,8 @@ NMDC-EDGE also allows for bulk submission projects. There is no limit to the num
 **URLs**
 - Enter the full download link, starting with `http://` or `https://`: https://example.com/data/sample1.fastq.gz
      
-   ![Excel Spreadsheet hovering over data type (Illumina or PacBio).](../_static/images/howto_guides/workflows/metaG/081425_bulk_submission_sequencing_platform.png)
-   Select if the input data is Illumina short-read or PacBio long-read (Illumina by default)
-     
 7. Choose your populated "NMDC-EDGE-Metagenomics-pipeline-bulk-submission.xlsx" file or your own properly formatted Excel spreadsheet. Here, metag_1 is running long-reads, metag_2 is running short-reads, and metag_3 is running a short-reads run that neads interleaving.
-   ![Excel Spreadsheet with Columns that are filled to run a Bulk Submission.](../_static/images/howto_guides/workflows/metaG/081825_bulk_submission_test_input.png)
+   ![Example Excel Spreadsheet that is filled to run a Bulk Submission.](../_static/images/howto_guides/workflows/metaG/082525_bulk_submission_test_excel.png)
 8. Click "Submit" to start a workflow run. [Results here](#bulk-submissions)
 
 
