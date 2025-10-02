@@ -12,4 +12,6 @@ The NMDC Submission Portal provides an interface for capturing information about
 All submissions to NMDC are kept private and adhere to DOE's data embargo, aligning with user facility data release policies. Submissions are reviewed and, once approved, the submission will be held until ready for release.
 
 ### NMDC Field Notes
+The NMDC Field Notes mobile app streamlines collection of sample information with automated syncing with the NMDC Submission Portal. Sample information is validated in real time against the NMDC metadata standards that use environment-specific templates (e.g., soil or water). Automated data collection features like geolocation and date can be easily selected using the basic functions on either an Android device or an iOS device (e.g., iPhone, iPad). The app was designed for both online and offline mode to accommodate access in the field regardless of internet connectivity.
+
 <iframe class="nmdc-embedded-youtube-video" src="https://www.youtube.com/watch?v=dC7aoJJHioE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
