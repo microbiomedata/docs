@@ -65,7 +65,7 @@ nav:
       - Using the NMDC API GUI: howto_guides/api_gui.md
       - Downloading Data via Globus: howto_guides/globus.md
   - Reference:
-      - NMDC Schema: https://w3id.org/nmdc/about
+      - NMDC Schema: https://microbiomedata.github.io/nmdc-schema/about/
       - NMDC Runtime: runtime/
       - NMDC Workflows: workflows/
       - NMDC Data Portal: reference/data_portal.md
