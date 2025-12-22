@@ -104,7 +104,13 @@ The last step in the study information is to provide external identifiers for th
 
 The Multi-omics Data page will prompt submitters to specify what data types have either already been generated or are anticipated to be generated. The NMDC supports the capture of retrospective (data has already been generated) and prospective (data has not yet been generated) metadata capture and data sharing.
 
-To share retrospective data and metadata that was **not** generated at a [DOE User Facility](#support-for-doe-user-facilities), you will be prompted to answer questions about how your -omics data was generated. This provides the information necessary to determine if your data can be analyzed via NMDC workflows. Additional information is typically necessary for mass spectrometry data, so those types have an option to upload protocols (via DOI, url or text) for sample processing, data acquisition and data access methods. Regardless of these answers, we encourage those interested in sharing their study, metadata, and data to use the NMDC products to capture metadata! 
+To share retrospective data and metadata that was **not** generated at a [DOE User Facility](#support-for-doe-user-facilities), you will be prompted to answer questions about how your -omics data was generated. This provides the information necessary to determine if your data can be analyzed via NMDC workflows. Additional information is typically necessary for mass spectrometry data, so those types have an option to upload protocols (via DOI, url or text) for sample processing, data acquisition and data access methods:
+
+- sample preparation protocol: This protocol should describe how samples were extracted, digested (including which proteolytic enzyme was used), and/or cleaned prior to analysis on an instrument
+- data acquisition protocol: This protocol should describe the chromatography and mass spectrometry methods used for data acquisition
+- data access methods: Provide the location of the publicly available data
+
+Regardless of these answers, we encourage those interested in sharing their study, metadata, and data to use the NMDC products to capture metadata! 
 
 To share retrospective data and metadata that was generated at a [DOE User Facility](#support-for-doe-user-facilities), similar questions will be asked about what facilities and data types. Extended questions about data generation methods will not be required. 
 
