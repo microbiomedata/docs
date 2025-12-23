@@ -60,7 +60,7 @@ All NMDC resources are accessible from the "Products" tab on [https://microbiome
 
 [![](../_static/images/howto_guides/portal_guide/2025-05_LogIn.png)](../_static/images/howto_guides/portal_guide/2025-05_LogIn.png)
 
-The Submission Portal requires ORCID authentication to access. If you have already signed in via ORCID iD, you will not see this login screen within the Submission Portal.
+The Submission Portal requires ORCID authentication to access. If you have already signed in via ORCID iD, you will see something similar to the below.
 
 [![](../_static/images/howto_guides/portal_guide/2025-12_SubmissionStatus.png)](../_static/images/howto_guides/portal_guide/2025-12_SubmissionStatus.png)
 
