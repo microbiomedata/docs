@@ -52,12 +52,7 @@ The DOE User Facilities, the JGI and EMSL, are key partners for the NMDC because
 
 [![](../_static/images/howto_guides/portal_guide/portal_functionality.png)](../_static/images/howto_guides/portal_guide/portal_functionality.png)
 
-All NMDC resources are accessible from the "Products" tab on [https://microbiomedata.org/](https://microbiomedata.org/).
-
-
-[![](../_static/images/howto_guides/portal_guide/ORCiD.png)](../_static/images/howto_guides/portal_guide/ORCiD.png)
-
-NMDC resources require ORCID authentication for full access and functionality.
+All NMDC resources are accessible from the "Products" tab on [https://microbiomedata.org/](https://microbiomedata.org/). NMDC resources require ORCID authentication for full access and functionality.
 
 ## Submission Portal Functionality
 
