@@ -52,12 +52,7 @@ The DOE User Facilities, the JGI and EMSL, are key partners for the NMDC because
 
 [![](../_static/images/howto_guides/portal_guide/portal_functionality.png)](../_static/images/howto_guides/portal_guide/portal_functionality.png)
 
-All NMDC resources are accessible from the "Products" tab on [https://microbiomedata.org/](https://microbiomedata.org/).
-
-
-[![](../_static/images/howto_guides/portal_guide/ORCiD.png)](../_static/images/howto_guides/portal_guide/ORCiD.png)
-
-NMDC resources require ORCID authentication for full access and functionality.
+All NMDC resources are accessible from the "Products" tab on [https://microbiomedata.org/](https://microbiomedata.org/). NMDC resources require ORCID authentication for full access and functionality.
 
 ## Submission Portal Functionality
 
@@ -65,13 +60,25 @@ NMDC resources require ORCID authentication for full access and functionality.
 
 [![](../_static/images/howto_guides/portal_guide/2025-05_LogIn.png)](../_static/images/howto_guides/portal_guide/2025-05_LogIn.png)
 
-The Submission Portal requires ORCID authentication to access. If you have already signed in via ORCID iD, you will not see this login screen within the Submission Portal.
+The Submission Portal requires ORCID authentication to access. If you have already signed in via ORCID iD, you will see something similar to the following:
 
-[![](../_static/images/howto_guides/portal_guide/2025-05_CreateSubmission.png)](../_static/images/howto_guides/portal_guide/2025-05_CreateSubmission.png)
+[![](../_static/images/howto_guides/portal_guide/2025-12_SubmissionStatus.png)](../_static/images/howto_guides/portal_guide/2025-12_SubmissionStatus.png)
 
-Once signed in with an ORCID, you will see an option to ‘Create New Submission’ with subsequent guidance to provide information required for submission to the NMDC. Details about each section are outlined below. Submitters can return to existing submissions saved under the ORCID account to resume their work at any point.   
+Submitters can return to an existing submission or start a new one on the 'submission/home' page. The submissions listed here are connected to your ORCID if you started the submission or are listed as a [Viewer, Metadata Contributor, or Editor](submit2nmdc.md#L90-93).
 
-Creating a 'Test Submission' is available to test and experiment with the NMDC Submission Portal. Test submissions cannot be submitted or changed to a real submission. Any sample metadata entered in a test submission can be exported, and imported into a real submission. See [download and import](#download-and-import) below.
+While a submission is being edited, it's 'Status' will be 'In Progress'. After hitting ["Submit"](submit2nmdc.md#L131), a submission's 'Status' becomes 'Submitted - Pending Review' and can no longer be edited. From here, the 'Status' may change to 'Updates Required', in which case a staff member will reach out and explain any necessary changes and the submission will become editable again. All potential 'Status' values are described below.
+
+  - In Progress : The submitter is currently working on the submission.
+  - Submitted - Pending Review : Submission is ready for NMDC review, the submitter cannot edit.
+  - Updates Required : Submission has been reviewed and submitter edits are required for approval. The submitter can edit the submission.
+  - Approved - Sent to User Facility : Submission has been reviewed and approved by NMDC. Sample information has been shared with designated user facility and is ready for their review. The submitter cannot edit.
+  - Approved - Held : Submission has been reviewed and approved. Information is complete, but not yet shared on the data portal. The submitter cannot edit.
+  - Denied : Submission has been reviewed and denied. The submitter cannot edit.
+  - Released : Submission has been reviewed and approved and data is released on the data portal. The submitter cannot edit.
+
+For new studies, you can either create a 'Submission' or a 'Test Submission'. Creating a 'Test Submission' is available to test and experiment with the NMDC Submission Portal. Test submissions cannot be submitted or changed to a real submission. Any sample metadata entered in a test submission can be exported, and imported into a real submission. See [download and import](#download-and-import) below. Details on creating a "New Submission" are also outlined below.
+
+[![](../_static/images/howto_guides/portal_guide/2025-12_NewSubmission.png)](../_static/images/howto_guides/portal_guide/2025-12_NewSubmission.png)
 
 ### Study
 
@@ -128,7 +135,7 @@ The Sample Metadata interface consists of a grid in which each row represents on
 
 The NMDC uses sections for clarity, and to identify when MIxS specifications have been used as published by the GSC, or when the NMDC team has modified the description, examples, or validation rules for a MIxS attribute captured in their respective columns. These modifications are based on user research and feedback provided to the NMDC.
 
-Biosample metadata can be entered manually (by typing each row), or the data can be entered in bulk by importing a Microsoft Excel XLSX file. The metadata is updated each time a submitter navigates across the submission template, without the need for manually clicking ‘save’. Upon completion, the study submission and metadata will be reviewed by a member of the NMDC team, and once approved, the submitter will indicate when data are ready to be published to the Data Portal.
+Biosample metadata can be entered manually (by typing each row), or the data can be entered in bulk by importing a Microsoft Excel XLSX file. The metadata is updated each time a submitter navigates across the submission template, without the need for manually clicking ‘save’. Upon completion, the individual who started the submission can hit "Submit" and all metadata will be reviewed by an NMDC staff member. Once approved, the submitter will indicate when data are ready to be published to the Data Portal.
  
 #### Metadata Sections
 
