@@ -76,7 +76,7 @@ While a submission is being edited, it's 'Status' will be 'In Progress'. After h
   - Denied : Submission has been reviewed and denied. The submitter cannot edit.
   - Released : Submission has been reviewed and approved and data is released on the data portal. The submitter cannot edit.
 
-[![](../_static/images/howto_guides/portal_guide/2025-05_CreateSubmission.png)](../_static/images/howto_guides/portal_guide/2025-05_CreateSubmission.png)
+[![](../_static/images/howto_guides/portal_guide/2025-12_NewSubmission.png)](../_static/images/howto_guides/portal_guide/2025-12_NewSubmission.png)
 
 For new studies, you can either create a 'Test Submission' or a 'New Submission'. Creating a 'Test Submission' is available to test and experiment with the NMDC Submission Portal. Test submissions cannot be submitted or changed to a real submission. Any sample metadata entered in a test submission can be exported, and imported into a real submission. See [download and import](#download-and-import) below. Details on creating a "New Submission" are also outlines below.
 
