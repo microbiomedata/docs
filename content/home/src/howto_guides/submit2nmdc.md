@@ -68,13 +68,18 @@ Submitters can return to an existing submission or start a new one on the 'submi
 
 While a submission is being edited, it's 'Status' will be 'In Progress'. After hitting ["Submit"](submit2nmdc.md#L131), a submission's 'Status' becomes 'Submitted - Pending Review' and can no longer be edited. From here, the 'Status' may change to 'Updates Required', in which case a staff member will reach out and explain any necessary changes and the submission will become editable again. All potential 'Status' values are described below.
 
-  - In Progress : The submitter is currently working on the submission.
-  - Submitted - Pending Review : Submission is ready for NMDC review, the submitter cannot edit.
-  - Updates Required : Submission has been reviewed and submitter edits are required for approval. The submitter can edit the submission.
-  - Approved - Sent to User Facility : Submission has been reviewed and approved by NMDC. Sample information has been shared with designated user facility and is ready for their review. The submitter cannot edit.
-  - Approved - Held : Submission has been reviewed and approved. Information is complete, but not yet shared on the data portal. The submitter cannot edit.
-  - Denied : Submission has been reviewed and denied. The submitter cannot edit.
-  - Released : Submission has been reviewed and approved and data is released on the data portal. The submitter cannot edit.
+<!-- 
+Note: The authoritative list of the status descriptions and user-facing names is at:
+      https://microbiomedata.github.io/nmdc-schema/SubmissionStatusEnum/#linkml-source
+-->
+
+- In Progress: The submitter is currently working on the submission.
+- Submitted - Pending Review: Submission is ready for NMDC review, the submitter cannot edit.
+- Updates Required: Submission has been reviewed and submitter edits are required for approval. The submitter can edit the submission.
+- Approved - Sent to User Facility: Submission has been reviewed and approved by NMDC. Sample information has been shared with designated user facility and is ready for their review. The submitter cannot edit.
+- Approved - Held: Submission has been reviewed and approved. Information is complete, but not yet shared on the data portal. The submitter cannot edit.
+- Denied: Submission has been reviewed and denied. The submitter cannot edit.
+- Released: Submission has been reviewed and approved and data is released on the data portal. The submitter cannot edit.
 
 For new studies, you can either create a 'Submission' or a 'Test Submission'. Creating a 'Test Submission' is available to test and experiment with the NMDC Submission Portal. Test submissions cannot be submitted or changed to a real submission. Any sample metadata entered in a test submission can be exported, and imported into a real submission. See [download and import](#download-and-import) below. Details on creating a "New Submission" are also outlined below.
 
