@@ -19,7 +19,7 @@ The API endpoints are organized into five groups:
 
 Please note that the endpoints discussed in this document were designed for use primarily by NMDC data consumers. For documentation describing other endpoints, primarily those designed for use by NMDC team members, please see the [NMDC Runtime documentation](https://docs.microbiomedata.org/runtime/).
 
-API requests can include parameters to filter, sort, and organize the requested information. The _Metadata access_ section contains endpoints using different query syntax approaches. Some endpoints use [compact syntax](https://docs.openalex.org/how-to-use-the-api/get-lists-of-entities/filter-entity-lists) (for example, filtering biosamples for those having an "Ecosystem Category" of "Plants" would involve submitting a request containing `ecosystem_category:Plants` to the `GET /biosamples` endpoint). Other endpoints use [MongoDB-like query syntax](https://www.mongodb.com/docs/manual/tutorial/query-documents/) (for example, the same filter would look like `{"ecosystem_category": "Plants"}` using the `GET /nmdcshema/{collection_name}` endpoint with `collection_name` set to `biosample_set`).
+API requests can include parameters to filter, sort, and organize the requested information. The _Metadata access_ section contains endpoints using different query syntax approaches. Some endpoints use [compact syntax](https://docs.openalex.org/how-to-use-the-api/get-lists-of-entities/filter-entity-lists) (for example, filtering biosamples for those having an "Ecosystem Category" of "Plants" would involve submitting a request containing `ecosystem_category:Plants` to the `GET /biosamples` endpoint). Other endpoints use [MongoDB-like query syntax](https://www.mongodb.com/docs/manual/tutorial/query-documents/) (for example, the same filter would look like `{"ecosystem_category": "Plants"}` using the `GET /nmdcschema/{collection_name}` endpoint with `collection_name` set to `biosample_set`).
 
 The following sections describe endpoints in the _Metadata access_ groups.
 
@@ -85,7 +85,7 @@ Here are some of these endpoints that exist today:
 - ![metadata get collection name](../_static/images/howto_guides/api_gui/metadata_get_collection_name.png)
   The `GET /nmdcschema/{collection_name}` endpoint is a general purpose way to retrieve NMDC metadata from a specific collection, given user-provided filter and projection criteria. Please see the [Collection Names](https://microbiomedata.github.io/nmdc-schema/Database/) that may be retrieved. Please note that metadata may only be retrieved about one collection at a time.
 - ![metadata get doc_id](../_static/images/howto_guides/api_gui/metadata_get_doc_id.png)
-  If you already know the the `id` value of the metadata record (i.e. document) you want to retrieve, you can use the `GET /nmdcshema/ids/{doc_id}` to retrieve that record.
+  If you already know the `id` value of the metadata record (i.e. document) you want to retrieve, you can use the `GET /nmdcschema/ids/{doc_id}` to retrieve that record.
 - ![metadata get collection_name doc_id](../_static/images/howto_guides/api_gui/metadata_get_collection_name_doc_id.png)
   If both the identifier and the collection name of the desired record is known, the `GET /nmdcschema/{collection_name}/{doc_id}` can be used to retrieve the record. The projection parameter is optionally available for this endpoint to retrieve only specific attributes from a record (e.g. to get only the _name_ of a study, rather than the _entire_ study).
 
