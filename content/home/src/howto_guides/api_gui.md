@@ -2,9 +2,9 @@
 
 > Note: This guide was written with respect to NMDC API version `2.13.0`.
 
-## Retrieving Metadata using the _Metadata Access_ API Endpoints
+## Retrieving metadata using "Metadata access" API endpoints
 
-Metadata describing NMDC data (e.g. studies, biosamples, data objects, etc.) may be retrieved with GET requests, using the **[NMDC API Graphical User Interface (GUI)](https://api.microbiomedata.org/docs)**. The API GUI provides a guided user interface for direct access to NMDC metadata. People can use it to:
+Metadata describing NMDC data (e.g. studies, biosamples, data objects, etc.) may be retrieved with GET requests, using the [NMDC API Graphical User Interface (GUI)](https://api.microbiomedata.org/docs). The API GUI provides a guided user interface for direct access to NMDC metadata. People can use it to:
 
 1. perform granular, targeted queries. This is especially helpful if a user has a query that may not be supported by the [NMDC Data Portal](https://data.microbiomedata.org/) yet.
 2. learn about querying capabilities. It provides code snippets that can be used in scripts for programmatic access, i.e. the request `curl` commands and URLs provided in the responses (please see the examples below).
@@ -23,7 +23,7 @@ API requests can include parameters to filter, sort, and organize the requested 
 
 The following sections describe endpoints in the _Metadata access_ groups.
 
-### Endpoints with Compact Syntax
+### Endpoints with compact syntax
 
 The _Metadata access_ section contains several endpoints that are dedicated to finding metadata
 of a specific type. There are endpoints specific to finding [studies](https://w3id.org/nmdc/Study),
@@ -70,7 +70,7 @@ Note that an equivalent curl command and request URL are provided as well—comp
 
 ![find example note](../_static/images/howto_guides/api_gui/find_example_note.png)
 
-### Endpoints with MongoDB-like Query Syntax
+### Endpoints with MongoDB-like query syntax
 
 These [endpoints](https://api.microbiomedata.org/docs#/Metadata%20access) can be used to get and filter metadata from _collections_ (e.g. studies—which are in the `study_set` collection; biosamples—which are in the `biosample_set` collection; and data objects—which are in the `data_object_set` collection).
 
@@ -103,7 +103,7 @@ Here are some of these endpoints that exist today:
 6. View the results in JSON format, available to download by clicking **Download**; or copy the results by clicking the clipboard icon in the bottom right corner of the response. In this case, two studies were retrieved. Note that the curl and request URL are provided as well.
    ![metadata example step6](../_static/images/howto_guides/api_gui/metadata_example_step6.png)
 
-## Retrieving Metadata using a _Queries_ API Endpoint
+## Retrieving metadata using a "Private" API endpoint
 
 ### "Public" versus "Private" API endpoints
 
