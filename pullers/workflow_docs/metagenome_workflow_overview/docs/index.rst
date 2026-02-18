@@ -28,7 +28,7 @@ The read-based taxonomy classification workflow utilizes GOTTCHA2, Kraken2, and 
 
 The metagenome assembly short reads workflow uses bbcms, metaSPAdes, and BBMap to run error correction, assembly, and assembly validation, respectively. While the metagenome assembly long reads workflow uses Flye, pbmm2, Racon, and minimap2 for assembly, alignment, polishing, and mapping, respectively. The metagenome annotation workflow takes in assembled metagenomes and generates structural and functional annotations. The MAGs workflow uses MetaBAT 2 to generate metagenome bins and applies the MiMAG standards using annotated tRNAs, rRNAs, and marker genes with checkM to estimate completeness and contamination and subsequent taxonomic lineage assignment.
 
-Users can run a single workflow within the metagenome pipeline with the appropriate input files, but the entire metagenome workflow is available to run from start to finish on NMDC EDGE from a single input raw Illumina file or PacBio file.
+Users can run a single workflow within the metagenome pipeline with the appropriate input files.
 
 
 .. _Workflow Availability:
@@ -36,7 +36,7 @@ Users can run a single workflow within the metagenome pipeline with the appropri
 Workflow Availability
 ---------------------
 
-The workflow is available in its individual components on GitHub (repositories linked) and as a whole to run on `NMDC EDGE <https://nmdc-edge.org/home>`_. Documentation links are available in :ref:`Workflow Overview`.
+The workflow is available in its individual components on GitHub (repositories linked). Documentation links are available in :ref:`Workflow Overview`.
 
 - `ReadsQC <https://github.com/microbiomedata/ReadsQC>`_ 
 - `MetaAssembly <https://github.com/microbiomedata/metaAssembly>`_
@@ -45,7 +45,7 @@ The workflow is available in its individual components on GitHub (repositories l
 - `Read-based Taxonomy <https://github.com/microbiomedata/ReadbasedAnalysis>`_
 
 
-Requirements for Execution outside `NMDC EDGE <nmdc-edge.org>`_:  
+Requirements for Execution:  
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 (recommendations are in **bold**)
@@ -92,35 +92,7 @@ Sample dataset(s):
   - A 10% subset of the interleaved file is available as a quick dataset `here <https://portal.nersc.gov/cfs/m3408/test_data/SRR7877884/SRR7877884-int-0.1.fastq.gz>`_
 
 
-
-Input: 
-~~~~~~~~~~~~~~~~~~~~
-
-To run the full workflow via NMDC EDGE web UI, the following inputs are needed: 
-
-#. Project/Run Name
-#. Is interleaved (boolean)
-#. Interleaved fastq(s), (FASTQ #1; FASTQ #2...)
-#. If non-interleaved paired-end reads, Pair(FASTQ R1, FASTQ R2)...
-
-To run individual workflows, see website or individual GitHub repositories. (See :ref:`Workflow Availability` links)
-
-
-Output:
-~~~~~~~
-Upon completion of the run, the NMDC EDGE interface provides results grouped by individual workflow for viewing.
-
-In addition to the workflow outputs are summary tables for each portion: 
-
-- ReadsQC: statistics and metrics, including the number of reads and bases before and after QC filtering
-- Read-based taxonomy: summary tables and interactive Krona plots as visual outputs
-- Assembly: summary statistics table
-- Annotation: statistics for processed sequences, predicted genes, and general quality information
-- MAGs: summary section with information on binned and unbinned contigs, genome completeness, estimated contamination, and the number of genes present on all bins determined to be high quality or medium quality
-
-
-
 Point of contact
 ----------------
 
-- Workflow maintainers: Chienchi Lo <chienchi@lanl.gov>, Mark Flynn <mflynn@lanl.gov>
+- Workflow maintainers: Samantha Obermiller samantha.obermiller@pnnl.gov, Alicia Clum <aclum@lbl.gov>
