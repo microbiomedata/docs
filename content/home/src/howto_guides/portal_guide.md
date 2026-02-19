@@ -18,9 +18,6 @@ public use with attribution, as outlined in the NMDC Data Use Policy
 iteration of the NMDC Data Portal was released in March 2021 and 
 continues to expand its data hosting and functionality on an ongoing basis.
 
-There is a short video tutorial showing how to navigate the portal on
-YouTube ([https://youtu.be/JV-8QWoL4aY](https://youtu.be/JV-8QWoL4aY)).
-
 ## User-Centered Design Process
 
 The NMDC is a resource designed together with and for the scientific
