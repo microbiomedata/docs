@@ -55,7 +55,6 @@ nav:
   - Home: index.md
   - Tutorials:
       - Submitting to NMDC: tutorials/submission_portal.md
-      - Running the Workflows: tutorials/run_workflows.md
       - Navigating the Data Portal: tutorials/nav_data_portal.md
   - How-To Guides:
       - Creating a Data Mgt. Plan: howto_guides/data_plan.md
@@ -127,7 +126,7 @@ plugins:
         reference/data_portal.html.md: reference/data_portal.md
         reference/software_development.html.md: reference/software_development.md
         tutorials/nav_data_portal.html.md: tutorials/nav_data_portal.md
-        tutorials/run_workflows.html.md: tutorials/run_workflows.md
+        tutorials/run_workflows.html.md: index.md
         tutorials/submission_portal.html.md: tutorials/submission_portal.md
 
 # Docs: https://www.mkdocs.org/user-guide/configuration/#hooks
