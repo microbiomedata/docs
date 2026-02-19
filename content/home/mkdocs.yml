@@ -59,7 +59,6 @@ nav:
   - How-To Guides:
       - Creating a Data Mgt. Plan: howto_guides/data_plan.md
       - Submitting to NMDC: howto_guides/submit2nmdc.md
-      - Running the Workflows: howto_guides/run_workflows.md
       - Navigating the Data Portal: howto_guides/portal_guide.md
       - Using the NMDC API GUI: howto_guides/api_gui.md
       - Downloading Data via Globus: howto_guides/globus.md
@@ -121,7 +120,7 @@ plugins:
         howto_guides/data_plan.html.md: howto_guides/data_plan.md
         howto_guides/globus.html.md: howto_guides/globus.md
         howto_guides/portal_guide.html.md: howto_guides/portal_guide.md
-        howto_guides/run_workflows.html.md: howto_guides/run_workflows.md
+        howto_guides/run_workflows.html.md: index.md
         howto_guides/submit2nmdc.html.md: howto_guides/submit2nmdc.md
         reference/data_portal.html.md: reference/data_portal.md
         reference/software_development.html.md: reference/software_development.md
