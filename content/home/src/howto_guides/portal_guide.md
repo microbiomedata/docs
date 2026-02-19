@@ -283,6 +283,15 @@ downloading data.
 Metadata for an individual study or sample can be downloaded on the relevant study or 
 sample pages or downloaded in bulk on the main search page by clicking on 'DOWNLOAD', then clicking on 'METADATA'.
 
+### Interactive visualizations 
+[![](../_static/images/howto_guides/portal_guide/magnified_glass_icon.png)](../_static/images/howto_guides/portal_guide/magnified_glass_icon.png)
+[![](../_static/images/howto_guides/portal_guide/krona_plot.png)](../_static/images/howto_guides/portal_guide/krona_plot.png)
+
+For Reads Based Taxonomic Analysis results users can click on the magnified glass 
+icon to open up interactive Krona (14) plots.
+
+
+
 ## References
 
 > 1.  Abras C, Maloney-Krichmar, D., Preece, J. 2004. User-Centered
@@ -322,3 +331,4 @@ sample pages or downloaded in bulk on the main search page by clicking on 'DOWNL
 > 11.  Bateman A, Coin L, Durbin R, Finn RD, Hollich V, Griffiths-Jones S, Khanna A, Marshall M, Moxon S, Sonnhammer ELL, Studholme DJ, Yeats C, Eddy SR. 2004. The Pfam protein families database. Nucleic Acids Res. 32:D138–D141. https://doi.org/10.1093/nar/gkh121.
 > 12.  Tatusov RL, Galperin MY, Natale DA, Koonin EV. 2000. The COG database: a tool for genome-scale analysis of protein functions and evolution. Nucleic Acids Res. 28:33. https://doi.org/10.1093/nar/28.1.33.
 > 13.  The Gene Ontology Consortium. 2019. The Gene Ontology resource: 20 years and still GOing strong. Nucleic Acids Res. 47:D330–D338. https://doi.org/10.1093/nar/gky1055.
+> 14.  Ondov BD, Bergman NH, Phillippy AM. Interactive metagenomic visualization in a Web browser. BMC Bioinformatics. 2011 Sep 30;12:385. doi: 10.1186/1471-2105-12-385. PMID: 21961884; PMCID: PMC3190407.
