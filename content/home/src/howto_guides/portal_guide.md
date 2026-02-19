@@ -264,7 +264,7 @@ Output files from each data type are sorted by the specific workflow
 available for download when the sample of interest is selected. Users
 must log in with an ORCID account before downloading data.
 
-### *Bulk download*
+### *Bulk data download*
 
 [![](../_static/images/howto_guides/portal_guide/bulk_download.png)](../_static/images/howto_guides/portal_guide/bulk_download.png)
 
@@ -275,6 +275,13 @@ of interest are down-selected through query terms, output files from
 each NMDC standardized workflow run on those samples are available as
 bulk downloads. Users must be logged in with an ORCID account before
 downloading data.
+
+### *Download metadata*
+[![](../_static/images/howto_guides/portal_guide/individual_study_metadata.png)](../_static/images/howto_guides/portal_guide/individual_study_metadata.png)
+[![](../_static/images/howto_guides/portal_guide/metadata_download.png)](../_static/images/howto_guides/portal_guide/metadata_download.png)
+
+Metadata for an individual study or sample can be downloaded on the relevant study or 
+sample pages or downloaded in bulk on the main search page by clicking on 'DOWNLOAD', then clicking on 'METADATA'.
 
 ## References
 
