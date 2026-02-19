@@ -284,7 +284,7 @@ sample pages or downloaded in bulk on the main search page by clicking on 'DOWNL
 [![](../_static/images/howto_guides/portal_guide/rbt_magnified_glass.png)](../_static/images/howto_guides/portal_guide/rbt_magnified_glass.png)
 [![](../_static/images/howto_guides/portal_guide/krona_plot.png)](../_static/images/howto_guides/portal_guide/krona_plot.png)
 
-For Reads Based Taxonomic Analysis results users can click on the magnified glass 
+For Reads-Based Taxonomic Analysis results, users can click on the magnifying glass 
 icon to open up interactive Krona (14) plots.
 
 
