@@ -284,7 +284,7 @@ Metadata for an individual study or sample can be downloaded on the relevant stu
 sample pages or downloaded in bulk on the main search page by clicking on 'DOWNLOAD', then clicking on 'METADATA'.
 
 ### Interactive visualizations 
-[![](../_static/images/howto_guides/portal_guide/magnified_glass_icon.png)](../_static/images/howto_guides/portal_guide/magnified_glass_icon.png)
+[![](../_static/images/howto_guides/portal_guide/rbt_magnified_glass.png)](../_static/images/howto_guides/portal_guide/rbt_magnified_glass.png)
 [![](../_static/images/howto_guides/portal_guide/krona_plot.png)](../_static/images/howto_guides/portal_guide/krona_plot.png)
 
 For Reads Based Taxonomic Analysis results users can click on the magnified glass 
