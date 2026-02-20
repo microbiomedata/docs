@@ -31,6 +31,9 @@ jobs:
         id: lychee
         uses: lycheeverse/lychee-action@v2
         with:
+          # Specify a Lychee version so the Lychee CLI options are always interpreted the same way,
+          # even if the Lychee developers introduce breaking changes in a new Lychee version.
+          lycheeVersion: 'v0.19.1'
           #
           # Notes:
           # - The `>` symbol tells the YAML parser to replace newlines with whitespace. This way, we don't
