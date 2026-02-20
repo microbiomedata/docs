@@ -51,7 +51,7 @@ jobs:
           #   when we don't, our broken link report contains "HTTP 429 - Too Many Requests" errors for that URL.
           #
           args: >
-            --base '_build/html'
+            --root-dir "${{ github.workspace }}/_build/html"
             --exclude-loopback
             --exclude '^https://rancher2.spin.nersc.gov'
             --exclude '^https://www.instagram.com/microbiomedata$'
