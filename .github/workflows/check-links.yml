@@ -40,8 +40,6 @@ jobs:
           # Notes:
           # - The `>` symbol tells the YAML parser to replace newlines with whitespace. This way, we don't
           #   have to terminate each line with a `\` character to escape the invisible newline character.
-          # - The `--scheme` option tells Lychee which types of links to check. We use this to prevent
-          #   Lychee from filling up the console with messages about `file://` and `data:` URLs.
           # - The `--format` option refers to the format of the report, not the documents being scanned.
           # - The `--exclude-loopback` option makes it so Lychee does not check "localhost" URLs.
           # - The `--exclude <PATTERN>` option can be used multiple times.
@@ -55,8 +53,8 @@ jobs:
           #   when we don't, our broken link report contains "HTTP 429 - Too Many Requests" errors for that URL.
           #
           args: >
+            --cache
             --root-dir "${{ github.workspace }}/_build/html"
-            --scheme "http,https"
             --exclude-loopback
             --exclude '^https://rancher2.spin.nersc.gov'
             --exclude '^https://www.instagram.com/microbiomedata$'
