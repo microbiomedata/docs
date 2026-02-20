@@ -33,7 +33,9 @@ jobs:
         with:
           # Specify a Lychee version so the Lychee CLI options are always interpreted the same way,
           # even if the Lychee developers introduce breaking changes in a new Lychee version.
-          lycheeVersion: 'v0.19.1'
+          # Note: v0.23.0 was released February 13, 2026, according to the GitHub repository:
+          #       https://github.com/lycheeverse/lychee/releases/tag/lychee-v0.23.0
+          lycheeVersion: 'v0.23.0'
           #
           # Notes:
           # - The `>` symbol tells the YAML parser to replace newlines with whitespace. This way, we don't
