@@ -53,11 +53,13 @@ jobs:
           #   when we don't, our broken link report contains "HTTP 429 - Too Many Requests" errors for that URL.
           #
           args: >
-            --cache
             --root-dir "${{ github.workspace }}/_build/html"
             --exclude-loopback
             --exclude '^https://rancher2.spin.nersc.gov'
             --exclude '^https://www.instagram.com/microbiomedata$'
+            --exclude '^https://dagit.microbiomedata.org'
+            --exclude '^https://dagit-dev.microbiomedata.org'
+            --exclude '^https://github.com/microbiomedata/infra-admin'
             --verbose
             --no-progress
             --format markdown
