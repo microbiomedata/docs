@@ -3,6 +3,10 @@
 # Docs: https://squidfunk.github.io/mkdocs-material/getting-started/
 mkdocs-material
 
+# We use this plugin to render Mermaid diagrams in our documentation.
+# Docs: https://github.com/fralau/mkdocs-mermaid2-plugin
+mkdocs-mermaid2-plugin
+
 # We use this plugin to redirect visitors from old URLs to new ones.
 # Docs: https://github.com/mkdocs/mkdocs-redirects
 mkdocs-redirects

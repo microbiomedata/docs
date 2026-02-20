@@ -4,33 +4,47 @@ The NMDC Data Portal is a web application researchers can use to discover and ac
 
 The main technologies upon which it is built are:
 
-* [Python](https://www.python.org/) and [FastAPI](https://fastapi.tiangolo.com/)
-* [PostgreSQL](https://www.postgresql.org/) and [SQLAlchemy](https://www.sqlalchemy.org/)
-* [Celery](https://docs.celeryq.dev/) and [Redis](https://redis.io/)
-* [Vue.js](https://v2.vuejs.org/) and [Vuetify](https://v2.vuetifyjs.com/)
+- [Python](https://www.python.org/) and [FastAPI](https://fastapi.tiangolo.com/)
+- [PostgreSQL](https://www.postgresql.org/) and [SQLAlchemy](https://www.sqlalchemy.org/)
+- [Vue.js](https://vuejs.org/) and [Vuetify](https://vuetifyjs.com/)
 
-For specific versions  of these technologies currently being used by the NMDC Data Portal, see the Dependencies below.
+For specific versions of these technologies currently being used by the NMDC Data Portal, see the dependency lists linked below.
 
-### Dependencies
+## Dependencies
 
-The NMDC Data Portal depends upon various Python and JavaScript libraries, which are listed in either of the following documents:
+The NMDC Data Portal depends upon various Python and JavaScript packages, which are listed at:
 
-* [Python dependencies](https://github.com/microbiomedata/nmdc-server/blob/main/pyproject.toml)
-* [Javascript dependencies](https://github.com/microbiomedata/nmdc-server/blob/main/web/package.json)
+- [Python dependencies](https://github.com/microbiomedata/nmdc-server/blob/main/pyproject.toml)
+- [JavaScript dependencies](https://github.com/microbiomedata/nmdc-server/blob/main/web/package.json)
 
 ## Architecture
 
-![nmdc-diagram](../_static/images/reference/data_portal/nmdc-diagram.svg)
+Here's a block diagram depicting the high-level architecture of the NMDC Data Portal.
 
-## API documentation
+```mermaid
+%% Docs: https://mermaid.js.org/syntax/architecture.html
+architecture-beta
+    group frontend[Frontend]
+    service vue(server)[Vue] in frontend
+    service nginx(server)[Nginx] in frontend
 
-In addition to providing a web-based GUI (graphical user interface), the NMDC Data Portal also exposes an HTTP API. Researchers can use the latter to _programmatically_ discover and access standardized multi-omics microbiome data.
+    group backend[Backend]
+    service postgres(database)[PostgreSQL] in backend
+    service zipstreamer(server)[ZipStreamer] in backend
+    service fastapi(server)[FastAPI] in backend
+    
+    service filestorage(cloud)[Data Storage]
 
-Information about the HTTP API is in this [wiki](https://github.com/microbiomedata/nmdc-server/wiki/Search-API-Docs).
+    vue:R         -- L:nginx
+    nginx:B       -- T:fastapi
+    fastapi:R     -- L:zipstreamer
+    zipstreamer:R -- L:filestorage
+    fastapi:L     -- R:postgres
+```
 
 ## Development documentation
 
 Here are some resources people can use to learn about the development of the NMDC Data Portal.
 
-* [Server and client development documentation](https://github.com/microbiomedata/nmdc-server/blob/main/docs/development.md)
-* [Client architecture notes](https://github.com/microbiomedata/nmdc-server/blob/main/web/README.md)
+- [Developer guide](https://github.com/microbiomedata/nmdc-server/blob/main/docs/development.md)
+- [Frontend developer guide](https://github.com/microbiomedata/nmdc-server/blob/main/web/README.md)

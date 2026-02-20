@@ -102,6 +102,15 @@ extra_javascript:
 
 plugins:
   - search
+  # Configure the `mkdocs-mermaid2-plugin` plugin.
+  # Docs: https://github.com/fralau/mkdocs-mermaid2-plugin
+  - mermaid2:
+      # Note: Since `content/home/src/reference/data_portal.md` contains a Mermaid diagram of type
+      #       "architecture-beta", here, we intentionally specify a Mermaid version that supports
+      #       that diagram type. That diagram type was introduced in Mermaid version 11.1.0; and
+      #       the latest version at the time of this writing is version 11.12.3.
+      #       Docs: https://mermaid.js.org/syntax/architecture.html
+      version: 11.12.3
   # Docs: https://github.com/mkdocs/mkdocs-redirects
   - redirects:
       redirect_maps:
