@@ -18,9 +18,6 @@ public use with attribution, as outlined in the NMDC Data Use Policy
 iteration of the NMDC Data Portal was released in March 2021 and 
 continues to expand its data hosting and functionality on an ongoing basis.
 
-There is a short video tutorial showing how to navigate the portal on
-YouTube ([https://youtu.be/JV-8QWoL4aY](https://youtu.be/JV-8QWoL4aY)).
-
 ## User-Centered Design Process
 
 The NMDC is a resource designed together with and for the scientific
@@ -264,7 +261,7 @@ Output files from each data type are sorted by the specific workflow
 available for download when the sample of interest is selected. Users
 must log in with an ORCID account before downloading data.
 
-### *Bulk download*
+### *Bulk data download*
 
 [![](../_static/images/howto_guides/portal_guide/bulk_download.png)](../_static/images/howto_guides/portal_guide/bulk_download.png)
 
@@ -275,6 +272,22 @@ of interest are down-selected through query terms, output files from
 each NMDC standardized workflow run on those samples are available as
 bulk downloads. Users must be logged in with an ORCID account before
 downloading data.
+
+### *Download metadata*
+[![](../_static/images/howto_guides/portal_guide/individual_study_metadata.png)](../_static/images/howto_guides/portal_guide/individual_study_metadata.png)
+[![](../_static/images/howto_guides/portal_guide/metadata_download.png)](../_static/images/howto_guides/portal_guide/metadata_download.png)
+
+Metadata for an individual study or sample can be downloaded on the relevant study or 
+sample pages or downloaded in bulk on the main search page by clicking on 'DOWNLOAD', then clicking on 'METADATA'.
+
+### Interactive visualizations 
+[![](../_static/images/howto_guides/portal_guide/rbt_magnified_glass.png)](../_static/images/howto_guides/portal_guide/rbt_magnified_glass.png)
+[![](../_static/images/howto_guides/portal_guide/krona_plot.png)](../_static/images/howto_guides/portal_guide/krona_plot.png)
+
+For Reads-Based Taxonomic Analysis results, users can click on the magnifying glass 
+icon to open up interactive Krona (14) plots.
+
+
 
 ## References
 
@@ -315,3 +328,4 @@ downloading data.
 > 11.  Bateman A, Coin L, Durbin R, Finn RD, Hollich V, Griffiths-Jones S, Khanna A, Marshall M, Moxon S, Sonnhammer ELL, Studholme DJ, Yeats C, Eddy SR. 2004. The Pfam protein families database. Nucleic Acids Res. 32:D138–D141. https://doi.org/10.1093/nar/gkh121.
 > 12.  Tatusov RL, Galperin MY, Natale DA, Koonin EV. 2000. The COG database: a tool for genome-scale analysis of protein functions and evolution. Nucleic Acids Res. 28:33. https://doi.org/10.1093/nar/28.1.33.
 > 13.  The Gene Ontology Consortium. 2019. The Gene Ontology resource: 20 years and still GOing strong. Nucleic Acids Res. 47:D330–D338. https://doi.org/10.1093/nar/gky1055.
+> 14.  Ondov BD, Bergman NH, Phillippy AM. Interactive metagenomic visualization in a Web browser. BMC Bioinformatics. 2011 Sep 30;12:385. doi: 10.1186/1471-2105-12-385. PMID: 21961884; PMCID: PMC3190407.
