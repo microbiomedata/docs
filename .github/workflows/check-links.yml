@@ -31,6 +31,11 @@ jobs:
         id: lychee
         uses: lycheeverse/lychee-action@v2
         with:
+          # Specify a Lychee version so the Lychee CLI options are always interpreted the same way,
+          # even if the Lychee developers introduce breaking changes in a new Lychee version.
+          # Note: v0.23.0 was released February 13, 2026, according to the GitHub repository:
+          #       https://github.com/lycheeverse/lychee/releases/tag/lychee-v0.23.0
+          lycheeVersion: 'v0.23.0'
           #
           # Notes:
           # - The `>` symbol tells the YAML parser to replace newlines with whitespace. This way, we don't
@@ -48,10 +53,13 @@ jobs:
           #   when we don't, our broken link report contains "HTTP 429 - Too Many Requests" errors for that URL.
           #
           args: >
-            --base '_build/html'
+            --root-dir "${{ github.workspace }}/_build/html"
             --exclude-loopback
             --exclude '^https://rancher2.spin.nersc.gov'
             --exclude '^https://www.instagram.com/microbiomedata$'
+            --exclude '^https://dagit.microbiomedata.org'
+            --exclude '^https://dagit-dev.microbiomedata.org'
+            --exclude '^https://github.com/microbiomedata/infra-admin'
             --verbose
             --no-progress
             --format markdown
