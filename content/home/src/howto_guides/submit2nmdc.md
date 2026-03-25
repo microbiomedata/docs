@@ -124,6 +124,7 @@ Additional information is typically necessary for mass spectrometry data, so tho
 
 - sample preparation protocol: This protocol should describe how samples were extracted, digested (including which proteolytic enzyme was used), and/or cleaned prior to analysis on an instrument
 - data acquisition protocol: This protocol should describe the chromatography and mass spectrometry methods used for data acquisition
+ THIS IS WHERE WE COULD ADD MORE TEXT 
 - data access methods: Provide the location of the publicly available data
 
 [![](../_static/images/howto_guides/portal_guide/2025-12_Data-Non-UF-MS.png)](../_static/images/howto_guides/portal_guide/2025-12_Data-Non-UF-MS.png)
