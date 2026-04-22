@@ -105,7 +105,7 @@ our [workflow documentation](https://github.com/microbiomedata/workflow_document
 
 ### Text Search
 
-TODO: upload and add text search screenshot
+[![](../_static/images/howto_guides/portal_guide/text_search.png)](../_static/images/howto_guides/portal_guide/text_search.png)
 
 Samples and studies can be searched by arbitrary text search terms using the `Search` input at the top of the left query term bar. Simply type in your search term and press enter or click the item underneath the `Text Search` label. This search uses a simple [full text search](https://www.postgresql.org/docs/current/textsearch-intro.html) algorithm to query for samples and studies across the following text or JSON columns in the database:
 
