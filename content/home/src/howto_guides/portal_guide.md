@@ -137,7 +137,7 @@ Samples and studies can be searched by arbitrary text search terms using the `Se
 - `annotations`
 - `alternate_identifiers`
 
-The text search input can also accept NMDC identifiers. Searching by an identifier will find all studies and samples that are associated with that identifier. For example, this can be used to quickly find samples that are related to a specific study ID (e.g. `nmdc:sty-11-r2h77870`). Users can also use this to find samples that are associated with specific Data Object IDs, Omics Processing IDs, or Workflow IDs.
+The text search input can also accept NMDC identifiers. Searching by an identifier will find all studies and samples that are associated with that identifier. For example, this can be used to quickly find samples that are related to a specific study ID (e.g. `nmdc:sty-11-r2h77870`). Users can also use this to find samples that are associated with specific Data Object IDs, Data Generation IDs, or Workflow Execution IDs.
 
 ### Faceted search and access
 
