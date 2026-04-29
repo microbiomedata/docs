@@ -103,6 +103,42 @@ our [workflow documentation](https://github.com/microbiomedata/workflow_document
 
 ## Portal Functionality
 
+### Text Search
+
+[![](../_static/images/howto_guides/portal_guide/text_search.png)](../_static/images/howto_guides/portal_guide/text_search.png)
+
+Samples and studies can be searched by arbitrary text search terms using the `Search` input at the top of the left query term bar. Simply type in your search term and press enter or click the item underneath the `Text Search` label. This search uses a simple [full text search](https://www.postgresql.org/docs/current/textsearch-intro.html) algorithm to query for samples and studies across the following text or JSON columns in the database:
+
+**Study Columns** ([live list in the code](https://github.com/microbiomedata/nmdc-server/blob/main/nmdc_server/models.py#L371))
+- `id`
+- `name`
+- `description`
+- `gold_name`
+- `gold_description`
+- `scientific_objective`
+- `annotations`
+- `part_of`
+- `children`
+
+**Sample Columns** ([live list in the code](https://github.com/microbiomedata/nmdc-server/blob/main/nmdc_server/models.py#L486))
+- `id`
+- `name`
+- `description`
+- `study_id`
+- `name`
+- `env_broad_scale_id`
+- `env_local_scale_id`
+- `env_medium_id`
+- `ecosystem`
+- `ecosystem_category`
+- `ecosystem_type`
+- `ecosystem_subtype`
+- `specific_ecosystem`
+- `annotations`
+- `alternate_identifiers`
+
+The text search input can also accept NMDC identifiers. Searching by an identifier will find all studies and samples that are associated with that identifier. For example, this can be used to quickly find samples that are related to a specific study ID (e.g. `nmdc:sty-11-r2h77870`). Users can also use this to find samples that are associated with specific Data Object IDs, Data Generation IDs, or Workflow Execution IDs.
+
 ### Faceted search and access
 
 ### *Search by investigator name*
