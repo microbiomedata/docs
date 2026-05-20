@@ -13,9 +13,9 @@ jobs:
     steps:
         # Docs: https://github.com/actions/checkout
       - name: Check out commit
-        uses: actions/checkout@v4
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
       - name: Check out commit from `nmdc-runtime/main`
-        uses: actions/checkout@v4
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
         with:
           # Notes:
           # - `repository` format is: "{owner_name}/{repo_name}"
@@ -27,7 +27,7 @@ jobs:
           path: _clones/microbiomedata/nmdc-runtime  # where, locally, to create the clone
         # Docs: https://github.com/actions/setup-python
       - name: Set up Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@a309ff8b426b58ec0e2a45f0f869d46889d02405 # v6.2.0
         with: { python-version: '3.12' }
       - name: Install dependencies of `nmdc-runtime` docs
         run: | 
@@ -71,7 +71,7 @@ jobs:
           }' | mkdocs build -f -
         # Upload the result as an "artifact" so it can then be downloaded and used by another job.
       - name: Save the HTML for publishing later  # Docs: https://github.com/actions/upload-artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
         with:
           name: runtime-docs-as-html
           # Note: Relative `path` values here are relative to the _workspace_, not to the current working directory.
