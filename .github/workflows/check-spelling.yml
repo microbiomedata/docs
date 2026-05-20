@@ -1,0 +1,37 @@
+# This GitHub Actions workflow checks spelling in HTML files and creates a GitHub Issue if it finds misspelled words.
+# Reference: https://docs.github.com/en/actions/writing-workflows/workflow-syntax-for-github-actions
+name: Check spelling
+
+on:
+  # Allow this workflow to be called by other workflows.
+  # Reference: https://docs.github.com/en/actions/using-workflows/reusing-workflows
+  workflow_call: { }
+
+jobs:
+  check-spelling:
+    name: Check spelling
+    runs-on: ubuntu-latest
+    steps:
+      # Check out the commit so that we have access to the spellcheck configuration file residing in the repository.
+      - name: Check out commit
+        uses: actions/checkout@v4
+      - name: Get website file tree
+        uses: actions/download-artifact@v4  # docs: https://github.com/actions/download-artifact
+        with:
+          name: github-pages
+          path: _downloads
+      - name: Un-tar the archive
+        run: |
+          pwd
+          mkdir -p _build/html
+          tar -xvf _downloads/artifact.tar -C _build/html
+          ls -lR _build/html
+      # Use `GitHub Spellcheck Action`, from the GHA Marketplace, to check spelling.
+      # Reference: https://github.com/marketplace/actions/github-spellcheck-action
+      - name: Dump Spellcheck configuration file
+        run: cat .github/workflows/supporting_files/spellcheck.yml
+      - name: Run Spellcheck
+        uses: rojopolis/spellcheck-github-actions@0.47.0
+        with:
+          config_path: .github/workflows/supporting_files/spellcheck.yml
+          task_name: HTML
