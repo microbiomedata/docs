@@ -64,7 +64,7 @@ The Submission Portal requires ORCID authentication to access. If you have alrea
 
 [![](../_static/images/howto_guides/portal_guide/2025-12_SubmissionStatus.png)](../_static/images/howto_guides/portal_guide/2025-12_SubmissionStatus.png)
 
-Submitters can return to an existing submission or start a new one on the 'submission/home' page. The submissions listed here are connected to your ORCID if you started the submission or are listed as a [Viewer, Metadata Contributor, or Editor](submit2nmdc.md#L90-93).
+Submission author can return to an existing submission or start a new one on the 'submission/home' page. The submissions listed here are connected to your ORCID if you started the submission or are listed as a [Viewer, Metadata Contributor, or Editor](submit2nmdc.md#L90-93).
 
 While a submission is being edited, it's 'Status' will be 'In Progress'. After hitting ["Submit"](submit2nmdc.md#L131), a submission's 'Status' becomes 'Submitted - Pending Review' and can no longer be edited. From here, the 'Status' may change to 'Updates Required', in which case a staff member will reach out and explain any necessary changes and the submission will become editable again. All potential 'Status' values are described below.
 
