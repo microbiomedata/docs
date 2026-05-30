@@ -19,8 +19,7 @@ as opposed to the content aspect.
       * [Workflow docs](#workflow-docs)
   * [Deployment](#deployment)
     * [Automatic deployment](#automatic-deployment)
-    * [Manual regeneration and deployment (step-by-step)](#manual-regeneration-and-deployment-step-by-step)
-    * [Workflow details (for GitHub Actions users)](#workflow-details-for-github-actions-users)
+    * [Manual deployment](#manual-deployment)
   * [Google Analytics](#google-analytics)
 <!-- TOC -->
 
@@ -105,38 +104,23 @@ and to (b) publish that single website to GitHub Pages.
 
 ### Automatic deployment
 
-Website regeneration and deployment happens automatically when a commit is pushed to the `main` branch of this repository.
-The workflow that performs this is `.github/workflows/deploy-to-gh-pages.yml` ("Deploy to GitHub Pages").
+Whenever a commit is added to the `main` branch of this repository, the website will be regenerated
+and redeployed. That happens via the "Deploy to GitHub Pages" GitHub Actions workflow, which is
+specified in: `.github/workflows/deploy-to-gh-pages.yml`
 
-### Manual regeneration and deployment (step-by-step)
+### Manual deployment
 
-Use this procedure when you need to regenerate and redeploy the website without creating a new commit on `main`.
+If you want to regenerate and redeploy the website without adding a commit to the `main` branch of
+this repository, you can do so by following the steps below:
 
-1. Open the repository's **Actions** tab: https://github.com/microbiomedata/docs/actions
-2. In the left sidebar, click **Deploy to GitHub Pages**
-3. Click **Run workflow**
-4. In the **Use workflow from** dropdown, select `main` (recommended for production)
-5. Click the green **Run workflow** button to start the run
-6. Open the new workflow run and monitor the jobs until they complete
-7. Confirm both jobs succeeded:
-   - **Assemble website**
-   - **Deploy website**
-8. Wait ~3 minutes, then verify the live site was refreshed: https://docs.microbiomedata.org
-
-If the run fails, open the failed job, review the logs, fix the root cause, and run the workflow again.
-
-### Workflow details (for GitHub Actions users)
-
-The deployment path is:
-
-1. `Deploy to GitHub Pages` (`deploy-to-gh-pages.yml`) is triggered (`push` to `main` or `workflow_dispatch`)
-2. It calls `Assemble website` (`assemble-website.yml`)
-3. `Assemble website` calls these reusable workflows in parallel:
-   - `compile-home-docs.yml`
-   - `fetch-and-compile-runtime-docs.yml`
-   - `fetch-and-compile-workflow-docs.yml`
-4. The assembled `github-pages` artifact is link-checked (`check-links.yml`)
-5. `actions/deploy-pages` publishes the artifact to GitHub Pages
+1. Open the repository's **[Actions](https://github.com/microbiomedata/docs/actions)** tab
+2. In the left sidebar, click the GHA workflow names **Deploy to GitHub Pages**
+3. In the upper right corner, click the **Run workflow** button
+4. In the **Use workflow from** menu that appears, ensure `main` is selected (that's the default)
+5. Click the green **Run workflow** button, which will run the GHA workflow
+6. Click on the new GHA workflow run and wait for the **Assemble website** job and
+   the **Deploy website** to finish successfully (i.e. to have a green checkmark)
+7. Wait approximately 3 minutes, then visit the website and confirm it shows what you expect
 
 ## Google Analytics
 
