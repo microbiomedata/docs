@@ -114,12 +114,12 @@ If you want to regenerate and redeploy the website without adding a commit to th
 this repository, you can do so by following the steps below:
 
 1. Open the repository's **[Actions](https://github.com/microbiomedata/docs/actions)** tab
-2. In the left sidebar, click the GHA workflow names **Deploy to GitHub Pages**
+2. In the left sidebar, click the GHA workflow named **Deploy to GitHub Pages**
 3. In the upper right corner, click the **Run workflow** button
 4. In the **Use workflow from** menu that appears, ensure `main` is selected (that's the default)
 5. Click the green **Run workflow** button, which will run the GHA workflow
-6. Click on the new GHA workflow run and wait for the **Assemble website** job and
-   the **Deploy website** to finish successfully (i.e. to have a green checkmark)
+6. Click on the new GHA workflow run and wait for the **Assemble website** and
+   **Deploy website** jobs to finish successfully (i.e. to have a green checkmark)
 7. Wait approximately 3 minutes, then visit the website and confirm it shows what you expect
 
 ## Google Analytics
