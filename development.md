@@ -18,6 +18,8 @@ as opposed to the content aspect.
       * [Runtime section](#runtime-section)
       * [Workflow docs](#workflow-docs)
   * [Deployment](#deployment)
+    * [Automatic deployment](#automatic-deployment)
+    * [Manual deployment](#manual-deployment)
   * [Google Analytics](#google-analytics)
 <!-- TOC -->
 
@@ -99,6 +101,26 @@ docker compose up --detach      workflow-docs
 The `.github/workflows` directory contains YAML files that we use to configure GitHub Actions.
 We use GitHub Actions to (a) compile local and remote content into a single website,
 and to (b) publish that single website to GitHub Pages.
+
+### Automatic deployment
+
+Whenever a commit is added to the `main` branch of this repository, the website will be regenerated
+and redeployed. That happens via the "Deploy to GitHub Pages" GitHub Actions workflow, which is
+specified in: `.github/workflows/deploy-to-gh-pages.yml`
+
+### Manual deployment
+
+If you want to regenerate and redeploy the website without adding a commit to the `main` branch of
+this repository, you can do so by following the steps below:
+
+1. Open the repository's **[Actions](https://github.com/microbiomedata/docs/actions)** tab
+2. In the left sidebar, click the GHA workflow named **Deploy to GitHub Pages**
+3. In the upper right corner, click the **Run workflow** button
+4. In the **Use workflow from** menu that appears, ensure `main` is selected (that's the default)
+5. Click the green **Run workflow** button, which will run the GHA workflow
+6. Click on the new GHA workflow run and wait for the **Assemble website** and
+   **Deploy website** jobs to finish successfully (i.e. to have a green checkmark)
+7. Wait approximately 3 minutes, then visit the website and confirm it shows what you expect
 
 ## Google Analytics
 
