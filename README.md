@@ -103,6 +103,8 @@ flowchart BT
 
 The website will automatically be regenerated and redeployed whenever a new commit is made on—or merged into—the `main`
 branch of _this_ repository. Regeneration includes pulling content from the remote repositories. The regeneration and redeployment process usually takes about three minutes to complete.
+If you need to regenerate/redeploy manually (without making a new commit), see the Deployment section in
+[`development.md`](./development.md#deployment).
 
 ## The Home section
 
