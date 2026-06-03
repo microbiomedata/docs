@@ -64,7 +64,7 @@ The Submission Portal requires ORCID authentication to access. If you have alrea
 
 [![](../_static/images/howto_guides/portal_guide/2025-12_SubmissionStatus.png)](../_static/images/howto_guides/portal_guide/2025-12_SubmissionStatus.png)
 
-Submitters can return to an existing submission or start a new one on the 'submission/home' page. The submissions listed here are connected to your ORCID if you started the submission or are listed as a [Viewer, Metadata Contributor, or Editor](submit2nmdc.md#L90-93).
+Submission authors can return to an existing submission or start a new one on the 'submission/home' page. The submissions listed here are connected to your ORCID if you started the submission or are listed as a [Viewer, Metadata Contributor, or Editor](submit2nmdc.md#L90-93).
 
 While a submission is being edited, it's 'Status' will be 'In Progress'. After hitting ["Submit"](submit2nmdc.md#L131), a submission's 'Status' becomes 'Submitted - Pending Review' and can no longer be edited. From here, the 'Status' may change to 'Updates Required', in which case a staff member will reach out and explain any necessary changes and the submission will become editable again. All potential 'Status' values are described below.
 
@@ -73,13 +73,13 @@ Note: The authoritative list of the status descriptions and user-facing names is
       https://microbiomedata.github.io/nmdc-schema/SubmissionStatusEnum/#linkml-source
 -->
 
-- In Progress: The submitter is currently working on the submission.
-- Submitted - Pending Review: Submission is ready for NMDC review, the submitter cannot edit.
-- Updates Required: Submission has been reviewed and submitter edits are required for approval. The submitter can edit the submission.
-- Approved - Sent to User Facility: Submission has been reviewed and approved by NMDC. Sample information has been shared with designated user facility and is ready for their review. The submitter cannot edit.
-- Approved - Held: Submission has been reviewed and approved. Information is complete, but not yet shared on the data portal. The submitter cannot edit.
-- Denied: Submission has been reviewed and denied. The submitter cannot edit.
-- Released: Submission has been reviewed and approved and data is released on the data portal. The submitter cannot edit.
+- In Progress: The submission author is currently working on the submission.
+- Submitted - Pending Review: Submission is ready for NMDC review, the submission author cannot edit.
+- Updates Required: Submission has been reviewed and submission author edits are required for approval. The submission author can edit the submission.
+- Approved - Sent to User Facility: Submission has been reviewed and approved by NMDC. Sample information has been shared with designated user facility and is ready for their review. The submission author cannot edit.
+- Approved - Held: Submission has been reviewed and approved. Information is complete, but not yet shared on the data portal. The submission author cannot edit.
+- Denied: Submission has been reviewed and denied. The submission author cannot edit.
+- Released: Submission has been reviewed and approved and data is released on the data portal. The submission author cannot edit.
 
 For new studies, you can either create a 'Submission' or a 'Test Submission'. Creating a 'Test Submission' is available to test and experiment with the NMDC Submission Portal. Test submissions cannot be submitted or changed to a real submission. Any sample metadata entered in a test submission can be exported, and imported into a real submission. See [download and import](#download-and-import) below. Details on creating a "New Submission" are also outlined below.
 
@@ -104,7 +104,7 @@ Permission roles are granted based on ORCID iD and are as follows:
 - Editor: will have full view and edit access to all parts of the submission, **except** contributors
 - None: no permissions or view granted
 
-The Principal Investigator will be granted the same permissions as the submitter and **can edit the entire submission**.
+The Principal Investigator will be granted the same permissions as the submission author and **can edit the entire submission**.
 
 [![](../_static/images/howto_guides/portal_guide/2025-05_ExternalIdentifiers.png)](../_static/images/howto_guides/portal_guide/2025-05_ExternalIdentifiers.png)
 
@@ -112,7 +112,7 @@ The last step in the study information is to provide external identifiers for th
 
 ### Multi-omics Data
 
-The Multi-omics Data page will prompt submitters to specify what data types have either already been generated or are anticipated to be generated. The NMDC supports the capture of retrospective (data has already been generated) and prospective (data has not yet been generated) metadata capture and data sharing.
+The Multi-omics Data page will prompt submission authors to specify what data types have either already been generated or are anticipated to be generated. The NMDC supports the capture of retrospective (data has already been generated) and prospective (data has not yet been generated) metadata capture and data sharing.
 
 [![](../_static/images/howto_guides/portal_guide/2025-12_Data-Generated-Short.png)](../_static/images/howto_guides/portal_guide/2025-12_Data-Generated-Short.png)
 
@@ -144,20 +144,20 @@ The NMDC supports metadata capture for sample submission to [DOE User Facility](
 
 [![](../_static/images/howto_guides/portal_guide/2025-05_SampleEnv.png)](../_static/images/howto_guides/portal_guide/2025-05_SampleEnv.png)
 
-The Biosample metadata portion of the Submission Portal uses the GSC’s environmental extensions (previously termed packages) to define data entry screens that are suitable for samples from a particular environment. The available environmental extensions include: air, built environment, host-associated, hydrocarbon resources- core, hydrocarbon resources- fluids swab, microbial material biofilm, plant-associated, sediment, soil, wastewater sludge, water, and miscellaneous natural or artificial environment. Incorporation of additional GSC extensions will be completed upon further user research. A submitter selects the environmental extension(s) that best fit the sample environment(s), with the ability to select a single or multiple extensions as appropriate for the study. The selected extension determines which metadata fields are required, recommended, or optional for each sample type. Additionally, curated EnvO and GOLD ecosystem classification terms and other enumerations that can be selected by dropdown menus are available for some extensions. 
+The Biosample metadata portion of the Submission Portal uses the GSC’s environmental extensions (previously termed packages) to define data entry screens that are suitable for samples from a particular environment. The available environmental extensions include: air, built environment, host-associated, hydrocarbon resources- core, hydrocarbon resources- fluids swab, microbial material biofilm, plant-associated, sediment, soil, wastewater sludge, water, and miscellaneous natural or artificial environment. Incorporation of additional GSC extensions will be completed upon further user research. A submission author selects the environmental extension(s) that best fit the sample environment(s), with the ability to select a single or multiple extensions as appropriate for the study. The selected extension determines which metadata fields are required, recommended, or optional for each sample type. Additionally, curated EnvO and GOLD ecosystem classification terms and other enumerations that can be selected by dropdown menus are available for some extensions. 
 
 ### Sample Metadata
 
-The Sample Metadata interface consists of a grid in which each row represents one sample and each column represents one attribute of a Biosample. Submitters are provided with numerous convenience and organizational features (described below) to assist in metadata completion.
+The Sample Metadata interface consists of a grid in which each row represents one sample and each column represents one attribute of a Biosample. Submission authors are provided with numerous convenience and organizational features (described below) to assist in metadata completion.
 
 The NMDC uses sections for clarity, and to identify when MIxS specifications have been used as published by the GSC, or when the NMDC team has modified the description, examples, or validation rules for a MIxS attribute captured in their respective columns. These modifications are based on user research and feedback provided to the NMDC.
 
-Biosample metadata can be entered manually (by typing each row), or the data can be entered in bulk by importing a Microsoft Excel XLSX file. The metadata is updated each time a submitter navigates across the submission template, without the need for manually clicking ‘save’. Upon completion, the individual who started the submission can hit "Submit" and all metadata will be reviewed by an NMDC staff member. Once approved, the submitter will indicate when data are ready to be published to the Data Portal.
+Biosample metadata can be entered manually (by typing each row), or the data can be entered in bulk by importing a Microsoft Excel XLSX file. The metadata is updated each time a submission author navigates across the submission template, without the need for manually clicking ‘save’. Upon completion, the individual who started the submission can hit "Submit" and all metadata will be reviewed by an NMDC staff member. Once approved, the submission author will indicate when data are ready to be published to the Data Portal.
  
 #### Metadata Sections
 
-Detailed biosample metadata input is captured using a curated metadata template. This page allows submitters to input biosample metadata into standardized fields based on the selected environmental template. The biosample metadata fields are split into 4 sections: Sample ID which consists of sample and environmental identification information; MIxS which are fields that are identical to those provided in MIxS templates; MIxS (modified) & MIxS Inspired which are similar to the MIxS fields, but have been altered in some way or were added based on user feedback. 
-These updated and additional fields are meant to provide clearer context and expectations for the submitter to better capture information about their samples.
+Detailed biosample metadata input is captured using a curated metadata template. This page allows submission authors to input biosample metadata into standardized fields based on the selected environmental template. The biosample metadata fields are split into 4 sections: Sample ID which consists of sample and environmental identification information; MIxS which are fields that are identical to those provided in MIxS templates; MIxS (modified) & MIxS Inspired which are similar to the MIxS fields, but have been altered in some way or were added based on user feedback. 
+These updated and additional fields are meant to provide clearer context and expectations for the submission author to better capture information about their samples.
 
 #### Tools and Features 
 
@@ -167,7 +167,7 @@ An information and tools tab can be expanded on the right side of your submissio
 
 [![](../_static/images/howto_guides/portal_guide/2025-05_ColumnInfo.png)](../_static/images/howto_guides/portal_guide/2025-05_ColumnInfo.png)
 
-Column Information is provided to guide a submitter on the required format and information collected for each metadata term provided here includes a description of the metadata term, additional guidance, and examples of valid completion. 
+Column Information is provided to guide a submission author on the required format and information collected for each metadata term provided here includes a description of the metadata term, additional guidance, and examples of valid completion. 
 This column information can also be accessed by double clicking the column header.
 
 ##### Find and Replace
@@ -186,7 +186,7 @@ This tool provides suggested metadata based on other information provided. It ca
 
 [![](../_static/images/howto_guides/portal_guide/2025-05_ImportExport.png)](../_static/images/howto_guides/portal_guide/2025-05_ImportExport.png)
 
-The NMDC Submission Portal allows submitters to enter sample metadata directly into the web interface. However, if a submitter prefers to work in other applications and programs, such as Microsoft Excel, the NMDC sample metadata template can be downloaded as a .xlsx file, opened via a separate application where submitters can add metadata, and imported back into the Submission Portal for completion and validation. 
+The NMDC Submission Portal allows submission authors to enter sample metadata directly into the web interface. However, if a submission author prefers to work in other applications and programs, such as Microsoft Excel, the NMDC sample metadata template can be downloaded as a .xlsx file, opened via a separate application where submission authors can add metadata, and imported back into the Submission Portal for completion and validation. 
 
 ##### We are here to help
 
@@ -198,19 +198,19 @@ If you have any issues, need assistance, experience a bug, or have a recommendat
 
 [![](../_static/images/howto_guides/portal_guide/2025-05_ShowHide.png)](../_static/images/howto_guides/portal_guide/2025-05_ShowHide.png)
 
-Submitters are encouraged to populate as many of the columns as possible, but not all are required or relevant to all sample types or research. To accommodate such needs, the Biosample Metadata interface distinguishes between required, recommended, and optional columns. Which columns appear on the screen can be controlled with the show/hide menu.  This tool can be used to hide optional or optional + recommended columns, and the show sub-menu can be used to center a particular section on the submitter’s screen.
+Submission authors are encouraged to populate as many of the columns as possible, but not all are required or relevant to all sample types or research. To accommodate such needs, the Biosample Metadata interface distinguishes between required, recommended, and optional columns. Which columns appear on the screen can be controlled with the show/hide menu.  This tool can be used to hide optional or optional + recommended columns, and the show sub-menu can be used to center a particular section on the submission author’s screen.
 
 ##### Jump to Column Search 
 
 [![](../_static/images/howto_guides/portal_guide/2025-05_ColumnSearch.png)](../_static/images/howto_guides/portal_guide/2025-05_ColumnSearch.png)
 
-A ‘Jump to column’ feature is available for searching for specific metadata fields.  The columns in the ‘Jump to column’ menu are listed in the order they appear on the interface when no visibility constraint has been applied. Submitters can either scroll though the listed columns or type in any portion of a column's name. For example, as shown above, submitters can search for the term ‘carbon’ in order to find the ‘carbon/nitrogen ratio’ column. Many slots are available for sample metadata completion, but not all are required or relevant depending on your research questions. The ‘Jump to column’ feature allows the submitter to find the attributes they need and those relevant to their samples.
+A ‘Jump to column’ feature is available for searching for specific metadata fields.  The columns in the ‘Jump to column’ menu are listed in the order they appear on the interface when no visibility constraint has been applied. Submission authors can either scroll though the listed columns or type in any portion of a column's name. For example, as shown above, submission authors can search for the term ‘carbon’ in order to find the ‘carbon/nitrogen ratio’ column. Many slots are available for sample metadata completion, but not all are required or relevant depending on your research questions. The ‘Jump to column’ feature allows the submission author to find the attributes they need and those relevant to their samples.
 
 ##### Real Time Validation  
 
 [![](../_static/images/howto_guides/portal_guide/2025-05_Validation1.png)](../_static/images/howto_guides/portal_guide/2025-05_Validation1.png)
 
-The real-time validation tool allows submitters to check their filled-in metadata and overall progress as they submit values to ensure the submission will be valid and adhere to the NMDC schema. 
+The real-time validation tool allows submission authors to check their filled-in metadata and overall progress as they submit values to ensure the submission will be valid and adhere to the NMDC schema. 
 
 ##### Color Legend
 
@@ -238,7 +238,7 @@ Submissions created in the Field Notes mobile app are available in the Submissio
 
 [![](../_static/images/howto_guides/portal_guide/new-study.png)](../_static/images/howto_guides/portal_guide/new-study.png)
 
-Once signed in with an ORCiD, you will have the ability to access existing studies or create a study using the 'New’ button. Details about each section are outlined below. Submitters can also return to existing submissions saved under the ORCiD account to resume their work at any point. 
+Once signed in with an ORCiD, you will have the ability to access existing studies or create a study using the 'New’ button. Details about each section are outlined below. Submission authors can also return to existing submissions saved under the ORCiD account to resume their work at any point. 
 
 ### New Study
 
@@ -251,12 +251,12 @@ Select "Save" once study information has been completed.
 
 ### Select Fields
 
-The Field Notes mobile app allows the submitter to select the metadata fields that will be visible and available on the app and when working in the field. 
+The Field Notes mobile app allows the submission author to select the metadata fields that will be visible and available on the app and when working in the field. 
 Available terms can be selected and de-selected individually or in bulk based on the section they're assigned to. The available sections are: 
 - "Common", terms commonly measured at the time of sample collection
 - "Occasional", terms that may sometimes be measured at the time of sample collection
 - "Uncommon", terms that are rarely measured at the time of sample collection. 
-This allows the submitter to tailor their metadata interface to be more focused for field collection.
+This allows the submission author to tailor their metadata interface to be more focused for field collection.
 If you are completing metadata for multiple sample types in multiple templates, you will need to select your fields for each individual template. 
 We recommend completing all "New Study" steps prior to and in preparation for field work.
 
