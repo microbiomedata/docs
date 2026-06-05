@@ -294,7 +294,7 @@ downloading data.
 [![](../_static/images/howto_guides/portal_guide/20260606_metadata_download.png)](../_static/images/howto_guides/portal_guide/20260606_metadata_download.png)
 
 Metadata for an individual study or sample can be downloaded on the relevant study or 
-sample pages or downloaded in bulk on the main search page by clicking on 'DOWNLOAD', then clicking on 'METADATA'.
+sample pages. Metadata can be downloaded in bulk on the main search page for several classes by clicking on 'DOWNLOAD', then clicking on 'METADATA'.
 
 ### Interactive visualizations 
 [![](../_static/images/howto_guides/portal_guide/rbt_magnified_glass.png)](../_static/images/howto_guides/portal_guide/rbt_magnified_glass.png)
