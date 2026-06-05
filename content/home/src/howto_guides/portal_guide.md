@@ -291,7 +291,7 @@ downloading data.
 
 ### *Download metadata*
 [![](../_static/images/howto_guides/portal_guide/individual_study_metadata.png)](../_static/images/howto_guides/portal_guide/individual_study_metadata.png)
-[![](../_static/images/howto_guides/portal_guide/metadata_download.png)](../_static/images/howto_guides/portal_guide/metadata_download.png)
+[![](../_static/images/howto_guides/portal_guide/20260606_metadata_download.png)](../_static/images/howto_guides/portal_guide/20260606_metadata_download.png)
 
 Metadata for an individual study or sample can be downloaded on the relevant study or 
 sample pages or downloaded in bulk on the main search page by clicking on 'DOWNLOAD', then clicking on 'METADATA'.
