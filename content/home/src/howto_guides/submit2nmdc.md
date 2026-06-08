@@ -2,39 +2,15 @@
 
 
 ## Introduction: Making metadata capture easy
-The NMDC has developed two integrated resources for improving metadata capture: the [NMDC Submission Portal](https://data.microbiomedata.org/submission/home) (released April 2022) and the [NMDC Field Notes](https://microbiomedata.org/field-notes/) mobile app (released April 2025). Each resource was designed to lower barriers to capturing metadata and adhering to community standards, thereby addressing the critical gap of collecting necessary information describing a study, its biosamples, and associated analyses. Please note that as of January 2026, the NMDC Field Notes mobile app will not be actively developed or maintained owing to a shift in program budget and priorities.
+The NMDC has developed an integrated resource for improving metadata capture: the [NMDC Submission Portal](https://data.microbiomedata.org/submission/home) (released April 2022). This resource was designed to lower barriers to capturing metadata and adhering to community standards, thereby addressing the critical gap of collecting necessary information describing a study, its biosamples, and associated analyses.
 
 ### NMDC Submission Portal
 The NMDC Submission Portal was designed using a flexible framework leveraging a new modeling approach called the Linked Data Modeling Language (LinkML) and the template-driven spreadsheet tool, [DataHarmonizer](https://github.com/cidgoh/DataHarmonizer). It supports several different community standards, such as the _Minimum Information about any (x) Sequence_ (MIxS) standard from the Genomic Standards Consortium ([GSC](https://www.gensc.org/pages/standards-intro.html)), the _PROV_ standard for provenance metadata, the _Proteomics Standards Initiative_ ([PSI](https://hupo.org/Proteomics-Standards-Initiative-(PSI))) standards for metaproteomics, and the _Metabolomics Standards Initiative_ ([MSI](https://github.com/MSI-Metabolomics-Standards-Initiative/MSIO)) standards for metabolomics. The NMDC Submission Portal is an intuitive interface that allows researchers to provide information about their study, biosample metadata, and multi-omics data generated from the biosamples. For Department of Energy (DOE) researchers, we support data and analysis outputs generated at the Joint Genome Institute (JGI) and the Environmental Molecular Sciences Laboratory (EMSL). Updates and new features are continually being implemented as user research provides new insights to improve usability, and as standards are updated and improved. 
 
-### NMDC Field Notes mobile app
-
-<p style="text-align: center;">
-    <a href="https://apps.apple.com/app/apple-store/id6575364655?pt=278434&ct=docs&mt=8 ">
-        <img 
-            alt="Download on the App Store" 
-            src="https://toolbox.marketingtools.apple.com/api/v2/badges/download-on-the-app-store/black/en-us?releaseDate=1740873600" 
-            style="padding: 12px; height: 76px;" 
-        />
-    </a>
-    <a href="https://play.google.com/store/apps/details?id=org.microbiomedata.fieldnotes&utm_source=docs">
-        <img 
-            alt="Get it on Google Play" 
-            src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"
-            style="height: 76px;" 
-        />
-    </a>
-</p>
-
-The NMDC Field Notes mobile app is designed to support real-time registration and collection of standardized metadata and field measurements. This mobile app is built following the same schema format as the Submission Portal and similarly supports the community standards [described above](#nmdc-submission-portal) as well as in [Collaboration to support Community Standards](#collaboration-to-support-community-standards) below. When using the NMDC Field Notes mobile app, metadata can be captured for your samples while in the field using in-app tools and formatting. The NMDC Field Notes mobile app can be used offline and provides a direct connection to the NMDC Submission Portal so your metadata is already there upon field work completion.
-
-#### Connecting NMDC Field Notes and the NMDC Submission Portal
-The NMDC Field Notes mobile app synchronizes data with the NMDC Submission Portal and vice versa. This means that changes made in one place will be reflected in the other. Additional details of this synchronization and important considerations are captured in the Field Notes mobile app [documentation and guide](https://github.com/microbiomedata/nmdc-field-notes/blob/main/src/pages/GuidePage/md/guide-page.md).
-
 ### Collaboration to support Community Standards 
 The Genomic Standards Consortium (GSC) is an open-membership working body formed nearly twenty years ago with the aim of supporting community-driven standards for sequence data. The GSC has defined a set of core descriptors for genomes, metagenomes and the samples thereof, with the intention to capture relevant environmental and other contextual data (e.g., metadata) to be made available in the International Nucleotide Sequence Database Collaboration (INSDC) primary repositories. The Minimum Information about any (x) Sequence (MIxS) was developed in 2011, and forms the basis for environmental packages (now referred to as extensions) that include terms describing specific environments from which a sample was collected (e.g., soil or water). Together with the GSC, the NMDC team has rendered the MIxS standards in LinkML as part of the latest version release. The NMDC has added computability to portions of the MIxS standard and validation can be applied in the NMDC Submission Portal. Through the GSC’s Compliance and Interoperability Group (CIG), the NMDC supports improvements to metadata elements that were unclear or missing, and makes updates to terminology and curation through the insights from numerous workshops hosted through the NMDC Ambassador Program. 
 
-As the NMDC continues to develop and gain user feedback, future iterations of the NMDC Submission Portal and Field Notes mobile app will provide templates for describing the ways in which samples are processed in preparation for analysis and improved ecosystem description. This will be accomplished by leveraging and collaborating with many existing standards and ontologies. Beyond the GSC’s standards, the NMDC leverages standards and controlled vocabularies developed by the Proteomics Standards Initiative (PSI), the [National Cancer Institute’s Proteomic Data Commons](https://pdc.cancer.gov/data-dictionary/dictionary.html), the IUPAC Gold Book, and the Metabolomics Standards Initiative (MSI) for mass spectrometry data types (e.g., ionization mode, mass resolution, scan rate, and so on). The NMDC team also collaborates heavily with the Environment Ontology (EnvO), which is a community-led ontology that represents environmental entities such as biomes, environmental features, and environmental materials.
+As the NMDC continues to develop and gain user feedback, future iterations of the NMDC Submission Portal will provide templates for describing the ways in which samples are processed in preparation for analysis and improved ecosystem description. This will be accomplished by leveraging and collaborating with many existing standards and ontologies. Beyond the GSC’s standards, the NMDC leverages standards and controlled vocabularies developed by the Proteomics Standards Initiative (PSI), the [National Cancer Institute’s Proteomic Data Commons](https://pdc.cancer.gov/data-dictionary/dictionary.html), the IUPAC Gold Book, and the Metabolomics Standards Initiative (MSI) for mass spectrometry data types (e.g., ionization mode, mass resolution, scan rate, and so on). The NMDC team also collaborates heavily with the Environment Ontology (EnvO), which is a community-led ontology that represents environmental entities such as biomes, environmental features, and environmental materials.
 
 In addition to working across community standards groups, the NMDC also works closely with the Genomes OnLine Database (GOLD) hosted by the Department of Energy’s Joint Genome Institute (JGI). GOLD is an open-access repository of genome, metagenome, and metatranscriptome sequencing projects with their associated metadata. Samples are described using a curated five-level ecosystem classification path that goes from ecosystem down to the type of environmental material. The NMDC team supports this hierarchical classification system in the Submission Portal, along with enabling search capabilities in the Data Portal. Further, the NMDC and GOLD teams collaborate to curate, update, and make improvements to shared study and metadata information to support interoperability. 
 
@@ -180,7 +156,7 @@ When validating the metadata and information provided, the Submission Portal pro
 
 [![](../_static/images/howto_guides/portal_guide/2025-05_Suggester.png)](../_static/images/howto_guides/portal_guide/2025-05_Suggester.png)
 
-This tool provides suggested metadata based on other information provided. It can be triggered or run automatically and suggestions can be accepted individually or in bulk. This tool currently suggests an elevation value, based on the provided latitude and longitude metadata. This tool will be expanded to other metadata fields and the NMDC welcomes your feedback and suggestions. This can be provided via the [We are here to help](#we-are-here-to-help) tab.
+This tool provides suggested metadata based on other information provided. It can be triggered or run automatically and suggestions can be accepted individually or in bulk. This tool currently suggests an elevation value, based on the provided latitude and longitude metadata. When the submission author submits metadata this tool recommmends metadata terms that are potentially relevant to the submission author's submissions and samples, as well as recommended values to complete submission author metadata. This tool is built and uses the submission material provided to make suggestions. The materials include DOIs to publications or data packages, the study description and links. This powerful tool minimizes the mental load on the submission author and still allows for the control of details and content. Once materials are provided and the submission author reviews the AI suggested metadata, the submission author can opt to use the suggested values or dismiss the recommendations. This tool will be expanded to other metadata fields and the NMDC welcomes your feedback and suggestions. This can be provided via the [We are here to help](#we-are-here-to-help) tab.
 
 ##### Download and Import
 
@@ -220,68 +196,3 @@ All fields in the metadata template innately fall into one of three color catego
 
 After selecting the validate button, cells will become color coded to indicate invalid and incomplete metadata. Dark pink cells indicate a required cell has been left empty. Light pink indicates that there is an error in the formatting of the information entered into that cell. The [Column Information](#column-information) tool, described above, provides expected structure patterns and examples of valid metadata, which you can refer to when addressing validation errors.
 
-## NMDC Field Notes mobile app functionality
-
-[https://microbiomedata.org/field-notes/](https://microbiomedata.org/field-notes/)
-
-The NMDC Field Notes app is for mobile device use. It runs on both Apple (iOS) and Android devices and is available in the corresponding app stores.
-This app is designed to streamline real-time registration and collection of standardized metadata and field measurements. 
-Upon first use, each section of the app will automatically launch a quick tour. You can press the "→" button to continue the tour or press the "X" button to end it. To re-initialize the tours at any time, visit the Settings page and tap "Reset tours".
-The "Guide" section of the app contains recommendations about fieldwork in general, and about collecting metadata for specific sample type(s). It also provides important considerations for synchronization with the Submission Portal. We recommend viewing it before going out into the field.
-
-The NMDC Field Notes mobile app requires ORCID authentication to access it. 
-Submissions created in the Field Notes mobile app are available in the Submission Portal. This sync happens automatically when connected to the internet. The app is available for offline use, but requires internet connection to **start** a submission. 
-
-[![](../_static/images/howto_guides/portal_guide/app-home-page.png)](../_static/images/howto_guides/portal_guide/app-home-page.png)
-
-### Welcome to the NMDC Field Notes mobile app! 
-
-[![](../_static/images/howto_guides/portal_guide/new-study.png)](../_static/images/howto_guides/portal_guide/new-study.png)
-
-Once signed in with an ORCiD, you will have the ability to access existing studies or create a study using the 'New’ button. Details about each section are outlined below. Submission authors can also return to existing submissions saved under the ORCiD account to resume their work at any point. 
-
-### New Study
-
-[![](../_static/images/howto_guides/portal_guide/app-study-page.png)](../_static/images/howto_guides/portal_guide/app-study-page.png)
-
-The Study Information page requires a valid "Study Name" and Principal Investigator email address. All other fields are optional and can be completed in the app or in the Submission Portal. Study names and all other information can be updated or added via the app or Submission Portal. See [Study](#study) for more details about Study information.
-Also in the New Study you will select the "Environment Template" that best fits your samples. The templates available correspond to the GSC environmental extensions. More information is available [above](#environmental-extension). Multiple environments can be selected and submitted in one submission.
-
-Select "Save" once study information has been completed.
-
-### Select Fields
-
-The Field Notes mobile app allows the submission author to select the metadata fields that will be visible and available on the app and when working in the field. 
-Available terms can be selected and de-selected individually or in bulk based on the section they're assigned to. The available sections are: 
-- "Common", terms commonly measured at the time of sample collection
-- "Occasional", terms that may sometimes be measured at the time of sample collection
-- "Uncommon", terms that are rarely measured at the time of sample collection. 
-This allows the submission author to tailor their metadata interface to be more focused for field collection.
-If you are completing metadata for multiple sample types in multiple templates, you will need to select your fields for each individual template. 
-We recommend completing all "New Study" steps prior to and in preparation for field work.
-
-### Samples
-
-In Field Notes, the sample metadata interface consists of a form-like structure where metadata is entered individually, unlike the grid format of the Submission Portal.
-Fields marked with a ⚠️ symbol indicate a validation issue. For example, a required value is missing or a value is not in the expected format. These do not prevent your updates from being saved. The issues only need to be resolved before the final submission to the NMDC for review. Once a sample has been started, you can return to the Study page via the ← button in the upper left. Your new sample will now appear at the bottom of your screen.
-Additional information about sample metadata can be found above in [Sample Metadata](#sample-metadata). 
-
-#### Tools and Features 
-
-##### Sorting Samples
-
-When samples are added to a study, they are listed at the bottom of the submission. Each sample can be revisited or viewed by selecting the desired sample. Additionally, samples can be filtered based on the sample type / template or you can search for a specific sample.
-
-##### Term Information
-
-[![](../_static/images/howto_guides/portal_guide/slot_info.png)](../_static/images/howto_guides/portal_guide/slot_info.png)
-
-Similar to [column information](#column-information) for the Submission Portal, when you select a term to complete metadata, term help will be included below the input field. This provides a description of the term, additional guidance, and examples of valid completion. 
-
-##### Location Provided Metadata
-
-Field Notes can use your mobile device information and location to populate some metadata fields. For example, selecting "Set to today" for the term "collection date" will auto-populate with the current date. Additionally, mobile GPS coordinates can be used to populate the "latitude and longitude" field by selecting "Use GPS location". This along with other auto-populating fields ensure accurate and structured metadata in real time and minimizes human error.
-
-##### Real Time Validation  
-
-Real time validation available in the Field Notes mobile app is similar to that in the Submission Portal [validation](#real-time-validation). No color coding, but the ⚠️ will disappear when metadata is valid, and a note below the input box will provide information if a required field is missing or if a field is misformatted. 
