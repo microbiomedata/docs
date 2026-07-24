@@ -56,6 +56,7 @@ nav:
   - Tutorials:
       - Submitting to NMDC: tutorials/submission_portal.md
       - Navigating the Data Portal: tutorials/nav_data_portal.md
+      - NMDC Quick Clips: tutorials/nmdc_quick_clips.md
   - How-To Guides:
       - Creating a Data Mgt. Plan: howto_guides/data_plan.md
       - Submitting to NMDC: howto_guides/submit2nmdc.md
