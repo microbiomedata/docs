@@ -7,7 +7,7 @@ a resource for consistently processed multi-omics data that is
 integrated to enable search, access, analysis, and download. Open-source
 bioinformatics workflows are used to process raw multi-omics data and
 produce interoperable and reusable annotated data from metagenome,
-metatranscriptome, metaproteome, metabolome, and natural organic matter
+metatranscriptome, metaproteome, metabolome, lipidome, and natural organic matter
 characterizations. The NMDC Data Portal offers several search and
 navigation components, and data can be downloaded through the graphical
 user interface using an ORCiD authentication, with associated download
@@ -135,7 +135,7 @@ more information about that study and that principal investigator.
 
 [![](../_static/images/howto_guides/portal_guide/instrument_name.png)](../_static/images/howto_guides/portal_guide/instrument_name.png)
 
-[![](../_static/images/howto_guides/portal_guide/data_types.png)](../_static/images/howto_guides/portal_guide/data_types.png)
+[![](../_static/images/howto_guides/portal_guide/20260901.data_types.png)](../_static/images/howto_guides/portal_guide/20260901.data_types.png)
 
 [![](../_static/images/howto_guides/portal_guide/processing_institution.png)](../_static/images/howto_guides/portal_guide/processing_institution.png)
 
@@ -208,7 +208,7 @@ Workflow results can be searched by metaproteomics analysis category.
 
 #### Barplot
 
-[![](../_static/images/howto_guides/portal_guide/bar_plot.png)](../_static/images/howto_guides/portal_guide/bar_plot.png)
+[![](../_static/images/howto_guides/portal_guide/20260901.bar_chart.png)](../_static/images/howto_guides/portal_guide/20260901.bar_chart.png)
 
 The barplot on the omics page displays the number of omics processing
 runs (not number of samples) for each data type available: organic
@@ -239,7 +239,7 @@ collection dates are grouped by month. The selected date range will be highlight
 
 #### Upset plot
 
-[![](../_static/images/howto_guides/portal_guide/upset_plot.png)](../_static/images/howto_guides/portal_guide/upset_plot.png)
+[![](../_static/images/howto_guides/portal_guide/20260901.upset_plot.png)](../_static/images/howto_guides/portal_guide/20260901.upset_plot.png)
 
 The upset plot on the omics page displays the number of samples that
 have various combinations of associated data. The axis at the top
