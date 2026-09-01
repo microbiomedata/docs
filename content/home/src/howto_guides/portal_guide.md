@@ -293,7 +293,7 @@ users to perform bulk downloads on workflow output files. Once samples
 of interest are down-selected through query terms, output files from
 each NMDC standardized workflow run on those samples are available as
 bulk downloads. Users must be logged in with an ORCID account before
-downloading data. Bulk download includes a json file which describes the files, a README.md file, and 
+downloading data. Bulk download includes a JSON file which describes the files, a README.md file, and 
 an RO-Crate (14) file which connects files to upstream records. 
 
 ### *Download metadata*
