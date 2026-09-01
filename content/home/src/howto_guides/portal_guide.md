@@ -212,7 +212,7 @@ Workflow results can be searched by metaproteomics analysis category.
 
 The barplot on the omics page displays the number of omics processing
 runs (not number of samples) for each data type available: organic
-matter, metagenomic, metatranscriptomic, proteomic, and metabolomic.
+matter, metagenomic, metatranscriptomic, proteomic, metabolomic, lipidomic, and amplicon.
 Selecting the bar of a data type will limit the search to just that data
 type.
 
@@ -243,9 +243,7 @@ collection dates are grouped by month. The selected date range will be highlight
 
 The upset plot on the omics page displays the number of samples that
 have various combinations of associated data. The axis at the top
-of the plot refers to the different omics types (MG: metagenomic, MT:
-metatranscriptomic, MP: metaproteomic, MB: metabolomic, NOM: natural
-organic matter) and the dots and lines in the graph below represent the
+of the plot refers to the different omics types and the dots and lines in the graph below represent the
 combinations of the data types. The numbers and bars on the right
 side represent the number of samples searchable in the NMDC data portal
 with each corresponding combination of omics data types. Clicking either on the bar 
@@ -265,6 +263,7 @@ levels of specificity. This will then limit your search to samples that
 came from that selected environment.
 
 ### Download
+
 
 ### *Individual file*
 
@@ -287,7 +286,8 @@ users to perform bulk downloads on workflow output files. Once samples
 of interest are down-selected through query terms, output files from
 each NMDC standardized workflow run on those samples are available as
 bulk downloads. Users must be logged in with an ORCID account before
-downloading data.
+downloading data. Bulk download includes a json file which describes the files, a README.md file, and 
+an RO-Crate (14) file which connects files to upstream records. 
 
 ### *Download metadata*
 [![](../_static/images/howto_guides/portal_guide/individual_study_metadata.png)](../_static/images/howto_guides/portal_guide/individual_study_metadata.png)
@@ -301,7 +301,7 @@ sample pages. Metadata can be downloaded in bulk on the main search page for sev
 [![](../_static/images/howto_guides/portal_guide/krona_plot.png)](../_static/images/howto_guides/portal_guide/krona_plot.png)
 
 For Reads-Based Taxonomic Analysis results, users can click on the magnifying glass 
-icon to open up interactive Krona (14) plots.
+icon to open up interactive Krona (15) plots.
 
 
 
@@ -344,4 +344,5 @@ icon to open up interactive Krona (14) plots.
 > 11.  Bateman A, Coin L, Durbin R, Finn RD, Hollich V, Griffiths-Jones S, Khanna A, Marshall M, Moxon S, Sonnhammer ELL, Studholme DJ, Yeats C, Eddy SR. 2004. The Pfam protein families database. Nucleic Acids Res. 32:D138–D141. https://doi.org/10.1093/nar/gkh121.
 > 12.  Tatusov RL, Galperin MY, Natale DA, Koonin EV. 2000. The COG database: a tool for genome-scale analysis of protein functions and evolution. Nucleic Acids Res. 28:33. https://doi.org/10.1093/nar/28.1.33.
 > 13.  The Gene Ontology Consortium. 2019. The Gene Ontology resource: 20 years and still GOing strong. Nucleic Acids Res. 47:D330–D338. https://doi.org/10.1093/nar/gky1055.
-> 14.  Ondov BD, Bergman NH, Phillippy AM. Interactive metagenomic visualization in a Web browser. BMC Bioinformatics. 2011 Sep 30;12:385. doi: 10.1186/1471-2105-12-385. PMID: 21961884; PMCID: PMC3190407.
+> 14.  Stian Soiland-Reyes, Peter Sefton, Mercè Crosas, Leyla Jael Castro, Frederik Coppens, José M. Fernández, Daniel Garijo, Björn Grüning, Marco La Rosa, Simone Leo, Eoghan Ó Carragáin, Marc Portier, Ana Trisovic, RO-Crate Community, Paul Groth, Carole Goble (2022):Packaging research artefacts with RO-Crate.Data Science 5(2). https://doi.org/10.3233/DS-210053
+> 15.  Ondov BD, Bergman NH, Phillippy AM. Interactive metagenomic visualization in a Web browser. BMC Bioinformatics. 2011 Sep 30;12:385. doi: 10.1186/1471-2105-12-385. PMID: 21961884; PMCID: PMC3190407.
