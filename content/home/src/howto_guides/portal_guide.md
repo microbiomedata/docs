@@ -200,7 +200,7 @@ the GSC.
 ## Workflow versions
 By default, only the most recent set of results for a sample are shown in the Data Portal. 
 To display older workflow versions, mark the `Include older workflow executions` checkbox next to the Download button.
-If there is a newer workflow result, the older result will indicate that there is a record that supersedes it.
+If there is a newer workflow result, the older result will indicate that there is a result that supersedes it.
 [![](../_static/images/howto_guides/portal_guide/202060901.workflow_versioning.png)](../_static/images/howto_guides/portal_guide/202060901.workflow_versioning.png)
 
 ## Metaproteomics analysis category
