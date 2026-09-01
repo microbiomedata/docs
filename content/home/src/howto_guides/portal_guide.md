@@ -203,7 +203,7 @@ To display older workflow versions, select the `Include older workflow execution
 If there is a newer workflow result, the older result will indicate that there is a record that supersedes it.
 [![](../_static/images/howto_guides/portal_guide/202060901.workflow_versioning.png)](../_static/images/howto_guides/portal_guide/202060901.workflow_versioning.png)
 
-### *Metaproteomics analysis category*
+### Metaproteomics analysis category
 [![](../_static/images/howto_guides/portal_guide/metap_analysis_category.png)](../_static/images/howto_guides/portal_guide/metap_analysis_category.png)
 
 Workflow results can be searched by metaproteomics analysis category. 
