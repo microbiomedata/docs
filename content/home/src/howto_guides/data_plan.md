@@ -12,12 +12,6 @@ While a new concept, making your DMP machine readable, increases the likelihood 
 
 While your DMP should include information about all data collected through the duration of your research, these guidelines and best practices focus on large omic data generated from microbiome samples. If you are unfamiliar with microbiome data management and metadata standards, we recommend you begin with an [Introduction to Metadata and Ontologies: Everything You Always Wanted to Know About Metadata and Ontologies (But Were Afraid to Ask)](https://microbiomedata.org/introduction-to-metadata-and-ontologies/) and the [NMDC Metadata Standards Documentation](https://w3id.org/nmdc/nmdc). These resources will introduce you to multi-omics metadata standards that leverage existing community-driven standards. 
 
-***The NMDC DMPTool Template***
-
-In partnership with the University of California Curation Center of the California Digital Library, the NMDC team has created a microbiome-specific DMPTool Template. DMPTool is an open-source application that assists researchers in the creation of data management plans compliant with federal funding requirements. The NMDC DMPTool template is funding-organization agnostic and was developed to support microbiome data management best practices with specifications unique to microbiome standards and data processing. Once you [create an account at DMPTool](https://dmptool.org/), this link will take you to the [NMDC Microbiome Omics Research DMP Template](https://dmptool.org/plans?plan%5Bfunder%5D%5Bid%5D=%7B+%22id%22%3A+4265%2C+%22name[…]Microbiome+Data+Collaborative%22+%7D&plan%5Btemplate_id%5D=1321) ***which provides step-by-step prompts for your DMP.***
-
-All of the sections below are laid out in the NMDC DMPTool template. This is a living document and the NMDC team welcomes community feedback on this resource. 
-
 ![](../_static/images/howto_guides/data_mgt/data_mgt_list.png)
 
 ### For more information 
@@ -25,5 +19,5 @@ You can find more information about [Data Management Best Practices](https://mic
 
 ### Contact us
 
-Please [email us](https://microbiomedata.org/contact/) with comments, suggestions, or questions. The NMDC team provides Data Management Plan Consultancies where we can help you draft an effective DMP and provide you with tools and resources for completing your DMP in accordance with funder requirements and community best practices. 
+Please [email us](https://microbiomedata.org/contact/) with comments, suggestions, or questions. 
  
