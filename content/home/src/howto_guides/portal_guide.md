@@ -310,6 +310,13 @@ sample pages. Metadata can be downloaded in bulk on the main search page for sev
 For Reads-Based Taxonomic Analysis results, users can click on the magnifying glass 
 icon to open up interactive Krona (15) plots.
 
+### Badges
+Biosamples can earn badges and users can filter by badge using faceted search. For example, if a user curated their 
+metadata using the Submission Portal the biosample receives an Expert Curation badge. For more information on avaliable badges and criteria for earning a badge
+see our [schema documentation](https://microbiomedata.github.io/nmdc-schema/badges/).
+[![](../_static/images/howto_guides/portal_guide/data_portal_badges.png)](../_static/images/howto_guides/portal_guide/data_portal_badges.png)
+[![](../_static/images/howto_guides/portal_guide/data_portal_badges_search.png)](../_static/images/howto_guides/portal_guide/data_portal_badges_search.png)
+
 
 
 ## References
