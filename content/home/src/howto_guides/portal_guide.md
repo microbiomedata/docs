@@ -315,7 +315,7 @@ Biosamples can earn badges and users can filter by badge using faceted search. F
 metadata using the Submission Portal the biosample receives an Expert Curation badge. For more information on avaliable badges and criteria for earning a badge
 see our [schema documentation](https://microbiomedata.github.io/nmdc-schema/badges/).
 [![](../_static/images/howto_guides/portal_guide/data_portal_badges.png)](../_static/images/howto_guides/portal_guide/data_portal_badges.png)
-[![](../_static/images/howto_guides/portal_guide/krona_plot.png)](../_static/images/howto_guides/portal_guide/krona_plot.png)
+[![](../_static/images/howto_guides/portal_guide/data_portal_badges_search.png)](../_static/images/howto_guides/portal_guide/data_portal_badges_search.png)
 
 
 
