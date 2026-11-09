@@ -16,12 +16,6 @@ We build web application clients using [TypeScript](https://www.typescriptlang.o
 
 _Example: [nmdc-server](https://github.com/microbiomedata/nmdc-server)_
 
-### Mobile application clients
-
-We build mobile application clients using [TypeScript](https://www.typescriptlang.org/), [React](https://react.dev/), the [Ionic](https://ionicframework.com/) mobile SDK, and the [Capacitor](https://capacitorjs.com/) runtime.
-
-_Example: [nmdc-field-notes](https://github.com/microbiomedata/nmdc-field-notes)_
-
 ### Notebooks
 
 We demonstrate things using [Jupyter](https://jupyter.org/) notebooks containing [Python](https://www.python.org/) and [R](https://www.r-project.org/) code.
@@ -46,7 +40,7 @@ _Examples: [nmdc-schema](https://github.com/microbiomedata/nmdc-schema) (Poetry)
 
 For TypeScript/JavaScript projects, we use [npm](https://nodejs.org/) to manage dependencies. While [yarn](https://yarnpkg.com/) is still in use in one repository, we are not using any yarn-specific features there and may eventually move it to npm.
 
-_Examples: [nmdc-field-notes](https://github.com/microbiomedata/nmdc-field-notes) (npm), [nmdc-server](https://github.com/microbiomedata/nmdc-server) (yarn)_
+_Example: [nmdc-server](https://github.com/microbiomedata/nmdc-server) (yarn)_
 
 ## Packaging and deployment
 
@@ -68,7 +62,7 @@ _Examples: [nmdc-server](https://github.com/microbiomedata/nmdc-server), [nmdc-r
 
 Python-based projects which are designed to be libraries that are consumed by other projects get deployed to the [Python Package Index](https://pypi.org/) (PyPI). In projects which are managed by Poetry, we use the functionality provided by Poetry to [build](https://python-poetry.org/docs/cli/#build) and [publish](https://python-poetry.org/docs/cli/#publish) the package.
 
-_Examples: [nmdc-schema](https://github.com/microbiomedata/nmdc-schema) and [geoloc-tools](https://github.com/microbiomedata/geoloc-tools)_
+_Example: [nmdc-schema](https://github.com/microbiomedata/nmdc-schema)_
 
 ### GitHub Actions
 
@@ -80,7 +74,7 @@ We use [GitHub Actions](https://docs.github.com/en/actions) for a variety of aut
 - Building and pushing container images to container registries (e.g., GHCR)
 - Building and publishing Python packages to PyPI
 
-_Examples: [nmdc-field-notes](https://github.com/microbiomedata/nmdc-field-notes), [submission-schema](https://github.com/microbiomedata/submission-schema), [docs](https://github.com/microbiomedata/docs)_
+_Examples: [submission-schema](https://github.com/microbiomedata/submission-schema), [docs](https://github.com/microbiomedata/docs)_
 
 ## Data pipelines and orchestration
 
